@@ -14168,7 +14168,7 @@ Test accuracy: 0.9419
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">N_observations</span> <span class="o">=</span> <span class="mi">50</span>
@@ -14186,7 +14186,7 @@ Test accuracy: 0.9419
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;constant&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">]</span>
@@ -14202,7 +14202,7 @@ Test accuracy: 0.9419
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_input_fn</span><span class="p">(</span><span class="n">data_df</span><span class="p">,</span> <span class="n">label_df</span><span class="p">,</span> <span class="n">num_epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
@@ -14220,7 +14220,7 @@ Test accuracy: 0.9419
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_train</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">features</span><span class="p">][:</span><span class="n">train_size</span><span class="p">]</span>
@@ -14252,14 +14252,14 @@ Test accuracy: 0.9419
 
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>WARNING: Logging before flag parsing goes to stderr.
-W0614 19:34:17.814179 140735602623360 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmp2hfdpnay
-W0614 19:34:17.820864 140735602623360 deprecation.py:323] From /Users/boone/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/training/training_util.py:238: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+W0615 11:11:05.046400 140735777072000 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpykiwk7fa
+W0615 11:11:05.108555 140735777072000 deprecation.py:323] From /Users/boone/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/training/training_util.py:238: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
-W0614 19:34:17.855100 140735602623360 deprecation.py:323] From /Users/boone/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/feature_column/feature_column_v2.py:2758: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+W0615 11:11:05.146202 140735777072000 deprecation.py:323] From /Users/boone/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/feature_column/feature_column_v2.py:2758: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use `tf.cast` instead.
-W0614 19:34:18.078471 140735602623360 deprecation.py:506] From /Users/boone/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/training/slot_creator.py:187: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+W0615 11:11:05.386369 140735777072000 deprecation.py:506] From /Users/boone/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/training/slot_creator.py:187: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
 Instructions for updating:
 Call initializer instance with the dtype argument instead of passing it to the constructor
 </pre>
@@ -14268,13 +14268,13 @@ Call initializer instance with the dtype argument instead of passing it to the c
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[59]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;tensorflow_estimator.python.estimator.canned.linear.LinearRegressorV2 at 0x1c2b02a358&gt;</pre>
+<pre>&lt;tensorflow_estimator.python.estimator.canned.linear.LinearRegressorV2 at 0x21afd3160&gt;</pre>
 </div>
 
 </div>
@@ -14285,7 +14285,7 @@ Call initializer instance with the dtype argument instead of passing it to the c
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">linear_est</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">train_input_fn</span><span class="p">)</span>
@@ -14305,7 +14305,7 @@ Call initializer instance with the dtype argument instead of passing it to the c
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>W0614 19:34:26.690412 140735602623360 deprecation.py:323] From /Users/boone/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+<pre>W0615 11:11:17.081946 140735777072000 deprecation.py:323] From /Users/boone/anaconda3/envs/tensorflow/lib/python3.7/site-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use standard file APIs to check for files with this prefix.
 </pre>
@@ -14314,16 +14314,16 @@ Use standard file APIs to check for files with this prefix.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[60]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;average_loss&#39;: 27.827478,
- &#39;label/mean&#39;: 1.6509315,
- &#39;loss&#39;: 27.82748,
- &#39;prediction/mean&#39;: 1.3681078,
+<pre>{&#39;average_loss&#39;: 22.156483,
+ &#39;label/mean&#39;: 2.5269034,
+ &#39;loss&#39;: 22.156479,
+ &#39;prediction/mean&#39;: 1.7909932,
  &#39;global_step&#39;: 10}</pre>
 </div>
 
@@ -14344,7 +14344,7 @@ Use standard file APIs to check for files with this prefix.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">N_observations</span> <span class="o">=</span> <span class="mi">50</span>
@@ -14371,7 +14371,7 @@ Use standard file APIs to check for files with this prefix.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;constant&#39;</span><span class="p">,</span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="s1">&#39;x2&#39;</span><span class="p">,</span><span class="s1">&#39;x3&#39;</span><span class="p">,</span><span class="s1">&#39;x4&#39;</span><span class="p">,</span><span class="s1">&#39;x5&#39;</span><span class="p">,</span><span class="s1">&#39;x6&#39;</span><span class="p">,</span><span class="s1">&#39;x7&#39;</span><span class="p">,</span><span class="s1">&#39;x8&#39;</span><span class="p">,</span><span class="s1">&#39;x9&#39;</span><span class="p">,</span><span class="s1">&#39;x10&#39;</span><span class="p">]</span>
@@ -14387,17 +14387,17 @@ Use standard file APIs to check for files with this prefix.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_input_fn</span><span class="p">(</span><span class="n">data_df</span><span class="p">,</span> <span class="n">label_df</span><span class="p">,</span> <span class="n">num_epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
-  <span class="k">def</span> <span class="nf">input_function</span><span class="p">():</span>
-    <span class="n">ds</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_tensor_slices</span><span class="p">((</span><span class="nb">dict</span><span class="p">(</span><span class="n">data_df</span><span class="p">),</span> <span class="n">label_df</span><span class="p">))</span>
-    <span class="k">if</span> <span class="n">shuffle</span><span class="p">:</span>
-      <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">ds</span>
-  <span class="k">return</span> <span class="n">input_function</span>
+    <span class="k">def</span> <span class="nf">input_function</span><span class="p">():</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_tensor_slices</span><span class="p">((</span><span class="nb">dict</span><span class="p">(</span><span class="n">data_df</span><span class="p">),</span> <span class="n">label_df</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">shuffle</span><span class="p">:</span>
+            <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ds</span>
+    <span class="k">return</span> <span class="n">input_function</span>
 </pre></div>
 
 </div>
@@ -14407,38 +14407,38 @@ Use standard file APIs to check for files with this prefix.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">make_input_fn</span><span class="p">(</span><span class="n">data_df</span><span class="p">,</span> <span class="n">label_df</span><span class="p">,</span> <span class="n">num_epochs</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">):</span>
-  <span class="k">def</span> <span class="nf">input_function</span><span class="p">():</span>
-    <span class="n">ds</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_tensor_slices</span><span class="p">((</span><span class="nb">dict</span><span class="p">(</span><span class="n">data_df</span><span class="p">),</span> <span class="n">label_df</span><span class="p">))</span>
-    <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">ds</span>
-  <span class="k">return</span> <span class="n">input_function</span>
+    <span class="k">def</span> <span class="nf">input_function</span><span class="p">():</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_tensor_slices</span><span class="p">((</span><span class="nb">dict</span><span class="p">(</span><span class="n">data_df</span><span class="p">),</span> <span class="n">label_df</span><span class="p">))</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">batch</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="n">num_epochs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">ds</span>
+    <span class="k">return</span> <span class="n">input_function</span>
 
 <span class="n">train_score</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">test_score</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">number_features</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">features</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-  <span class="n">df_train</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">features</span><span class="p">[:</span><span class="n">i</span><span class="p">]][:</span><span class="n">train_size</span><span class="p">]</span>
-  <span class="n">df_test</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">features</span><span class="p">[:</span><span class="n">i</span><span class="p">]][</span><span class="n">train_size</span><span class="p">:]</span>
-  <span class="n">NUMERIC_COLUMNS</span> <span class="o">=</span> <span class="n">features</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span>
-  <span class="n">feature_columns</span> <span class="o">=</span> <span class="p">[]</span>
-  <span class="k">for</span> <span class="n">feature_name</span> <span class="ow">in</span> <span class="n">NUMERIC_COLUMNS</span><span class="p">:</span>
-      <span class="n">feature_columns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">feature_column</span><span class="o">.</span><span class="n">numeric_column</span><span class="p">(</span><span class="n">feature_name</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
+    <span class="n">df_train</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">features</span><span class="p">[:</span><span class="n">i</span><span class="p">]][:</span><span class="n">train_size</span><span class="p">]</span>
+    <span class="n">df_test</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">features</span><span class="p">[:</span><span class="n">i</span><span class="p">]][</span><span class="n">train_size</span><span class="p">:]</span>
+    <span class="n">NUMERIC_COLUMNS</span> <span class="o">=</span> <span class="n">features</span><span class="p">[:</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">feature_columns</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">feature_name</span> <span class="ow">in</span> <span class="n">NUMERIC_COLUMNS</span><span class="p">:</span>
+        <span class="n">feature_columns</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">feature_column</span><span class="o">.</span><span class="n">numeric_column</span><span class="p">(</span><span class="n">feature_name</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">))</span>
       
-  <span class="n">train_input_fn</span> <span class="o">=</span> <span class="n">make_input_fn</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
-  <span class="n">eval_input_fn</span> <span class="o">=</span> <span class="n">make_input_fn</span><span class="p">(</span><span class="n">df_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+    <span class="n">train_input_fn</span> <span class="o">=</span> <span class="n">make_input_fn</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">eval_input_fn</span> <span class="o">=</span> <span class="n">make_input_fn</span><span class="p">(</span><span class="n">df_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
   
-  <span class="n">linear_est</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">LinearRegressor</span><span class="p">(</span><span class="n">feature_columns</span><span class="o">=</span><span class="n">feature_columns</span><span class="p">)</span>
-  <span class="n">linear_est</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">train_input_fn</span><span class="p">)</span>
+    <span class="n">linear_est</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">estimator</span><span class="o">.</span><span class="n">LinearRegressor</span><span class="p">(</span><span class="n">feature_columns</span><span class="o">=</span><span class="n">feature_columns</span><span class="p">)</span>
+    <span class="n">linear_est</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">train_input_fn</span><span class="p">)</span>
   
-  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-  <span class="n">number_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-  <span class="n">train_score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">linear_est</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">train_input_fn</span><span class="p">)[</span><span class="s1">&#39;average_loss&#39;</span><span class="p">])</span>
-  <span class="n">test_score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">linear_est</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">eval_input_fn</span><span class="p">)[</span><span class="s1">&#39;average_loss&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">number_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">train_score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">linear_est</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">train_input_fn</span><span class="p">)[</span><span class="s1">&#39;average_loss&#39;</span><span class="p">])</span>
+    <span class="n">test_score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">linear_est</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">eval_input_fn</span><span class="p">)[</span><span class="s1">&#39;average_loss&#39;</span><span class="p">])</span>
   
    
 </pre></div>
@@ -14457,7 +14457,7 @@ Use standard file APIs to check for files with this prefix.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>W0614 19:34:35.843143 140735602623360 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpbb7kltch
+<pre>W0615 11:11:37.530149 140735777072000 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpz48uwadr
 </pre>
 </div>
 </div>
@@ -14479,7 +14479,7 @@ Use standard file APIs to check for files with this prefix.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>W0614 19:34:37.865765 140735602623360 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpo94y4_wl
+<pre>W0615 11:11:39.605625 140735777072000 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmp0saf0imi
 </pre>
 </div>
 </div>
@@ -14501,7 +14501,7 @@ Use standard file APIs to check for files with this prefix.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>W0614 19:34:40.035088 140735602623360 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmp3pn6uzqd
+<pre>W0615 11:11:42.166437 140735777072000 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmptpqgiu83
 </pre>
 </div>
 </div>
@@ -14523,7 +14523,7 @@ Use standard file APIs to check for files with this prefix.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>W0614 19:34:42.542291 140735602623360 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpr00f8yt9
+<pre>W0615 11:11:45.381804 140735777072000 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmp6th4w72k
 </pre>
 </div>
 </div>
@@ -14545,7 +14545,7 @@ Use standard file APIs to check for files with this prefix.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>W0614 19:34:45.353739 140735602623360 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpsm_q3zjq
+<pre>W0615 11:11:48.307901 140735777072000 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmp445x7gki
 </pre>
 </div>
 </div>
@@ -14567,7 +14567,7 @@ Use standard file APIs to check for files with this prefix.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>W0614 19:34:48.498611 140735602623360 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmp4ajdvzq1
+<pre>W0615 11:11:51.837961 140735777072000 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpwkx1oehf
 </pre>
 </div>
 </div>
@@ -14589,7 +14589,7 @@ Use standard file APIs to check for files with this prefix.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>W0614 19:34:51.884017 140735602623360 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpvfl1_kyn
+<pre>W0615 11:11:56.092657 140735777072000 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpj_nmnb0s
 </pre>
 </div>
 </div>
@@ -14611,7 +14611,7 @@ Use standard file APIs to check for files with this prefix.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>W0614 19:34:55.495949 140735602623360 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmp7r5i8ndl
+<pre>W0615 11:11:59.925038 140735777072000 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpp5mpdkl4
 </pre>
 </div>
 </div>
@@ -14633,7 +14633,7 @@ Use standard file APIs to check for files with this prefix.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>W0614 19:34:59.405158 140735602623360 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmp52hf0yom
+<pre>W0615 11:12:04.101035 140735777072000 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpgs0fwg8m
 </pre>
 </div>
 </div>
@@ -14655,7 +14655,7 @@ Use standard file APIs to check for files with this prefix.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>W0614 19:35:03.549828 140735602623360 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmpzdjypfin
+<pre>W0615 11:12:08.878054 140735777072000 estimator.py:1799] Using temporary folder as model directory: /var/folders/b6/1x1jg8w113vfq8m_qkqym1sh0000gn/T/tmp1y4kkejl
 </pre>
 </div>
 </div>
@@ -14677,7 +14677,7 @@ Use standard file APIs to check for files with this prefix.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">outcome</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;x_i&#39;</span><span class="p">:</span><span class="n">number_features</span><span class="p">,</span> <span class="s1">&#39;train_score&#39;</span><span class="p">:</span> <span class="n">train_score</span><span class="p">,</span> <span class="s1">&#39;test_score&#39;</span><span class="p">:</span> <span class="n">test_score</span><span class="p">})</span>  
@@ -14694,7 +14694,7 @@ Use standard file APIs to check for files with this prefix.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[65]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -14726,62 +14726,62 @@ Use standard file APIs to check for files with this prefix.
     <tr>
       <th>0</th>
       <td>2</td>
-      <td>12518.250977</td>
-      <td>7285.670410</td>
+      <td>13118.151367</td>
+      <td>19899.773438</td>
     </tr>
     <tr>
       <th>1</th>
       <td>3</td>
-      <td>12408.869141</td>
-      <td>7390.244629</td>
+      <td>12967.951172</td>
+      <td>20359.941406</td>
     </tr>
     <tr>
       <th>2</th>
       <td>4</td>
-      <td>11899.289062</td>
-      <td>7176.062012</td>
+      <td>12559.404297</td>
+      <td>19044.339844</td>
     </tr>
     <tr>
       <th>3</th>
       <td>5</td>
-      <td>11483.595703</td>
-      <td>7467.850098</td>
+      <td>12036.378906</td>
+      <td>22332.517578</td>
     </tr>
     <tr>
       <th>4</th>
       <td>6</td>
-      <td>10112.750977</td>
-      <td>6900.551270</td>
+      <td>11054.901367</td>
+      <td>14201.379883</td>
     </tr>
     <tr>
       <th>5</th>
       <td>7</td>
-      <td>9743.199219</td>
-      <td>7501.470703</td>
+      <td>9930.191406</td>
+      <td>40896.683594</td>
     </tr>
     <tr>
       <th>6</th>
       <td>8</td>
-      <td>8984.423828</td>
-      <td>6107.690430</td>
+      <td>8970.059570</td>
+      <td>13934.008789</td>
     </tr>
     <tr>
       <th>7</th>
       <td>9</td>
-      <td>8974.168945</td>
-      <td>6033.361328</td>
+      <td>8945.999023</td>
+      <td>149381.265625</td>
     </tr>
     <tr>
       <th>8</th>
       <td>10</td>
-      <td>9282.704102</td>
-      <td>5964.391602</td>
+      <td>9001.130859</td>
+      <td>127542.015625</td>
     </tr>
     <tr>
       <th>9</th>
       <td>11</td>
-      <td>9844.468750</td>
-      <td>6660.434570</td>
+      <td>9110.343750</td>
+      <td>284718.375000</td>
     </tr>
   </tbody>
 </table>
@@ -14805,7 +14805,7 @@ Use standard file APIs to check for files with this prefix.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span><span class="n">outcome</span><span class="o">.</span><span class="n">train_score</span><span class="p">)</span>
@@ -14821,13 +14821,13 @@ Use standard file APIs to check for files with this prefix.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[66]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x1c292cc470&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x1c340dbac8&gt;]</pre>
 </div>
 
 </div>
@@ -14862,7 +14862,7 @@ Use standard file APIs to check for files with this prefix.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">12</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">outcome</span><span class="o">.</span><span class="n">test_score</span><span class="p">))</span>
@@ -14878,13 +14878,13 @@ Use standard file APIs to check for files with this prefix.
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[67]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>[&lt;matplotlib.lines.Line2D at 0x1c30426860&gt;]</pre>
+<pre>[&lt;matplotlib.lines.Line2D at 0x1c32b83d30&gt;]</pre>
 </div>
 
 </div>
@@ -14913,17 +14913,6 @@ Use standard file APIs to check for files with this prefix.
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="OLS-using-Tensorflow">OLS using Tensorflow<a class="anchor-link" href="#OLS-using-Tensorflow">&#182;</a></h1><p>Using more functionality from Tensorflow to program our OLS.</p>
 <p>This allows us to see some building blocks that we will need below to program our neural network.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Program-your-own-Lasso">Program your own Lasso<a class="anchor-link" href="#Program-your-own-Lasso">&#182;</a></h1><p>With OLS, adding variables is always "good" in terms of in-sample fit. But it can lead to overfitting.</p>
-<p>One way to avoid overfitting is to introduce a penalty for using more variables. This is the idea of Lasso.</p>
-<p>Here you are going to program your own Lasso.</p>
 
 </div>
 </div>
@@ -15176,7 +15165,7 @@ Use standard file APIs to check for files with this prefix.
 
 
 <div class="output_png output_subarea ">
-<img src="output_128_0.png"
+<img src="output_127_0.png"
 >
 </div>
 
@@ -15379,7 +15368,7 @@ Final outputs are:
 
 
 <div class="output_png output_subarea ">
-<img src="output_134_0.png"
+<img src="output_133_0.png"
 >
 </div>
 
@@ -16974,8 +16963,8 @@ predictions and their probabilities:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="IV">IV<a class="anchor-link" href="#IV">&#182;</a></h1><p>What are instrumental variables again?</p>
-<p>We use the IV example in <a href="https://www.youtube.com/watch?v=e5cgiAGBKzI">Richard McElreath's lecture 18</a> (starting around 28:00).</p>
+<h2 id="IV">IV<a class="anchor-link" href="#IV">&#182;</a></h2><p>What are instrumental variables again?</p>
+<p>We use the IV example in <a href="https://www.youtube.com/watch?v=e5cgiAGBKzI">Richard McElreath's lecture 18</a> (starting around 28:00) which is based on Angrist and Krueger (1991).</p>
 <p>An individual's education (<code>e</code>) affects her wage (<code>w</code>). We want to know how strong this effect is.</p>
 <p><code>q</code> denotes fraction of the year that has elapsed when you were born.</p>
 <p><strong>TODO</strong> add text</p>
@@ -17193,6 +17182,780 @@ Warnings:
   <th></th>                            <td>(6.8070)</td>  
 </tr>
 </table><br/><br/>T-stats reported in parentheses<br/>T-stats use same covariance type as original model<br/>id: 0x1c30dd1f28
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Heterogenous-treatment-effects">Heterogenous treatment effects<a class="anchor-link" href="#Heterogenous-treatment-effects">&#182;</a></h2><p>One of the complications when using IV to find causal effects is that treatment effects can differ between subgroups and that these subgroups react differently to the treatment/instrument. This is based on Chapter 4 of Angrist and Pischke (2009).</p>
+<p>We will consider this in the context of unemployed who are offered a training program. To understand the effects, we will again generate our own data such that we know exactly what all the relevant effects are. The question is then, how do we get these effects from the data.</p>
+<p>As before, the learning goals of this section are two fold: (i) learn how to program your own data generating process in python and (ii) understand the statistical issue under considerarion: heterogenous treatment effects.</p>
+<p>The government introduces a training program for unemployed. The treatment variable $D_i$ denotes whether (1) or not (0) individual $i$ received training. The instrument $Z_i$ that we use is whether (1) or not (0) $i$ is invited to join the training.</p>
+<p>We have three groups of unemployed:</p>
+<ul>
+<li>compliers join the training if and only if they are invited to do so: $D_i = 1 (0)$ iff $Z_i = 1 (0)$;</li>
+<li>always-takers join the training whether or not they are invited to do so: $D_i =1$ irrespective of $Z_i$;</li>
+<li>never-takers never join the training: $D_i = 0$ irrespective of $Z_i$.</li>
+</ul>
+<p>Note that in this training context, the always-takers are a bit "odd": how can you join a training program where you are not supposed to be. The never-takers make more sense in this context: some people may not attend the training even though they were invited to do so. We will not worry about this; the point is that we can conceptually distinguish these groups.</p>
+<p>We are interested in the effect of the training program on earnings. We denote by $\beta$ the expected earnings without training. The expected earnings with training is denoted by $\beta+\tau$. Hence, $\tau$ denotes the treatment effects.</p>
+<p>Let $j \in \{c,a,n \}$ denote whether an individual is a complier, always-taker or never-taker. We assume that $\beta_j$ and $\tau_j$ vary with $j$.</p>
+<p>In particular we assume that the earnings effect for someone in group $j$ is drawn from a normal distribution with mean $\mu = \beta_j$ and standard deviation $\sigma =1$ in case of no training and the effect of training is drawn from a normal distribution with mean $\mu = \tau_j$ and standard deviation $\sigma =1$.</p>
+<p>Below we will consider different configurations for $\beta_j, \tau_j$ and see how they affect the estimated effects.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">accept_complier</span><span class="p">(</span><span class="n">invited</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">invited</span>
+
+<span class="k">def</span> <span class="nf">accept_always</span><span class="p">(</span><span class="n">invited</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">invited</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">accept_never</span><span class="p">(</span><span class="n">invited</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">invited</span><span class="p">)</span>
+
+<span class="n">N_simulations</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">fraction_training</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="c1"># 20% of agents are invited to the training</span>
+<span class="n">types</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;complier&#39;</span><span class="p">,</span><span class="s1">&#39;always_taker&#39;</span><span class="p">,</span> <span class="s1">&#39;never_taker&#39;</span><span class="p">]</span>
+<span class="n">β</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;complier&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;always_taker&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;never_taker&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">τ</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;complier&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;always_taker&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span> <span class="s1">&#39;never_taker&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">n</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;complier&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;always_taker&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> <span class="s1">&#39;never_taker&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">}</span>
+<span class="n">accept</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;complier&#39;</span><span class="p">:</span> <span class="n">accept_complier</span><span class="p">,</span> <span class="s1">&#39;always_taker&#39;</span><span class="p">:</span> <span class="n">accept_always</span><span class="p">,</span> <span class="s1">&#39;never_taker&#39;</span><span class="p">:</span> <span class="n">accept_never</span><span class="p">}</span>
+<span class="n">earnings_without</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">training_effect</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">earnings</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">invited</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">trained</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">data_simulation</span><span class="p">(</span><span class="n">β</span> <span class="o">=</span> <span class="n">β</span><span class="p">,</span> <span class="n">τ</span><span class="o">=</span><span class="n">τ</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">types</span><span class="p">:</span>
+        <span class="n">earnings_without</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="n">β</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">scale</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">N_simulations</span><span class="p">))</span>
+        <span class="n">training_effect</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="n">τ</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">scale</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">N_simulations</span><span class="p">))</span>
+        <span class="n">invited</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">fraction_training</span><span class="p">,</span><span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">N_simulations</span><span class="p">))</span>
+        <span class="n">trained</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">accept</span><span class="p">[</span><span class="n">j</span><span class="p">](</span><span class="n">invited</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+        <span class="n">earnings</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">earnings_without</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span> <span class="n">trained</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">training_effect</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="n">column_invited</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">invited</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">types</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">column_trained</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">trained</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">types</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">column_earnings</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">earnings</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">types</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;invited&#39;</span><span class="p">:</span><span class="n">column_invited</span><span class="p">,</span> <span class="s1">&#39;trained&#39;</span><span class="p">:</span><span class="n">column_trained</span><span class="p">,</span><span class="s1">&#39;earnings&#39;</span><span class="p">:</span><span class="n">column_earnings</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">df</span>
+ 
+<span class="n">df</span> <span class="o">=</span> <span class="n">data_simulation</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[66]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>invited</th>
+      <th>trained</th>
+      <th>earnings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>1</td>
+      <td>3.207807</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>0</td>
+      <td>1.526118</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>0</td>
+      <td>1.774895</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0.254500</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>0</td>
+      <td>1.347471</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We have a dataset now with indicators for who was invited to a training and who attended a training.</p>
+<p>We would like to learn the effect of training on earnings.</p>
+<p><strong>Question</strong> Which of the parameters above could we hope to recover? $\tau_c,\tau_a,\tau_n$?</p>
+<p><strong>Question</strong> Hence, if we do some calculations with the data, which number do we want to see?</p>
+<p><strong>Question</strong> Compare the average earnings of people with training with the average earnings of people without training. Is this the number that you expected? Why (not)?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">trained</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">trained</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[65]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4.419601275141817</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Exercise</strong> Where does this number come from?</p>
+<p>[hint: $(0.1*4+0.25*6)/0.35-(0.4*1+0.25*1)/0.65$]</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question</strong> Perhaps we should use the instrument whether someone if invited or not: compare average earnings of people with and without an invitation to the training.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[67]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.4986679017116429</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question</strong> Does it help if we compare:</p>
+<ul>
+<li>people with training and an invitation to training with</li>
+<li>people without training and no invitation to training</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">trained</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">trained</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">0</span><span class="p">)]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[56]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.780164091706591</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We have seen now that we have no hope of recovering the relevant training effect in the set-up above. So the question is: when can we recover the relevant parameters? That is, what assumptions are needed?</p>
+<p>To see how you can analyze this with the set-up above, let's program two obvious cases where this works.</p>
+<p><strong>Question</strong> Explain for each case <em>why</em> it works.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;complier&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;always_taker&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;never_taker&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">}</span>
+<span class="n">df_compliers_only</span> <span class="o">=</span> <span class="n">data_simulation</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_compliers_only</span><span class="p">[</span><span class="n">df_compliers_only</span><span class="o">.</span><span class="n">trained</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_compliers_only</span><span class="p">[</span><span class="n">df_compliers_only</span><span class="o">.</span><span class="n">trained</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[68]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.9897864115040935</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">β</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;complier&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;always_taker&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;never_taker&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">τ</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;complier&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;always_taker&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;never_taker&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">df_homog</span> <span class="o">=</span> <span class="n">data_simulation</span><span class="p">(</span><span class="n">β</span><span class="o">=</span><span class="n">β</span><span class="p">,</span><span class="n">τ</span><span class="o">=</span><span class="n">τ</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_homog</span><span class="p">[</span><span class="n">df_homog</span><span class="o">.</span><span class="n">trained</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_homog</span><span class="p">[</span><span class="n">df_homog</span><span class="o">.</span><span class="n">trained</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[69]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.993966729294061</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For a less obvious case where we can retrieve relevant parameters, we will use Angrist and Pischke (2009: chapter 4). In particular, we will verify Theorem 4.4.2.</p>
+<p>We work with one sided noncompliance. That is, we allow for never-takers but not for always-takers.</p>
+<p>According to Theorem 4.4.2 the effect of treatment on the treated can be found as:</p>
+<p>$$
+\frac{E(Y_i|Z_i=1)-E(Y_i|Z_i=0)}{Prob(D_i=1|Z_i=1)}
+$$</p>
+<p>We first create the dataframe.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;complier&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;always_taker&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;never_taker&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">}</span>
+<span class="n">df_one_sided</span> <span class="o">=</span> <span class="n">data_simulation</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question</strong> Calculate $Prob(D_i = 1|Z_i =1)$ and denote this <code>correction_term</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">correction_term</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df_one_sided</span><span class="p">[</span><span class="n">df_one_sided</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">trained</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df_one_sided</span><span class="p">[</span><span class="n">df_one_sided</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">invited</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question</strong> Calculate $\frac{E(Y_i|Z_i=1)-E(Y_i|Z_i=0)}{Prob(D_i=1|Z_i=1)}$:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_one_sided</span><span class="p">[</span><span class="n">df_one_sided</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_one_sided</span><span class="p">[</span><span class="n">df_one_sided</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">))</span><span class="o">/</span><span class="n">correction_term</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[78]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.0599751836106086</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question</strong> Which parameter have we recovered?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Probability-of-treatment">Probability of treatment<a class="anchor-link" href="#Probability-of-treatment">&#182;</a></h2><p>Consider a situation which is simpler than the one above in the sense that there are no always-takers, not never-takers.</p>
+<p>However, now the instrument ("invited") $Z$ causes the probability of training to increase from 0.2 to 0.6. 30% of people get invited.</p>
+<p><strong>Exercise</strong> Copy/paste python code from the analysis above to generate a dataframe using that $Z_i=1$ implies that the probability of treatment increases from 0.2 to 0.6</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[102]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">N_simulations</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">types</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;invited&#39;</span><span class="p">,</span><span class="s1">&#39;not_invited&#39;</span><span class="p">]</span>
+<span class="n">β</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">τ</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">n</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;invited&#39;</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="s1">&#39;not_invited&#39;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">}</span>
+<span class="n">prob_training</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;invited&#39;</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span> <span class="s1">&#39;not_invited&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">}</span>
+<span class="n">earnings_without</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">training_effect</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">earnings</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">trained</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">data_simulation_prob</span><span class="p">(</span><span class="n">β</span> <span class="o">=</span> <span class="n">β</span><span class="p">,</span> <span class="n">τ</span><span class="o">=</span><span class="n">τ</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">types</span><span class="p">:</span>
+        <span class="n">earnings_without</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="n">β</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">N_simulations</span><span class="p">))</span>
+        <span class="n">training_effect</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="n">τ</span><span class="p">,</span> <span class="n">scale</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">N_simulations</span><span class="p">))</span>
+        <span class="n">trained</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">binomial</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">prob_training</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">N_simulations</span><span class="p">))</span>
+        <span class="n">earnings</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">earnings_without</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">+</span> <span class="n">trained</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">training_effect</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="n">column_invited</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">trained</span><span class="p">[</span><span class="s1">&#39;invited&#39;</span><span class="p">]),</span><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">trained</span><span class="p">[</span><span class="s1">&#39;not_invited&#39;</span><span class="p">])],</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">column_trained</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">trained</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">types</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">column_earnings</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">earnings</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">types</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;invited&#39;</span><span class="p">:</span><span class="n">column_invited</span><span class="p">,</span> <span class="s1">&#39;trained&#39;</span><span class="p">:</span><span class="n">column_trained</span><span class="p">,</span><span class="s1">&#39;earnings&#39;</span><span class="p">:</span><span class="n">column_earnings</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">df</span>
+ 
+<span class="n">df_prob</span> <span class="o">=</span> <span class="n">data_simulation_prob</span><span class="p">()</span>
+<span class="n">df_prob</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[102]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>invited</th>
+      <th>trained</th>
+      <th>earnings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0</td>
+      <td>-0.087973</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0</td>
+      <td>0.914145</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>0</td>
+      <td>1.464441</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>1</td>
+      <td>2.500288</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1</td>
+      <td>0</td>
+      <td>2.090975</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question</strong> Suppose we can observe whether someone received training or not. Use this to calculate the effect of training on earnings.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[103]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_prob</span><span class="p">[</span><span class="n">df_prob</span><span class="o">.</span><span class="n">trained</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_prob</span><span class="p">[</span><span class="n">df_prob</span><span class="o">.</span><span class="n">trained</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[103]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.008607912494946</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Suppose we cannot observe whether someone actually did the training or not (e.g. whether or not someone invested effort in the training). We only know ("from a previous study") that explicitly inviting someone for the training ("nudge") increases the probability that they invest training effort from 0.2 to 0.6.</p>
+<p><strong>Question</strong> Use the dataframe above to verify what the effect of the nudge is. Call this the <code>correction_term</code>. What value should the correction term have?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">correction_term</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_prob</span><span class="p">[</span><span class="n">df_prob</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">trained</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_prob</span><span class="p">[</span><span class="n">df_prob</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">trained</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Angrist and Pischke (2009: chapter 4) Theorem 4.4.1 (LATE Theorem; local average treatment effect) claims that (under some assumptions), we can calculate the effect of training on earnings as:</p>
+<p>$$
+\frac{E(Y_i|Z_i=1)-E(Y_i|Z_i=0)}{E(D_i|Z_i=1)-E(D_i|Z_i=0)}
+$$</p>
+<p><strong>Question</strong> Use this expression to calculate the effect of training on earnings.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_prob</span><span class="p">[</span><span class="n">df_prob</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df_prob</span><span class="p">[</span><span class="n">df_prob</span><span class="o">.</span><span class="n">invited</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">earnings</span><span class="p">))</span><span class="o">/</span><span class="n">correction_term</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[106]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.041039399035364</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we are going to use an IV estimation to find the same result. Run the following two regressions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[117]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results_first_stage</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s1">&#39;trained ~ invited&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_prob</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">results_second_stage</span> <span class="o">=</span> <span class="n">smf</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="s1">&#39;earnings ~ invited&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df_prob</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Question</strong> Use these regressions to calculate the effect of training on earning.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">results_second_stage</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">results_first_stage</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[116]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.0410393990350824</pre>
 </div>
 
 </div>
