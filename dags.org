@@ -67,7 +67,7 @@ Z causes both X and Y, but there is no effect of X on Y once you condition on Z.
 
 +--------------+     +--------------+     +--------------+   
 |              |     |              |     |              |
-|      X       |---->|       Z      |<----|       Y      | 
+|      X       |---->|       Z      |---->|       Y      | 
 |              |     |              |     |              |
 +--------------+     +--------------+     +--------------+
                                   ^          ^
@@ -110,7 +110,7 @@ Since we assume that grandparents (X) have no effect on grandchildren educationa
 
 +--------------+     +--------------+     +--------------+   
 |              |     |              |     |              |
-|  grandparent |---->|    parent    |<----|  grandchild  | 
+|  grandparent |---->|    parent    |---->|  grandchild  | 
 |  education   |     |   education  |     |  education   |
 |              |     |              |     |              |
 +--------------+     +--------------+     +--------------+
