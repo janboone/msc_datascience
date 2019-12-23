@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Seminar Data Science for Economics</title>
+<meta name="author" content="(Jan and Madina)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/css/theme/solarized.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Seminar Data Science for Economics</h1><h2 class="author">Jan and Madina</h2><h2 class="date">Dept. of Economics, Tilburg University</h2>
+</section>
+<section id="table-of-contents">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-introduction">Introduction</a></li>
+<li><a href="#/slide-what-do-you-need">What do you need?</a></li>
+<li><a href="#/slide-rules-of-the-game">Rules of the game</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-introduction">
+<h2 id="introduction">Introduction</h2>
+</section>
+<section id="slide-this-lecture">
+<h3 id="this-lecture">this lecture</h3>
+<ul>
+<li>in this lecture, we look at:
+
+<ul>
+<li>motivation to learn datascience</li>
+<li>first assignment</li>
+<li>start with jupyter notebook</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-motivation">
+<h3 id="motivation">motivation</h3>
+<ul>
+<li>in this course we teach you
+
+<ul>
+<li>what is datascience?</li>
+<li>difference with econometrics</li>
+<li>prediction vs causality</li>
+<li>give policy advice based on "unstructured data"</li>
+<li>to use python, tensorflow and R</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-examples">
+<h3 id="examples">things to learn</h3>
+<ul>
+<li>when you finish this course, you can
+
+<ul>
+<li>obtain data</li>
+<li>clean data (in a reproducible way)</li>
+<li>do data-project management</li>
+<li>work with high dimensional data (tensors)</li>
+<li>simulate your own estimation techniques</li>
+<li>use a (simple) neural network</li>
+<li>use cross validation</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+<section id="slide-finishing-the-course">
+<h3 id="finishing-the-course">finishing the course</h3>
+<ul>
+<li>gives you a better understanding 
+<ul>
+<li>how statistics/econometrics work</li>
+<li>what datascience and AI is</li>
+<li>what the advantages and limits are of datascience techniques</li>
+<li>how you can use datascience techniques to do causal inference</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-what-do-you-need">
+<h2 id="what-do-you-need">What do you need?</h2>
+</section>
+<section id="slide-install-software">
+<h3 id="install-software">Software</h3>
+<ul>
+<li>you will be working with <a href="https://jupyterlab.uvt.nl/">jupyter lab</a></li>
+<li>if you also want to install things on your computer, use the <a href="https://www.anaconda.com/distribution/">anaconda distribution</a></li>
+<li>use github but for this you not need to install anything</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-rules-of-the-game">
+<h2 id="rules-of-the-game">Rules of the game</h2>
+</section>
+<section id="slide-org4daecfc">
+<h3 id="org4daecfc">to learn python we use <a href="https://www.datacamp.com/home">datacamp</a> and lectures:</h3>
+<ul>
+<li>you need to finish the datacamp courses in time</li>
+<li>otherwise you will be lost during the lectures</li>
+<li>see the Lecture schedule for the deadlines</li>
+<li>prepare the lectures by going through the notebook beforehand</li>
+<li>participate actively during the lectures</li>
+<li>you do not learn datascience by passively typing in answers!</li>
+
+</ul>
+
+</section>
+<section id="slide-org2853439">
+<h3 id="org2853439">to get a grade for the python track:</h3>
+<ul>
+<li>finish Assignment 1 before the deadline</li>
+<li>Final Assignment</li>
+<li>check the deadlines for the final assignment</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

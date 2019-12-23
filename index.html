@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Seminar Data Science for Economics</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jan Boone" />
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">Seminar Data Science for Economics</h1>
+<p>
+This website contains the material for the MSc course Seminar Data Science for Economics
+</p>
+
+<p>
+<b><b>This website is under construction for 2019/2020</b></b>
+</p>
+
+<p>
+This year the course is taught by:
+</p>
+<ul class="org-ul">
+<li>Marco Alberti</li>
+<li>Jan Boone</li>
+<li>Madina Kurmangaliyeva</li>
+</ul>
+
+<div id="outline-container-orgebb3738" class="outline-2">
+<h2 id="orgebb3738">Course description</h2>
+<div class="outline-text-2" id="text-orgebb3738">
+<p>
+In the course Data Science for Economics you will learn how to deal with big (unstructured) data to answer policy questions using recent advances in machine learning.
+</p>
+
+<p>
+Whether you are a public policy-maker or a data analyst at a private firm,  you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large individual-level data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which (out of many) variables to use in your analysis. 
+</p>
+
+<p>
+This course will help you to overcome those challenges. The "traditional" econometrics you have learnt in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there are more variables than observations, and you do not know at the start which variables and interaction terms to include. 
+</p>
+
+<p>
+In this course, we give an introduction to data-project management  (e.g. git, sublime), tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
+</p>
+
+<p>
+We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets, cross-validation and machine learning to find the best instrumental variables.
+</p>
+
+<p>
+Finally, we will cover post-selection inference for causal effects (as in Belloni, Chernozhukov, and Hansen 2013).
+</p>
+
+<p>
+In terms of software we will be using python, google's tensorflow, and R. Students must have followed the Econometrics 1 and the python track in AEA 1.
+</p>
+
+
+<p>
+For this course we use the following resources:
+</p>
+
+<ul class="org-ul">
+<li>We are very happy that we partner with <a href="https://www.datacamp.com/">Datacamp</a> for this course.</li>
+</ul>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgebb3738">Course description</a></li>
+<li><a href="#org22390d3">Organisation of the course</a>
+<ul>
+<li><a href="#org987043e">Lecture schedule</a></li>
+<li><a href="#orgbb20bbf">First Lecture</a></li>
+<li><a href="#org972d7a4">Datacamp</a></li>
+<li><a href="#orgc5d259c">Deadlines</a></li>
+<li><a href="#org616c6c9">Questions</a></li>
+</ul>
+</li>
+<li><a href="#org6548148">Final Assignment</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org22390d3" class="outline-2">
+<h2 id="org22390d3">Organisation of the course</h2>
+<div class="outline-text-2" id="text-org22390d3">
+</div>
+<div id="outline-container-org987043e" class="outline-3">
+<h3 id="org987043e">Lecture schedule</h3>
+<div class="outline-text-3" id="text-org987043e">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">week</th>
+<th scope="col" class="org-left">day</th>
+<th scope="col" class="org-right">date</th>
+<th scope="col" class="org-left">time</th>
+<th scope="col" class="org-left">teacher</th>
+<th scope="col" class="org-left">room</th>
+<th scope="col" class="org-left">topics</th>
+<th scope="col" class="org-left">datacamp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Tue</td>
+<td class="org-right">2020-01-28</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Jan</td>
+<td class="org-left">CubeZ 16</td>
+<td class="org-left">distributions, bootstrapping</td>
+<td class="org-left">statistical simulation 1,2</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Thu</td>
+<td class="org-right">2020-01-30</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Jan</td>
+<td class="org-left">CubeZ 221</td>
+<td class="org-left">doing your own OLS</td>
+<td class="org-left">statistical simulation 3,4</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Tue</td>
+<td class="org-right">2020-02-04</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Jan</td>
+<td class="org-left">CubeZ 223</td>
+<td class="org-left">causality</td>
+<td class="org-left">keras 1,2</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">Thu</td>
+<td class="org-right">2020-02-06</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Jan</td>
+<td class="org-left">CubeZ 16</td>
+<td class="org-left">tensors, first neural netw.</td>
+<td class="org-left">keras 3,4</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Tue</td>
+<td class="org-right">2020-02-11</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Jan</td>
+<td class="org-left">CubeZ 16</td>
+<td class="org-left">over/underfitting</td>
+<td class="org-left">tensorflow 1,2</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Thu</td>
+<td class="org-right">2020-02-13</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Jan</td>
+<td class="org-left">CubeZ 15</td>
+<td class="org-left">neural network</td>
+<td class="org-left">tensorflow 3,4</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Tue</td>
+<td class="org-right">2020-02-18</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Jan</td>
+<td class="org-left">CubeZ 222</td>
+<td class="org-left">neural network</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">Thu</td>
+<td class="org-right">2020-02-20</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Jan</td>
+<td class="org-left">CubeZ 214</td>
+<td class="org-left">treatment effects</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">Tue</td>
+<td class="org-right">2020-03-03</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Madina</td>
+<td class="org-left">CubeZ 16</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">Thu</td>
+<td class="org-right">2020-03-05</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Madina</td>
+<td class="org-left">CubeZ 212</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">Tue</td>
+<td class="org-right">2020-03-10</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Madina</td>
+<td class="org-left">CubeZ 222</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">Thu</td>
+<td class="org-right">2020-03-12</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Madina</td>
+<td class="org-left">CubeZ 212</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">Tue</td>
+<td class="org-right">2020-03-17</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Madina</td>
+<td class="org-left">CubeZ 17</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">Thu</td>
+<td class="org-right">2020-03-19</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Madina</td>
+<td class="org-left">CubeZ 16</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">Tue</td>
+<td class="org-right">2020-03-24</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Madina</td>
+<td class="org-left">CubeZ 223</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">Thu</td>
+<td class="org-right">2020-03-26</td>
+<td class="org-left">10:45&#x2013;12:30</td>
+<td class="org-left">Madina</td>
+<td class="org-left">CubeZ 215</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>we will see how fast we go, the column "topics" is an indication of what will be discussed in each week</li>
+<li>for the first part, taught by Jan, we will go through <a href="https://janboone.github.io/msc_datascience/Statistical_Hacking/Statistical_Hacking.html">this notebook</a></li>
+<li>the speed at which we go through the notebook will be faster than with AEA 1; hence, <b>prepare for class by going through the notebook beforehand</b></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgbb20bbf" class="outline-3">
+<h3 id="orgbb20bbf">First Lecture</h3>
+<div class="outline-text-3" id="text-orgbb20bbf">
+<p>
+<a href="img/Introduction_Lecture.html#introduction">Introduction Lecture</a>
+</p>
+</div>
+
+<div id="outline-container-orgce7d8a3" class="outline-4">
+<h4 id="orgce7d8a3">Assignment 1</h4>
+<div class="outline-text-4" id="text-orgce7d8a3">
+<p>
+Do the following four steps:
+</p>
+<ul class="org-ul">
+<li>if you did AEA 1, you already have a <a href="https://github.com/">github</a> account, otherwise create a github account</li>
+<li>fill in this <a href="https://forms.gle/p23hAkp6LRN7w94v5">google form</a> before <b>Friday 7 February 2020</b>
+<ul class="org-ul">
+<li>sign in with your @tilburguniversity.edu email address and password</li>
+</ul></li>
+<li>go to 
+<ul class="org-ul">
+<li><a href="https://jupyterlab.uvt.nl/">jupyter lab</a> (if you are working away from the campus, use the cisco client to start a vpb to access jupyter lab)</li>
+<li>or &#x2013;if all else fails&#x2013; <a href="https://colab.research.google.com/">google's colab</a></li>
+</ul></li>
+<li>create a new python notebook and type the following code in the first cell:</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-ipython">%%bash
+
+git clone https://github.com/janboone/msc_datascience.git
+</pre>
+</div>
+
+<p>
+This creates a folder on the server `msc<sub>datascience</sub>` that contains the material for the python part of the course.
+</p>
+
+<p>
+Note: you can only run this command once. If you run it again, you get an error since the folder already exists.
+</p>
+
+<ul class="org-ul">
+<li>instructions for the final assignment can be found <a href="#org6548148">here</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org972d7a4" class="outline-3">
+<h3 id="org972d7a4">Datacamp</h3>
+<div class="outline-text-3" id="text-org972d7a4">
+<p>
+From Datacamp, do the following courses:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.datacamp.com/courses/statistical-simulation-in-python">statistical simulation</a></li>
+<li><a href="https://www.datacamp.com/courses/deep-learning-with-keras-in-python">keras</a></li>
+<li><a href="https://www.datacamp.com/courses/introduction-to-tensorflow-in-python">tensorflow</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc5d259c" class="outline-3">
+<h3 id="orgc5d259c">Deadlines</h3>
+<div class="outline-text-3" id="text-orgc5d259c">
+<p>
+The deadline for the <b>final assignment</b> is: Friday June 19th 2020 at 23:59.
+</p>
+
+<p>
+The resit deadline for the assignment is: Friday August 14th, 2020. Let us know by email that you have submitted your assignment for the resit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org616c6c9" class="outline-3">
+<h3 id="org616c6c9">Questions</h3>
+<div class="outline-text-3" id="text-org616c6c9">
+<p>
+If you have questions/comments about this course, go to the <a href="https://github.com/janboone/msc_datascience/issues">issues page</a>
+open a new issue (with the green "New issue" button) and type your
+question. Use a title that is informative (e.g. not "question", but
+"question about the second assignment"). Go to the next box ("Leave a comment")
+and type your question. Then click on "Submit new issue". We will
+answer your question as quickly as possible.
+</p>
+
+<p>
+The advantages of the issue page include:
+</p>
+
+<ul class="org-ul">
+<li>if you have a question, other students may have it as well; in this
+way we answer the questions in a way that everyone can see it. Also
+before asking the question, you may want to check whether it was
+asked/answered before on the issue page</li>
+<li>we answer your question more quickly than when you email us</li>
+<li>you increase your knowledge of github!</li>
+</ul>
+
+<p>
+Only when you need to include privately sensitive information ("my cat
+has passed away"), you can send an email.
+</p>
+
+<p>
+In order to post issues, you need to create a github account (which
+you need anyway to follow this course).
+</p>
+
+<p>
+Note that if your question is related to another issue, you can react
+to the earlier issue and leave a comment in that "conversation".
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6548148" class="outline-2">
+<h2 id="org6548148">Final Assignment</h2>
+<div class="outline-text-2" id="text-org6548148">
+<ul class="org-ul">
+<li>The final assignment you can do alone or with at max. one other student (i.e. max group size is 2).</li>
+<li>for the deadline of the python assignment, see <a href="#orgc5d259c">Deadlines</a> above</li>
+<li>we will give you the github repos. with the `assignment<sub>template.ipynb</sub>` notebook</li>
+<li>to submit your final assignment:
+<ul class="org-ul">
+<li>do not change the name of the `assignment<sub>template.ipynb</sub>` notebook</li>
+<li>fill in this <a href="https://forms.gle/F4WNsww1ShjDm83t5">google form</a></li>
+<li>push the final notebook on the github classroom repository</li>
+</ul></li>
+</ul>
+
+<p>
+The idea of the assignment is that you report your findings in a transparent way that can easily be verified/reproduced by others.
+</p>
+
+<p>
+The following ingredients will be important when we evaluate your assignment:
+</p>
+
+<ul class="org-ul">
+<li>Find a "big dataset", e.g. on <a href="https://www.kaggle.com/">kaggle</a>, but other sources are fine as well
+<ul class="org-ul">
+<li>download the data to your repos. (in a separate folder "data") and</li>
+<li>in your notebook create a link to the data source</li>
+</ul></li>
+<li>Start with a clear and transparent <b>question</b>.</li>
+<li>Briefly <b>motivate</b> why this question is interesting.</li>
+<li>Explain the <b>methods</b> that you use to answer the question.
+<ul class="org-ul">
+<li>are your methods based on correlations (only)?</li>
+<li>do they allow you to make claims about causality?</li>
+</ul></li>
+<li>Give the <b>answer</b> that you find</li>
+<li>Mention the main <b>assumptions</b> that you need to get this answer.</li>
+<li>Use graphs to introduce your data</li>
+<li>If you use equations, use latex to make them easy to read.</li>
+<li>Explain your code, the reader must be able to easily follow what you are doing.</li>
+<li>How well does your model <b>fit</b> the data?
+<ul class="org-ul">
+<li>what methods do you use to evaluate this?</li>
+</ul></li>
+<li>Present a clear conclusion/answer to your question.</li>
+<li>Include some <b>discussion</b> of what you find and elements on which you need additional information.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jan Boone</p>
+</div>
+</body>
+</html>
