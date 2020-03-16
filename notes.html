@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Notes Data Science for Economics</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jan Boone" />
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Notes Data Science for Economics</h1>
+
+<div id="outline-container-org6f01ecb" class="outline-2">
+<h2 id="org6f01ecb">How are the weights in a neural network updated?</h2>
+<div class="outline-text-2" id="text-org6f01ecb">
+<p>
+Consider the following simple classification problem. We have three points (0,1),(1,0),(1,1) with label/target equal to 1 and one point (0,0) with label equal to 0. We are looking for a line which separates these points.
+</p>
+
+<p>
+That is, we want a line such that all points above the line have label 1 and the points below it have label 0. The line that is drawn in the figure is actually not right, so we need to update the "weights" of the line.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-jupyter-python"><span style="color: #5317ac;">import</span> matplotlib.pyplot <span style="color: #5317ac;">as</span> plt
+<span style="color: #5317ac;">import</span> numpy <span style="color: #5317ac;">as</span> np
+<span style="color: #005589;">inputs</span> = np.array([[0,0],[0,1],[1,0],[1,1]])
+<span style="color: #005589;">targets</span> = np.array([[0],[1],[1],[1]])
+<span style="color: #005589;">colors</span> = []
+<span style="color: #5317ac;">for</span> i <span style="color: #5317ac;">in</span> <span style="color: #8f0075;">range</span>(<span style="color: #8f0075;">len</span>(targets)):
+    colors.append([<span style="color: #223fbf;">'red'</span>,<span style="color: #223fbf;">'blue'</span>][targets[i][0]])
+plt.scatter(inputs[:,0],inputs[:,1],color=colors)
+plt.xlabel(<span style="color: #223fbf;">'$x$'</span>)
+plt.ylabel(<span style="color: #223fbf;">'$y$'</span>)
+plt.plot([-0.03,1.03],[0.8,0.2])
+plt.savefig(<span style="color: #223fbf;">'classification.png'</span>)
+</pre>
+</div>
+
+<p>
+We write the line as \(w_0 x + w_1 y = w_2\). Note that the line is not uniquely defined: any multiple of the coefficients gives us the same line. Hence, some normalization could be applied, but we ignore this for now.
+</p>
+
+<p>
+Assume that \(w_1 > 0\), then points above (below) the line feature \(w_0 x + w_1 y > (<) w_2\) and we label these points 1 (0).
+</p>
+
+<p>
+To use our geometric intuition, we write the equation for the line as:
+</p>
+\begin{equation}
+\label{eq:1}
+y = \frac{w_2 - w_0 x}{w_1}
+\end{equation}
+<p>
+With this representation, we see that the incorrect classification of point (1,0) with label 0 is caused by the fact that the line is not steep enough. That is &#x2013;assuming $w<sub>1</sub>&gt;0$&#x2013; we need to increase \(w_0\).
+</p>
+
+<p>
+Let \(\hat t\) denote the activation or predicted label for an observation and \(t\) the true label or target. Then the update rule can be written as
+</p>
+\begin{equation}
+\label{eq:2}
+w_0 = w_0 - \eta (\hat t - t)
+\end{equation}
+<p>
+where \(\eta > 0\) denotes the learning rate. For the point (1,0) this becomes
+</p>
+\begin{equation}
+\label{eq:3}
+w_0 = w_0 - \eta (0 - 1)
+\end{equation}
+<p>
+Hence, the algorithm indeed raises \(w_0\) in response to the incorrect classification of (1,0).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga047c66" class="outline-2">
+<h2 id="orga047c66">Deep neural network</h2>
+<div class="outline-text-2" id="text-orga047c66">
+<p>
+The network above had only 1 layer. We had inputs x, y and \(-1\), where the latter is called "bias" in a neural network; in our figure above it is the constant in a line like \(y = ax+b\).
+</p>
+
+<p>
+Now let's introduce a second layer. This is usually called a hidden layer as it does not directly feature the inputs of the system, nor the outputs.
+</p>
+
+<p>
+Assume that this second layer also has 3 nodes. We denote the weights from the input layer to the first hidden note by \((u_0,u_1,u_2)\). For the second and third nodes in the hidden layer we use weights resp. \((v_0,v_1,v_2),(w_0,w_1,w_2)\).
+</p>
+
+<p>
+Hence, the first hidden node has value \(u_0 x + u_1 y - u_2\) etc.
+</p>
+
+<p>
+The third layer is the output layer which has only one node. If the value in this node is negative, we label the observation 0 and otherwise we label it 1.
+</p>
+
+<p>
+The weights from the three hidden nodes to the final node are given by \((z_0,z_1,z_2)\). Hence, we can write the input of the final node as
+</p>
+\begin{equation}
+\label{eq:4}
+z_0(u_0 x + u_1 y - u_2) + z_1 (v_0 x + v_1 y - v_2) + z_2 (w_0 x + w_1 y - w_2)
+\end{equation}
+<p>
+But this looks like a linear combination of \(x,y,-1\). What is the use of the hidden layer if we end up with a linear combination of \(x,y,-1\) anyway? Did we overlook something?
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jan Boone</p>
+</div>
+</body>
+</html>
