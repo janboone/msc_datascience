@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-06-22 ma 15:55 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Assessment material for the course "Seminar Data Science for Economics" 310170-M-6</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jan Boone and Madina Kurmangaliyeva" />
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+</head>
+<body>
+<div id="content">
+<h1 class="title">Assessment material for the course "Seminar Data Science for Economics" 310170-M-6</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org6928062">Syllabus</a>
+<ul>
+<li><a href="#org274015d">Course structure</a></li>
+<li><a href="#org0a373bb">Learning goals</a></li>
+<li><a href="#org27e89dd">Examination</a></li>
+<li><a href="#org774d62e">Course website</a></li>
+</ul>
+</li>
+<li><a href="#org58a1d01">Specification table</a></li>
+<li><a href="#orgff519ca">Inspection information</a></li>
+<li><a href="#org733cf28">Preparation materials for the exam</a></li>
+<li><a href="#orge94b36e">The exam cover page and exam questions for the exams</a></li>
+<li><a href="#org27ee243">Grading instructions</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6928062" class="outline-2">
+<h2 id="org6928062">Syllabus</h2>
+<div class="outline-text-2" id="text-org6928062">
+</div>
+
+<div id="outline-container-org274015d" class="outline-3">
+<h3 id="org274015d">Course structure</h3>
+<div class="outline-text-3" id="text-org274015d">
+<p>
+In the course Data Science for Economics you will learn how to deal with big (unstructured) data to answer policy questions using recent advances in machine learning.
+</p>
+
+<p>
+Whether you are a public policy-maker or a data analyst at a private firm,  you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large individual-level data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which (out of many) variables to use in your analysis.
+</p>
+
+<p>
+This course will help you to overcome those challenges. The "traditional" econometrics you have learnt in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there are more variables than observations, and you do not know at the start which variables and interaction terms to include.
+</p>
+
+<p>
+In this course, we give an introduction to data-project management  (e.g. git, sublime), tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
+</p>
+
+<p>
+We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets, cross-validation and machine learning to find the best instrumental variables.
+</p>
+
+<p>
+Finally, we will cover post-selection inference for causal effects (as in Belloni, Chernozhukov, and Hansen 2013). In terms of software we will be using python, google's tensorflow, and R.
+</p>
+
+<p>
+<b>Required Prerequisites</b>
+</p>
+
+<p>
+Students make sure they follow Econometrics 1 and the python track in AEA 1.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0a373bb" class="outline-3">
+<h3 id="org0a373bb">Learning goals</h3>
+<div class="outline-text-3" id="text-org0a373bb">
+<p>
+By the end of the course, you will be able to:
+</p>
+<ul class="org-ul">
+<li>design your empirical strategy to answer a policy question
+<ul class="org-ul">
+<li>motivate your policy question (why is it relevant/interesting; how is your analysis going to answer the question)</li>
+</ul></li>
+<li>gather unstructured datasets, merge and clean them using programming</li>
+<li>apply machine learning techniques (e.g. neural networks, decision trees, random forest) to deal with big data in a causal framework</li>
+<li>explain the critical assumptions that you need for the technique that you are using and discuss (potential) weaknesses of the technique used</li>
+<li>use machine learning toolkit if the goal is pure prediction, explain why this differs from causal inference</li>
+<li>explain the policy implications of your analysis</li>
+</ul>
+
+<p>
+The overall learning goal is to make you independent in designing and performing data analysis.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org27e89dd" class="outline-3">
+<h3 id="org27e89dd">Examination</h3>
+<div class="outline-text-3" id="text-org27e89dd">
+<p>
+The examination for this course consists of a data analysis project (100%), where you will use the knowledge gained throughout the course and apply it in a new setting on your own.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org774d62e" class="outline-3">
+<h3 id="org774d62e">Course website</h3>
+<div class="outline-text-3" id="text-org774d62e">
+<p>
+All other information can be found on the <a href="index.html#ID-6a40d18d-ece7-40ae-a723-79a2e93891cc">course website</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org58a1d01" class="outline-2">
+<h2 id="org58a1d01">Specification table</h2>
+<div class="outline-text-2" id="text-org58a1d01">
+<p>
+<b>Test type</b>: Assignment 
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Specification table: cognitive skills</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">tested subjects</th>
+<th scope="col" class="org-left">Knowledge</th>
+<th scope="col" class="org-left">Comprehension</th>
+<th scope="col" class="org-left">Application</th>
+<th scope="col" class="org-right">Analysis</th>
+<th scope="col" class="org-right">Evaluation</th>
+<th scope="col" class="org-right">Synthesis</th>
+<th scope="col" class="org-right">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">design empirical strategy</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">1.0</td>
+<td class="org-right">0.5</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">1.5</td>
+</tr>
+
+<tr>
+<td class="org-left">explain policy motivation</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">0.5</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">0.5</td>
+</tr>
+
+<tr>
+<td class="org-left">gather data, merge and clean data (using programming)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">0.5</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">0.5</td>
+</tr>
+
+<tr>
+<td class="org-left">apply machine learning techniques</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">6.0</td>
+<td class="org-right">6.</td>
+</tr>
+
+<tr>
+<td class="org-left">explain critical assumptions, discuss weaknesses</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">0.75</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">0.75</td>
+</tr>
+
+<tr>
+<td class="org-left">distinguish prediction and causal inference</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">0.25</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">0.25</td>
+</tr>
+
+<tr>
+<td class="org-left">explain policy implications</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">0.5</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">0.5</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">total</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">10.</td>
+</tr>
+</tbody>
+</table>
+
+
+<p>
+From the final assignment (discussed below):
+</p>
+<ul class="org-ul">
+<li>design empirical strategy relates to the assignment questions on Research question, (half of) Method and data and Preview of answers</li>
+<li>explain policy motivation: question on Motivation</li>
+<li>gather data, merge clean data (using programming): question on (half of) Method and data</li>
+<li>apply machine learning methods: Python/R code</li>
+<li>explain critical assumptions, discuss weaknesses: Main assumptions (half) and Robustness analysis</li>
+<li>distinguish prediction and causal inference: Main assumptions (half)</li>
+<li>explain policy implications: Discussion and conclusion</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgff519ca" class="outline-2">
+<h2 id="orgff519ca">Inspection information</h2>
+<div class="outline-text-2" id="text-orgff519ca">
+<p>
+Students can contact us for an appointment to discuss the grade of their assignment.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org733cf28" class="outline-2">
+<h2 id="org733cf28">Preparation materials for the exam</h2>
+<div class="outline-text-2" id="text-org733cf28">
+<ul class="org-ul">
+<li>From Datacamp, the following courses:
+<ul class="org-ul">
+<li><a href="https://www.datacamp.com/courses/statistical-simulation-in-python">statistical simulation</a></li>
+<li><a href="https://www.datacamp.com/courses/deep-learning-with-keras-in-python">keras</a></li>
+<li><a href="https://www.datacamp.com/courses/introduction-to-tensorflow-in-python">tensorflow</a></li>
+<li><a href="https://www.datacamp.com/courses/web-scraping-with-python">intro to scraping (do only chapters 1,2,3)</a></li>
+<li><a href="https://www.datacamp.com/courses/regular-expressions-in-python">regular expressions Python</a></li>
+<li><a href="https://www.datacamp.com/courses/string-manipulation-in-r-with-stringr">regular expressions R</a></li>
+<li><a href="https://www.datacamp.com/courses/introduction-to-the-tidyverse">intro to tidyverse R</a></li>
+</ul></li>
+<li><a href="https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb">jupyter notebook</a></li>
+<li>Chapters 6 and 8 from <a href="http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf">An Introduction to Statistical Learning</a> by James, Witte, Hastie, and Tibshirani</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orge94b36e" class="outline-2">
+<h2 id="orge94b36e">The exam cover page and exam questions for the exams</h2>
+<div class="outline-text-2" id="text-orge94b36e">
+<p>
+Students get a template to make their assignment in the form of a jupyter notebook.
+</p>
+
+<p>
+The template can be found <a href="https://github.com/janboone/datascience_assignment_template/blob/master/assignment_notebook.ipynb">here</a> and <a href="https://janboone.github.io/msc_datascience/#org6548148">the description of the final assignment</a>. The template specifies the sections for the final assignment and the max. points that can be earned for each section.
+</p>
+
+<p>
+The template was designed by Madina and Jan.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org27ee243" class="outline-2">
+<h2 id="org27ee243">Grading instructions</h2>
+<div class="outline-text-2" id="text-org27ee243">
+<p>
+Since this is a (free) assignment, it is not possible to provide (exact) answers to each section in the assignment template. The template itself specifies the points we are looking for when grading the assignment.
+</p>
+
+<p>
+Students can work on their own or in teams of two students. We use github classroom and hence can see whether both students contributed to the assignment (github keeps track who made which changes in a file). If we have doubts whether a student (or the two students) worked on her/his own, we ask them to come to our office and explain their code to us.
+</p>
+
+<p>
+Students with a grade of 5.5 can be called in for an oral exam (discussion of their assignment).
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jan Boone and Madina Kurmangaliyeva</p>
+<p class="date">Created: 2020-06-22 ma 15:55</p>
+</div>
+</body>
+</html>
