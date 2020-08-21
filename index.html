@@ -89,7 +89,12 @@ For this course we use the following resources:
 <li><a href="#orgfceab8c">Assessment material</a></li>
 </ul>
 </li>
-<li><a href="#org1f18667">Final Assignment</a></li>
+<li><a href="#org1f18667">Final Assignment</a>
+<ul>
+<li><a href="#org7ca3085">what we are looking for</a></li>
+<li><a href="#org4e9ad54">resit of final assignment</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -349,29 +354,34 @@ Do the following four steps:
 </ul></li>
 <li>go to
 <ul class="org-ul">
-<li><a href="https://jupyterlab.uvt.nl/">jupyter lab</a> (if you are working away from the campus, use the cisco client to start a vpb to access jupyter lab)</li>
-<li>or &#x2013;if all else fails&#x2013; <a href="https://colab.research.google.com/">google's colab</a></li>
+<li><a href="https://jupyterlab.uvt.nl/">jupyter lab</a>
+<ul class="org-ul">
+<li>IT suggests that you use the Firefox browser to access jupyter lab</li>
+<li>sometimes it helps to access jupyter lab with an incognito/private window</li>
+</ul></li>
+<li>or &#x2013;if all else fails&#x2013; you can use <a href="https://colab.research.google.com/">google's colab</a></li>
 </ul></li>
 <li>create a new python notebook and type the following code in the first cell:</li>
 </ul>
-
 <div class="org-src-container">
 <pre class="src src-ipython">%%bash
 
 git clone https://github.com/janboone/msc_datascience.git
 </pre>
 </div>
-
-<p>
-This creates a folder on the server <code>msc_datascience</code> that contains the material for the python part of the course.
-</p>
-
-<p>
-Note: you can only run this command once. If you run it again, you get an error since the folder already exists.
-</p>
-
 <ul class="org-ul">
-<li>instructions for the final assignment can be found <a href="#org1f18667">here</a></li>
+<li>then press the Shift key and Enter key as the same time</li>
+<li>this creates a folder on the server <code>msc_datascience</code> that contains the material for the python part of the course.</li>
+<li>Note: you can only run this command once. If you run it again, you get an error since the folder already exists.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org49ba7d1" class="outline-4">
+<h4 id="org49ba7d1">Final assignment</h4>
+<div class="outline-text-4" id="text-org49ba7d1">
+<ul class="org-ul">
+<li>instructions for the final assignment can be found below.</li>
 </ul>
 </div>
 </div>
@@ -558,9 +568,14 @@ We have a separate page with all relevant <a href="Datascience_for_economics.htm
 <li>push the final notebook on the github classroom repository</li>
 </ul></li>
 </ul>
+</div>
 
+
+<div id="outline-container-org7ca3085" class="outline-3">
+<h3 id="org7ca3085">what we are looking for</h3>
+<div class="outline-text-3" id="text-org7ca3085">
 <p>
-The idea of the assignment is that you report your findings in a transparent way that can easily be verified/reproduced by others.
+The idea of the assignment is that you report your findings in a transparent way that can easily be verified/reproduced by others. The intended audience is your fellow students. They should be able to understand the code you write together with the explanations that you give for this code.
 </p>
 
 <p>
@@ -580,11 +595,11 @@ The following ingredients will be important when we evaluate your assignment:
 <li>are your methods based on correlations (only)?</li>
 <li>do they allow you to make claims about causality?</li>
 </ul></li>
-<li>Give the <b>answer</b> that you find</li>
+<li>Give the <b>answer</b> that you find (as a preview).</li>
 <li>Mention the main <b>assumptions</b> that you need to get this answer.</li>
 <li>Use graphs to introduce your data</li>
 <li>If you use equations, use latex to make them easy to read.</li>
-<li>Explain your code, the reader must be able to easily follow what you are doing.</li>
+<li>Explain your code, the reader &#x2013;think of your fellow students&#x2013;  must be able to easily follow what you are doing.</li>
 <li>How well does your model <b>fit</b> the data?
 <ul class="org-ul">
 <li>what methods do you use to evaluate this?</li>
@@ -592,6 +607,39 @@ The following ingredients will be important when we evaluate your assignment:
 <li>Present a clear conclusion/answer to your question.</li>
 <li>Include some <b>discussion</b> of what you find and elements on which you need additional information.</li>
 </ul>
+
+<p>
+Two remarks:
+</p>
+<ul class="org-ul">
+<li>you can copy code from the web; but
+<ul class="org-ul">
+<li>make sure that you explain the code that you use so that another student of the course understands it and can use it;</li>
+<li>give the reference of the code that you copy;</li>
+</ul></li>
+<li>use <b>common sense</b>: it is not always necessary to have a full blown economic model, but we do expect you to think!
+<ul class="org-ul">
+<li>in the past we had students looking at the effect of age on income in sports; "theory" suggests that this relation is hump-shaped: 5 year olds and 80 year olds tend not to earn a lot of money as elite athletes; the students presented a scatter plot with a clear hump-shape; then they wrote "now we do a linear regression". For each step that you program, ask yourself why this step makes sense and then explain this in your notebook.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4e9ad54" class="outline-3">
+<h3 id="org4e9ad54">resit of final assignment</h3>
+<div class="outline-text-3" id="text-org4e9ad54">
+<p>
+The resit of the final assignment needs to be a new project compared to the one you handed in before. The easiest way to achieve this is to choose a new research question and a new data set. You can use the same data if you make sure that research question and analysis are sufficiently different from before.
+</p>
+
+<p>
+Simply adjusting your first submission based on our feedback will be not be enough. 
+</p>
+
+<p>
+Otherwise, follow the procedure above on how to submit the assignment and fill in the google form.
+</p>
+</div>
 </div>
 </div>
 </div>
