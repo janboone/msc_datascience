@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Screencasts for Seminar Datascience for Economics</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jan Boone" />
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Screencasts for Seminar Datascience for Economics</h1>
+<p>
+<b>Under construction</b>
+</p>
+
+
+<p>
+This page contains the screencasts for the first part of the course <a href="index.html#org59ccf1a">Seminar Datascience for Economics</a>
+</p>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgb0147b7">How are the screencasts supposed to help?</a>
+<ul>
+<li><a href="#orge67702e">Why are there screencasts?</a></li>
+<li><a href="#org89cb95d">Suggested use of the screencasts</a></li>
+<li><a href="#org54b5f6b">Prerequisite knowledge</a></li>
+<li><a href="#org835aa53">Libraries we use</a></li>
+</ul>
+</li>
+<li><a href="#org53233ac">Compare jupyter notebook/lab and emacs</a>
+<ul>
+<li><a href="#org7ac465e">Why am I using emacs</a></li>
+</ul>
+</li>
+<li><a href="#orgb82c9b0">Distributions of an estimator</a>
+<ul>
+<li><a href="#org54f7677">distribution of sample average and standard deviation</a></li>
+<li><a href="#org8568335">distribution of a slope</a></li>
+<li><a href="#orgd9c8f25">bootstrapping</a></li>
+<li><a href="#orgc9c20e1">Doing your own OLS and lasso regressions</a></li>
+</ul>
+</li>
+<li><a href="#org7682d11">Causality</a>
+<ul>
+<li><a href="#orgdf34a5c">Fork</a></li>
+<li><a href="#orgb3aba9a">Pipe</a></li>
+<li><a href="#org29553aa">Collider</a></li>
+</ul>
+</li>
+<li><a href="#orgc1681a6">Tensors</a>
+<ul>
+<li><a href="#org2a5e946">Introduction</a></li>
+<li><a href="#orgb7c6934">Creating tensors with numpy</a></li>
+<li><a href="#org96fa9b3">Broadcasting</a></li>
+<li><a href="#org640ad32">slicing and fancy indexing</a></li>
+<li><a href="#orgdcd5539">First neural network</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb0147b7" class="outline-2">
+<h2 id="orgb0147b7">How are the screencasts supposed to help?</h2>
+<div class="outline-text-2" id="text-orgb0147b7">
+<p>
+For the first part of the course we use <a href="https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb">this notebook</a>. The notebook is fairly self-explanatory, but you may get stuck with some of the questions. The screencasts are meant to help you along if you do not know how to proceed. The idea is similar to what we did in <a href="https://janboone.github.io/applied-economics/">Applied Economic Analysis</a>.
+</p>
+</div>
+
+<div id="outline-container-orge67702e" class="outline-3">
+<h3 id="orge67702e">Why are there screencasts?</h3>
+<div class="outline-text-3" id="text-orge67702e">
+<p>
+The screencasts were initially developed because of the 2020 corona crisis where students were no longer able to come to the campus of Tilburg University. But they can also be used as complements to the lecturers and classes taught.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org89cb95d" class="outline-3">
+<h3 id="org89cb95d">Suggested use of the screencasts</h3>
+<div class="outline-text-3" id="text-org89cb95d">
+<p>
+Just watching the screencasts is not going to be very useful for you. The best way to use them is as follows:
+</p>
+
+<ul class="org-ul">
+<li>first read the relevant section in the notebook and try to solve the questions by yourself</li>
+<li>if you manage to do so, you are done and there is no need to watch the screencast; if you do not manage to answer all the questions, you have the background for the screencast (which is rather short and does not motivate the underlying economic problem) and you know what problems to look for in the video</li>
+<li>type along with what we do in the screencast. Pause the video if you need more time to type</li>
+<li>experiment with the code that we give you in the video either during the video or after watching it; try different numerical values, use different syntax or a different library; if you get an error, google it to see what is going on etc.</li>
+<li>in general, play around with the python code; that is the best way to understand and learn the language</li>
+</ul>
+
+<p>
+With screencasts there is &#x2013;obviously&#x2013; no interaction between teachers and students. This is a problem when you run into an error message. In class students then immediately raise their hand to understand what is happening.
+</p>
+
+<p>
+As this is not possible with a screencast, here are some tips on how to deal with error messages. Also note that as the screencast is typed "live", so there will be error messages in the videos as well and you can see how we deal with these as we go along.
+</p>
+
+<p>
+Python error messages:
+</p>
+<ul class="org-ul">
+<li>start reading the error message at the end; hence scroll down in your notebook to see the last line of the error message. This will usually give a clue of what is happening</li>
+<li>if you do not know what the last line means, use copy/paste to google it or go to <a href="https://stackoverflow.com/">stackoverflow</a> directly</li>
+<li>reading "upwards" from the last line, you can trace how the error was generated</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org54b5f6b" class="outline-3">
+<h3 id="org54b5f6b">Prerequisite knowledge</h3>
+<div class="outline-text-3" id="text-org54b5f6b">
+<p>
+<b>Economics/Econometrics</b> this introduction to datascience is part of an MSc degree in Economics. Hence, we assume that you know what OLS is, standard errors, the difference between correlation and causality and you have seen instrumental variables before. In terms of math, you can do some basic linear algebra like multiplying a matrix and a vector and know what a (partial) derivative of a function is.
+</p>
+
+<p>
+<b>Python</b>: you have done the python track of <a href="https://janboone.github.io/applied-economics/">Applied Economic Analysis</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org835aa53" class="outline-3">
+<h3 id="org835aa53">Libraries we use</h3>
+<div class="outline-text-3" id="text-org835aa53">
+<ul class="org-ul">
+<li>numpy: basic number crunching and vector manipulation</li>
+<li>pandas to work with dataframes</li>
+<li>statsmodels to do OLS</li>
+<li>pymc3: to generate random numbers and do Bayesian analysis</li>
+<li>tensorflow (2.0 or later): we use keras for our neural networks</li>
+<li>scipy: scientific python</li>
+<li>matplotlib: to make plots</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org53233ac" class="outline-2">
+<h2 id="org53233ac">Compare jupyter notebook/lab and emacs</h2>
+<div class="outline-text-2" id="text-org53233ac">
+</div>
+<div id="outline-container-org7ac465e" class="outline-3">
+<h3 id="org7ac465e">Why am I using emacs</h3>
+<div class="outline-text-3" id="text-org7ac465e">
+<p>
+You know how to work with JupyterLab on the university servers (or on your own laptop). As with Applied Economic Analysis, most screencasts will be made with Emacs. See the <a href="https://janboone.github.io/applied-economics/pagescreencasts.html#org3bcecee">Applied Economics website</a> for an explanation why I use Emacs.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb82c9b0" class="outline-2">
+<h2 id="orgb82c9b0">Distributions of an estimator</h2>
+<div class="outline-text-2" id="text-orgb82c9b0">
+</div>
+<div id="outline-container-org54f7677" class="outline-3">
+<h3 id="org54f7677">distribution of sample average and standard deviation</h3>
+<div class="outline-text-3" id="text-org54f7677">
+</div>
+<div id="outline-container-org51028df" class="outline-4">
+<h4 id="org51028df">generating data</h4>
+<div class="outline-text-4" id="text-org51028df">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/QLVO-twLJU4" frameborder="0" allowfullscreen>generating data</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>some estimators have known (analytical) distributions</li>
+<li>this is usually not the case with advanced models in datascience</li>
+<li>hence we need to know how to simulate such distributions</li>
+<li>we first simulate the distribution of a sample average \(m\)</li>
+<li>we use the code <code>tf.random.uniform([N_simulations,sample_size],0,1)</code> to generate <code>N_simulations</code> times a sample of size <code>sample_size</code></li>
+<li>this results in a dataset with <code>N_simulations</code> rows and <code>sample_size</code> columns</li>
+<li><code>tf.random.uniform?</code> to see how this function can be used</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>generate data that is drawn from a normal distribution with mean 0 and standard deviation 1</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org07d4b35" class="outline-4">
+<h4 id="org07d4b35">distribution sample mean</h4>
+<div class="outline-text-4" id="text-org07d4b35">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/GysdEGpCfk4" frameborder="0" allowfullscreen>sample mean</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>calculating the mean across an axis with <code>np.mean(data, axis = 1)</code></li>
+<li>making a histogram with matplotlib's <code>hist</code> function; setting <code>density</code> and <code>bins</code></li>
+<li>adding title and labels on the axes</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>change the values for <code>N_simulations</code> and <code>sample_size</code> and plot the histogram of \(m\); what do you find? How does, for instance, the standard deviation in the histogram vary with these parameters?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4ca432f" class="outline-4">
+<h4 id="org4ca432f">standard deviation of \(m\)</h4>
+<div class="outline-text-4" id="text-org4ca432f">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/ancSPkoYnX8" frameborder="0" allowfullscreen>standard deviation m</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>we show how the standard deviation of \(m\) varies with the sample size \(n\)</li>
+<li>we do this by creating an empty vector <code>vector_std</code> and for each sample size we calculate the standard deviation of \(m\) (across our <code>N_simulations</code>) and then add this to the vector with <code>vector_std.append()</code></li>
+<li>using <code>plt.scatter</code> we plot the sample size against this standard deviation</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>how do we usually call "the standard deviation of \(m\)"?</li>
+<li>what is the analytical expression for the relation between sample size \(n\) and the standard deviation of \(m\)?
+<ul class="org-ul">
+<li>to find this relation, you can check <a href="https://en.wikipedia.org/wiki/Continuous_uniform_distribution">wikipedia</a> to find the expression for the variance \(V(x)\)</li>
+<li>or to numerically approximate it, you can use <code>np.std(tf.random.uniform([10000],0,1))</code></li>
+<li>use python to check that both these approaches give the same answer and explain why</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org033b895" class="outline-4">
+<h4 id="org033b895">distribution of \(s\)</h4>
+<div class="outline-text-4" id="text-org033b895">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/0Qsxh_BArZY" frameborder="0" allowfullscreen>distribution of the standard deviation</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>we calculate the standard deviation of the sample (of 10 draws) across columns with  <code>np.std(data, axis = 1)</code></li>
+<li>we plot this distribution of <code>N_simulations</code> values of \(s\) with <code>plt.hist()</code></li>
+<li>then we use a boolean expression to calculate the probability that \(s\) is below 0.20
+<ul class="org-ul">
+<li>since <code>True</code> is represented in python by 1 (and <code>False</code> by 0), <code>np.sum(data_std &lt; 0.20)</code> gives the number of case (out of <code>N_simulations</code>) where the standard deviation is below 0.20</li>
+<li>dividing this by <code>N_simulations</code> (or equivalently <code>len(data_std)</code>) gives us the fraction or probability that \(s<0.20\)</li>
+</ul></li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>calculate the probability that \(s \in [0.20,0.30]\)</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org8568335" class="outline-3">
+<h3 id="org8568335">distribution of a slope</h3>
+<div class="outline-text-3" id="text-org8568335">
+</div>
+<div id="outline-container-orgd1079c9" class="outline-4">
+<h4 id="orgd1079c9">generating data</h4>
+<div class="outline-text-4" id="text-orgd1079c9">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/D9uaz2dPMRw" frameborder="0" allowfullscreen>generating data</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>how to generate \(x\) observations denoted <code>simulated_x</code> and then use these to generate data on \(y\) denoted <code>simulated_y</code> of the format \(y = \beta_0 + \beta_1 x + \varepsilon\)</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>what values of \(\beta_0\) and \(\beta_1\) do we use in the video and which values in the notebook?</li>
+<li>how does the distribution of \(\varepsilon\) differ in the video and in the notebook? In particular, what is the standard deviation of \(\varepsilon\) in the notebook? [hint: this is not 1.0]</li>
+<li>generate <code>simulated_x</code> using a different distribution than the normal distribution, e.g. use a gamma distribution for \(x\).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga9d8975" class="outline-4">
+<h4 id="orga9d8975">doing OLS on your data</h4>
+<div class="outline-text-4" id="text-orga9d8975">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/MDinBLqliIw" frameborder="0" allowfullscreen>doing OLS</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>make a scatter plot for one of our <code>N_simulations</code> datasets</li>
+<li>for this dataset do an OLS regression using <code>statsmodels</code> (see the <a href="https://www.statsmodels.org/stable/regression.html">website</a> for details on the syntax; but for this course you do not need to learn <code>statsmodels</code>)</li>
+<li>some libraries, like <code>statsmodels</code>, cannot work with tensorflow arrays directly; you can use the <code>.numpy()</code> method to avoid problems</li>
+<li>plot the estimated OLS line in the scatter plot</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>in the same scatter plot, present two datasets and two estimated OLS lines; that is, work with <code>simulated_x[0,:],simulated_y[0,:]</code> and <code>simulated_x[1,:],simulated_y[1,:]</code> in the same figure</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc08a605" class="outline-4">
+<h4 id="orgc08a605">distribution of slopes</h4>
+<div class="outline-text-4" id="text-orgc08a605">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/YiZV985oB5k" frameborder="0" allowfullscreen>distribution of slopes</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>use a for-loop to run <code>N_simulations</code> OLS regressions</li>
+<li>using the <code>.append()</code> method to add the estimated slopes and constants to their resp. lists</li>
+<li>then plot the slopes with a histogram</li>
+<li>plot the estimated OLS lines in \((x,y)\) space</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>what is the probability that the slope is lower than \(-2.2\)?</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd9c8f25" class="outline-3">
+<h3 id="orgd9c8f25">bootstrapping</h3>
+<div class="outline-text-3" id="text-orgd9c8f25">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/69zsXfKib2o" frameborder="0" allowfullscreen>bootstrapping</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>generate your own data: here two data sets \(A\) and \(B\)</li>
+<li>calculate the observed difference in means for the 2 data sets: \(m_{A}, m_B\)</li>
+<li>is the difference \(m_A - m_B\) significant?</li>
+<li>under the null hypothesis that \(A\) and \(B\) were drawn from the same distribution, we can concatenate our data sets \(A\) and \(B\) into one big data set denoted \(AB\)</li>
+<li>out of \(AB\) we generate 10,000 data sets \(\tilde A\) and 10,000 data sets \(\tilde B\) and we calculate the difference \(m_{\tilde A}-m_{\tilde B}\) 10,000 times; hence we get the distribution of our statistic the difference in means between \(A\) and \(B\)</li>
+<li>then we see how likely it is that the difference exceeds the observed difference \(m_A - m_B\)</li>
+<li>if this is not likely, we say that it is not likely that \(A\) and \(B\) were drawn from the same distribution</li>
+<li>we use <code>tf.concat</code> to merge the two data sets and</li>
+<li><code>np.random.shuffle</code> to shuffle the rows of the combined data set \(AB\) to generate new samples for \(\tilde A\) and \(\tilde B\)</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>plot the distribution of the differences</li>
+<li>redo this exercise specifying different values for <code>delta</code>; for which values of <code>delta</code> (not equal to 1) do you find that the null hypothesis is not rejected?</li>
+<li>Suppose you have a data set with a \(y\) column and an \(x\) column. You run a regression of \(y\) on \(x\) and a constant and find that the slope on the \(x\) variable equals 0.05. How can you use bootstrapping to test whether this slope equals 0? [hint: if the slope is zero, what does this say about the rows \((x_i,y_i)\) in your data set?]</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc9c20e1" class="outline-3">
+<h3 id="orgc9c20e1">Doing your own OLS and lasso regressions</h3>
+<div class="outline-text-3" id="text-orgc9c20e1">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/r2QteNGlMYM" frameborder="0" allowfullscreen>OLS and lasso</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>defining tensorflow vectors and using <code>tf.concat</code> to create a matrix \(X\) with these vectors as columns</li>
+<li>using <code>tf.ones</code> to create a column that consists of 1's</li>
+<li>then we define the difference between our observations and our OLS line as \(y-Xw\) where \(w\) consists of the constant, the slope of the first variable and the slope of the second variable; for now think (incorrectly) of \(Xw\) as a matrix multiplication (once we get to "broadcasting" you will see what it really is)</li>
+<li>we define a function <code>loss</code> which equals the sum of the squared differences between \(y\) and our prediction \(Xw\)</li>
+<li>we use <code>optimize.fmin</code> to minimize the loss function; <code>fmin</code> requires the function to be minimized and an initial guess for the variables (here \(w\)) over which we minimize the function</li>
+<li>this minimization gives us the OLS estimates of \(w\)</li>
+<li>for lasso and ridge regressions, the \(x\) and \(y\) variables need to be standardized; our \(x\) variables are standardized by the way we defined them (zero mean and standard deviation equal to one); so we only center \(y\) such that the centered variable has mean 0</li>
+<li>we define the loss function for a lasso regression which is a function of the coefficients \(w\) and a penalty term \(\lambda\).</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>minimize <code>loss-lasso(w,0)</code>; which coefficients \(w\) do you find?</li>
+<li>are they identical to \(w\) minimizing <code>loss(w)</code>? Why (not)?</li>
+<li>try <code>w_guess = tf.zeros([3])</code> and <code>w_guess = tf.zeros([3,1])</code> in the code. Do both of these work as well?</li>
+<li>generate the data with <code>constant</code> and <code>slope2</code> not equal to zero. Then estimate the OLS and lasso coefficients.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7682d11" class="outline-2">
+<h2 id="org7682d11">Causality</h2>
+<div class="outline-text-2" id="text-org7682d11">
+</div>
+<div id="outline-container-orgdf34a5c" class="outline-3">
+<h3 id="orgdf34a5c">Fork</h3>
+<div class="outline-text-3" id="text-orgdf34a5c">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/eYYxS6HBAEI" frameborder="0" allowfullscreen>Fork</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>generate our own data where \(Z\) causes \(X\) and \(Y\) but there is no causal link between \(X\) and \(Y\)</li>
+<li>create a panda's dataframe with the three variables \(x,y,x\) using <code>pd.DataFrame</code> and specify a dictionary of the form: <code>{'column name':variable name}</code></li>
+<li>generate OLS results from the regression \(y = b_0 + b_x x\) using statsmodels (again: you do not need to know statsmodels for this course)</li>
+<li>this regression shows that \(b_x\) is significantly different from 0
+<ul class="org-ul">
+<li>this is correct: there is a strong correlation between \(x\) and \(y\)</li>
+</ul></li>
+<li>you may be tempted to interpret this as a causal effect of \(x\) on \(y\)
+<ul class="org-ul">
+<li>this is not correct: the way we generated the data in python clearly shows that there is no causal effect of \(x\) on \(y\)</li>
+</ul></li>
+<li>A fork can be easily solved: just run the regression \(y = b_0 + b_x x + b_z z\) and this will show the unbiased estimate of \(b_x\): in our model we find that after controlling for \(z\), there is no significant effect anymore of \(x\) on \(y\).</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>Write \(y = \beta_0 + \beta_x x + \beta_z z + \varepsilon\); then in the video we consider the case with \(\beta_x = 0\)
+<ul class="org-ul">
+<li>now program your data such that \(\beta_x \neq 0\)</li>
+<li>first run the regression \(y = b_0 + b_x x\): do you find \(b_x = \beta_x\)?</li>
+<li>then run the regression \(y = b_0 + b_x x + b_z z\): how do \(b_x\) and $ &beta;<sub>x</sub>$ compare now?</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb3aba9a" class="outline-3">
+<h3 id="orgb3aba9a">Pipe</h3>
+<div class="outline-text-3" id="text-orgb3aba9a">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/BWLrbqho8Hs" frameborder="0" allowfullscreen>Pipe</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>we generate data where \(X\) causes \(Z\) and \(Z\) causes \(Y\)</li>
+<li>hence there is a causal effect of \(X\) on \(Y\) (via \(Z\))</li>
+<li>running a regression \(y = b_0 + b_x x + b_z z\) shows that \(b_x\) is not significantly different from 0
+<ul class="org-ul">
+<li>hence you could incorrectly infer that \(X\) has no causal effect on \(Y\) (but actually it does in the data that we generated)</li>
+</ul></li>
+<li>this regression shows that after controlling for \(Z\), \(X\) has no (additional) effect on \(Y\)</li>
+<li>hence with a fork the regression \(y = b_0 + b_x x + b_z z\) suggests the correct causal interpretation of \(X\) on \(Y\) but with a pipe this regression gives the wrong impression of the causal effect of \(X\) on \(Y\): so which one should you use in practice?</li>
+<li>your knowledge of the world should help you figure out whether you are in a fork or pipe "situation" and hence which regression gives the correct suggestion of causal effects.</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>with the data generated in the video, run the regression \(y = b_0 + b_x x\): does this provide the correct value for \(b_x\)</li>
+<li>generate data using \(y = \beta_0 + \beta_x x + \beta_z z + \varepsilon\) with \(\beta_x \neq 0\). Which regression gives the correct size of the causal effect of \(X\) on \(Y\)? Can you determine this correct size analytically?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org29553aa" class="outline-3">
+<h3 id="org29553aa">Collider</h3>
+<div class="outline-text-3" id="text-org29553aa">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/VrfDU1Dl9G8" frameborder="0" allowfullscreen>Collider</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>we create a dataset with a collider</li>
+<li>we run the regression of \(Y\) on \(X\) and \(Z\) and find a negative effect of \(X\) on \(Y\)
+<ul class="org-ul">
+<li>this is puzzling because in our data \(X\) has a positive effect on \(Z\) and \(Z\) has a positive effect on \(Y\)</li>
+<li>hence where is the negative effect coming from?</li>
+</ul></li>
+<li>when running a regression like \(y = b_0 + b_x x + b_z z\), the interpretation of \(b_x\) is the effect of \(x\) for a given value of \(z\)</li>
+<li>hence we plot the relation between \(X\) and \(Y\) for a given value of \(Z\): this scatter plot reveals a negative correlation</li>
+<li>when controlling for parent's education \(Z\), a well educated grandparent must have lived in a neighborhood that is not so great; while a grandparent (with the same \(Z\), educational achievement of the parent) who has low education her/himself must have lived in great neighborhood. The former grandparent's grandchild lives in the same bad neighborhood and has low educational achievement while the latter grandchild's educational achievement is boosted by the good neighborhood they live in.</li>
+<li>this explains the negative correlation between \(X\) and \(Y\) controlling for \(Z\)</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>run the regression of \(Y\) on \(X\) only: what effect do you find?</li>
+<li>include the neighborhood effects \(U\) in the dataframe and run the regression of \(Y\) on \(X, Z\) and \(U\): what effects do you find?</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgc1681a6" class="outline-2">
+<h2 id="orgc1681a6">Tensors</h2>
+<div class="outline-text-2" id="text-orgc1681a6">
+</div>
+<div id="outline-container-org2a5e946" class="outline-3">
+<h3 id="org2a5e946">Introduction</h3>
+<div class="outline-text-3" id="text-org2a5e946">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/yJxsbWL9JUI" frameborder="0" allowfullscreen>Introduction Tensors</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>we create a "normal" data set with variables like gdp, inflation, unemployment
+<ul class="org-ul">
+<li>this is basically a matrix: 2 dimensional data</li>
+<li>columns are the variables and rows the observations (e.g. countries with cross section data, or time for a given country in time series data or a combination of countries over time in panel data)</li>
+</ul></li>
+<li>we download the mnist data set which consists of images of handwritten numbers
+<ul class="org-ul">
+<li>that is, one observation is a handwritten number in 2 dimensions</li>
+<li>hence the data is 3 dimensional: the training data consists of 60,000 observations where each observation is a two dimensional image</li>
+<li>tensors allow us to work with data in higher dimensions than two</li>
+</ul></li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>what is the dimension of <code>train_labels</code>?</li>
+<li>use <code>inflation.shape</code> to see that <code>inflation</code> is a two dimensional <b>tensor</b> [hint: the command returns 2 numbers]</li>
+<li>but what is the dimension of <code>inflation</code> as a <b>vector</b>? [hint: the distinction between dimensions as a vector and as a tensor is confusing at first, but you will get used to it]</li>
+<li>check what <code>train_labels[4]</code> is.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb7c6934" class="outline-3">
+<h3 id="orgb7c6934">Creating tensors with numpy</h3>
+<div class="outline-text-3" id="text-orgb7c6934">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/XWCmZjjgeLs" frameborder="0" allowfullscreen>tensors with numpy</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>create a tensor in numpy using the <code>.reshape</code> method</li>
+<li>using the <code>.shape</code> and <code>.ndim</code> methods to determine what the shape of the tensor is what its dimensions are</li>
+<li>a 100-dimensional column vector \(x\) turns out to have dimension 1 as a tensor</li>
+<li>add a new dimension to a tensor using <code>np.newaxis</code></li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>create a vector <code>y = np.arange(120)</code> and define <code>y5 = y.reshape(1,2,3,4,5)</code>
+<ul class="org-ul">
+<li>what is the shape of <code>y5</code>? And is dimensions?</li>
+<li>to get a sense of what <code>y5</code> looks like, try things like <code>y5[:,0,0,0,0]</code> and  <code>y5[0,0,:,0,0]</code> and  <code>y5[0,0,:,:,0]</code></li>
+<li>you can also evaluate <code>y5</code> itself and you get the sense of a matrix of matrices; pay attention to the square brackets <code>[]</code> to see how python delineates dimensions in its output when evaluating <code>y5</code></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org96fa9b3" class="outline-3">
+<h3 id="org96fa9b3">Broadcasting</h3>
+<div class="outline-text-3" id="text-org96fa9b3">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/4xUIQlbxHqI" frameborder="0" allowfullscreen>broadcasting</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>numpy matrix multiplication using the <code>@</code> operator</li>
+<li>multiplying tensors using broadcasting</li>
+<li>multiplication, addition etc. of tensors is done element by element</li>
+<li>if the two tensors do not have the same shape, numpy uses broadcasting to get the tensors into the same shape</li>
+<li>broadcasting rules are:
+<ul class="org-ul">
+<li>start at the last dimension of the two tensors</li>
+<li>these two dimensions are compatible if
+<ul class="org-ul">
+<li>either they are equal</li>
+<li>or if they are not equal, at least one of them equals 1</li>
+</ul></li>
+<li>if this is satisfied, move a dimension "to the left" and do the same check</li>
+</ul></li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>create two tensors yourself, e.g. using <code>np.arange</code> and <code>.reshape</code>, and try to add them together; create tensors where this does not work and then use <code>np.newaxis</code> to make the tensors compatible; check that you did this correctly by multiplying them and python should not throw an error</li>
+<li>check the examples in the notebook and predict &#x2013;before running the code&#x2013; whether they can be broadcast together or notebook</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org640ad32" class="outline-3">
+<h3 id="org640ad32">slicing and fancy indexing</h3>
+<div class="outline-text-3" id="text-org640ad32">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/B0dU9F6v5U4" frameborder="0" allowfullscreen>slicing and indexing</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>we create a 2-dimensional tensor \(x\)</li>
+<li>then we select the first element as <code>x[0,0]</code>, the last element as <code>x[-1,-1]</code></li>
+<li><code>x[:,a:b:c]</code> means we want all rows and then columns starting with index <code>a</code> up to (but not including) index <code>b</code> and we take steps <code>c</code>. If no value of <code>a</code> is specified we start at index 0, if no <code>b</code> is specified we go to the last element and if no <code>c</code> is specified we take step 1</li>
+<li><code>c = -1</code> implies that we reverse the order</li>
+<li>fancy indexing uses boolean masks to select entries from a tensor: <code>x[x&gt;0]</code> selects the positive elements out of the tensor <code>x</code></li>
+<li>this can be used to plot a function where the color varies with the value of the function</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>the slicing and indexing questions in the notebook should now be straightforward to do</li>
+<li>create a 4 dimensional tensor and make selections out the 4 dimensions</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdcd5539" class="outline-3">
+<h3 id="orgdcd5539">First neural network</h3>
+<div class="outline-text-3" id="text-orgdcd5539">
+<ul class="org-ul">
+<li>After all the work of understanding tensors, the notebook presents a first example of a neural network. At this point you do not need to worry about the syntax (from <code>keras</code>) with which we build the neural network. Just go through the notebook and run the cells. The independent variable (\(x\) variable, if you like) is now a two-dimensional figure: a handwritten number. The labels are the number that was handwritten in the figure. The network tries to predict this label based on the figure. The notebook takes you through the steps and checks accuracy.</li>
+<li>the \(x\) variable in the train set is called <code>train_images</code> which is a 3-dimensional tensor of shape \((60000, 28, 28)\). You cannot work with such \(x\) variables in an OLS regression, but the neural network has no problems with this.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jan Boone</p>
+</div>
+</body>
+</html>
