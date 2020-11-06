@@ -85,6 +85,13 @@ This page contains the screencasts for the first part of the course <a href="ind
 <li><a href="#orgdcd5539">First neural network</a></li>
 </ul>
 </li>
+<li><a href="#org83ed859">Overfitting and underfitting</a>
+<ul>
+<li><a href="#orgfbb67a4">generating the data</a></li>
+<li><a href="#orgddbe136">overfitting</a></li>
+</ul>
+</li>
+<li><a href="#org208ea87">Neural network</a></li>
 </ul>
 </div>
 </div>
@@ -191,9 +198,9 @@ You know how to work with JupyterLab on the university servers (or on your own l
 <h3 id="org54f7677">distribution of sample average and standard deviation</h3>
 <div class="outline-text-3" id="text-org54f7677">
 </div>
-<div id="outline-container-org51028df" class="outline-4">
-<h4 id="org51028df">generating data</h4>
-<div class="outline-text-4" id="text-org51028df">
+<div id="outline-container-orgd1079c9" class="outline-4">
+<h4 id="orgd1079c9">generating data</h4>
+<div class="outline-text-4" id="text-orgd1079c9">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/QLVO-twLJU4" frameborder="0" allowfullscreen>generating data</iframe>
 </p>
@@ -311,9 +318,9 @@ Questions you should be able to answer before continuing:
 <h3 id="org8568335">distribution of a slope</h3>
 <div class="outline-text-3" id="text-org8568335">
 </div>
-<div id="outline-container-orgd1079c9" class="outline-4">
-<h4 id="orgd1079c9">generating data</h4>
-<div class="outline-text-4" id="text-orgd1079c9">
+<div id="outline-container-org0c9b97b" class="outline-4">
+<h4 id="org0c9b97b">generating data</h4>
+<div class="outline-text-4" id="text-org0c9b97b">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/D9uaz2dPMRw" frameborder="0" allowfullscreen>generating data</iframe>
 </p>
@@ -712,6 +719,85 @@ Questions you should be able to answer before continuing:
 </ul>
 </div>
 </div>
+</div>
+
+<div id="outline-container-org83ed859" class="outline-2">
+<h2 id="org83ed859">Overfitting and underfitting</h2>
+<div class="outline-text-2" id="text-org83ed859">
+</div>
+<div id="outline-container-orgfbb67a4" class="outline-3">
+<h3 id="orgfbb67a4">generating the data</h3>
+<div class="outline-text-3" id="text-orgfbb67a4">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/BIW0H6cB2DU" frameborder="0" allowfullscreen>overfitting generating data</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>when doing OLS, adding variables always improves the fit/reduces the mean squared error (mse)</li>
+<li>there are two dangers when you keep adding variables to a regression:
+<ul class="org-ul">
+<li>as discussed above: you start to misinterpret the results in terms of causality</li>
+<li>although mse falls, your predictions become worse at some point</li>
+</ul></li>
+<li>overfitting is the situation where you add so many variables that your predictions start to suffer</li>
+<li>with underfitting you did not add enough relevant variables and your predictions are less than optimal as well</li>
+<li>you get an idea of the over/underfitting of a model by splitting your data into a train and test data set
+<ul class="org-ul">
+<li>you estimate (train) your model on the train data</li>
+<li>and evaluate your model on the test data</li>
+</ul></li>
+<li>we use <code>tf.keras.losses.mse</code> to evaluate the model; we provide this function with two variables: the observed \(y\) values in the train data (<code>df_train['y']</code>) and the model prediction on the train data: <code>model.predict(df_train)</code></li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>change the definition of the variable \(y\) by adding terms \(x^3,x^4\) to it. Then run the code again and see what happens to the development of the mse.</li>
+<li>change other parameters like <code>N_observations</code> and <code>train_size</code> and see the effects on the development of mse and with the code of the next video on performance on the test set.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgddbe136" class="outline-3">
+<h3 id="orgddbe136">overfitting</h3>
+<div class="outline-text-3" id="text-orgddbe136">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/EXMt0LWgtVs" frameborder="0" allowfullscreen>overfitting in test data</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>again we use <code>tf.keras.losses.mse</code> to evaluate the model but now with the observed \(y\) values in the test data (<code>df_test['y']</code>) and the model prediction on the test data: <code>model.predict(df_test)</code></li>
+<li>adding additional (irrelevant) variables basically destroys the prediction performance of the model on the test data</li>
+<li>in the video the mse for the test data is minimized by including the correct variables in the model (which we know as we generated the data ourselves)</li>
+<li>plotting the higher order models in \((x,y)\) space shows that they try to capture idiosyncratic features of the train data that do not generalize to the test data: this is why their prediction performance deteriorates by including more variables</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>suppose you estimate a model on the train data and get great results on the test data. How can you be sure that this is no coincidence of the way you split the data into train and test data?</li>
+<li>is the following estimation procedure ok?
+<ul class="org-ul">
+<li>fix the train and test data</li>
+<li>estimate a first version of the model on the train data and evaluate the result on the test data</li>
+<li>then add new variables/delete some variables, change the functional form of the equation you estimate (and later on, change the hyper parameters of the model), estimate on the train data and evaluate on the test data</li>
+<li>keep repeating this till you have minimized the mse on the test data</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org208ea87" class="outline-2">
+<h2 id="org208ea87">Neural network</h2>
 </div>
 </div>
 <div id="postamble" class="status">
