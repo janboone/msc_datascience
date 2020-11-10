@@ -91,7 +91,15 @@ This page contains the screencasts for the first part of the course <a href="ind
 <li><a href="#orgddbe136">overfitting</a></li>
 </ul>
 </li>
-<li><a href="#org208ea87">Neural network</a></li>
+<li><a href="#org208ea87">Neural network</a>
+<ul>
+<li><a href="#org52c99f4">perceptron</a></li>
+<li><a href="#orga881998">tensorflow regression</a></li>
+<li><a href="#org0f3e049">tensorflow classification</a></li>
+</ul>
+</li>
+<li><a href="#org69b308d">Back to our first neural network</a></li>
+<li><a href="#org1983a33">Treatment effects</a></li>
 </ul>
 </div>
 </div>
@@ -198,9 +206,9 @@ You know how to work with JupyterLab on the university servers (or on your own l
 <h3 id="org54f7677">distribution of sample average and standard deviation</h3>
 <div class="outline-text-3" id="text-org54f7677">
 </div>
-<div id="outline-container-orgd1079c9" class="outline-4">
-<h4 id="orgd1079c9">generating data</h4>
-<div class="outline-text-4" id="text-orgd1079c9">
+<div id="outline-container-org0c9b97b" class="outline-4">
+<h4 id="org0c9b97b">generating data</h4>
+<div class="outline-text-4" id="text-org0c9b97b">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/QLVO-twLJU4" frameborder="0" allowfullscreen>generating data</iframe>
 </p>
@@ -318,9 +326,9 @@ Questions you should be able to answer before continuing:
 <h3 id="org8568335">distribution of a slope</h3>
 <div class="outline-text-3" id="text-org8568335">
 </div>
-<div id="outline-container-org0c9b97b" class="outline-4">
-<h4 id="org0c9b97b">generating data</h4>
-<div class="outline-text-4" id="text-org0c9b97b">
+<div id="outline-container-org494eb77" class="outline-4">
+<h4 id="org494eb77">generating data</h4>
+<div class="outline-text-4" id="text-org494eb77">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/D9uaz2dPMRw" frameborder="0" allowfullscreen>generating data</iframe>
 </p>
@@ -798,6 +806,170 @@ Questions you should be able to answer before continuing:
 
 <div id="outline-container-org208ea87" class="outline-2">
 <h2 id="org208ea87">Neural network</h2>
+<div class="outline-text-2" id="text-org208ea87">
+</div>
+<div id="outline-container-org52c99f4" class="outline-3">
+<h3 id="org52c99f4">perceptron</h3>
+<div class="outline-text-3" id="text-org52c99f4">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/BpKcGueisRI" frameborder="0" allowfullscreen>update coefficients network</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>we use <a href="https://homepages.ecs.vuw.ac.nz/~marslast/Code/Ch3/pcn.py">Stephen Marsland</a>'s code for the perceptron to understand how weights in a neural network are updated</li>
+<li>weight \(w_0\) is updated according to the rule: \(w_0 = w_0 - \eta(\hat t -t)x\) where \(\eta\) denotes the learning rate, \(\hat t\) is the current prediction of our neural network and \(t\) is the true (correct) target for the point \(x\). Hence, if \(\hat t = t\) there is no need to update \(w_0\) as far as point \(x\) is concerned.</li>
+<li>we illustrate with a simple graph how this updating of weights improves the prediction of our model</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>in the video we consider the case where \(w_1 > 0\); check that this updating works as well in case \(w_1 < 0\)</li>
+<li>another way to update the line in the video is to leave \(w_0\) unchanged and adapt \(w_1\); check that the correction works as well for \(w_1\)</li>
+<li>do the section on the multi-layer perceptron in the notebook; if you have trouble downloading the data, check the video on tensor classification below.</li>
+<li>a great way to get some intuition on the workings of a neural network is to go to the <a href="http://playground.tensorflow.org/">playground</a></li>
+<li>if you need a break and want to have some fun with machine learning, go and <a href="https://quickdraw.withgoogle.com/">doodle</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga881998" class="outline-3">
+<h3 id="orga881998">tensorflow regression</h3>
+<div class="outline-text-3" id="text-orga881998">
+</div>
+<div id="outline-container-org75cbbdd" class="outline-4">
+<h4 id="org75cbbdd">the math</h4>
+<div class="outline-text-4" id="text-org75cbbdd">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/TAFldQ-af40" frameborder="0" allowfullscreen>tensorflow minimize</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>define a tensorflow variable \(z\) with starting value 0:  <code>z = tf.Variable(0.0)</code></li>
+<li>define a function using tensorflow variables and other variables</li>
+<li>calculate the derivative of a function w.r.t. a tensorflow variable using <code>tf.GradientTape()</code> and the <code>.gradient</code> method</li>
+<li>using this derivative to update the tensorflow variables to minimize a function</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>define another function and use the method described in the video to minimize this function</li>
+<li>adapt the method to maximize a function (in particular the part <code>z.assign_sub</code>) and use it maximize the function \(f(x,y) = 10 - x^2 - y^2\).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5a4c161" class="outline-4">
+<h4 id="org5a4c161">the regression</h4>
+<div class="outline-text-4" id="text-org5a4c161">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/wWjVn1Flphs" frameborder="0" allowfullscreen>tensorflow regression</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>define a function to generate our own train data</li>
+<li>use tensorflow functions <code>tf.square</code> and <code>tf.reduce_mean</code> to define a loss function of the difference between true data \(y\) and our prediction of \(y\)</li>
+<li>minimize this loss function to find the OLS estimates of the slope and intercept.</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>use the function <code>make_noisy_data</code> defined in the video to generate other data and estimate the slope and intercept of this data</li>
+<li>extend the function <code>make_noisy_data</code> to allow for \(y =b+ m_x x + m_z z + e\) and adapt the procedure to estimate \(b,m_x\) and \(m_z\)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0f3e049" class="outline-3">
+<h3 id="org0f3e049">tensorflow classification</h3>
+<div class="outline-text-3" id="text-org0f3e049">
+</div>
+<div id="outline-container-org8c798ea" class="outline-4">
+<h4 id="org8c798ea">getting the data ready</h4>
+<div class="outline-text-4" id="text-org8c798ea">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/aTUcFsWPBJ8" frameborder="0" allowfullscreen>getting data ready</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>getting the data using <code>urllib.request</code></li>
+<li>using pandas =.read<sub>csv</sub>()=to read the data</li>
+<li>using <code>.replace()</code> to replace the flower names (strings) by numbers (integers)</li>
+<li>normalizing the features of the data set</li>
+<li>plot the data with different colors for each flower type</li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>plot the data for all combinations of features (feature 0 and 1; 0 and 2 etc.) to see which dimensions seem most helpful to classify the data into the different flower types</li>
+<li>compare the data normalization steps that we do here with the ones used in the notebook in the section Multi-layer perceptron: which parts are the same, which differ?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1306918" class="outline-4">
+<h4 id="org1306918">estimating the network</h4>
+<div class="outline-text-4" id="text-org1306918">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/lNoK-NdW1sQ" frameborder="0" allowfullscreen>estimating network</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>split the data into train and test set</li>
+<li>specify the network using the <code>keras</code> syntax</li>
+<li>we use two layers with 'relu' activation and the final layer with 'softmax', this gives us prediction probabilities over the 3 flower types in our data</li>
+<li>we then compile the model specifying the optimizer, loss function and the metrics we would like to see during the fitting stage</li>
+<li>we fit the model using the train data (features and targets) and we specify the number of epochs
+<ul class="org-ul">
+<li>as the number of epochs increases, the loss on the train data falls, but this can lead to over-fitting; later we will see how you can determine the optimal number of epochs (avoiding both over-fitting and under-fitting)</li>
+</ul></li>
+<li>we evaluate the data on the test set.</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>which mistake is made in the video when splitting the data into a train and test set? You can increase the 'epochs' to improve the fit on the train data, but the evaluation on the test set will not really improve. [hint: in the section Multi-layer perceptron in the notebook we use the iris data for the first time. Carefully check the steps we take there: which one did we miss here? check the data to see why this step matters]</li>
+<li>increase the number of epochs and compare the fit on the train data with the fit on the test data</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org69b308d" class="outline-2">
+<h2 id="org69b308d">Back to our first neural network</h2>
+</div>
+
+
+<div id="outline-container-org1983a33" class="outline-2">
+<h2 id="org1983a33">Treatment effects</h2>
 </div>
 </div>
 <div id="postamble" class="status">
