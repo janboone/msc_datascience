@@ -1,0 +1,1681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-11-23 ma 14:26 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ReadTheOrg style</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Fabrice Niessen" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">ReadTheOrg style</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org47df71c">1. Overview</a></li>
+<li><a href="#org2d06a8d">2. Typography</a>
+<ul>
+<li><a href="#org58e72a3">2.1. Headings</a></li>
+<li><a href="#org22b9a66">2.2. Body</a></li>
+<li><a href="#org10f9a33">2.3. Bold</a></li>
+<li><a href="#org65e1c06">2.4. Blockquotes</a></li>
+<li><a href="#orgfea38dc">2.5. Lists</a></li>
+</ul>
+</li>
+<li><a href="#org82a9c96">3. Media queries</a></li>
+<li><a href="#org16feebd">4. Code</a>
+<ul>
+<li><a href="#orgab695d9">4.1. Inline</a></li>
+<li><a href="#org0f81d75">4.2. Basic block</a></li>
+<li><a href="#orgcc69912">4.3. Sample output</a></li>
+</ul>
+</li>
+<li><a href="#org7522f27">5. Tables</a>
+<ul>
+<li><a href="#org2da4875">5.1. Basic example</a></li>
+<li><a href="#org9aeea4e">5.2. Optional table caption</a></li>
+<li><a href="#org179b7ac">5.3. Striped rows</a></li>
+</ul>
+</li>
+<li><a href="#org385f920">6. Images</a>
+<ul>
+<li><a href="#org4b105ea">6.1. Optional image caption</a></li>
+</ul>
+</li>
+<li><a href="#org80101f3">7. Helper classes</a></li>
+<li><a href="#org66c9600">8. Responsive utilities</a></li>
+<li><a href="#orga27395c">9. CSS</a></li>
+<li><a href="#orgb728992">10. Htmlize</a></li>
+<li><a href="#org31cf39d">11. JS</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org47df71c" class="outline-2">
+<h2 id="org47df71c"><span class="section-number-2">1</span> Overview</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Get the lowdown on the key pieces of ReadTheOrg's infrastructure, including our
+approach to better HTML export.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2d06a8d" class="outline-2">
+<h2 id="org2d06a8d"><span class="section-number-2">2</span> Typography</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #8f0075;">@import</span> url<span style="color: #145c33;">(</span><span style="color: #2544bb;">"https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700"</span><span style="color: #145c33;">)</span>;
+<span style="color: #8f0075;">@import</span> url<span style="color: #145c33;">(</span><span style="color: #2544bb;">"https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"</span><span style="color: #145c33;">)</span>;
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org58e72a3" class="outline-3">
+<h3 id="org58e72a3"><span class="section-number-3">2.1</span> Headings</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">h1,h2,h3,h4,h5,h6,legend</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-family</span>:<span style="color: #2544bb;">"Roboto Slab"</span>,<span style="color: #2544bb;">"ff-tisa-web-pro"</span>,<span style="color: #2544bb;">"Georgia"</span>,Arial,sans-serif;
+    <span style="color: #5317ac;">font-weight</span>:700;
+    <span style="color: #5317ac;">margin-top</span>:0;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">h1</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:175%;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.subtitle</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:95%; <span style="color: #505050;">/* </span><span style="color: #505050;">of h1 </span><span style="color: #505050;">*/</span>
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">h2</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:150%;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">h3</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:125%;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">h4</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:115%;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">h5</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:110%;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">h6</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:100%;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">h4,h5,h6</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #2980B9;">#2980B9</span>;
+    <span style="color: #5317ac;">font-weight</span>:300;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org22b9a66" class="outline-3">
+<h3 id="org22b9a66"><span class="section-number-3">2.2</span> Body</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">html</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">-ms-text-size-adjust</span>:100%;
+    <span style="color: #5317ac;">-webkit-text-size-adjust</span>:100%;
+    <span style="color: #5317ac;">font-size</span>:100%;
+    <span style="color: #5317ac;">height</span>:100%;
+    <span style="color: #5317ac;">overflow-x</span>:hidden;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">body</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #edf0f2;">#edf0f2</span>;
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #404040;">#404040</span>;
+    <span style="color: #5317ac;">font-family</span>:<span style="color: #2544bb;">"Lato"</span>,<span style="color: #2544bb;">"proxima-nova"</span>,<span style="color: #2544bb;">"Helvetica Neue"</span>,Arial,sans-serif;
+    <span style="color: #5317ac;">font-weight</span>:normal;
+    <span style="color: #5317ac;">margin</span>:0;
+    <span style="color: #5317ac;">min-height</span>:100%;
+    <span style="color: #5317ac;">overflow-x</span>:hidden;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #fcfcfc;">#fcfcfc</span>;
+    <span style="color: #5317ac;">height</span>:100%;
+    <span style="color: #5317ac;">margin-left</span>:300px;
+    <span style="color: #505050;">/* </span><span style="color: #505050;">margin:auto; </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">max-width</span>:800px;
+    <span style="color: #5317ac;">min-height</span>:100%;
+    <span style="color: #5317ac;">padding</span>:1.618em 3.236em;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">p</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:16px;
+    <span style="color: #5317ac;">line-height</span>:24px;
+    <span style="color: #5317ac;">margin</span>:0px 0px 24px 0px;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org10f9a33" class="outline-3">
+<h3 id="org10f9a33"><span class="section-number-3">2.3</span> Bold</h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">b,strong</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-weight</span>:bold<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org65e1c06" class="outline-3">
+<h3 id="org65e1c06"><span class="section-number-3">2.4</span> Blockquotes</h3>
+<div class="outline-text-3" id="text-2-4">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">blockquote</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #F0F0F0;">#F0F0F0</span>;
+    <span style="color: #5317ac;">border-left</span>:5px solid <span style="color: #000000; background-color: #CCCCCC;">#CCCCCC</span>;
+    <span style="color: #5317ac;">font-style</span>:italic;
+    <span style="color: #5317ac;">line-height</span>:24px;
+    <span style="color: #5317ac;">margin</span>:0px 0px 24px 0px;
+    <span style="color: #505050;">/* </span><span style="color: #505050;">margin-left:24px; </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">padding</span>: 6px 20px;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfea38dc" class="outline-3">
+<h3 id="orgfea38dc"><span class="section-number-3">2.5</span> Lists</h3>
+<div class="outline-text-3" id="text-2-5">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">ul,ol,dl</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">line-height</span>:24px;
+    <span style="color: #5317ac;">list-style-image</span>:none;
+    <span style="color: #505050;">/* </span><span style="color: #505050;">list-style:none; </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">margin</span>:0px 0px 24px 0px;
+    <span style="color: #5317ac;">padding</span>:0;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">li</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-left</span>: 24px;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">dd</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin</span>:0;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">#content .section ul,#content .toctree-wrapper ul,article ul</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">list-style</span>:disc;
+    <span style="color: #5317ac;">line-height</span>:24px;
+    <span style="color: #5317ac;">margin-bottom</span>:24px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ul li,#content .toctree-wrapper ul li,article ul li</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">list-style</span>:disc;
+    <span style="color: #5317ac;">margin-left</span>:24px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ul li p:last-child,#content .toctree-wrapper ul li p:last-child,article ul li p:last-child</span><span style="color: #145c33;">{</span>
+                                                                                                                                  <span style="color: #5317ac;">margin-bottom</span>:0<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ul li ul,#content .toctree-wrapper ul li ul,article ul li ul</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:0<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ul li li,#content .toctree-wrapper ul li li,article ul li li</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">list-style</span>:circle<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ul li li li,#content .toctree-wrapper ul li li li,article ul li li li</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">list-style</span>:square<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ul li ol li,#content .toctree-wrapper ul li ol li,article ul li ol li</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">list-style</span>:decimal<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ol,#content ol,article ol</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">list-style</span>:decimal;
+    <span style="color: #5317ac;">line-height</span>:24px;
+    <span style="color: #5317ac;">margin-bottom</span>:24px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ol li,#content ol li,article ol li</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">list-style</span>:decimal;
+    <span style="color: #5317ac;">margin-left</span>:24px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ol li p:last-child,#content ol li p:last-child,article ol li p:last-child</span><span style="color: #145c33;">{</span>
+                                                                                                                           <span style="color: #5317ac;">margin-bottom</span>:0<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ol li ul,#content ol li ul,article ol li ul</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:0<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ol li ul li,#content ol li ul li,article ol li ul li</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">list-style</span>:disc<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org56dba74" class="outline-4">
+<h4 id="org56dba74"><span class="section-number-4">2.5.1</span> Unordered</h4>
+</div>
+
+
+
+<div id="outline-container-org393cec5" class="outline-4">
+<h4 id="org393cec5"><span class="section-number-4">2.5.2</span> Ordered</h4>
+</div>
+
+
+
+<div id="outline-container-org3767432" class="outline-4">
+<h4 id="org3767432"><span class="section-number-4">2.5.3</span> Description</h4>
+<div class="outline-text-4" id="text-2-5-3">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">dl dt</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-weight</span>:bold;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">dl p,dl table,dl ul,dl ol</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:12px <span style="color: #8f0075;">!important</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">dl dd</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin</span>:0 0 12px 24px;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org82a9c96" class="outline-2">
+<h2 id="org82a9c96"><span class="section-number-2">3</span> Media queries</h2>
+<div class="outline-text-2" id="text-3">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #8f0075;">@media</span> print<span style="color: #145c33;">{</span>
+    <span style="color: #721045;">.codeblock,pre.src</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">white-space</span>:pre.src-wrap<span style="color: #5317ac;">}</span>
+<span style="color: #145c33;">}</span>
+
+<span style="color: #8f0075;">@media</span> print<span style="color: #145c33;">{</span>
+    <span style="color: #721045;">html,body,section</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">background</span>:none <span style="color: #8f0075;">!important</span><span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">*</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">box-shadow</span>:none <span style="color: #8f0075;">!important</span>;
+        <span style="color: #5317ac;">text-shadow</span>:none <span style="color: #8f0075;">!important</span>;
+        <span style="color: #5317ac;">filter</span>:none <span style="color: #8f0075;">!important</span>;
+        <span style="color: #5317ac;">-ms-filter</span>:none <span style="color: #8f0075;">!important</span><span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">a,a:visited</span><span style="color: #5317ac;">{</span>
+          <span style="color: #5317ac;">text-decoration</span>:underline<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">pre.src,blockquote</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">page-break-inside</span>:avoid<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">thead</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">display</span>:table-header-group<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">tr,img</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">page-break-inside</span>:avoid<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">img</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">max-width</span>:100% <span style="color: #8f0075;">!important</span><span style="color: #5317ac;">}</span>
+
+    <span style="color: #8f0075;">@page</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">margin</span>:0.5cm<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">p,h2,h3</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">orphans</span>:3;
+        <span style="color: #5317ac;">widows</span>:3<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">h2,h3</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">page-break-after</span>:avoid<span style="color: #5317ac;">}</span>
+<span style="color: #145c33;">}</span>
+
+<span style="color: #8f0075;">@media</span> print<span style="color: #145c33;">{</span>
+    <span style="color: #721045;">#postamble</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">display</span>:none<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">#content</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">margin-left</span>:0<span style="color: #5317ac;">}</span>
+<span style="color: #145c33;">}</span>
+
+<span style="color: #8f0075;">@media</span> print<span style="color: #145c33;">{</span>
+    <span style="color: #721045;">#table-of-contents</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">display</span>:none<span style="color: #5317ac;">}</span>
+
+    <span style="color: #8f0075;">@page</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">size</span>: auto;
+        <span style="color: #5317ac;">margin</span>: 25mm 25mm 25mm 25mm;<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">body </span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">margin</span>: 0px;<span style="color: #5317ac;">}</span>
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #8f0075;">@media</span> screen and <span style="color: #145c33;">(</span>max-width: 768px<span style="color: #145c33;">){</span>
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #8f0075;">@media</span> only screen and <span style="color: #145c33;">(</span>max-width: 480px<span style="color: #145c33;">){</span>
+<span style="color: #145c33;">}</span>
+
+<span style="color: #8f0075;">@media</span> screen and <span style="color: #145c33;">(</span>max-width: 768px<span style="color: #145c33;">){</span>
+    <span style="color: #721045;">.tablet-hide</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">display</span>:none<span style="color: #5317ac;">}</span>
+<span style="color: #145c33;">}</span>
+
+<span style="color: #8f0075;">@media</span> screen and <span style="color: #145c33;">(</span>max-width: 480px<span style="color: #145c33;">){</span>
+    <span style="color: #721045;">.mobile-hide</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">display</span>:none<span style="color: #5317ac;">}</span>
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #8f0075;">@media</span> screen and <span style="color: #145c33;">(</span>max-width: 480px<span style="color: #145c33;">){</span>
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #8f0075;">@media</span> screen and <span style="color: #145c33;">(</span>max-width: 768px<span style="color: #145c33;">){</span>
+    <span style="color: #721045;">#content</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">margin-left</span>:0<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">#content #content</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">padding</span>:1.618em<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">#content.shift</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">position</span>:fixed;
+        <span style="color: #5317ac;">min-width</span>:100%;
+        <span style="color: #5317ac;">left</span>:85%;
+        <span style="color: #5317ac;">top</span>:0;
+        <span style="color: #5317ac;">height</span>:100%;
+        <span style="color: #5317ac;">overflow</span>:hidden<span style="color: #5317ac;">}</span>
+<span style="color: #145c33;">}</span>
+
+<span style="color: #8f0075;">@media</span> screen and <span style="color: #145c33;">(</span>min-width: 1400px<span style="color: #145c33;">){</span>
+    <span style="color: #721045;">#content</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">background</span>:<span style="color: #ffffff; background-color: #000000;">rgba(0,0,0,0.05)</span><span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">#content</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #fcfcfc;">#fcfcfc</span><span style="color: #5317ac;">}</span>
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #8f0075;">@media</span> screen and <span style="color: #145c33;">(</span>max-width: 768px<span style="color: #145c33;">){</span>
+    <span style="color: #721045;">#copyright</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">width</span>:85%;
+        <span style="color: #5317ac;">display</span>:none<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">#copyright.shift</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">display</span>:block<span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">img</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">width</span>:100%;
+        <span style="color: #5317ac;">height</span>:auto<span style="color: #5317ac;">}</span>
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #8f0075;">@media</span> screen and <span style="color: #145c33;">(</span>max-width: 480px<span style="color: #145c33;">){</span>
+    <span style="color: #721045;">#content .sidebar</span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">width</span>:100%<span style="color: #5317ac;">}</span>
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org16feebd" class="outline-2">
+<h2 id="org16feebd"><span class="section-number-2">4</span> Code</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+
+<div id="outline-container-orgab695d9" class="outline-3">
+<h3 id="orgab695d9"><span class="section-number-3">4.1</span> Inline</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">code</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #fff;">#fff</span>;
+    <span style="color: #5317ac;">border</span>:solid 1px <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+    <span style="color: #505050;">/* </span><span style="color: #505050;">color:#000;  for clickable code </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">font-family</span>:Consolas,<span style="color: #2544bb;">"Andale Mono WT"</span>,<span style="color: #2544bb;">"Andale Mono"</span>,<span style="color: #2544bb;">"Lucida Console"</span>,<span style="color: #2544bb;">"Lucida Sans Typewriter"</span>,<span style="color: #2544bb;">"DejaVu Sans Mono"</span>,<span style="color: #2544bb;">"Bitstream Vera Sans Mono"</span>,<span style="color: #2544bb;">"Liberation Mono"</span>,<span style="color: #2544bb;">"Nimbus Mono L"</span>,Monaco,<span style="color: #2544bb;">"Courier New"</span>,Courier,monospace;
+    <span style="color: #5317ac;">font-size</span>:75%;
+    <span style="color: #5317ac;">max-width</span>:100%;
+    <span style="color: #5317ac;">overflow-x</span>:auto;
+    <span style="color: #5317ac;">padding</span>:0 5px;
+    <span style="color: #5317ac;">white-space</span>:nowrap;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0f81d75" class="outline-3">
+<h3 id="org0f81d75"><span class="section-number-3">4.2</span> Basic block</h3>
+<div class="outline-text-3" id="text-4-2">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">.codeblock-example</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">border</span>:1px solid <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+    <span style="color: #5317ac;">border-bottom</span>:none;
+    <span style="color: #5317ac;">padding</span>:24px;
+    <span style="color: #5317ac;">padding-top</span>:48px;
+    <span style="color: #5317ac;">font-weight</span>:500;
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #fff;">#fff</span>;
+    <span style="color: #5317ac;">position</span>:relative<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.codeblock-example:after</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">content</span>:<span style="color: #2544bb;">"Example"</span>;
+    <span style="color: #5317ac;">position</span>:absolute;
+    <span style="color: #5317ac;">top</span>:0px;
+    <span style="color: #5317ac;">left</span>:0px;
+    <span style="color: #5317ac;">background</span>:<span style="color: #ffffff; background-color: #9B59B6;">#9B59B6</span>;
+    <span style="color: #5317ac;">color</span>:<span style="color: #000000; background-color: #fff;">#fff</span>;
+    <span style="color: #5317ac;">padding</span>:6px 12px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.codeblock-example.prettyprint-example-only</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">border</span>:1px solid <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+    <span style="color: #5317ac;">margin-bottom</span>:24px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.codeblock,pre.src,#content .literal-block</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">border</span>:1px solid <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+    <span style="color: #5317ac;">padding</span>:12px;
+    <span style="color: #5317ac;">overflow-x</span>:auto;
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #fff;">#fff</span>;
+    <span style="color: #5317ac;">margin</span>:1px 0 24px 0<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">pre.src</span><span style="color: #145c33;">{</span>
+    <span style="color: #505050;">/* </span><span style="color: #505050;">color:#404040; </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">display</span>:block;
+    <span style="color: #5317ac;">font-family</span>:Consolas,<span style="color: #2544bb;">"Andale Mono WT"</span>,<span style="color: #2544bb;">"Andale Mono"</span>,<span style="color: #2544bb;">"Lucida Console"</span>,<span style="color: #2544bb;">"Lucida Sans Typewriter"</span>,<span style="color: #2544bb;">"DejaVu Sans Mono"</span>,<span style="color: #2544bb;">"Bitstream Vera Sans Mono"</span>,<span style="color: #2544bb;">"Liberation Mono"</span>,<span style="color: #2544bb;">"Nimbus Mono L"</span>,Monaco,<span style="color: #2544bb;">"Courier New"</span>,Courier,monospace;
+    <span style="color: #5317ac;">font-size</span>:12px;
+    <span style="color: #5317ac;">line-height</span>:1.5;
+    <span style="color: #5317ac;">margin</span>:1px 0px 24px 0px;
+    <span style="color: #5317ac;">overflow</span>:auto;
+    <span style="color: #5317ac;">padding</span>:12px;
+    <span style="color: #5317ac;">white-space</span>:pre;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcc69912" class="outline-3">
+<h3 id="orgcc69912"><span class="section-number-3">4.3</span> Sample output</h3>
+<div class="outline-text-3" id="text-4-3">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">.example</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #f3f6f6;">#f3f6f6</span>;
+    <span style="color: #5317ac;">border</span>:1px solid <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #404040;">#404040</span>;
+    <span style="color: #5317ac;">font-size</span>: 12px;
+    <span style="color: #5317ac;">line-height</span>: 1.5;
+    <span style="color: #5317ac;">margin-bottom</span>:24px;
+    <span style="color: #5317ac;">padding</span>:12px;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7522f27" class="outline-2">
+<h2 id="org7522f27"><span class="section-number-2">5</span> Tables</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+
+<div id="outline-container-org2da4875" class="outline-3">
+<h3 id="org2da4875"><span class="section-number-3">5.1</span> Basic example</h3>
+<div class="outline-text-3" id="text-5-1">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">table</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">border-collapse</span>:collapse;
+    <span style="color: #5317ac;">border-spacing</span>:0;
+    <span style="color: #5317ac;">empty-cells</span>:show;
+    <span style="color: #5317ac;">margin-bottom</span>:24px;
+    <span style="color: #5317ac;">border-bottom</span>:1px solid <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">td</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">vertical-align</span>:top<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">table td,table th</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:90%;
+    <span style="color: #5317ac;">margin</span>:0;
+    <span style="color: #5317ac;">overflow</span>:visible;
+    <span style="color: #5317ac;">padding</span>:8px 16px;
+    <span style="color: #5317ac;">background-color</span>:<span style="color: #000000; background-color: #ffffff;">white</span>;
+    <span style="color: #5317ac;">border</span>:1px solid <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">table thead th</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-weight</span>:bold;
+    <span style="color: #5317ac;">border-top</span>:3px solid <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+    <span style="color: #5317ac;">border-bottom</span>:1px solid <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9aeea4e" class="outline-3">
+<h3 id="org9aeea4e"><span class="section-number-3">5.2</span> Optional table caption</h3>
+<div class="outline-text-3" id="text-5-2">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">table caption</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #000;">#000</span>;
+    <span style="color: #5317ac;">font</span>:italic 85%/1 arial,sans-serif;
+    <span style="color: #5317ac;">padding</span>:1em 0;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org179b7ac" class="outline-3">
+<h3 id="org179b7ac"><span class="section-number-3">5.3</span> Striped rows</h3>
+<div class="outline-text-3" id="text-5-3">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">table tr:nth-child</span><span style="color: #145c33;">(</span><span style="color: #721045;">2n-1</span><span style="color: #145c33;">)</span><span style="color: #721045;"> td</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background-color</span>:<span style="color: #000000; background-color: #f3f6f6;">#f3f6f6</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">table tr:nth-child</span><span style="color: #145c33;">(</span><span style="color: #721045;">2n</span><span style="color: #145c33;">)</span><span style="color: #721045;"> td</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background-color</span>:<span style="color: #000000; background-color: #ffffff;">white</span>;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org385f920" class="outline-2">
+<h2 id="org385f920"><span class="section-number-2">6</span> Images</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+
+<div id="outline-container-org4b105ea" class="outline-3">
+<h3 id="org4b105ea"><span class="section-number-3">6.1</span> Optional image caption</h3>
+<div class="outline-text-3" id="text-6-1">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">.figure p</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #000;">#000</span>;
+    <span style="color: #5317ac;">font</span>:italic 85%/1 arial,sans-serif;
+    <span style="color: #5317ac;">padding</span>:1em 0;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org80101f3" class="outline-2">
+<h2 id="org80101f3"><span class="section-number-2">7</span> Helper classes</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">.rotate-90</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">-webkit-transform</span>:rotate<span style="color: #5317ac;">(</span>90deg<span style="color: #5317ac;">)</span>;
+    <span style="color: #5317ac;">-moz-transform</span>:rotate<span style="color: #5317ac;">(</span>90deg<span style="color: #5317ac;">)</span>;
+    <span style="color: #5317ac;">-ms-transform</span>:rotate<span style="color: #5317ac;">(</span>90deg<span style="color: #5317ac;">)</span>;
+    <span style="color: #5317ac;">-o-transform</span>:rotate<span style="color: #5317ac;">(</span>90deg<span style="color: #5317ac;">)</span>;
+    <span style="color: #5317ac;">transform</span>:rotate<span style="color: #5317ac;">(</span>90deg<span style="color: #5317ac;">)</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.rotate-270</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">-webkit-transform</span>:rotate<span style="color: #5317ac;">(</span>270deg<span style="color: #5317ac;">)</span>;
+    <span style="color: #5317ac;">-moz-transform</span>:rotate<span style="color: #5317ac;">(</span>270deg<span style="color: #5317ac;">)</span>;
+    <span style="color: #5317ac;">-ms-transform</span>:rotate<span style="color: #5317ac;">(</span>270deg<span style="color: #5317ac;">)</span>;
+    <span style="color: #5317ac;">-o-transform</span>:rotate<span style="color: #5317ac;">(</span>270deg<span style="color: #5317ac;">)</span>;
+    <span style="color: #5317ac;">transform</span>:rotate<span style="color: #5317ac;">(</span>270deg<span style="color: #5317ac;">)</span>;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org66c9600" class="outline-2">
+<h2 id="org66c9600"><span class="section-number-2">8</span> Responsive utilities</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Responsive for sidebar:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">#toggle-sidebar,</span>
+<span style="color: #721045;">#table-of-contents .close-sidebar </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>: none;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #8f0075;">@media</span> screen and <span style="color: #145c33;">(</span>max-width: 768px<span style="color: #145c33;">)</span> <span style="color: #145c33;">{</span>
+    <span style="color: #721045;">#table-of-contents </span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">display</span>: none;
+        <span style="color: #5317ac;">width</span>: 60%;
+    <span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">#table-of-contents h2 a </span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">display</span>: block;
+    <span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">#table-of-contents:target </span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">display</span>: block;
+    <span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">#copyright, #postamble </span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">display</span>: none;
+    <span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">#toggle-sidebar </span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">background-color</span>: <span style="color: #ffffff; background-color: #2980B9;">#2980B9</span>;
+        <span style="color: #5317ac;">display</span>: block;
+        <span style="color: #5317ac;">margin-bottom</span>: 1.6em;
+        <span style="color: #5317ac;">padding</span>: 0.6em;
+        <span style="color: #5317ac;">text-align</span>: center;
+    <span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">#toggle-sidebar h2 </span><span style="color: #5317ac;">{</span>
+        <span style="color: #5317ac;">background-color</span>:<span style="color: #ffffff; background-color: #2980B9;">#2980B9</span>;
+        <span style="color: #5317ac;">width</span>:100%;
+        <span style="color: #5317ac;">height</span>:50px;
+        <span style="color: #5317ac;">left</span>:0;
+        <span style="color: #5317ac;">top</span>:0;
+        <span style="color: #5317ac;">color</span>: <span style="color: #000000; background-color: #ffffff;">white</span>;
+        <span style="color: #5317ac;">font-size</span>: 100%;
+        <span style="color: #5317ac;">line-height</span>: 50px;
+        <span style="color: #5317ac;">position</span>:fixed;
+        <span style="color: #5317ac;">margin</span>: 0;
+        <span style="color: #5317ac;">padding</span>: 0;
+        <span style="color: #5317ac;">opacity</span>:0.7;
+        <span style="color: #5317ac;">z-index</span>: 10;
+    <span style="color: #5317ac;">}</span>
+
+    <span style="color: #721045;">#table-of-contents .close-sidebar </span><span style="color: #5317ac;">{</span>
+       <span style="color: #5317ac;">color</span>: <span style="color: #000000; background-color: #ffffff;">rgba(255, 255, 255, 0.3)</span>;
+       <span style="color: #5317ac;">display</span>: inline-block;
+       <span style="color: #5317ac;">margin</span>: 0px 10px 0px 45px;
+       <span style="color: #5317ac;">padding</span>: 10px;
+    <span style="color: #5317ac;">}</span>
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga27395c" class="outline-2">
+<h2 id="orga27395c"><span class="section-number-2">9</span> CSS</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">*</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">-webkit-box-sizing</span>:border-box;
+    <span style="color: #5317ac;">-moz-box-sizing</span>:border-box;
+    <span style="color: #5317ac;">box-sizing</span>:border-box;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">figcaption,figure,footer,header,hgroup,nav</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:block<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">ins</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #ff9;">#ff9</span>;
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #000;">#000</span>;
+    <span style="color: #5317ac;">text-decoration</span>:none<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">mark</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #ff0;">#ff0</span>;
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #000;">#000</span>;
+    <span style="color: #5317ac;">font-style</span>:italic;
+    <span style="color: #5317ac;">font-weight</span>:bold<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">small</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:85%<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">sub,sup</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:75%;
+    <span style="color: #5317ac;">line-height</span>:0;
+    <span style="color: #5317ac;">position</span>:relative;
+    <span style="color: #5317ac;">vertical-align</span>:baseline<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">sup</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">top</span>:-0.5em<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">sub</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">bottom</span>:-0.25em<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">img</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">-ms-interpolation-mode</span>:bicubic;
+    <span style="color: #5317ac;">vertical-align</span>:middle;
+    <span style="color: #5317ac;">max-width</span>:100%<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">svg:not</span><span style="color: #145c33;">(</span><span style="color: #721045;">:root</span><span style="color: #145c33;">)</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">overflow</span>:hidden<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">figure</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin</span>:0<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">label</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">cursor</span>:pointer<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">legend</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">border</span>:0;
+    <span style="color: #5317ac;">margin-left</span>:-7px;
+    <span style="color: #5317ac;">padding</span>:0;
+    <span style="color: #5317ac;">white-space</span>:normal<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">.fa:before,#content .admonition-title:before,#content h1 .headerlink:before,#content h2 .headerlink:before,#content h3 .headerlink:before,#content h4 .headerlink:before,#content h5 .headerlink:before,#content h6 .headerlink:before,#content dl dt .headerlink:before,.icon:before,.wy-dropdown .caret:before,.wy-inline-validate.wy-inline-validate-success .wy-input-context:before,.wy-inline-validate.wy-inline-validate-danger .wy-input-context:before,.wy-inline-validate.wy-inline-validate-warning .wy-input-context:before,.wy-inline-validate.wy-inline-validate-info .wy-input-context:before,.wy-alert,#content .note,#content .attention,#content .caution,#content .danger,#content .error,#content .hint,#content .important,#content .tip,#content .warning,#content .seealso,#content .admonitiontodo,.btn,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"text"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"password"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"email"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"url"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"date"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"month"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"time"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"datetime"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"datetime-local"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"week"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"number"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"search"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"tel"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,input</span><span style="color: #145c33;">[</span><span style="color: #721045;">type=</span><span style="color: #2544bb;">"color"</span><span style="color: #145c33;">]</span><span style="color: #721045;">,select,textarea,#table-of-contents li.on a,#table-of-contents li.current&gt;a,.wy-side-nav-search&gt;a,.wy-side-nav-search .wy-dropdown&gt;a,.wy-nav-top a</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">-webkit-font-smoothing</span>:antialiased<span style="color: #145c33;">}</span>
+
+<span style="color: #505050;">/*</span><span style="color: #505050;">!</span>
+<span style="color: #505050;"> *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome</span>
+<span style="color: #505050;"> *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)</span>
+<span style="color: #505050;"> </span><span style="color: #505050;">*/</span><span style="color: #8f0075;">@font-face</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-family</span>:<span style="color: #2544bb;">'FontAwesome'</span>;
+    <span style="color: #5317ac;">src</span>:url<span style="color: #5317ac;">(</span><span style="color: #2544bb;">"../fonts/fontawesome-webfont.eot?v=4.1.0"</span><span style="color: #5317ac;">)</span>;
+    <span style="color: #5317ac;">src</span>:url<span style="color: #5317ac;">(</span><span style="color: #2544bb;">"../fonts/fontawesome-webfont.eot?#iefix&amp;v=4.1.0"</span><span style="color: #5317ac;">)</span> format<span style="color: #5317ac;">(</span><span style="color: #2544bb;">"embedded-opentype"</span><span style="color: #5317ac;">)</span>,url<span style="color: #5317ac;">(</span><span style="color: #2544bb;">"../fonts/fontawesome-webfont.woff?v=4.1.0"</span><span style="color: #5317ac;">)</span> format<span style="color: #5317ac;">(</span><span style="color: #2544bb;">"woff"</span><span style="color: #5317ac;">)</span>,url<span style="color: #5317ac;">(</span><span style="color: #2544bb;">"../fonts/fontawesome-webfont.ttf?v=4.1.0"</span><span style="color: #5317ac;">)</span> format<span style="color: #5317ac;">(</span><span style="color: #2544bb;">"truetype"</span><span style="color: #5317ac;">)</span>,url<span style="color: #5317ac;">(</span><span style="color: #2544bb;">"../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular"</span><span style="color: #5317ac;">)</span> format<span style="color: #5317ac;">(</span><span style="color: #2544bb;">"svg"</span><span style="color: #5317ac;">)</span>;
+    <span style="color: #5317ac;">font-weight</span>:normal;
+    <span style="color: #5317ac;">font-style</span>:normal<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.fa,#content .admonition-title,.icon</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:inline-block;
+    <span style="color: #5317ac;">font-family</span>:FontAwesome;
+    <span style="color: #5317ac;">font-style</span>:normal;
+    <span style="color: #5317ac;">font-weight</span>:normal;
+    <span style="color: #5317ac;">line-height</span>:1;
+    <span style="color: #5317ac;">-webkit-font-smoothing</span>:antialiased;
+    <span style="color: #5317ac;">-moz-osx-font-smoothing</span>:grayscale<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.fa-ul</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">padding-left</span>:0;
+    <span style="color: #5317ac;">margin-left</span>:2.14286em;
+    <span style="color: #5317ac;">list-style-type</span>:none<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.fa-ul&gt;li</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">position</span>:relative<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.fa-li</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">position</span>:absolute;
+    <span style="color: #5317ac;">left</span>:-2.14286em;
+    <span style="color: #5317ac;">width</span>:2.14286em;
+    <span style="color: #5317ac;">top</span>:0.14286em;
+    <span style="color: #5317ac;">text-align</span>:center<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.fa-li.fa-lg</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">left</span>:-1.85714em<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.fa-border</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">padding</span>:.2em .25em .15em;
+    <span style="color: #5317ac;">border</span>:solid 0.08em <span style="color: #000000; background-color: #eee;">#eee</span>;
+    <span style="color: #5317ac;">border-radius</span>:.1em<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.fa,#content .admonition-title</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-family</span>:inherit<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.fa:before,#content .admonition-title:before</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-family</span>:<span style="color: #2544bb;">"FontAwesome"</span>;
+    <span style="color: #5317ac;">display</span>:inline-block;
+    <span style="color: #5317ac;">font-style</span>:normal;
+    <span style="color: #5317ac;">font-weight</span>:normal;
+    <span style="color: #5317ac;">line-height</span>:1;
+    <span style="color: #5317ac;">text-decoration</span>:inherit<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">a .fa,a #content .admonition-title,#content a .admonition-title</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:inline-block;
+    <span style="color: #5317ac;">text-decoration</span>:inherit<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.nav #content .admonition-title,#content .nav .admonition-title,.nav .icon</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:inline<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.wy-alert,#content .note,#content .attention,#content .caution,#content .danger,#content .error,#content .hint,#content .important,#content .tip,#content .warning,#content .seealso,#content .admonitiontodo</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">padding</span>:12px;
+    <span style="color: #5317ac;">line-height</span>:24px;
+    <span style="color: #5317ac;">margin-bottom</span>:24px;
+    <span style="color: #505050;">/* </span><span style="color: #505050;">background:#e7f2fa; </span><span style="color: #505050;">*/</span>
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.wy-alert-title,#content .admonition-title</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>:<span style="color: #000000; background-color: #fff;">#fff</span>;
+    <span style="color: #5317ac;">font-weight</span>:bold;
+    <span style="color: #5317ac;">display</span>:block;
+    <span style="color: #5317ac;">color</span>:<span style="color: #000000; background-color: #fff;">#fff</span>;
+    <span style="color: #505050;">/* </span><span style="color: #505050;">background:#6ab0de; </span><span style="color: #505050;">*/</span>
+    <span style="color: #505050;">/* </span><span style="color: #505050;">margin:-12px; </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">padding</span>:6px 12px;
+    <span style="color: #5317ac;">margin-bottom</span>:0px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .danger,#content .error</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #fdf3f2;">#fdf3f2</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.wy-alert.wy-alert-warning,#content .wy-alert-warning.note,#content .attention,#content .caution,#content .wy-alert-warning.danger,#content .wy-alert-warning.error,#content .wy-alert-warning.hint,#content .wy-alert-warning.important,#content .wy-alert-warning.tip,#content .warning,#content .wy-alert-warning.seealso,#content .admonitiontodo</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #ffedcc;">#ffedcc</span><span style="color: #145c33;">}</span>
+
+#content .admonition-title.note:before, #content .admonition-title.seealso:before,
+#content .admonition-title.warning:before, #content .admonition-title.caution:before,
+#content .admonition-title.attention:before,
+#content .admonition-title.tip:before, #content .admonition-title.hint:before,
+#content .admonition-title.important:before,
+<span style="color: #721045;">#content .admonition-title.error:before, #content .admonition-title.danger:before</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-family</span>:FontAwesome;
+    <span style="color: #5317ac;">content</span>: <span style="color: #2544bb;">"&#61546;"</span>;<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .note,#content .seealso</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #e7f2fa;">#e7f2fa</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.wy-alert p:last-child,#content .note p:last-child,#content .attention p:last-child,#content .caution p:last-child,#content .danger p:last-child,#content .error p:last-child,#content .hint p:last-child,#content .important p:last-child,#content .tip p:last-child,#content .warning p:last-child,#content .seealso p:last-child,#content .admonitiontodo p:last-child</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:0<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .admonition-title.tip,#content .admonition-title.important,#content .admonition-title.hint</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">line-height</span>: 1;
+    <span style="color: #5317ac;">background</span>:<span style="color: #ffffff; background-color: #1abc9c;">#1abc9c</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .important,#content .tip,#content .hint</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #dbfaf4;">#dbfaf4</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .admonition-title.note,#content .admonition-title.seealso</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">line-height</span>: 1;
+    <span style="color: #5317ac;">background</span>:<span style="color: #ffffff; background-color: #6ab0de;">#6ab0de</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .admonition-title.warning,#content .admonition-title.caution,#content .admonition-title.attention</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">line-height</span>: 1;
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #F0B37E;">#F0B37E</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .admonition-title.error,#content .admonition-title.danger</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">line-height</span>: 1;
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #f29f97;">#f29f97</span><span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">legend</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:block;
+    <span style="color: #5317ac;">width</span>:100%;
+    <span style="color: #5317ac;">border</span>:0;
+    <span style="color: #5317ac;">padding</span>:0;
+    <span style="color: #5317ac;">white-space</span>:normal;
+    <span style="color: #5317ac;">margin-bottom</span>:24px;
+    <span style="color: #5317ac;">font-size</span>:150%;
+    *margin-left:-7px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">label</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:block;
+    <span style="color: #5317ac;">margin</span>:0 0 0.3125em 0;
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #333;">#333</span>;
+    <span style="color: #5317ac;">font-size</span>:90%<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">a</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #2980B9;">#2980B9</span>;
+    <span style="color: #5317ac;">text-decoration</span>:none;
+    <span style="color: #5317ac;">cursor</span>:pointer<span style="color: #145c33;">}</span>
+
+
+<span style="color: #721045;">a:hover,a:active</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">outline</span>:0;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">a:hover</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #3091d1;">#3091d1</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">a:visited</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #9B59B6;">#9B59B6</span><span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">.left</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">text-align</span>:left<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.center</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">text-align</span>:center<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.right</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">text-align</span>:right<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">hr</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:block;
+    <span style="color: #5317ac;">height</span>:1px;
+    <span style="color: #5317ac;">border</span>:0;
+    <span style="color: #5317ac;">border-top</span>:1px solid <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+    <span style="color: #5317ac;">margin</span>:24px 0;
+    <span style="color: #5317ac;">padding</span>:0<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">#table-of-contents li</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">list-style</span>:none;
+    <span style="color: #5317ac;">margin-left</span>: 0px;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents header</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">height</span>:32px;
+    <span style="color: #5317ac;">display</span>:inline-block;
+    <span style="color: #5317ac;">line-height</span>:32px;
+    <span style="color: #5317ac;">padding</span>:0 1.618em;
+    <span style="color: #5317ac;">display</span>:block;
+    <span style="color: #5317ac;">font-weight</span>:bold;
+    <span style="color: #5317ac;">text-transform</span>:uppercase;
+    <span style="color: #5317ac;">font-size</span>:80%;
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #2980B9;">#2980B9</span>;
+    <span style="color: #5317ac;">white-space</span>:nowrap<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents ul</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:0<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents li.divide-top</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">border-top</span>:solid 1px <span style="color: #ffffff; background-color: #404040;">#404040</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents li.divide-bottom</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">border-bottom</span>:solid 1px <span style="color: #ffffff; background-color: #404040;">#404040</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents li.current</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #e3e3e3;">#e3e3e3</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents li.current a</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #808080;">gray</span>;
+    <span style="color: #5317ac;">border-right</span>:solid 1px <span style="color: #000000; background-color: #c9c9c9;">#c9c9c9</span>;
+    <span style="color: #5317ac;">padding</span>:0.4045em 2.427em<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents li.current a:hover</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #d6d6d6;">#d6d6d6</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents li a</span><span style="color: #145c33;">{</span>
+    <span style="color: #505050;">/* </span><span style="color: #505050;">color:#404040; </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">padding</span>:0.4045em 1.618em;
+    <span style="color: #5317ac;">position</span>:relative;
+    <span style="color: #505050;">/* </span><span style="color: #505050;">background:#fcfcfc; </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">border</span>:none;
+    <span style="color: #505050;">/* </span><span style="color: #505050;">border-bottom:solid 1px #c9c9c9; </span><span style="color: #505050;">*/</span>
+    <span style="color: #505050;">/* </span><span style="color: #505050;">border-top:solid 1px #c9c9c9; </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">padding-left</span>:1.618em -4px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents li.on a:hover,#table-of-contents li.current&gt;a:hover</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #fcfcfc;">#fcfcfc</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents li ul li a</span><span style="color: #145c33;">{</span>
+    <span style="color: #505050;">/* </span><span style="color: #505050;">background:#c9c9c9; </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">padding</span>:0.4045em 2.427em<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents li ul li ul li a</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">padding</span>:0.4045em 3.236em<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents li.current ul</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:block<span style="color: #145c33;">}</span>
+
+<span style="color: #505050;">/* </span><span style="color: #505050;">#table-of-contents li ul{ </span><span style="color: #505050;">*/</span>
+<span style="color: #505050;">/*     </span><span style="color: #505050;">margin-bottom:0; </span><span style="color: #505050;">*/</span>
+<span style="color: #505050;">/*     </span><span style="color: #505050;">display:none} </span><span style="color: #505050;">*/</span>
+
+<span style="color: #721045;">#table-of-contents .local-toc li ul</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:block<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents li ul li a</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:0;
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #b3b3b3;">#b3b3b3</span>;
+    <span style="color: #5317ac;">font-weight</span>:normal<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents a</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:inline-block;
+    <span style="color: #5317ac;">line-height</span>:18px;
+    <span style="color: #5317ac;">padding</span>:0.4045em 1.618em;
+    <span style="color: #5317ac;">display</span>:block;
+    <span style="color: #5317ac;">position</span>:relative;
+    <span style="color: #5317ac;">font-size</span>:90%;
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #b3b3b3;">#b3b3b3</span>;
+    <span style="color: #5317ac;">direction</span>: ltr;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents a:hover</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background-color</span>:<span style="color: #ffffff; background-color: #4e4a4a;">#4e4a4a</span>;
+    <span style="color: #5317ac;">cursor</span>:pointer<span style="color: #145c33;">}</span>
+
+<span style="color: #505050;">/* </span><span style="color: #505050;">#text-table-of-contents { </span><span style="color: #505050;">*/</span>
+<span style="color: #505050;">/*     </span><span style="color: #505050;">overflow:scroll; </span><span style="color: #505050;">*/</span>
+<span style="color: #505050;">/* </span><span style="color: #505050;">} </span><span style="color: #505050;">*/</span>
+
+<span style="color: #721045;">#table-of-contents</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">position</span>:fixed;
+    <span style="color: #5317ac;">top</span>:0;
+    <span style="color: #5317ac;">left</span>:0;
+    <span style="color: #5317ac;">width</span>:300px;
+    <span style="color: #5317ac;">overflow-x</span>:hidden;
+    <span style="color: #5317ac;">overflow-y</span>:scroll;
+    <span style="color: #5317ac;">height</span>:100%;
+    <span style="color: #5317ac;">background</span>:<span style="color: #ffffff; background-color: #343131;">#343131</span>;
+    <span style="color: #5317ac;">z-index</span>:200;
+    <span style="color: #5317ac;">scrollbar-base-color</span>: <span style="color: #ffffff; background-color: #1F1D1D;">#1F1D1D</span>;
+    <span style="color: #5317ac;">scrollbar-arrow-color</span>: <span style="color: #ffffff; background-color: #b3b3b3;">#b3b3b3</span>;
+    <span style="color: #5317ac;">scrollbar-shadow-color</span>: <span style="color: #ffffff; background-color: #1F1D1D;">#1F1D1D</span>;
+    <span style="color: #5317ac;">scrollbar-track-color</span> : <span style="color: #ffffff; background-color: #343131;">#343131</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#table-of-contents h2</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">z-index</span>:200;
+    <span style="color: #5317ac;">background-color</span>:<span style="color: #ffffff; background-color: #2980B9;">#2980B9</span>;
+    <span style="color: #5317ac;">text-align</span>:center;
+    <span style="color: #5317ac;">padding</span>:0.809em;
+    <span style="color: #5317ac;">display</span>:block;
+    <span style="color: #5317ac;">color</span>:<span style="color: #000000; background-color: #fcfcfc;">#fcfcfc</span>;
+    <span style="color: #5317ac;">font-size</span>: 100%;
+    <span style="color: #5317ac;">margin-bottom</span>:0.809em<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">ul.nav li ul li </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>: none;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">ul.nav li ul li ul li </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>: none;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">ul.nav li.active ul li </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>: inline;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">ul.nav li.active ul li ul li </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>: inline;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">ul.nav li.active ul li a </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #E3E3E3;">#E3E3E3</span>;
+    <span style="color: #5317ac;">color</span>: <span style="color: #ffffff; background-color: #8099B0;">#8099B0</span>;
+    <span style="color: #5317ac;">border-right</span>:solid 1px <span style="color: #000000; background-color: #c9c9c9;">#c9c9c9</span> <span style="color: #8f0075;">!important</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">ul.nav li.active ul li.active a </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #C9C9C9;">#C9C9C9</span>;
+    <span style="color: #5317ac;">color</span>: <span style="color: #ffffff; background-color: #000000;">black</span> <span style="color: #8f0075;">!important</span>;
+    <span style="color: #5317ac;">font-weight</span>: bold <span style="color: #8f0075;">!important</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">ul.nav li.active ul li.active ul li.active a </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>: <span style="color: #ffffff; background-color: #000000;">black</span> <span style="color: #8f0075;">!important</span>;
+    <span style="color: #5317ac;">font-weight</span>: bold <span style="color: #8f0075;">!important</span>;
+    <span style="color: #5317ac;">display</span>: block <span style="color: #8f0075;">!important</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">ul.nav li.active ul li.active ul li a </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>: <span style="color: #ffffff; background-color: #808080;">#808080</span> <span style="color: #8f0075;">!important</span>;
+    <span style="color: #5317ac;">font-weight</span>: normal <span style="color: #8f0075;">!important</span>;
+    <span style="color: #5317ac;">display</span>: block <span style="color: #8f0075;">!important</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">ul.nav li.active ul li ul li a </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>: none <span style="color: #8f0075;">!important</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #505050;">/* </span><span style="color: #505050;">ul.nav li ul li ul li { </span><span style="color: #505050;">*/</span>
+<span style="color: #505050;">/*     </span><span style="color: #505050;">display: none !important; /\* as long as nav is on multiple levels of ul *\/ </span><span style="color: #505050;">*/</span>
+<span style="color: #505050;">/*     </span><span style="color: #505050;">/\* display: none; /\* as long as nav is on multiple levels of ul *\\/ *\/ </span><span style="color: #505050;">*/</span>
+<span style="color: #505050;">/* </span><span style="color: #505050;">} </span><span style="color: #505050;">*/</span>
+
+<span style="color: #721045;">ul.nav li ul li ul li ul li </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>: none <span style="color: #8f0075;">!important</span>; <span style="color: #505050;">/* </span><span style="color: #505050;">as long as nav is on multiple levels of ul </span><span style="color: #505050;">*/</span>
+    <span style="color: #505050;">/* </span><span style="color: #505050;">display: none; /* as long as nav is on multiple levels of ul *\/ </span><span style="color: #505050;">*/</span>
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">ul.nav li.active &gt; a </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">border-bottom</span>:solid 1px <span style="color: #000000; background-color: #c9c9c9;">#c9c9c9</span> <span style="color: #8f0075;">!important</span>; <span style="color: #505050;">/* </span><span style="color: #505050;">XXX Restrict it to 2nd level </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">border-right</span>:solid 1px <span style="color: #000000; background-color: #c9c9c9;">#c9c9c9</span> <span style="color: #8f0075;">!important</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">ul.nav li.active a </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>: <span style="color: #ffffff; background-color: #808080;">gray</span> <span style="color: #8f0075;">!important</span>;
+    <span style="color: #5317ac;">font-weight</span>:bold;
+    <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #ffffff;">white</span>;
+    <span style="color: #5317ac;">border-right</span>:solid 0px <span style="color: #000000; background-color: #ffffff;">white</span> <span style="color: #8f0075;">!important</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">ul.nav &gt; li.active &gt; a </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>: <span style="color: #ffffff; background-color: #000000;">black</span> <span style="color: #8f0075;">!important</span>;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">footer</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #999;">#999</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">footer p</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:12px<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">#copyright, #postamble</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">position</span>:fixed;
+    <span style="color: #5317ac;">bottom</span>:0;
+    <span style="color: #5317ac;">left</span>:0;
+    <span style="color: #5317ac;">width</span>:300px;
+    <span style="color: #5317ac;">color</span>:<span style="color: #000000; background-color: #fcfcfc;">#fcfcfc</span>;
+    <span style="color: #5317ac;">background</span>:<span style="color: #ffffff; background-color: #1f1d1d;">#1f1d1d</span>;
+    <span style="color: #5317ac;">border-top</span>:solid 10px <span style="color: #ffffff; background-color: #343131;">#343131</span>;
+    <span style="color: #5317ac;">font-family</span>:<span style="color: #2544bb;">"Lato"</span>,<span style="color: #2544bb;">"proxima-nova"</span>,<span style="color: #2544bb;">"Helvetica Neue"</span>,Arial,sans-serif;
+    <span style="color: #5317ac;">font-size</span>: 90%;
+    <span style="color: #5317ac;">z-index</span>:400;
+    <span style="color: #5317ac;">padding</span>:12px;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#postamble .author </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>: 100%;
+    <span style="color: #5317ac;">margin-bottom</span>: 0px;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#postamble .date </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>: 90%;
+    <span style="color: #5317ac;">margin-bottom</span>: 0px;
+    <span style="color: #5317ac;">color</span>: <span style="color: #ffffff; background-color: #27AE60;">#27AE60</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#postamble .creator,#postamble .validation </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:none;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#copyright a</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #2980B9;">#2980B9</span>;
+    <span style="color: #5317ac;">text-decoration</span>:none<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#copyright .rst-current-version</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">padding</span>:12px;
+    <span style="color: #5317ac;">background-color</span>:<span style="color: #ffffff; background-color: #272525;">#272525</span>;
+    <span style="color: #5317ac;">display</span>:block;
+    <span style="color: #5317ac;">text-align</span>:right;
+    <span style="color: #5317ac;">font-size</span>:90%;
+    <span style="color: #5317ac;">cursor</span>:pointer;
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #27AE60;">#27AE60</span>;
+    *zoom:1<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">#content img</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">max-width</span>:100%;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content div.figure</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:24px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content div.figure.align-center</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">text-align</span>:center<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section&gt;img,#content .section&gt;a&gt;img</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:24px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.verse</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">border-left</span>:5px solid <span style="color: #ffffff; background-color: #6AB0DE;">#6AB0DE</span>;
+    <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #E7F2FA;">#E7F2FA</span>;
+    <span style="color: #5317ac;">padding</span>: 6px 20px;
+    <span style="color: #5317ac;">font-style</span>:italic;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .note .last,#content .attention .last,#content .caution .last,#content .danger .last,#content .error .last,#content .hint .last,#content .important .last,#content .tip .last,#content .warning .last,#content .seealso .last,#content .admonitiontodo .last</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:0<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .admonition-title:before</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-right</span>:4px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .section ol p,#content .section ul p</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:12px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content h1 .headerlink,#content h2 .headerlink,#content h3 .headerlink,#content h4 .headerlink,#content h5 .headerlink,#content h6 .headerlink,#content dl dt .headerlink</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:none;
+    <span style="color: #5317ac;">visibility</span>:hidden;
+    <span style="color: #5317ac;">font-size</span>:14px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content h1 .headerlink:after,#content h2 .headerlink:after,#content h3 .headerlink:after,#content h4 .headerlink:after,#content h5 .headerlink:after,#content h6 .headerlink:after,#content dl dt .headerlink:after</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">visibility</span>:visible;
+    <span style="color: #5317ac;">content</span>:<span style="color: #2544bb;">"&#61633;"</span>;
+    <span style="color: #5317ac;">font-family</span>:FontAwesome;
+    <span style="color: #5317ac;">display</span>:inline-block<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content h1:hover .headerlink,#content h2:hover .headerlink,#content h3:hover .headerlink,#content h4:hover .headerlink,#content h5:hover .headerlink,#content h6:hover .headerlink,#content dl dt:hover .headerlink</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:inline-block<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .sidebar</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">float</span>:right;
+    <span style="color: #5317ac;">width</span>:40%;
+    <span style="color: #5317ac;">display</span>:block;
+    <span style="color: #5317ac;">margin</span>:0 0 24px 24px;
+    <span style="color: #5317ac;">padding</span>:24px;
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #f3f6f6;">#f3f6f6</span>;
+    <span style="color: #5317ac;">border</span>:solid 1px <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .sidebar p,#content .sidebar ul,#content .sidebar dl</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-size</span>:90%<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .sidebar .last</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">margin-bottom</span>:0<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .sidebar .sidebar-title</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:block;
+    <span style="color: #5317ac;">font-family</span>:<span style="color: #2544bb;">"Roboto Slab"</span>,<span style="color: #2544bb;">"ff-tisa-web-pro"</span>,<span style="color: #2544bb;">"Georgia"</span>,Arial,sans-serif;
+    <span style="color: #5317ac;">font-weight</span>:bold;
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+    <span style="color: #5317ac;">padding</span>:6px 12px;
+    <span style="color: #5317ac;">margin</span>:-24px;
+    <span style="color: #5317ac;">margin-bottom</span>:24px;
+    <span style="color: #5317ac;">font-size</span>:100%<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .highlighted</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>:<span style="color: #000000; background-color: #F1C40F;">#F1C40F</span>;
+    <span style="color: #5317ac;">display</span>:inline-block;
+    <span style="color: #5317ac;">font-weight</span>:bold;
+    <span style="color: #5317ac;">padding</span>:0 6px<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#content .footnote-reference,#content .citation-reference</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">vertical-align</span>:super;
+    <span style="color: #5317ac;">font-size</span>:90%<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">span</span><span style="color: #145c33;">[</span><span style="color: #721045;">id*=</span><span style="color: #2544bb;">'MathJax-Span'</span><span style="color: #145c33;">]</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>:<span style="color: #ffffff; background-color: #404040;">#404040</span><span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.math</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">text-align</span>:center<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">#footnotes</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">border-top</span>:1px solid <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
+    <span style="color: #5317ac;">padding-top</span>: 36px;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">h2.footnotes</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">display</span>:none;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.footnum, .footref</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>: <span style="color: #ffffff; background-color: #2980b9;">#2980b9</span>;
+    <span style="color: #5317ac;">font-size</span>: 170%;
+    <span style="color: #5317ac;">font-family</span>:<span style="color: #2544bb;">"Lato"</span>,<span style="color: #2544bb;">"proxima-nova"</span>,<span style="color: #2544bb;">"Helvetica Neue"</span>,Arial,sans-serif;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.footnum:before, .footref:before</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">content</span>:<span style="color: #2544bb;">"["</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.footnum:after, .footref:after</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">content</span>:<span style="color: #2544bb;">"]"</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.footpara </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>: <span style="color: #ffffff; background-color: #999;">#999</span>;
+    <span style="color: #5317ac;">font-size</span>: 90%;
+    <span style="color: #5317ac;">font-family</span>:<span style="color: #2544bb;">"Lato"</span>,<span style="color: #2544bb;">"proxima-nova"</span>,<span style="color: #2544bb;">"Helvetica Neue"</span>,Arial,sans-serif;
+    <span style="color: #5317ac;">padding-bottom</span>: 8px;
+    <span style="color: #5317ac;">padding-left</span>: 16px;
+    <span style="color: #5317ac;">padding-right</span>: 16px;
+    <span style="color: #5317ac;">padding-top</span>: 8px;
+    <span style="color: #5317ac;">line-height</span>: 1.25em;
+    <span style="color: #505050;">/* </span><span style="color: #505050;">display: inline; </span><span style="color: #505050;">*/</span>
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">.todo</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #f29f97;">#f29f97</span>;
+    <span style="color: #5317ac;">padding</span>: 0px 4px;
+    <span style="color: #5317ac;">color</span>: <span style="color: #000000; background-color: #fff;">#fff</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.WAIT, .nilWAIT</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background-color</span>: <span style="color: #ffffff; background-color: #6AB097;">#6AB097</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.done</span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background-color</span>: <span style="color: #ffffff; background-color: #6ab0de;">#6ab0de</span>;
+    <span style="color: #5317ac;">padding</span>: 0px 4px;
+    <span style="color: #5317ac;">color</span>: <span style="color: #000000; background-color: #fff;">#fff</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.tag span </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #EDEDED;">#EDEDED</span>;
+    <span style="color: #5317ac;">border</span>: 1px solid <span style="color: #000000; background-color: #EDEDED;">#EDEDED</span>;
+    <span style="color: #5317ac;">color</span>: <span style="color: #ffffff; background-color: #939393;">#939393</span>;
+    <span style="color: #5317ac;">cursor</span>: pointer;
+    <span style="color: #5317ac;">display</span>: block;
+    <span style="color: #5317ac;">float</span>: right;
+    <span style="color: #5317ac;">font-size</span>: 80%;
+    <span style="color: #5317ac;">font-weight</span>: normal;
+    <span style="color: #5317ac;">margin</span>: 0 3px;
+    <span style="color: #5317ac;">padding</span>: 1px 2px;
+    <span style="color: #5317ac;">border-radius</span>: 10px;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.tag .FLAGGED </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background-color</span>: <span style="color: #ffffff; background-color: #DB2D27;">#DB2D27</span>;
+    <span style="color: #5317ac;">border</span>: 1px solid <span style="color: #ffffff; background-color: #DB2D27;">#DB2D27</span>;
+    <span style="color: #5317ac;">color</span>: <span style="color: #000000; background-color: #ffffff;">white</span>;
+    <span style="color: #5317ac;">font-weight</span>: bold;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.timestamp </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">font-family</span>: Consolas,<span style="color: #2544bb;">"Andale Mono WT"</span>,<span style="color: #2544bb;">"Andale Mono"</span>,<span style="color: #2544bb;">"Lucida Console"</span>,<span style="color: #2544bb;">"Lucida Sans Typewriter"</span>,<span style="color: #2544bb;">"DejaVu Sans Mono"</span>,<span style="color: #2544bb;">"Bitstream Vera Sans Mono"</span>,<span style="color: #2544bb;">"Liberation Mono"</span>,<span style="color: #2544bb;">"Nimbus Mono L"</span>,Monaco,<span style="color: #2544bb;">"Courier New"</span>,Courier,monospace;
+    <span style="color: #5317ac;">font-size</span>: 90%;
+    <span style="color: #5317ac;">color</span>: <span style="color: #ffffff; background-color: #000080;">navy</span>;
+<span style="color: #145c33;">}</span>
+
+<span style="color: #721045;">.nav .timestamp </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">color</span>: inherit;
+<span style="color: #145c33;">}</span>
+</pre>
+</div>
+
+<p>
+See
+<a href="http://stackoverflow.com/questions/10535432/tmux-man-page-search-highlighting">http://stackoverflow.com/questions/10535432/tmux-man-page-search-highlighting</a>
+for nice yellow or orange boxes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">.inlinetask </span><span style="color: #145c33;">{</span>
+    <span style="color: #5317ac;">background</span>: <span style="color: #000000; background-color: #FFF9E3;">#FFF9E3</span>;  <span style="color: #505050;">/* </span><span style="color: #505050;">url</span><span style="color: #000000; background-color: #ffffff;">(</span><span style="color: #505050;">dialog-todo.png</span><span style="color: #000000; background-color: #ffffff;">)</span><span style="color: #505050;"> no-repeat 10px 8px; </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">border</span>: 3px solid <span style="color: #000000; background-color: #FFEB8E;">#FFEB8E</span>;
+    <span style="color: #505050;">/* </span><span style="color: #505050;">border-right-style: none; </span><span style="color: #505050;">*/</span>
+    <span style="color: #505050;">/* </span><span style="color: #505050;">border-left-style: none; </span><span style="color: #505050;">*/</span>
+    <span style="color: #505050;">/* </span><span style="color: #505050;">padding: 10px 20px 10px 60px; </span><span style="color: #505050;">*/</span>
+    <span style="color: #5317ac;">padding</span>: 9px 12px;
+    <span style="color: #5317ac;">margin-bottom</span>: 24px;
+    <span style="color: #5317ac;">font-family</span>:<span style="color: #2544bb;">"Roboto Slab"</span>,<span style="color: #2544bb;">"ff-tisa-web-pro"</span>,<span style="color: #2544bb;">"Georgia"</span>,Arial,sans-serif<span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb728992" class="outline-2">
+<h2 id="orgb728992"><span class="section-number-2">10</span> Htmlize</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-src-container">
+<pre class="src src-css"><span style="color: #721045;">.org-bold </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">bold </span><span style="color: #505050;">*/</span> font-weight: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-bold-italic </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">bold-italic </span><span style="color: #505050;">*/</span> font-weight: bold; <span style="color: #5317ac;">font-style</span>: italic; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-buffer-menu-buffer </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">buffer-menu-buffer </span><span style="color: #505050;">*/</span> font-weight: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-builtin </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-builtin-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-button </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">button </span><span style="color: #505050;">*/</span> text-decoration: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-calendar-today </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">calendar-today </span><span style="color: #505050;">*/</span> text-decoration: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-change-log-acknowledgement </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">change-log-acknowledgement </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-change-log-conditionals </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">change-log-conditionals </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-change-log-date </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">change-log-date </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-change-log-email </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">change-log-email </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-change-log-file </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">change-log-file </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-change-log-function </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">change-log-function </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-change-log-list </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">change-log-list </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-change-log-name </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">change-log-name </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #008b8b;">#008b8b</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-comint-highlight-input </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">comint-highlight-input </span><span style="color: #505050;">*/</span> font-weight: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-comint-highlight-prompt </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">comint-highlight-prompt </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #00008b;">#00008b</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-comment </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-comment-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #999988;">#999988</span>; <span style="color: #5317ac;">font-style</span>: italic; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-comment-delimiter </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-comment-delimiter-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #999988;">#999988</span>; <span style="color: #5317ac;">font-style</span>: italic; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-completions-annotations </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">completions-annotations </span><span style="color: #505050;">*/</span> font-style: italic; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-completions-common-part </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">completions-common-part </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #ffffff;">#ffffff</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-completions-first-difference </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">completions-first-difference </span><span style="color: #505050;">*/</span> font-weight: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-constant </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-constant-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #008b8b;">#008b8b</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-diary </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">diary </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-diff-context </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">diff-context </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-diff-file-header </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">diff-file-header </span><span style="color: #505050;">*/</span> background-color: <span style="color: #ffffff; background-color: #b3b3b3;">#b3b3b3</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-diff-function </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">diff-function </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #cccccc;">#cccccc</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-diff-header </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">diff-header </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #cccccc;">#cccccc</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-diff-hunk-header </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">diff-hunk-header </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #cccccc;">#cccccc</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-diff-index </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">diff-index </span><span style="color: #505050;">*/</span> background-color: <span style="color: #ffffff; background-color: #b3b3b3;">#b3b3b3</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-diff-nonexistent </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">diff-nonexistent </span><span style="color: #505050;">*/</span> background-color: <span style="color: #ffffff; background-color: #b3b3b3;">#b3b3b3</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-diff-refine-change </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">diff-refine-change </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #d9d9d9;">#d9d9d9</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-dired-directory </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">dired-directory </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-dired-flagged </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">dired-flagged </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-dired-header </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">dired-header </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-dired-ignored </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">dired-ignored </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-dired-mark </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">dired-mark </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #008b8b;">#008b8b</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-dired-marked </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">dired-marked </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-dired-perm-write </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">dired-perm-write </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-dired-symlink </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">dired-symlink </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-dired-warning </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">dired-warning </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-doc </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-doc-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-escape-glyph </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">escape-glyph </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a52a2a;">#a52a2a</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-file-name-shadow </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">file-name-shadow </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-flyspell-duplicate </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">flyspell-duplicate </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #cdad00;">#cdad00</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #5317ac;">text-decoration</span>: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-flyspell-incorrect </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">flyspell-incorrect </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #ff4500;">#ff4500</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #5317ac;">text-decoration</span>: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-fringe </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">fringe </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #f2f2f2;">#f2f2f2</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-function-name </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-function-name-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #008080;">teal</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-header-line </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">header-line </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #333333;">#333333</span>; <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #e5e5e5;">#e5e5e5</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-help-argument-name </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">help-argument-name </span><span style="color: #505050;">*/</span> font-style: italic; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-highlight </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">highlight </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #b4eeb4;">#b4eeb4</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-holiday </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">holiday </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #ffc0cb;">#ffc0cb</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-isearch </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">isearch </span><span style="color: #505050;">*/</span> color: <span style="color: #000000; background-color: #b0e2ff;">#b0e2ff</span>; <span style="color: #5317ac;">background-color</span>: <span style="color: #ffffff; background-color: #cd00cd;">#cd00cd</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-isearch-fail </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">isearch-fail </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #ffc1c1;">#ffc1c1</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-italic </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">italic </span><span style="color: #505050;">*/</span> font-style: italic; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-keyword </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-keyword-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #0086b3;">#0086b3</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-lazy-highlight </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">lazy-highlight </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #afeeee;">#afeeee</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-link </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">link </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="color: #5317ac;">text-decoration</span>: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-link-visited </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">link-visited </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #8b008b;">#8b008b</span>; <span style="color: #5317ac;">text-decoration</span>: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-log-edit-header </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">log-edit-header </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-log-edit-summary </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">log-edit-summary </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-log-edit-unknown-header </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">log-edit-unknown-header </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-match </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">match </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #ffff00;">#ffff00</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-next-error </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">next-error </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #eedc82;">#eedc82</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-nobreak-space </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">nobreak-space </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a52a2a;">#a52a2a</span>; <span style="color: #5317ac;">text-decoration</span>: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-archived </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-archived </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-block </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-block </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-block-begin-line </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-block-begin-line </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-block-end-line </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-block-end-line </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-checkbox </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-checkbox </span><span style="color: #505050;">*/</span> font-weight: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-checkbox-statistics-done </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-checkbox-statistics-done </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-checkbox-statistics-todo </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-checkbox-statistics-todo </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-clock-overlay </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-clock-overlay </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #ffff00;">#ffff00</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-code </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-code </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-column </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-column </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #e5e5e5;">#e5e5e5</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-column-title </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-column-title </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #e5e5e5;">#e5e5e5</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #5317ac;">text-decoration</span>: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-date </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-date </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="color: #5317ac;">text-decoration</span>: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-document-info </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-document-info </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #191970;">#191970</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-document-info-keyword </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-document-info-keyword </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-document-title </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-document-title </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #191970;">#191970</span>; <span style="color: #5317ac;">font-size</span>: 144%; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-done </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-done </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-drawer </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-drawer </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-ellipsis </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-ellipsis </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b8860b;">#b8860b</span>; <span style="color: #5317ac;">text-decoration</span>: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-footnote </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-footnote </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="color: #5317ac;">text-decoration</span>: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-formula </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-formula </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-headline-done </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-headline-done </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #bc8f8f;">#bc8f8f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-hide </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-hide </span><span style="color: #505050;">*/</span> color: <span style="color: #000000; background-color: #ffffff;">#ffffff</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-latex-and-export-specials </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-latex-and-export-specials </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #8b4513;">#8b4513</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-level-1 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-level-1 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-level-2 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-level-2 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-level-3 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-level-3 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-level-4 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-level-4 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-level-5 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-level-5 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-level-6 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-level-6 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #008b8b;">#008b8b</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-level-7 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-level-7 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-level-8 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-level-8 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-link </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-link </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="color: #5317ac;">text-decoration</span>: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-meta-line </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-meta-line </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-mode-line-clock </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-mode-line-clock </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #bfbfbf;">#bfbfbf</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-mode-line-clock-overrun </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-mode-line-clock-overrun </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="color: #5317ac;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-quote </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-quote </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-scheduled </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-scheduled </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #006400;">#006400</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-scheduled-previously </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-scheduled-previously </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-scheduled-today </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-scheduled-today </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #006400;">#006400</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-sexp-date </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-sexp-date </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-special-keyword </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-special-keyword </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-table </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-table </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-tag </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-tag </span><span style="color: #505050;">*/</span> font-weight: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-target </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-target </span><span style="color: #505050;">*/</span> text-decoration: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-time-grid </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-time-grid </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b8860b;">#b8860b</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-todo </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-todo </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-upcoming-deadline </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-upcoming-deadline </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-verbatim </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-verbatim </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-verse </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-verse </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-org-warning </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">org-warning </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-outline-1 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">outline-1 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-outline-2 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">outline-2 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-outline-3 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">outline-3 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-outline-4 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">outline-4 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-outline-5 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">outline-5 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-outline-6 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">outline-6 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #008b8b;">#008b8b</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-outline-7 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">outline-7 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-outline-8 </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">outline-8 </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-preprocessor </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-preprocessor-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-query-replace </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">query-replace </span><span style="color: #505050;">*/</span> color: <span style="color: #000000; background-color: #b0e2ff;">#b0e2ff</span>; <span style="color: #5317ac;">background-color</span>: <span style="color: #ffffff; background-color: #cd00cd;">#cd00cd</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-regexp-grouping-backslash </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-regexp-grouping-backslash </span><span style="color: #505050;">*/</span> font-weight: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-regexp-grouping-construct </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-regexp-grouping-construct </span><span style="color: #505050;">*/</span> font-weight: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-region </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">region </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #eedc82;">#eedc82</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-secondary-selection </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">secondary-selection </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #ffff00;">#ffff00</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-shadow </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">shadow </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-show-paren-match </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">show-paren-match </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #40e0d0;">#40e0d0</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-show-paren-mismatch </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">show-paren-mismatch </span><span style="color: #505050;">*/</span> color: <span style="color: #000000; background-color: #ffffff;">#ffffff</span>; <span style="color: #5317ac;">background-color</span>: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-string </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-string-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #dd1144;">#dd1144</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-tool-bar </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">tool-bar </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #bfbfbf;">#bfbfbf</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-tooltip </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">tooltip </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="color: #5317ac;">background-color</span>: <span style="color: #000000; background-color: #ffffe0;">#ffffe0</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-trailing-whitespace </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">trailing-whitespace </span><span style="color: #505050;">*/</span> background-color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-type </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-type-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-underline </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">underline </span><span style="color: #505050;">*/</span> text-decoration: underline; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-variable-name </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-variable-name-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #008080;">teal</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-warning </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">font-lock-warning-face </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="color: #5317ac;">font-weight</span>: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-widget-button </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">widget-button </span><span style="color: #505050;">*/</span> font-weight: bold; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-widget-button-pressed </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">widget-button-pressed </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-widget-documentation </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">widget-documentation </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #006400;">#006400</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-widget-field </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">widget-field </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #d9d9d9;">#d9d9d9</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-widget-inactive </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">widget-inactive </span><span style="color: #505050;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; <span style="color: #145c33;">}</span>
+<span style="color: #721045;">.org-widget-single-line-field </span><span style="color: #145c33;">{</span> <span style="color: #505050;">/* </span><span style="color: #505050;">widget-single-line-field </span><span style="color: #505050;">*/</span> background-color: <span style="color: #000000; background-color: #d9d9d9;">#d9d9d9</span>; <span style="color: #145c33;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org31cf39d" class="outline-2">
+<h2 id="org31cf39d"><span class="section-number-2">11</span> JS</h2>
+<div class="outline-text-2" id="text-11">
+<div class="org-src-container">
+<pre class="src src-js">$<span style="color: #145c33;">(</span><span style="color: #5317ac;">function</span><span style="color: #5317ac;">()</span> <span style="color: #5317ac;">{</span>
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'.note'</span><span style="color: #005a5f;">)</span>.before<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"&lt;p class='admonition-title note'&gt;Note&lt;/p&gt;"</span><span style="color: #005a5f;">)</span>;
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'.seealso'</span><span style="color: #005a5f;">)</span>.before<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"&lt;p class='admonition-title seealso'&gt;See also&lt;/p&gt;"</span><span style="color: #005a5f;">)</span>;
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'.warning'</span><span style="color: #005a5f;">)</span>.before<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"&lt;p class='admonition-title warning'&gt;Warning&lt;/p&gt;"</span><span style="color: #005a5f;">)</span>;
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'.caution'</span><span style="color: #005a5f;">)</span>.before<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"&lt;p class='admonition-title caution'&gt;Caution&lt;/p&gt;"</span><span style="color: #005a5f;">)</span>;
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'.attention'</span><span style="color: #005a5f;">)</span>.before<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"&lt;p class='admonition-title attention'&gt;Attention&lt;/p&gt;"</span><span style="color: #005a5f;">)</span>;
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'.tip'</span><span style="color: #005a5f;">)</span>.before<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"&lt;p class='admonition-title tip'&gt;Tip&lt;/p&gt;"</span><span style="color: #005a5f;">)</span>;
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'.important'</span><span style="color: #005a5f;">)</span>.before<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"&lt;p class='admonition-title important'&gt;Important&lt;/p&gt;"</span><span style="color: #005a5f;">)</span>;
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'.hint'</span><span style="color: #005a5f;">)</span>.before<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"&lt;p class='admonition-title hint'&gt;Hint&lt;/p&gt;"</span><span style="color: #005a5f;">)</span>;
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'.error'</span><span style="color: #005a5f;">)</span>.before<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"&lt;p class='admonition-title error'&gt;Error&lt;/p&gt;"</span><span style="color: #005a5f;">)</span>;
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'.danger'</span><span style="color: #005a5f;">)</span>.before<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"&lt;p class='admonition-title danger'&gt;Danger&lt;/p&gt;"</span><span style="color: #005a5f;">)</span>;
+<span style="color: #5317ac;">}</span><span style="color: #145c33;">)</span>;
+
+$<span style="color: #145c33;">(</span> document <span style="color: #145c33;">)</span>.ready<span style="color: #145c33;">(</span><span style="color: #5317ac;">function</span><span style="color: #5317ac;">()</span> <span style="color: #5317ac;">{</span>
+
+    <span style="color: #505050;">// </span><span style="color: #505050;">Shift nav in mobile when clicking the menu.</span>
+    $<span style="color: #005a5f;">(</span>document<span style="color: #005a5f;">)</span>.on<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'click'</span>, <span style="color: #2544bb;">"[data-toggle='wy-nav-top']"</span>, <span style="color: #5317ac;">function</span><span style="color: #863927;">()</span> <span style="color: #863927;">{</span>
+      $<span style="color: #0000c0;">(</span><span style="color: #2544bb;">"[data-toggle='wy-nav-shift']"</span><span style="color: #0000c0;">)</span>.toggleClass<span style="color: #0000c0;">(</span><span style="color: #2544bb;">"shift"</span><span style="color: #0000c0;">)</span>;
+      $<span style="color: #0000c0;">(</span><span style="color: #2544bb;">"[data-toggle='rst-versions']"</span><span style="color: #0000c0;">)</span>.toggleClass<span style="color: #0000c0;">(</span><span style="color: #2544bb;">"shift"</span><span style="color: #0000c0;">)</span>;
+    <span style="color: #863927;">}</span><span style="color: #005a5f;">)</span>;
+    <span style="color: #505050;">// </span><span style="color: #505050;">Close menu when you click a link.</span>
+    $<span style="color: #005a5f;">(</span>document<span style="color: #005a5f;">)</span>.on<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'click'</span>, <span style="color: #2544bb;">".wy-menu-vertical .current ul li a"</span>, <span style="color: #5317ac;">function</span><span style="color: #863927;">()</span> <span style="color: #863927;">{</span>
+      $<span style="color: #0000c0;">(</span><span style="color: #2544bb;">"[data-toggle='wy-nav-shift']"</span><span style="color: #0000c0;">)</span>.removeClass<span style="color: #0000c0;">(</span><span style="color: #2544bb;">"shift"</span><span style="color: #0000c0;">)</span>;
+      $<span style="color: #0000c0;">(</span><span style="color: #2544bb;">"[data-toggle='rst-versions']"</span><span style="color: #0000c0;">)</span>.toggleClass<span style="color: #0000c0;">(</span><span style="color: #2544bb;">"shift"</span><span style="color: #0000c0;">)</span>;
+    <span style="color: #863927;">}</span><span style="color: #005a5f;">)</span>;
+    $<span style="color: #005a5f;">(</span>document<span style="color: #005a5f;">)</span>.on<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'click'</span>, <span style="color: #2544bb;">"[data-toggle='rst-current-version']"</span>, <span style="color: #5317ac;">function</span><span style="color: #863927;">()</span> <span style="color: #863927;">{</span>
+      $<span style="color: #0000c0;">(</span><span style="color: #2544bb;">"[data-toggle='rst-versions']"</span><span style="color: #0000c0;">)</span>.toggleClass<span style="color: #0000c0;">(</span><span style="color: #2544bb;">"shift-up"</span><span style="color: #0000c0;">)</span>;
+    <span style="color: #863927;">}</span><span style="color: #005a5f;">)</span>;
+    <span style="color: #505050;">// </span><span style="color: #505050;">Make tables responsive</span>
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"table.docutils:not(.field-list)"</span><span style="color: #005a5f;">)</span>.wrap<span style="color: #005a5f;">(</span><span style="color: #2544bb;">"&lt;div class='wy-table-responsive'&gt;&lt;/div&gt;"</span><span style="color: #005a5f;">)</span>;
+<span style="color: #5317ac;">}</span><span style="color: #145c33;">)</span>;
+
+$<span style="color: #145c33;">(</span> document <span style="color: #145c33;">)</span>.ready<span style="color: #145c33;">(</span><span style="color: #5317ac;">function</span><span style="color: #5317ac;">()</span> <span style="color: #5317ac;">{</span>
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'#text-table-of-contents ul'</span><span style="color: #005a5f;">)</span>.first<span style="color: #005a5f;">()</span>.addClass<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'nav'</span><span style="color: #005a5f;">)</span>;
+                                        <span style="color: #505050;">// </span><span style="color: #505050;">ScrollSpy also requires that we use</span>
+                                        <span style="color: #505050;">// </span><span style="color: #505050;">a Bootstrap nav component.</span>
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'body'</span><span style="color: #005a5f;">)</span>.scrollspy<span style="color: #005a5f;">(</span><span style="color: #863927;">{</span>target: <span style="color: #2544bb;">'#text-table-of-contents'</span><span style="color: #863927;">}</span><span style="color: #005a5f;">)</span>;
+
+    <span style="color: #505050;">// </span><span style="color: #505050;">DON'T add sticky table headers (Fix issue #69?)</span>
+    <span style="color: #505050;">// </span><span style="color: #505050;">$('table').stickyTableHeaders();</span>
+
+    <span style="color: #505050;">// </span><span style="color: #505050;">set the height of tableOfContents</span>
+    <span style="color: #5317ac;">var</span> <span style="color: #00538b;">$postamble</span> = $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'#postamble'</span><span style="color: #005a5f;">)</span>;
+    <span style="color: #5317ac;">var</span> <span style="color: #00538b;">$tableOfContents</span> = $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'#table-of-contents'</span><span style="color: #005a5f;">)</span>;
+    $tableOfContents.css<span style="color: #005a5f;">(</span><span style="color: #863927;">{</span>paddingBottom: $postamble.outerHeight<span style="color: #0000c0;">()</span><span style="color: #863927;">}</span><span style="color: #005a5f;">)</span>;
+
+    <span style="color: #505050;">// </span><span style="color: #505050;">add TOC button</span>
+    <span style="color: #5317ac;">var</span> <span style="color: #00538b;">toggleSidebar</span> = $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'&lt;div id="toggle-sidebar"&gt;&lt;a href="#table-of-contents"&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;&lt;/a&gt;&lt;/div&gt;'</span><span style="color: #005a5f;">)</span>;
+    $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'#content'</span><span style="color: #005a5f;">)</span>.prepend<span style="color: #005a5f;">(</span>toggleSidebar<span style="color: #005a5f;">)</span>;
+
+    <span style="color: #505050;">// </span><span style="color: #505050;">add close button when sidebar showed in mobile screen</span>
+    <span style="color: #5317ac;">var</span> <span style="color: #00538b;">closeBtn</span> = $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'&lt;a class="close-sidebar" href="#"&gt;Close&lt;/a&gt;'</span><span style="color: #005a5f;">)</span>;
+    <span style="color: #5317ac;">var</span> <span style="color: #00538b;">tocTitle</span> = $<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'#table-of-contents'</span><span style="color: #005a5f;">)</span>.find<span style="color: #005a5f;">(</span><span style="color: #2544bb;">'h2'</span><span style="color: #005a5f;">)</span>;
+    tocTitle.append<span style="color: #005a5f;">(</span>closeBtn<span style="color: #005a5f;">)</span>;
+<span style="color: #5317ac;">}</span><span style="color: #145c33;">)</span>;
+
+window.SphinxRtdTheme = <span style="color: #145c33;">(</span><span style="color: #5317ac;">function</span> <span style="color: #5317ac;">(</span><span style="color: #00538b;">jquery</span><span style="color: #5317ac;">)</span> <span style="color: #5317ac;">{</span>
+    <span style="color: #5317ac;">var</span> <span style="color: #00538b;">stickyNav</span> = <span style="color: #005a5f;">(</span><span style="color: #5317ac;">function</span> <span style="color: #863927;">()</span> <span style="color: #863927;">{</span>
+        <span style="color: #5317ac;">var</span> <span style="color: #00538b;">navBar</span>,
+            win,
+            stickyNavCssClass = <span style="color: #2544bb;">'stickynav'</span>,
+            applyStickNav = <span style="color: #5317ac;">function</span> <span style="color: #0000c0;">()</span> <span style="color: #0000c0;">{</span>
+                <span style="color: #5317ac;">if</span> <span style="color: #315b00;">(</span>navBar.height<span style="color: #8f0075;">()</span> &lt;= win.height<span style="color: #8f0075;">()</span><span style="color: #315b00;">)</span> <span style="color: #315b00;">{</span>
+                    navBar.addClass<span style="color: #8f0075;">(</span>stickyNavCssClass<span style="color: #8f0075;">)</span>;
+                <span style="color: #315b00;">}</span> <span style="color: #5317ac;">else</span> <span style="color: #315b00;">{</span>
+                    navBar.removeClass<span style="color: #8f0075;">(</span>stickyNavCssClass<span style="color: #8f0075;">)</span>;
+                <span style="color: #315b00;">}</span>
+            <span style="color: #0000c0;">}</span>,
+            enable = <span style="color: #5317ac;">function</span> <span style="color: #0000c0;">()</span> <span style="color: #0000c0;">{</span>
+                applyStickNav<span style="color: #315b00;">()</span>;
+                win.on<span style="color: #315b00;">(</span><span style="color: #2544bb;">'resize'</span>, applyStickNav<span style="color: #315b00;">)</span>;
+            <span style="color: #0000c0;">}</span>,
+            init = <span style="color: #5317ac;">function</span> <span style="color: #0000c0;">()</span> <span style="color: #0000c0;">{</span>
+                navBar = jquery<span style="color: #315b00;">(</span><span style="color: #2544bb;">'nav.wy-nav-side:first'</span><span style="color: #315b00;">)</span>;
+                win    = jquery<span style="color: #315b00;">(</span>window<span style="color: #315b00;">)</span>;
+            <span style="color: #0000c0;">}</span>;
+        jquery<span style="color: #0000c0;">(</span>init<span style="color: #0000c0;">)</span>;
+        <span style="color: #5317ac;">return</span> <span style="color: #0000c0;">{</span>
+            enable : enable
+        <span style="color: #0000c0;">}</span>;
+    <span style="color: #863927;">}()</span><span style="color: #005a5f;">)</span>;
+    <span style="color: #5317ac;">return</span> <span style="color: #005a5f;">{</span>
+        StickyNav : stickyNav
+    <span style="color: #005a5f;">}</span>;
+<span style="color: #5317ac;">}(</span>$<span style="color: #5317ac;">)</span><span style="color: #145c33;">)</span>;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Fabrice Niessen</p>
+<p class="date">Created: 2020-11-23 ma 14:26</p>
+</div>
+</body>
+</html>
