@@ -18,7 +18,7 @@ This website contains the material for the MSc course Seminar Data Science for E
 </p>
 
 <p>
-<b><b>This website is under construction for 2019/2020</b></b>
+<b><b>This website is under construction for 2020/2021</b></b>
 </p>
 
 <p>
@@ -27,6 +27,7 @@ This year the course is taught by:
 <ul class="org-ul">
 <li>Jan Boone</li>
 <li>Madina Kurmangaliyeva</li>
+<li>Jing-Rong Zeng</li>
 </ul>
 
 <div id="outline-container-org59ccf1a" class="outline-2">
@@ -66,7 +67,7 @@ For this course we use the following resources:
 </p>
 
 <ul class="org-ul">
-<li>We are very happy that we partner with <a href="https://www.datacamp.com/">Datacamp</a> for this course.</li>
+<li>We are very happy that we partner with <a href="https://www.datacamp.com/">Datacamp</a> for this course: <a href="https://www.tilburguniversity.edu/students/skills/programming">register for Datacamp</a></li>
 <li>Textbook for Madina's part: Chapters 6 and 8 from <a href="http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf">An Introduction to Statistical Learning</a> by James, Witte, Hastie, and Tibshirani (available free online)</li>
 </ul>
 
@@ -76,6 +77,7 @@ For this course we use the following resources:
 <div id="text-table-of-contents">
 <ul>
 <li><a href="#org59ccf1a">Course description</a></li>
+<li><a href="#screencasts_datascience">Screencasts</a></li>
 <li><a href="#org3e74984">Organisation of the course</a>
 <ul>
 <li><a href="#orgf4d8d06">Lecture schedule</a></li>
@@ -97,6 +99,16 @@ For this course we use the following resources:
 </ul>
 </div>
 </div>
+</div>
+</div>
+
+
+<div id="outline-container-screencasts_datascience" class="outline-2">
+<h2 id="screencasts_datascience">Screencasts</h2>
+<div class="outline-text-2" id="text-screencasts_datascience">
+<p>
+For this course a series of screencasts is available. For Jan's part of the course the screencasts can be found on this <a href="./pagescreencasts.html">webpage.</a>
+</p>
 </div>
 </div>
 
@@ -347,7 +359,7 @@ Do the following four steps:
 </p>
 <ul class="org-ul">
 <li>if you did AEA 1, you already have a <a href="https://github.com/">github</a> account, otherwise create a github account</li>
-<li>fill in this <a href="https://forms.gle/p23hAkp6LRN7w94v5">google form</a> before <b>Friday 7 February 2020</b>
+<li>fill in this <a href="https://forms.gle/33HJUpXV3iD6s5ZE6">google form</a> before <b>Friday 12 February 2021</b>
 <ul class="org-ul">
 <li>sign in with your @tilburguniversity.edu email address and password</li>
 </ul></li>
@@ -492,11 +504,11 @@ The <a href="https://www.datacamp.com/courses/introduction-to-tensorflow-in-pyth
 <h3 id="org5ae5370">Deadlines</h3>
 <div class="outline-text-3" id="text-org5ae5370">
 <p>
-The deadline for the <b>final assignment</b> is: Friday June 19th 2020 at 23:59.
+The deadline for the <b>final assignment</b> is: Friday June 18th 2021 at 23:59.
 </p>
 
 <p>
-The resit deadline for the assignment is: Friday August 14th, 2020. Let us know by email that you have submitted your assignment for the resit.
+The resit deadline for the assignment is: Friday August 27th, 2021. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
 </p>
 </div>
 </div>
@@ -563,7 +575,7 @@ We have a separate page with all relevant <a href="Datascience_for_economics.htm
 <li>to submit your final assignment:
 <ul class="org-ul">
 <li>do not change the name of the <code>assignment_notebook.ipynb</code> notebook</li>
-<li>fill in this <a href="https://forms.gle/F4WNsww1ShjDm83t5">google form</a></li>
+<li>fill in this <a href="https://forms.gle/PxdCRduc2wWBkNbT9">google form</a></li>
 <li>push the final notebook on the github classroom repository</li>
 </ul></li>
 </ul>
@@ -582,12 +594,25 @@ The following ingredients will be important when we evaluate your assignment:
 </p>
 
 <ul class="org-ul">
-<li>Find a "big dataset", e.g. on <a href="https://www.kaggle.com/">kaggle</a>, but other sources are fine as well
+<li>Create a "big dataset" from an economic organization providing data; think of:
+<ul class="org-ul">
+<li><a href="https://stats.oecd.org">OECD</a></li>
+<li><a href="https://data.worldbank.org">World Bank</a> (recall that we use a python API to access this data in AEA; this you can use as well, of course)</li>
+<li><a href="https://www.imf.org/en/Data">IMF</a></li>
+<li><a href="https://www.federalreserve.gov/data.htm">Federal Reserve</a></li>
+<li><a href="https://data.europa.eu/euodp/en/data/">European Union</a></li>
+<li><a href="https://www.ecb.europa.eu/stats/html/index.en.html">European Central Bank</a></li>
+<li>statistical office of your own country, e.g. <a href="https://opendata.cbs.nl/statline/#/CBS/en/">Statistics Netherlands</a></li>
+<li>if you want to use another economic data source, ask us first</li>
+</ul></li>
+<li>Data handling:    
 <ul class="org-ul">
 <li>download the data to your repos. (in a separate folder "data") and</li>
 <li>in your notebook create a link to the website of the data source</li>
+<li>give the code how you merged separate datasets into one big dataset that you use</li>
+<li>explain what you did (including the code) and why you did the data cleaning steps to get the data from the downloads to the data that you use in the analysis</li>
 </ul></li>
-<li>Start with a clear and transparent <b>question</b>.</li>
+<li>Start your analysis with a clear and transparent <b>question</b>.</li>
 <li>Briefly <b>motivate</b> why this question is interesting.</li>
 <li>Explain the <b>methods</b> that you use to answer the question.
 <ul class="org-ul">
