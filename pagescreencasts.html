@@ -98,8 +98,20 @@ This page contains the screencasts for the first part of the course <a href="ind
 <li><a href="#org0f3e049">tensorflow classification</a></li>
 </ul>
 </li>
-<li><a href="#org69b308d">Back to our first neural network</a></li>
-<li><a href="#org1983a33">Treatment effects</a></li>
+<li><a href="#org69b308d">Back to our first neural network</a>
+<ul>
+<li><a href="#org50521ec">defining the network and fitting it</a></li>
+<li><a href="#org55f6bc1">checking the fit</a></li>
+<li><a href="#org4fef352">number of epochs and overfitting</a></li>
+</ul>
+</li>
+<li><a href="#org1983a33">Treatment effects</a>
+<ul>
+<li><a href="#orge9fd955">IV</a></li>
+<li><a href="#org1a85243">Heterogenous treatment effects</a></li>
+<li><a href="#org3818441">Probability of treatment</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -206,9 +218,9 @@ You know how to work with JupyterLab on the university servers (or on your own l
 <h3 id="org54f7677">distribution of sample average and standard deviation</h3>
 <div class="outline-text-3" id="text-org54f7677">
 </div>
-<div id="outline-container-org0c9b97b" class="outline-4">
-<h4 id="org0c9b97b">generating data</h4>
-<div class="outline-text-4" id="text-org0c9b97b">
+<div id="outline-container-org494eb77" class="outline-4">
+<h4 id="org494eb77">generating data</h4>
+<div class="outline-text-4" id="text-org494eb77">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/QLVO-twLJU4" frameborder="0" allowfullscreen>generating data</iframe>
 </p>
@@ -326,9 +338,9 @@ Questions you should be able to answer before continuing:
 <h3 id="org8568335">distribution of a slope</h3>
 <div class="outline-text-3" id="text-org8568335">
 </div>
-<div id="outline-container-org494eb77" class="outline-4">
-<h4 id="org494eb77">generating data</h4>
-<div class="outline-text-4" id="text-org494eb77">
+<div id="outline-container-org15af0f6" class="outline-4">
+<h4 id="org15af0f6">generating data</h4>
+<div class="outline-text-4" id="text-org15af0f6">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/D9uaz2dPMRw" frameborder="0" allowfullscreen>generating data</iframe>
 </p>
@@ -965,11 +977,293 @@ Questions you should be able to answer before continuing:
 
 <div id="outline-container-org69b308d" class="outline-2">
 <h2 id="org69b308d">Back to our first neural network</h2>
+<div class="outline-text-2" id="text-org69b308d">
+</div>
+<div id="outline-container-org50521ec" class="outline-3">
+<h3 id="org50521ec">defining the network and fitting it</h3>
+<div class="outline-text-3" id="text-org50521ec">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/bqY-iOitEYk" frameborder="0" allowfullscreen>defining the network</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>loading the mnist data</li>
+<li>normalizing our variable</li>
+<li>defining the model using <code>keras.Sequential</code> for the different layers</li>
+<li>using activations relu and softmax</li>
+<li>in the <code>compile</code> step we specify the optimizer, the loss function and other metrics that we want to see when the model is fit to the data</li>
+<li>finally we <code>fit</code> the model</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>when do you use relu and when softmax activations?</li>
+<li>what is a <code>Dense</code> layer?</li>
+<li>what is an epoch?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org55f6bc1" class="outline-3">
+<h3 id="org55f6bc1">checking the fit</h3>
+<div class="outline-text-3" id="text-org55f6bc1">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/wq8lxJ-ugwM" frameborder="0" allowfullscreen>checking the fit</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>how to evaluate your fitted model on the test data</li>
+<li>with a classification model the prediction is an array with probabilities</li>
+<li>the highest probability in this array gives the most likely label for the observation</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>compare the prediction with the label for 5 different test observations.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4fef352" class="outline-3">
+<h3 id="org4fef352">number of epochs and overfitting</h3>
+<div class="outline-text-3" id="text-org4fef352">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/cEJQJQ2wSgI" frameborder="0" allowfullscreen>choosing the number of epochs</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>use the history of <code>model.fit</code> to see the model's performance as a function of the number of epochs</li>
+<li>plot the loss on the train data and the loss on the validation (or test) data</li>
+<li>the number of epochs where the validation loss "levels off" is the right number of epochs to use</li>
+<li>the loss on the train data keeps falling with the number of epochs beyond this point, but this is due to overfitting</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>make a similar plot for model accuracy and the number of epochs</li>
+<li>experiment with the network architecture to see how this affects the optimal number of epochs:
+<ul class="org-ul">
+<li>increase the number of nodes in a layer</li>
+<li>increase the number of layers in the network</li>
+</ul></li>
+<li>specify a model that clearly overfits the data</li>
+</ul>
+</div>
+</div>
 </div>
 
 
 <div id="outline-container-org1983a33" class="outline-2">
 <h2 id="org1983a33">Treatment effects</h2>
+<div class="outline-text-2" id="text-org1983a33">
+</div>
+<div id="outline-container-orge9fd955" class="outline-3">
+<h3 id="orge9fd955">IV</h3>
+<div class="outline-text-3" id="text-orge9fd955">
+</div>
+<div id="outline-container-org37a645e" class="outline-4">
+<h4 id="org37a645e">generating our data</h4>
+<div class="outline-text-4" id="text-org37a645e">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/o5O2P8DrAZA" frameborder="0" allowfullscreen>generating our data</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>we generate data with no direct (causal) effect of education on wage</li>
+<li>with an OLS estimation we find a positive and significant effect of education on the wage rate</li>
+<li>hence OLS is not the correct estimator to find the causal effect of education on wage</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>define a function that generates the data, runs the OLS and returns the results as a function of the parameters <code>alpha_w, alpha_e, beta_ew, beta_qe</code>.</li>
+<li>for different values of the parameters, see what the OLS result is; e.g. what happens to the OLS estimation of the effect of education on wage in case <code>alpha_ew</code> equals 1.0?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org94a658c" class="outline-4">
+<h4 id="org94a658c">IV estimate</h4>
+<div class="outline-text-4" id="text-org94a658c">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/GjBvmgOB4TU" frameborder="0" allowfullscreen>IV estimate</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>using IV we correctly identify the causal effect of education on wage</li>
+<li>the first stage correctly captures the effect of the instrument <code>q</code> on education</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>which properties of <code>q</code> make it a valid instrument?</li>
+<li>generate data with <code>alpha_ew</code> equal to 1; can the IV estimation correctly identify this parameter?</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1a85243" class="outline-3">
+<h3 id="org1a85243">Heterogenous treatment effects</h3>
+<div class="outline-text-3" id="text-org1a85243">
+</div>
+<div id="outline-container-org98d6cfc" class="outline-4">
+<h4 id="org98d6cfc">generating our data</h4>
+<div class="outline-text-4" id="text-org98d6cfc">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/CJbiwXSnAV8" frameborder="0" allowfullscreen>generating data</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>use of <code>np.ones_like, np.zeros_like</code></li>
+<li>using dictionaries to define effects and functions for different groups</li>
+<li>python can loop over a list of strings (names for the different subgroups)</li>
+<li>we avoid copy/paste of code for different groups by using dictionaries together with a function
+<ul class="org-ul">
+<li>if we change something, we only need to change it once in our code (i.e. not change it for each group which we would have to do if you copy/paste your code)</li>
+</ul></li>
+<li>with <code>np.concatenate</code> we "glue" the vectors for the groups together in columns for the dataframe</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>generate another dataframe <code>df2</code> with different values for \(\beta,\tau\) and/or \(n\)</li>
+<li>do the analyses below as well for this dataframe and compare results to the analysis with <code>df</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb1a9533" class="outline-4">
+<h4 id="orgb1a9533">what can we calculate?</h4>
+<div class="outline-text-4" id="text-orgb1a9533">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/s4MinmKxytw" frameborder="0" allowfullscreen>comparing average earnings of individuals with and without traing</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>with heterogeneous effects, comparing expected earnings with and without training does not give us a straightforward training effect</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>compare expected earnings of individuals with and without an invitation to the training. Does this identify the training effect? [hint: use <code>df[df.invited==1].earnings</code> etc.]</li>
+<li>do the same when comparing the group (trained and invited) with the group (not trained and not invited)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6a27c1c" class="outline-4">
+<h4 id="org6a27c1c">three cases where we can identify the treatment effect</h4>
+<div class="outline-text-4" id="text-org6a27c1c">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/_GiHNAfhm4Y" frameborder="0" allowfullscreen>three cases where we can identify treatment effects</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>three scenario's where we can recover the relevant treatment effect</li>
+<li>calculate a conditional probability with <code>np.sum</code> over a dataframe column</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>why does the equation of Agrist and Pischke (2009) not work if there are always takers?</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3818441" class="outline-3">
+<h3 id="org3818441">Probability of treatment</h3>
+<div class="outline-text-3" id="text-org3818441">
+</div>
+<div id="outline-container-org9c2de46" class="outline-4">
+<h4 id="org9c2de46">generating our data</h4>
+<div class="outline-text-4" id="text-org9c2de46">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/KrTwMeWUCx0" frameborder="0" allowfullscreen>generating data with probability of treatment</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>using dictionaries we generate a dataframe for different types</li>
+<li><p>
+we model a nudge where receiving an explicit invitation increases the probability that the training is finished successfully
+</p>
+
+<p>
+Questions you should be able to answer before continuing:
+</p></li>
+<li>calculate using the dataframe the effect of the invitation on the training probability; i.e. the mean of <code>trained</code> conditional on being invited minus this mean conditional on not being invited. Check that this is close to 0.4.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org34db2b7" class="outline-4">
+<h4 id="org34db2b7">effect of training on earnings</h4>
+<div class="outline-text-4" id="text-org34db2b7">
+<p>
+<iframe width="660" height="503" src="https://www.youtube.com/embed/Gk_lo-UG_tA" frameborder="0" allowfullscreen>effect of training</iframe>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>using the dataframe we determine the effect of training on earnings without observing which individuals successfully finished their training</li>
+<li>we only observe who received a nudge by being explicitly invited to the training</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>use <code>results_second_stage.params</code> to see what this returns exactly and what is selected by <code>params[1]</code></li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
