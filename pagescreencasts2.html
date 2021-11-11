@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Screencasts for Seminar Datascience for Economics Part 2</title>
+<meta name="author" content="Jan Boone" />
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Screencasts for Seminar Datascience for Economics Part 2</h1>
+<p>
+<b>Under construction</b>
+</p>
+
+
+<p>
+This page contains the screencasts for the second part of the course <a href="index.html#org8b82893">Seminar Datascience for Economics</a>
+</p>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org2464db3">Dealing with data</a>
+<ul>
+<li><a href="#org6bfae03">mortality</a></li>
+<li><a href="#orgb01bf6b">GDP</a></li>
+<li><a href="#org11305e7">Income quantiles</a></li>
+<li><a href="#org6dad81a">life style variables</a></li>
+</ul>
+</li>
+<li><a href="#orgda7064b">Bayesian statistics</a>
+<ul>
+<li><a href="#org5b41783">Introduction</a></li>
+<li><a href="#orgaf4de7b">Simple Bayesian model</a></li>
+</ul>
+</li>
+<li><a href="#org0f8b065">Estimating a Bayesian model</a>
+<ul>
+<li><a href="#org2b9aed3">formulating the model</a></li>
+<li><a href="#org3e1e06f">sampling from the model</a></li>
+<li><a href="#orgf3dc9ee">summarizing posterior distribution and model fit</a></li>
+<li><a href="#orgf2c7500">Income inequality and standardizing data</a></li>
+<li><a href="#org977a792">Bayesian Model</a></li>
+<li><a href="#org46b37ef">Checking model</a></li>
+<li><a href="#orgdb2e067">Interactive plot with Altair</a></li>
+</ul>
+</li>
+<li><a href="#orgf982d2d">Dealing with missing data the Bayesian way</a>
+<ul>
+<li><a href="#orgd545d46">Masked arrays</a></li>
+<li><a href="#org8319f4c">Estimating model with missing observations</a></li>
+</ul>
+</li>
+<li><a href="#org1a858f4">Bayesian time series</a>
+<ul>
+<li><a href="#org9042531">Gaussian process</a></li>
+<li><a href="#org0d76429">Covid data</a></li>
+</ul>
+</li>
+<li><a href="#org928a8a8">Bayesian neural network</a>
+<ul>
+<li><a href="#org7069ae3">Generating the data and the grid</a></li>
+<li><a href="#orgfa1b6a8">Code for the network</a></li>
+<li><a href="#org9d7746b">Evaluating the estimated network</a></li>
+<li><a href="#org84fcb8c">Further graphical illustrations of the estimated network</a></li>
+</ul>
+</li>
+<li><a href="#org5e84ca5">What is a confidence interval</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org2464db3" class="outline-2">
+<h2 id="org2464db3">Dealing with data</h2>
+<div class="outline-text-2" id="text-org2464db3">
+</div>
+<div id="outline-container-org6bfae03" class="outline-3">
+<h3 id="org6bfae03">mortality</h3>
+<div class="outline-text-3" id="text-org6bfae03">
+<p>
+<a href="921Z4AgHwNY">downloading mortality variables</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>use <code>eurostat.get_data_df()</code> to download variables directly into a <code>pandas</code> dataframe</li>
+<li>use the <code>.unique()</code> method to find the values of a variable</li>
+<li><code>.rename()</code> to give a column a different name</li>
+<li><code>.replace()</code> to change the (row) values of a column</li>
+<li>use <code>pd.melt()</code> to "change columns into rows"</li>
+<li><code>.set_index</code> together with <code>.unstack()</code> to get variables in rows "into different columns"</li>
+<li><code>reset_index()</code> removes the index hierarchy to get a dataframe without an index</li>
+<li>and then renaming columns with <code>df.columns = [' '.join(col).strip() for col in df.columns.values]</code></li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>consider the following two statements, where we replace/rename a label:
+<ul class="org-ul">
+<li><code>df['country'] = df['geo'].replace(eurostat_dictionary)</code></li>
+<li><code>df.rename({'geo\\time':'geo'},inplace=True, axis=1)</code></li>
+</ul></li>
+<li>why does the second statement use <code>inplace = True</code> and the first does not?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb01bf6b" class="outline-3">
+<h3 id="orgb01bf6b">GDP</h3>
+<div class="outline-text-3" id="text-orgb01bf6b">
+<p>
+<a href="nm0V0vVfpiI">downloading gdp</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>same as above to create the dataframe for GDP</li>
+<li>we call this dataframe <code>df_n</code> in order to be able to merge this data in the next step:</li>
+<li><code>merge</code> statement to combine this GDP data with the mortality data above</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>why do we only need a <code>melt</code> statement for GDP and not <code>unstack</code>?</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org11305e7" class="outline-3">
+<h3 id="org11305e7">Income quantiles</h3>
+<div class="outline-text-3" id="text-org11305e7">
+<p>
+<a href="Yfl-z8E3VCU">downloading income quantiles</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>same as above</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>after merging the income quantiles data with the dataframe created above, in the video we get the columns <code>year_x</code> and <code>year_y</code>. Rename <code>year_x</code> to <code>year</code> and delete the column <code>year_y</code></li>
+<li>[advanced] after we merged the gdp and mortality data above, we did not get columns <code>year_x</code> and <code>year_y</code>: why this difference with the merge in this video?
+<ul class="org-ul">
+<li>what could have done differently in the video to avoid the <code>year_x</code> and <code>year_y</code> columns?</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6dad81a" class="outline-3">
+<h3 id="org6dad81a">life style variables</h3>
+<div class="outline-text-3" id="text-org6dad81a">
+<p>
+<a href="nOaNkcpnINg">downloading lifestyle variables</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>downloading the data for BMI and alcohol consumption is similar to what we did before: the columns that we want to "turn into rows" are years</li>
+<li>hence we can use <code>np.arange(2011,2021)</code> or even simpler <code>[2014]</code> (if we only want one year) in the <code>melt</code> statement</li>
+<li>at the time of making the video, the Eurostat data for smoking has the country abbreviations as columns that we want to "turn into rows"</li>
+<li>here we use <code>df_n.columns[4:]</code> in the melt statement</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>download the alcohol data on your own</li>
+<li>merge the lifestyle variables into the dataframe <code>df</code> with all the variables we downloaded above</li>
+<li>save you dataframe <code>df</code> into the folder <code>data</code> (create this folder if you do not have it yet):
+<ul class="org-ul">
+<li><code>df.to_csv('./data/health_data.csv')</code></li>
+</ul></li>
+<li>we will use this data below.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgda7064b" class="outline-2">
+<h2 id="orgda7064b">Bayesian statistics</h2>
+<div class="outline-text-2" id="text-orgda7064b">
+</div>
+<div id="outline-container-org5b41783" class="outline-3">
+<h3 id="org5b41783">Introduction</h3>
+<div class="outline-text-3" id="text-org5b41783">
+<p>
+<a href="VGe2AHNkMUU">Bayes' theorem</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes' Theorem</a>: \(P(A|B) = \frac{P(A and B)}{P(B)} = \frac{P(B|A)P(A)}{P(B)}\)</li>
+<li>we will want to estimate parameters \(\theta\) for a model; the posterior distribution for \(\theta\) is then given by:</li>
+</ul>
+\begin{equation}
+P(\theta | \text{data}) = \frac{P(\text{data}|\theta)*P(\theta)}{P(\text{data})}
+\end{equation}
+<ul class="org-ul">
+<li>below we will use <code>pymc3</code> (imported as <code>pm</code>) to derive the posterior distribution \(P(\theta | \text{data})\):
+<ul class="org-ul">
+<li>the probability distribution of the parameters \(\theta\) given the data that we have</li>
+</ul></li>
+<li>we use Bayes' theorem to find the probability that someone is a vampire, conditional on testing positive</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>suppose you throw a coin \(n\) times and \(p\) is the probability of "head"; what is the probability distribution of \(y\) (number of heads in \(n\) throws) called?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgaf4de7b" class="outline-3">
+<h3 id="orgaf4de7b">Simple Bayesian model</h3>
+<div class="outline-text-3" id="text-orgaf4de7b">
+<p>
+<a href="Rlvy1ItxU0A">First Baysian model</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/Binomial_distribution">binomial distribution</a></li>
+<li>we have data on an experiment where a coin is throw up to 20 times; we see how the posterior evolves after 1, 2, 3, 4, 5 and 20 throws</li>
+<li>do not worry about the <code>pymc3</code> syntax yet (this will be explained in later videos)</li>
+<li>focus on the figure showing how the posterior distribution for <code>p</code> evolves and try to understand how different values for \(y\) affect this distribution</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>choose different values for <code>y_values</code> and see how this affects the development of the posterior distribution</li>
+<li>calculate for this posterior the probability that \(p>0.8\) after throwing 20 times and \(y\) value you have chosen here
+<ul class="org-ul">
+<li>is it bigger or smaller than the probability we find in the video? Why?</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org0f8b065" class="outline-2">
+<h2 id="org0f8b065">Estimating a Bayesian model</h2>
+<div class="outline-text-2" id="text-org0f8b065">
+</div>
+<div id="outline-container-org2b9aed3" class="outline-3">
+<h3 id="org2b9aed3">formulating the model</h3>
+<div class="outline-text-3" id="text-org2b9aed3">
+<p>
+<a href="1urA2THS46A">Model specification</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>start <code>pymc3</code> model as follows: <code>with pm.Model() as model_name:</code></li>
+<li>then give the priors for the parameters of the models: <code>slope = pm.Normal('slope', 0,1)</code></li>
+<li>link the model to observed variable in the data, here <code>df.y</code> (column <code>y</code> from dataframe <code>df</code>):
+<ul class="org-ul">
+<li><code>obs = pm.Normal('obs',mu = mu, sigma = sigma, observed = df.y)</code></li>
+</ul></li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>use <code>pm.sample?</code> to see how you can modify the number of draws from the posterior distribution</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3e1e06f" class="outline-3">
+<h3 id="org3e1e06f">sampling from the model</h3>
+<div class="outline-text-3" id="text-org3e1e06f">
+<p>
+<a href="sOl41BfFwEw">Sampling from the model</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>sample from the posterior with <code>trace = pm.sample()</code></li>
+<li>the posterior predictive gives for each observation ('row') in your data, the prediction of the 'y' variable for this observation</li>
+<li>this is useful to check the fit of the model</li>
+<li>use <code>pm.sample_posterior_prediction(trace,varnames = ['obs'])</code> to generate the posterior predictive</li>
+<li>to capture the trace and the posterior predictive into one object use <code>az.from_pymc3()</code></li>
+<li>this can be used to save the trace and posterior predictive together</li>
+</ul>
+
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>choose different parameter values in the function <code>generating_data()</code> and see how the posterior distributions for the parameters change
+<ul class="org-ul">
+<li>what happens to the posterior distributions for the parameters when you increase the number of observations <code>n</code>?</li>
+<li>what happens if the parameter values chosen do not overlap with the priors specified in the model?</li>
+</ul></li>
+<li>explain the three characteristics of the trace plots that need to be satisfied to trust the sampling process</li>
+<li>what is "MCMC" the abbreviation of?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf3dc9ee" class="outline-3">
+<h3 id="orgf3dc9ee">summarizing posterior distribution and model fit</h3>
+<div class="outline-text-3" id="text-orgf3dc9ee">
+<p>
+<a href="Dxx8lbKDk_0">summarizing posterior and fit</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>use of <code>az.summary()</code> to summarize the posterior in a table</li>
+<li>the interpretation of <code>r_hat</code> in this table</li>
+<li>plot the original data and the 95% intervals to judge the fit of the model
+<ul class="org-ul">
+<li>use of <code>np.percentile()</code> to find the percentiles</li>
+<li><code>matplotlib.pyplot</code>'s <code>vlines</code> to plot the percentiles as a vertical line</li>
+</ul></li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>what do <code>hdi_3%</code> and <code>hdi_97%</code> mean?</li>
+<li>what does <code>alpha = 0.2</code> mean in a plot statement?</li>
+</ul>
+</div>
+
+<div id="outline-container-orgeeb624e" class="outline-4">
+<h4 id="orgeeb624e">Eurostat data</h4>
+<div class="outline-text-4" id="text-orgeeb624e">
+<p>
+<a href="gnE9K0u6p34">Loading and plotting Eurostat data</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>loading the data with <code>pandas</code>'s <code>read_casv()</code></li>
+<li>plotting the data with a <code>matplotlib</code> color map</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgf2c7500" class="outline-3">
+<h3 id="orgf2c7500">Income inequality and standardizing data</h3>
+<div class="outline-text-3" id="text-orgf2c7500">
+<p>
+<a href="32A_LTy5RW4">Income inequality and standardizing data</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>difference between <code>np.log(df[income_quantiles].mean(axis = 1))</code> and <code>(np.log(df[income_quantiles])).mean(axis = 1)</code>
+<ul class="org-ul">
+<li>i.e. order of taking the logarithm and the mean of the quantiles</li>
+</ul></li>
+<li>using <code>dropna()</code> to delete observations with missing values (which is, actually, a bad idea)</li>
+<li>defining a function <code>standardize()</code> which subtracts the mean of a variable and divides by standard deviation and then apply this function to the variables in the dataframe</li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>what are advantages of standardizing your data?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org977a792" class="outline-3">
+<h3 id="org977a792">Bayesian Model</h3>
+<div class="outline-text-3" id="text-org977a792">
+<p>
+<a href="IFi50EBpXig">Bayesian model</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>we build a model to explain how log-mortality varies between countries and genders</li>
+<li>we use 'mortality' instead of 'obs' when linking the model to the observed (standardized) variable <code>log_mortality</code></li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>explain why some priors are based on a normal distribution and others on a half-normal distribution</li>
+<li>use <code>pm.sample?</code> or use google to find out what the <code>tune</code> keyword does</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org46b37ef" class="outline-3">
+<h3 id="org46b37ef">Checking model</h3>
+<div class="outline-text-3" id="text-org46b37ef">
+<p>
+<a href="ozzR5_DXMqs">Checking the model</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>plot the original data together with 95% prediction interval for log mortality</li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>check the trace plots for the coefficients in <code>variables_health</code></li>
+<li>when variables are standardized, what does a mean coefficient of, say, <code>-0.802</code> mean?</li>
+<li>re-estimate the model with preventable mortality as variable to be explained and repeat all the steps above.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdb2e067" class="outline-3">
+<h3 id="orgdb2e067">Interactive plot with Altair</h3>
+<div class="outline-text-3" id="text-orgdb2e067">
+<p>
+<a href="sVwuOjmcvck">Interactive Plot Altair</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>make an interactive plot with <code>altair</code>'s <code>Chart(df)</code> method combined with <code>.encode()</code> and <code>.interactive()</code></li>
+<li>define a year selection with <code>alt.selection_single()</code></li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>make the same interactive plot with <code>inequality</code> on the horizontal axis</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf982d2d" class="outline-2">
+<h2 id="orgf982d2d">Dealing with missing data the Bayesian way</h2>
+<div class="outline-text-2" id="text-orgf982d2d">
+</div>
+<div id="outline-container-orgd545d46" class="outline-3">
+<h3 id="orgd545d46">Masked arrays</h3>
+<div class="outline-text-3" id="text-orgd545d46">
+<p>
+<a href="AicqVtR1-RI">Masked arrays</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>creating a masked array with <code>np.ma.array()</code></li>
+<li>if <code>x</code> is a masked array, use <code>x.compressed()</code> to get a readable representation</li>
+<li>use <code>np.ma.masked_invalid()</code> to turn an existing array into a masked array</li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>if a masked array has 4 entriew and <code>mask = [0, 0, 1, 1]</code>, which entries are missing?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8319f4c" class="outline-3">
+<h3 id="org8319f4c">Estimating model with missing observations</h3>
+<div class="outline-text-3" id="text-org8319f4c">
+<p>
+<a href="FhjhU1CxAns">Model with missing observations</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>specify the priors for the missing variables using the <code>observed</code> keyword</li>
+<li>use different names (e.g. capitalized) for the variables with missing values where the missing values are drawn from the prior distribution</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>summarize the posterior distribution with a table</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1a858f4" class="outline-2">
+<h2 id="org1a858f4">Bayesian time series</h2>
+<div class="outline-text-2" id="text-org1a858f4">
+</div>
+<div id="outline-container-org9042531" class="outline-3">
+<h3 id="org9042531">Gaussian process</h3>
+<div class="outline-text-3" id="text-org9042531">
+</div>
+<div id="outline-container-orge41db0c" class="outline-4">
+<h4 id="orge41db0c">GP with exponentiated quadratic kernel</h4>
+<div class="outline-text-4" id="text-orge41db0c">
+<p>
+<a href="HjoYRQDYK4E">exponentiated quadratic kernel</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>generate our own data with a trend and cyclical component</li>
+<li>formulate the model with a Gaussian Process:
+<ul class="org-ul">
+<li><code>pm.gp.cov.ExpQuad()</code> for the kernel</li>
+<li><code>pm.gp.Marginal()</code> for the Gaussian Process</li>
+<li><code>.marginal_likelihood()</code> method on the Gaussian Process to link process to the data</li>
+</ul></li>
+<li>use <code>pm.ADVI()</code> to approximate the posterior and then <code>.sample()</code> to sample from this posterior</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>use MCMC to sample the posterior; does this work well?</li>
+<li>generate a different time series and fit the GP to this data using the ADVI sampler</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc25277a" class="outline-4">
+<h4 id="orgc25277a">Checking fit</h4>
+<div class="outline-text-4" id="text-orgc25277a">
+<p>
+<a href="0ZpJB1ROLuA">checking fit GP</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>use of <code>np_c</code> as documented <a href="https://numpy.org/doc/stable/reference/generated/numpy.c_.html">here</a></li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>what do you think of the out-of-sample prediction of this kernel?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org55b5457" class="outline-4">
+<h4 id="org55b5457">GP with periodic kernel</h4>
+<div class="outline-text-4" id="text-org55b5457">
+<p>
+<a href="Kq-ZlhkGDWw">periodic kernel</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>defining the periodic kernel with
+<ul class="org-ul">
+<li><code>pm.gp.cov.Periodic()</code> and <code>pm.gp.Marginal()</code></li>
+<li>defining a linear component with <code>pm.gp.cov.Linear()</code></li>
+<li>adding two GP's</li>
+</ul></li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>finish the analysis with the ELBO-plot, sampling from the posterior, in-sample and out-of-sample predictions</li>
+<li>compare the out-of-sample predictions here with the ones obtained from the exponentiated quadratic kernel: which one performs better in your view?</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0d76429" class="outline-3">
+<h3 id="org0d76429">Covid data</h3>
+<div class="outline-text-3" id="text-org0d76429">
+</div>
+<div id="outline-container-org33b8fe9" class="outline-4">
+<h4 id="org33b8fe9">Getting the data from John Hopkins University</h4>
+<div class="outline-text-4" id="text-org33b8fe9">
+<p>
+<a href="KE-GjOb58x8">getting covid data</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>use of <a href="https://github.com/PayneLab/covid19pandas">pandas API</a> to <a href="https://coronavirus.jhu.edu/about/how-to-use-our-data">John Hopkins covid data</a></li>
+<li>selecting data from the Netherlands</li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>select data from a different country and different time period</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge6c0848" class="outline-4">
+<h4 id="orge6c0848">Bayesian exponential model</h4>
+<div class="outline-text-4" id="text-orge6c0848">
+<p>
+<a href="FFU_n5r_2a8">specifying exponential model</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>specifying a non-linear relationship \(y = a(1+b)^t\) to be estimated</li>
+<li>sample from the prior predictive distribution; these are predictions based on the prior only, without using the data</li>
+<li>plotting 50 samples from the prior-predictive to check whether the predictions look reasonable</li>
+<li>use of <code>zip()</code> with two lists to generate "coordinates"</li>
+<li>plotting the 95% prediction intervals</li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>draw prior-predictive samples from a model based on \(y = e^{bt}\)</li>
+<li>create triples <code>(1,4,7), (2,5,8)</code> etc. from the lists <code>[1,2,3], [4,5,6]</code> and <code>[7,8,9]</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8dd6ae2" class="outline-4">
+<h4 id="org8dd6ae2">Bayesian logistic model</h4>
+<div class="outline-text-4" id="text-org8dd6ae2">
+<p>
+<a href="aytlnYqBZgA">logistic model</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>rewrite your model in terms of parameters that simplify the choice of prior distributions for these parameters</li>
+<li>then use <code>pm.Deterministic()</code> to generate the parameter that you actually need in your model</li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>get the trace with <code>pm.sample()</code></li>
+<li>check the trace plot and the summary of the trace in a table</li>
+<li>and posterior predictive distribution with <code>pm.sample_posterior_predictive()</code></li>
+<li>plot the original data together with the 95% posterior predictive interval</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org928a8a8" class="outline-2">
+<h2 id="org928a8a8">Bayesian neural network</h2>
+<div class="outline-text-2" id="text-org928a8a8">
+</div>
+<div id="outline-container-org7069ae3" class="outline-3">
+<h3 id="org7069ae3">Generating the data and the grid</h3>
+<div class="outline-text-3" id="text-org7069ae3">
+<p>
+<a href="E0_KRDJX2iQ">Data and grid</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>use of <code>make_moons()</code> from <code>sklearn</code> to generate "nice" data for a supervised learning algorithm</li>
+<li>use <code>pm.floatX()</code> to get data of the correct type for <code>pymc3</code> (and its <code>theano</code> backbone) &#x2013;don't worry if you do not understand this; usually this step is not necessary</li>
+<li>use of <code>np.mgrid[]</code> to generate a two dimensional grid of coordinates:
+<ul class="org-ul">
+<li><code>np.mgrid[0:1:3j,10:11:4j]</code> generates a \(2 \times 3 \times 4\) tensor of \((x,y)\) coordinates (first dimension),
+<ul class="org-ul">
+<li>going from 0 to 1 in 3 steps (the complex number <code>j</code> translates into number of steps; instead of step size; to see this try <code>np.mgrid[0:1:0.25,10:11:4j]</code> where 0.25 denotes step size)</li>
+<li>going from 10 to 11 in 4 steps</li>
+</ul></li>
+<li>then <code>np.mgrid[0:1:3j,10:11:4j].reshape(2,-1).T</code>
+<ul class="org-ul">
+<li>generates twelve (x,y) coordinates, starting with (0,10) and going to (1,11)</li>
+<li>the "-1" in <code>reshape()</code> means: choose whatever dimension is necessary here for the reshape to work
+<ul class="org-ul">
+<li>to see this, try <code>.reshape(3,-1)</code> and <code>.reshape(5,-1)</code>; why does the latter generate an error?</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>consider the integer pairs \((x,y) = (0,0), (1,0), (0,1), (2,0) ... (4,4)\); show that for 19 such pairs \((x,y)\) it the case that \(x+y > 2\)?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfa1b6a8" class="outline-3">
+<h3 id="orgfa1b6a8">Code for the network</h3>
+<div class="outline-text-3" id="text-orgfa1b6a8">
+<p>
+<a href="-StgJosvkaQ">code for the network</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>the model follows a standard <code>pymc3</code> model, with some additional "bells and whistles" as we are modeling a neural network:
+<ul class="org-ul">
+<li>the code is mainly provided as illustration; it is not necessary to fully understand the code of the model</li>
+<li>but the main idea is important: the parameters/weights of a neural network can be thought of as being stochastic and hence we can consider the posterior distribution of the weights and the predictions of the network</li>
+<li>weights in the first layer <code>weights_in_1</code> need to "receive" the inputs of the features (columns) in data matrix \(X\) and output to the number of nodes in the first hidden layer. The <code>shape</code> keyword in <code>pm.Normal()</code> takes care of this when defining the prior for these weights</li>
+<li><code>testval</code> sometimes helps to get the sampling of the posterior going; it is like providing an initial guess in a function like <code>fsolve()</code></li>
+<li>we also specify the weights of the first and second hidden layers</li>
+<li>we define the activation functions and outcomes for the three layers: <code>act_1, act_2, act_out</code></li>
+<li>these activations will be defined in terms of our inputs (data) \(X\)</li>
+<li>in addition to this, we want to plot the predictions of the network on the grid <code>grid_2d</code> that we defined</li>
+<li>for this we use <code>pm.Deterministic()</code> to define the probability <code>p</code>, which is again based on the three activation functions but now applied to <code>grid_2d</code> and not to data \(X\)</li>
+<li>our final classification is based on the classification propability <code>act_out</code> which is based on data \(X\); as there are only two classes (blue and red), this is a Bernoulli process (one draw from a Binomial distribution)</li>
+<li><code>theano.shared()</code> makes sure that variables defined outside the <code>pymc3</code> model, work inside it as well (again, do not worry about this)</li>
+</ul></li>
+<li>we use ADVI to sample the posterior as it is faster than MCMC</li>
+</ul>
+
+
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>what is the difference between <code>A*B</code> and <code>pm.math.dot(A,B)</code> for two tensors <code>A</code> and <code>B</code>? [hint: how can you find out what <code>pm.math.dot()</code> does?]</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org9d7746b" class="outline-3">
+<h3 id="org9d7746b">Evaluating the estimated network</h3>
+<div class="outline-text-3" id="text-org9d7746b">
+<p>
+<a href="q2gaWDjlrGU">evaluating the network</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>we plot the ELBO to see whether the optimization step in ADVI converged; we get the "inverse J" shape that we would expect</li>
+<li>since we draw weigths from our posterior, there is not one decision boundary, but we have a number of these; we plot the first 50 of these boundaries
+<ul class="org-ul">
+<li>the boundary is the contour ("iso probability line") corresponding to \(p=0.5\)</li>
+</ul></li>
+<li>this shows that in some regions we are pretty sure where the boundary lies, while in other regions the boundary varies more across posterior samples</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>just for illustrative purposes: plot the 0.4 and 0.6 contours; we will use color below to plot "all contours" at once</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org84fcb8c" class="outline-3">
+<h3 id="org84fcb8c">Further graphical illustrations of the estimated network</h3>
+<div class="outline-text-3" id="text-org84fcb8c">
+<p>
+<a href="eiDGXIqveA8">graphical illustration of network uncertainty</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>using a color map, we plot all probability contours (iso probability lines) at the same time</li>
+<li>hence, we can say things like: for this point we are 70% sure that the label is "red" where we take the average probability across posterior samples</li>
+<li>to get an idea of the uncertainty across samples, we plot the standard deviation of the probabilities across posterior samples</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>in this case, the contour plots of the means \(p\) across posterior samples and of the standard deviations across samples look very similar. Explain why this is [hint: consider the expression for the standard deviation of a binomial distribution]</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org5e84ca5" class="outline-2">
+<h2 id="org5e84ca5">What is a confidence interval</h2>
+<div class="outline-text-2" id="text-org5e84ca5">
+<p>
+<a href="BVe6EYkbHQw">confidence vs credible intervals</a>
+</p>
+
+<p>
+Topics we cover in this video:
+</p>
+<ul class="org-ul">
+<li>we use simulations to show what a 95% confidence interval and a credible interval is</li>
+<li>then we check that the relevant parameter lies in the interval 95% of time</li>
+</ul>
+
+<p>
+Questions you should be able to answer before continuing:
+</p>
+<ul class="org-ul">
+<li>do the analysis with different values of <code>n_sample, precision</code>; for very small values of <code>precision</code> you may have to increase <code>repetitions</code></li>
+<li>if \(\sigma\) is not known, we need to estimate it from the sample; in that case, we need to use the $t$-distribution to calculate the confidence interval (instead of a normal distribution). If necessary use <a href="https://en.wikipedia.org/wiki/Confidence_interval#Example">the example here</a> and program this case to check that the confidence interval contains \(\mu\) in 95% of the cases.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jan Boone</p>
+</div>
+</body>
+</html>

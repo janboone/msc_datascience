@@ -1,0 +1,112 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+#+Title: Assessment material for the course "Seminar Data Science for Economics" 310170-M-6
+#+Author: Jan Boone and Madina Kurmangaliyeva
+
+* Syllabus
+  :PROPERTIES:
+  :ID:       assessment
+  :END:
+
+** Course structure
+
+In the course Data Science for Economics you will learn how to deal with big (unstructured) data to answer policy questions using recent advances in machine learning.
+
+Whether you are a public policy-maker or a data analyst at a private firm,  you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large individual-level data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which (out of many) variables to use in your analysis.
+
+This course will help you to overcome those challenges. The "traditional" econometrics you have learnt in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there are more variables than observations, and you do not know at the start which variables and interaction terms to include.
+
+In this course, we give an introduction to data-project management  (e.g. git, sublime), tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
+
+We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets, cross-validation and machine learning to find the best instrumental variables.
+
+Finally, we will cover post-selection inference for causal effects (as in Belloni, Chernozhukov, and Hansen 2013). In terms of software we will be using python, google's tensorflow, and R.
+
+*Required Prerequisites*
+
+Students make sure they follow Econometrics 1 and the python track in AEA 1.
+
+** Learning goals
+
+By the end of the course, you will be able to:
++ design your empirical strategy to answer a policy question
+  + motivate your policy question (why is it relevant/interesting; how is your analysis going to answer the question)
++ gather unstructured datasets, merge and clean them using programming
++ apply machine learning techniques (e.g. neural networks, decision trees, random forest) to deal with big data in a causal framework
++ explain the critical assumptions that you need for the technique that you are using and discuss (potential) weaknesses of the technique used
++ use machine learning toolkit if the goal is pure prediction, explain why this differs from causal inference
++ explain the policy implications of your analysis
+
+The overall learning goal is to make you independent in designing and performing data analysis.
+
+** Examination
+
+The examination for this course consists of a data analysis project (100%), where you will use the knowledge gained throughout the course and apply it in a new setting on your own.
+
+** Course website
+
+All other information can be found on the [[file:index.org::*Course description][course website]].
+
+* Specification table
+
+*Test type*: Assignment 
+
+#+Caption: Specification table: cognitive skills
+| tested subjects                                       | Knowledge | Comprehension | Application | Analysis | Evaluation | Synthesis | Total |
+|-------------------------------------------------------+-----------+---------------+-------------+----------+------------+-----------+-------|
+| design empirical strategy                             |           |               |             |      1.0 |        0.5 |           |   1.5 |
+| explain policy motivation                             |           |               |             |          |        0.5 |           |   0.5 |
+| gather data, merge and clean data (using programming) |           |               |             |      0.5 |            |           |   0.5 |
+| apply machine learning techniques                     |           |               |             |          |            |       6.0 |    6. |
+| explain critical assumptions, discuss weaknesses      |           |               |             |          |       0.75 |           |  0.75 |
+| distinguish prediction and causal inference           |           |               |             |          |       0.25 |           |  0.25 |
+| explain policy implications                           |           |               |             |          |        0.5 |           |   0.5 |
+|-------------------------------------------------------+-----------+---------------+-------------+----------+------------+-----------+-------|
+| total                                                 |           |               |             |          |            |           |   10. |
+#+TBLFM: $8=vsum($2..$7)::@11$8=vsum(@4$8..@10$8)
+
+
+From the final assignment (discussed below):
++ design empirical strategy relates to the assignment questions on Research question, (half of) Method and data and Preview of answers
++ explain policy motivation: question on Motivation                        
++ gather data, merge clean data (using programming): question on (half of) Method and data
++ apply machine learning methods: Python/R code                   
++ explain critical assumptions, discuss weaknesses: Main assumptions (half) and Robustness analysis 
++ distinguish prediction and causal inference: Main assumptions (half)     
++ explain policy implications: Discussion and conclusion
+
+* Inspection information
+
+Students can contact us for an appointment to discuss the grade of their assignment.
+
+* Preparation materials for the exam
+
++ From Datacamp, the following courses:
+  + [[https://www.datacamp.com/courses/statistical-simulation-in-python][statistical simulation]]
+  + [[https://www.datacamp.com/courses/deep-learning-with-keras-in-python][keras]]
+  + [[https://www.datacamp.com/courses/introduction-to-tensorflow-in-python][tensorflow]]
+  + [[https://www.datacamp.com/courses/web-scraping-with-python][intro to scraping (do only chapters 1,2,3)]]
+  + [[https://www.datacamp.com/courses/regular-expressions-in-python][regular expressions Python]]
+  + [[https://www.datacamp.com/courses/string-manipulation-in-r-with-stringr][regular expressions R]]
+  + [[https://www.datacamp.com/courses/introduction-to-the-tidyverse][intro to tidyverse R]]
++ [[https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb][jupyter notebook]]
++ Chapters 6 and 8 from [[http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf][An Introduction to Statistical Learning]] by James, Witte, Hastie, and Tibshirani
+
+
+* The exam cover page and exam questions for the exams
+
+Students get a template to make their assignment in the form of a jupyter notebook.
+
+The template can be found [[https://github.com/janboone/datascience_assignment_template/blob/master/assignment_notebook.ipynb][here]] and [[https://janboone.github.io/msc_datascience/#org6548148][the description of the final assignment]]. The template specifies the sections for the final assignment and the max. points that can be earned for each section.
+
+The template was designed by Madina and Jan.
+
+
+* Grading instructions
+
+Since this is a (free) assignment, it is not possible to provide (exact) answers to each section in the assignment template. The template itself specifies the points we are looking for when grading the assignment.
+
+Students can work on their own or in teams of two students. We use github classroom and hence can see whether both students contributed to the assignment (github keeps track who made which changes in a file). If we have doubts whether a student (or the two students) worked on her/his own, we ask them to come to our office and explain their code to us.
+
+Students with a grade of 5.5 can be called in for an oral exam (discussion of their assignment).
+
+

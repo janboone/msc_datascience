@@ -1,0 +1,319 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+#+Title: Seminar Data Science for Economics
+#+Author: Jan Boone and Madina Kurmangaliyeva
+#+OPTIONS: toc:2 timestamp:nil toc:nil
+
+This website contains the material for the MSc course Seminar Data Science for Economics
+
+**This website is under construction for 2020/2021**
+
+This year the course is taught by:
++ Jan Boone
++ Madina Kurmangaliyeva
++ Jing-Rong Zeng
+
+* Course description
+  :PROPERTIES:
+  :ID:       6a40d18d-ece7-40ae-a723-79a2e93891cc
+  :END:
+
+In the course Data Science for Economics you will learn how to deal with big (unstructured) data to answer policy questions using recent advances in machine learning.
+
+Whether you are a public policy-maker or a data analyst at a private firm,  you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large individual-level data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which (out of many) variables to use in your analysis.
+
+This course will help you to overcome those challenges. The "traditional" econometrics you have learnt in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there are more variables than observations, and you do not know at the start which variables and interaction terms to include.
+
+In this course, we give an introduction to data-project management  (e.g. git, sublime), tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
+
+We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets, cross-validation and machine learning to find the best instrumental variables. We will also learn to use supervised machine learning methods as Lasso, Ridge regressions, and tree-based methods (e.g., random forest). 
+
+Finally, we will cover how to use the machine learning methods to measure causal effects (i.e., post-regularization inference, Double Machine Learning, Generalized Random Forest).
+
+In terms of software we will be using python, google's tensorflow, and R. Students must have followed the Econometrics 1 and the python track in AEA 1.
+
+
+For this course we use the following resources:
+
++ We are very happy that we partner with [[https://www.datacamp.com/][Datacamp]] for this course: [[https://www.tilburguniversity.edu/students/skills/programming][register for Datacamp]]
++ Textbook for Madina's part: Chapters 6 and 8 from [[http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf][An Introduction to Statistical Learning]] by James, Witte, Hastie, and Tibshirani (available free online)
+
+
+#+TOC: headlines 2
+
+
+* Screencasts
+  :PROPERTIES:
+  :CUSTOM_ID:       screencasts_datascience
+  :END:
+
+For this course a series of screencasts is available. For Jan's part of the course the screencasts can be found on this [[file:./pagescreencasts.org][webpage.]]
+
+
+* Organisation of the course
+
+** Lecture schedule
+   :PROPERTIES:
+   :ID:       39F7FAD7-56BA-49D0-8424-7EB8F8839E41
+   :END:
+   
+
+| day      | date   |         time | teacher | topics                                              | datacamp                   |
+|----------+--------+--------------+---------+-----------------------------------------------------+----------------------------|
+| Friday   | Feb 5  | 10:45--12:30 | Jan     | distributions, bootstrapping                        | statistical simulation 1,2 |
+|          |        |              |         | doing your own OLS                                  | statistical simulation 3,4 |
+| Thursday | Feb 11 | 12:45--14:30 | Jan     | causality                                           | keras 1,2                  |
+|          |        |              |         | tensors, first neural netw.                         | keras 3,4                  |
+| Friday   | Feb 26 | 10:45--12:30 | Jan     | over/underfitting                                   | tensorflow 1,2             |
+|          |        |              |         | neural network                                      | tensorflow 3,4             |
+| Friday   | Mar 5  | 10:45--12:30 | Jan     | neural network                                      |                            |
+|          |        |              |         | treatment effects                                   |                            |
+| Friday   | Mar 12 | 10:45--12:30 | Madina  | prediction: loss functions, bias variance trade-off |                            |
+|          |        |              |         | prediction: cross-validation                        |                            |
+| Friday   | Mar 19 | 10:45--12:30 | Madina  | prediction: lasso/ridge                             | linear regressions         |
+|          |        |              |         | prediction: trees, boosting, bagging, r. forest     | tree-based models          |
+| Friday   | Mar 26 | 10:45--12:30 | Madina  | causality: post-regularization inference            |                            |
+|          |        |              |         | causality: double machine learning                  |                            |
+| Friday   | Apr 1  | 10:45--12:30 | Madina  | causality: causal trees                             |                            |
+|          |        |              |         | causality: generalized random forests               |                            |
+
++ we will see how fast we go, the column "topics" is an indication of what will be discussed in each week
++ for the first part, taught by Jan, we will go through [[https://janboone.github.io/msc_datascience/Statistical_Hacking/Statistical_Hacking.html][this notebook]]
++ for the second part, taught by Madina, we will go through a series of lectures and tutorials based on the textbook (see above) and the latest techniques in the field of machine learning for causality (e.g., double machine learning,  causal trees).
+
+** First Lecture
+
+[[file:img/Introduction_Lecture.org::#introduction][Introduction Lecture]]
+
+*** Assignment 1
+:PROPERTIES:
+:ID:       1BBFB9ED-F701-42A8-B620-03FD6AFB73A2
+:END:
+
+Do the following four steps:
++ if you did AEA 1, you already have a [[https://github.com/][github]] account, otherwise create a github account
++ fill in this [[https://forms.gle/33HJUpXV3iD6s5ZE6][google form]] before *Friday 12 February 2021*
+  + sign in with your @tilburguniversity.edu email address and password
++ go to
+  + [[https://jupyterlab.uvt.nl/][jupyter lab]]
+    + IT suggests that you use the Firefox browser to access jupyter lab
+    + sometimes it helps to access jupyter lab with an incognito/private window
+  + or --if all else fails-- you can use [[https://colab.research.google.com/][google's colab]]
++ create a new python notebook and type the following code in the first cell:
+#+BEGIN_SRC ipython
+%%bash
+
+git clone https://github.com/janboone/msc_datascience.git
+#+END_SRC
++ then press the Shift key and Enter key as the same time
++ this creates a folder on the server ~msc_datascience~ that contains the material for the python part of the course.
++ Note: you can only run this command once. If you run it again, you get an error since the folder already exists.
+
+*** Final assignment
+
++ instructions for the final assignment can be found below.
+
+
+** Datacamp
+
+** From Datacamp, do the following courses for the first part of the course
+
++ [[https://www.datacamp.com/courses/statistical-simulation-in-python][statistical simulation]]
++ [[https://www.datacamp.com/courses/deep-learning-with-keras-in-python][keras]]
++ [[https://www.datacamp.com/courses/introduction-to-tensorflow-in-python][tensorflow]]
+
+A couple of notes on these datacamp courses:
+
+The [[https://www.datacamp.com/courses/statistical-simulation-in-python][statistical simulation]] course starts with very simple statistical concepts. But rapidly things become more challenging. The focus of our seminar will not be on statistical simulation per se, but we will use it to understand the properties of estimators. Hence, it is important to understand the "flow" of having a statistical process and then repeating it 10,000 times to understand its properties. You also learn how to use numpy's statistical functions from ~numpy.random~.
+
+The point for us of this Datacamp course is to become comfortable with modelling data generating processes. Not the specific applications considered in this course.
+
+You may not have seen the ~get~ method of a dictionary. Here you see it in action in a simple example (borrowed from [[https://stackoverflow.com/questions/2068349/understanding-get-method-in-python][stackoverflow]]):
+
+#+BEGIN_SRC ipython
+sentence="The quick brown fox jumped over the lazy dog."
+characters={}
+
+for character in sentence:
+    characters[character] = characters.get(character, 0) + 1
+
+print(characters)
+#+END_SRC
+
+#+RESULTS:
+: {'T': 1, 'h': 2, 'e': 4, ' ': 8, 'q': 1, 'u': 2, 'i': 1, 'c': 1, 'k': 1, 'b': 1, 'r': 2, 'o': 4, 'w': 1, 'n': 1, 'f': 1, 'x': 1, 'j': 1, 'm': 1, 'p': 1, 'd': 2, 'v': 1, 't': 1, 'l': 1, 'a': 1, 'z': 1, 'y': 1, 'g': 1, '.': 1}
+
+~characters~ is a dictionary with ~key~ a character (including "space") from the ~sentence~ and the ~value~ equals the number of times the character has occured up till then. If a character "happens" for the first time, ~get~ cannot find it in the dictionary ~characters~ and returns the default value (here specified as 0). If character has happened, say, 3 times before, ~get~ returns the value 3 and we add 1, so the new value equals 4.
+
+If you run into other functions that you are not familiar with, you can use "?", like in:
+
+#+BEGIN_SRC jupyter-python :session py :kernel python3
+np.random.binomial?
+#+END_SRC
+
+Also, you can google!
+
+Things to take away from this course:
++ how to use random variables in python
++ how to create samples out of a population (e.g. by using ~np.random.choice~)
++ how to model statistical processes (data generating processes)
++ how to use resampling methods like bootstrapping
++ how to use permutation testing
++ how to use simulation for power analysis
+
+This [[https://www.datacamp.com/courses/deep-learning-with-keras-in-python][keras]] course is "hands on" and has a lot of applications. If you prefer a course with some more background on the math of neural networks, you can do [[https://www.datacamp.com/courses/deep-learning-in-python][this one]] instead.
+
+Note that for this [[https://www.datacamp.com/courses/deep-learning-with-keras-in-python][keras]] course Chapter 4 is fun but optional.
+
+The [[https://www.datacamp.com/courses/introduction-to-tensorflow-in-python][tensorflow]] course gives some more background on the syntax used in tensorflow that we also use in class. All the keras commands you learn in the keras course are easily applied under tensorflow.
+
+** For the second part of the course, you can do the following datacamp courses:
+
+- [[https://learn.datacamp.com/courses/supervised-learning-with-scikit-learn][linear regressions]] (Chapter 2 only)
+- [[https://learn.datacamp.com/courses/machine-learning-with-tree-based-models-in-python][tree-based models]]
+
+Additional courses on datacamp (optional, highly recommended):  
+
+- working with big datasets:
+  - [[https://learn.datacamp.com/courses/introduction-to-sql][Intro to SQL]]
+  - [[https://learn.datacamp.com/courses/introduction-to-pyspark][Intro to PySpark]]
+- Other useful skills:
+  - [[https://www.datacamp.com/courses/regular-expressions-in-python][regular expressions Python]]
+  - [[https://www.datacamp.com/courses/web-scraping-with-python][intro to scraping]]
+
+** Deadlines
+   :PROPERTIES:
+   :ID:       D000098A-D12D-4E06-9F7A-2C2549B03236
+   :END:
+
+The deadline for the *final assignment* is: Friday June 18th 2021 at 23:59.
+
+The resit deadline for the assignment is: Friday August 27th, 2021. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
+
+** Questions
+
+ If you have questions/comments about this course, go to the [[https://github.com/janboone/msc_datascience/issues][issues page]]
+ open a new issue (with the green "New issue" button) and type your
+ question. Use a title that is informative (e.g. not "question", but
+ "question about the second assignment"). Go to the next box ("Leave a comment")
+ and type your question. Then click on "Submit new issue". We will
+ answer your question as quickly as possible.
+
+ The advantages of the issue page include:
+
+ + if you have a question, other students may have it as well; in this
+   way we answer the questions in a way that everyone can see it. Also
+   before asking the question, you may want to check whether it was
+   asked/answered before on the issue page
+ + we answer your question more quickly than when you email us
+ + you increase your knowledge of github!
+
+ Only when you need to include privately sensitive information ("my cat
+ has passed away"), you can send an email.
+
+ In order to post issues, you need to create a github account (which
+ you need anyway to follow this course).
+
+ Note that if your question is related to another issue, you can react
+ to the earlier issue and leave a comment in that "conversation".
+
+** Assessment material
+
+We have a separate page with all relevant [[file:Datascience_for_economics.org::*Syllabus][assessment material]]
+
+* Final Assignment
+  :PROPERTIES:
+  :ID:       A5BAF826-823B-4CE7-AB70-F9BD310CE96A
+  :END:
+
++ The final assignment you can do alone or with at max. one other student (i.e. max group size is 2).
++ for the deadline of the python assignment, see [[Deadlines]] above
++ on Canvas we give you the link to the github repos. with the ~assignment_notebook.ipynb~
++ to submit your final assignment:
+  + do not change the name of the ~assignment_notebook.ipynb~ notebook
+  + fill in this [[https://forms.gle/PxdCRduc2wWBkNbT9][google form]]
+  + push the final notebook on the github classroom repository
+
+
+** TODO Instructions for submitting final assignment to be put on Canvas :noexport:
+
+- [X] create assignment on github classroom with the datascience template/notebook
+- [X] create google form for students to fill in once they finish assignment: replace last year link above
+
+1. attach instructions: [[file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf][file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf]]
+2. create and post screencast where notebook is downloaded and uploaded on github
+3. show previous step during lecture
+
+
+Dear students,
+
+The link for the final datascience assignment (template) is: https://classroom.github.com/g/7C4-NeR1
+
+You can do the assignment on your own or with (at max.) one other student. When you use the link to the assignment, you will be asked for your team's name.
+
+When you finish your assignment:
+
+1. download your assignment (jupyter notebook) from jupyter lab (or google colabs; or check where it is on your computer when using anaconda) to your computer (e.g. in the folder Downloads)
+
+2. push it onto your assignment's github repository
+
+3. fill in the google form as indicated on the website under Final Assignment
+
+We need the information from the google form to link your assignment to your student number which is needed for the exam administration.
+
+If you have questions about the assignment or the procedure described above, create an issue on the webpage at: https://github.com/janboone/msc_datascience/issues
+
+Then you can see whether other students had the same question (which was already answered) or fellow-students can learn from your question. These issues can be read by anyone, so do not provide any privacy related information.
+
+Good luck with the assignment,
+
+Madina and Jan.
+
+** what we are looking for
+
+The idea of the assignment is that you report your findings in a transparent way that can easily be verified/reproduced by others. The intended audience is your fellow students. They should be able to understand the code you write together with the explanations that you give for this code.
+
+The following ingredients will be important when we evaluate your assignment:
+
++ Create a "big dataset" from an economic organization providing data; think of:
+  + [[https://stats.oecd.org][OECD]]
+  + [[https://data.worldbank.org][World Bank]] (recall that we use a python API to access this data in AEA; this you can use as well, of course)
+  + [[https://www.imf.org/en/Data][IMF]]
+  + [[https://www.federalreserve.gov/data.htm][Federal Reserve]]
+  + [[https://data.europa.eu/euodp/en/data/][European Union]]
+  + [[https://www.ecb.europa.eu/stats/html/index.en.html][European Central Bank]]
+  + statistical office of your own country, e.g. [[https://opendata.cbs.nl/statline/#/CBS/en/][Statistics Netherlands]]
+  + if you want to use another economic data source, ask us first
++ Data handling:    
+  + download the data to your repos. (in a separate folder "data") and
+  + in your notebook create a link to the website of the data source
+  + give the code how you merged separate datasets into one big dataset that you use
+  + explain what you did (including the code) and why you did the data cleaning steps to get the data from the downloads to the data that you use in the analysis
++ Start your analysis with a clear and transparent *question*.
++ Briefly *motivate* why this question is interesting.
++ Explain the *methods* that you use to answer the question.
+  + are your methods based on correlations (only)?
+  + do they allow you to make claims about causality?
++ Give the *answer* that you find (as a preview).
++ Mention the main *assumptions* that you need to get this answer.
++ Use graphs to introduce your data
++ If you use equations, use latex to make them easy to read.
++ Explain your code, the reader --think of your fellow students--  must be able to easily follow what you are doing.
++ How well does your model *fit* the data?
+  + what methods do you use to evaluate this?
++ Present a clear conclusion/answer to your question.
++ Include some *discussion* of what you find and elements on which you need additional information.
+
+Two remarks:
++ you can copy code from the web; but
+  + make sure that you explain the code that you use so that another student of the course understands it and can use it;
+  + give the reference of the code that you copy;
++ use *common sense*: it is not always necessary to have a full blown economic model, but we do expect you to think!
+  + in the past we had students looking at the effect of age on income in sports; "theory" suggests that this relation is hump-shaped: 5 year olds and 80 year olds tend not to earn a lot of money as elite athletes; the students presented a scatter plot with a clear hump-shape; then they wrote "now we do a linear regression". For each step that you program, ask yourself why this step makes sense and then explain this in your notebook.
+
+** resit of final assignment
+
+The resit of the final assignment needs to be a new project compared to the one you handed in before. The easiest way to achieve this is to choose a new research question and a new data set. You can use the same data if you make sure that research question and analysis are sufficiently different from before.
+
+Simply adjusting your first submission based on our feedback will be not be enough. 
+
+Otherwise, follow the procedure above on how to submit the assignment and fill in the google form.
