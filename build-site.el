@@ -13,23 +13,11 @@
 ;; Install dependencies
 (package-install 'htmlize)
 
-
 (require 'org)
 (require 'org-element)
-
-;; (defcustom org-yt-url-protocol "yt"
-;;   "Protocol identifier for youtube links."
-;;   :group 'org-yt
-;;   :type 'string)
-
-;; (defun org-yt-follow (video-id)
-;;   "Open youtube with VIDEO-ID."
-;;   (browse-url (concat "https://youtu.be/" video-id)))
-
-;; (org-link-set-parameters org-yt-url-protocol :follow #'org-yt-follow)
-
-;; Load the publishing system
 (require 'ox-publish)
+
+
 
 (defvar yt-iframe-format
   ;; You may want to change your width and height.
@@ -39,7 +27,9 @@
           " frameborder=\"0\""
           " allowfullscreen>%s</iframe>"))
 
-(org-link-set-parameters
+;; although org-add-link-type is depreciated; org-link-set-parameters does not work at 11-11-2021
+
+(org-add-link-type
  "yt"
  (lambda (handle)
    (browse-url
@@ -52,19 +42,56 @@
      (latex (format "\href{%s}{%s}"
                     path (or desc "video"))))))
 
-  (setq org-html-validation-link nil
+
+
+
+
+;; (defcustom org-yt-url-protocol "yt"
+;;   "Protocol identifier for youtube links."
+;;   :group 'org-yt
+;;   :type 'string)
+
+;; (defun org-yt-follow (video-id)
+;;   "Open youtube with VIDEO-ID."
+;;   (browse-url (concat "https://youtu.be/" video-id)))
+
+;; (org-link-set-parameters org-yt-url-protocol :follow #'org-yt-follow)
+
+;; (org-link-set-parameters "yt" :follow 'yt-iframe-format)
+
+
+;; (defvar yt-iframe-format
+;;   ;; You may want to change your width and height.
+;;   (concat "<iframe width=\"660\""
+;;           " height=\"503\""
+;;           " src=\"https://www.youtube.com/embed/%s\""
+;;           " frameborder=\"0\""
+;;           " allowfullscreen>%s</iframe>"))
+
+
+;; (org-link-set-parameters
+;;   "yt"
+;;   (lambda (handle)
+;;     (browse-url
+;;      (concat "https://www.youtube.com/embed/"
+;;              handle)))
+;;   (lambda (path desc backend)
+;;     (cl-case backend
+;;       (html (format yt-iframe-format
+;;                     path (or desc "")))
+;;       (latex (format "\href{%s}{%s}"
+;;                      path (or desc "video"))))))
+
+(setq org-html-validation-link nil
         org-html-head-include-scripts nil       ;; Use our own scripts
         org-html-head-include-default-style nil) ;; Use our own styles
-        ;; org-html-head "<link rel=\"stylesheet \" href=\"https://cdn.simplecss.org/simple.min.css\" />")
-        ;; org-html-head "<link rel=\"stylesheet\" href=\"css/stylesheet.css\" />")
 
-
-  (defun filter-local-links (link backend info)
+(defun filter-local-links (link backend info)
     "Filter that converts all the /index.html links to /"
     (if (org-export-derived-backend-p backend 'html)
         (replace-regexp-in-string "/index.html" "/" link)))
 
-  (setq org-publish-project-alist
+(setq org-publish-project-alist
         '(;; Publish the posts
           ("mscdata"
            :base-directory "./org-files"
@@ -94,7 +121,8 @@
 ))
 
 
+
 ;; Generate the site output
 (org-publish-all t)
 
-(message "Build complete!")
+(message "Build complete!!!")
