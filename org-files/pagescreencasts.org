@@ -6,7 +6,7 @@
 *Under construction*
 
 
-This page contains the screencasts for the first part of the course [[file:index.org::*Course description][Seminar Datascience for Economics]]
+This page contains the screencasts for the first part of the course [[./index.org][Seminar Datascience for Economics]].
 
 #+TOC: headlines 2
 
@@ -607,8 +607,9 @@ Questions you should be able to answer before continuing:
 - use =results_second_stage.params= to see what this returns exactly and what is selected by =params[1]=
 
 
+* Part 2
 
-
+For part 2 of the screencasts, go to [[./pagescreencasts2.org][this page]].
 
 
 * template :noexport:

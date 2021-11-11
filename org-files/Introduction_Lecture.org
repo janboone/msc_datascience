@@ -31,7 +31,7 @@
   - difference with econometrics
   - prediction vs causality
   - give policy advice based on "unstructured data"
-  - to use python, tensorflow and R
+  - to use python, pymc3 and tensorflow
 
 ** things to learn
    :PROPERTIES:
@@ -55,9 +55,9 @@
 
 - gives you a better understanding
   - how statistics/econometrics work
+  - how to do a Bayesian analysis
   - what datascience and AI is
   - what the advantages and limits are of datascience techniques
-  - how you can use datascience techniques to do causal inference
 
 * What do you need?
   :PROPERTIES:
@@ -82,11 +82,10 @@
 
   - you need to finish the datacamp courses in time
   - see the Lecture schedule for the deadlines
-  - first try the notebook yourself, then watch the video if you get stuck
+  - first try the notebooks yourself, then watch the video if you get stuck
   - you do not learn datascience by passively typing in answers!
   - participate actively by posting github issues for your questions
   - these will be discussed in the tutorials
-  - for the second part of the course: there are both datacamp courses and a (free online) textbook
 
 ** to get a grade for this seminar:
 

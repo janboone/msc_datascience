@@ -1,16 +1,15 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 #+Title: Seminar Data Science for Economics
-#+Author: Jan Boone and Madina Kurmangaliyeva
+#+Author: Jan Boone
 #+OPTIONS: toc:2 timestamp:nil toc:nil
 
 This website contains the material for the MSc course Seminar Data Science for Economics
 
-**This website is under construction for 2020/2021**
+**This website is under construction for 2021/2022**
 
 This year the course is taught by:
 + Jan Boone
-+ Madina Kurmangaliyeva
-+ Jing-Rong Zeng
++ Barbora Písecká
 
 * Course description
   :PROPERTIES:
@@ -19,23 +18,21 @@ This year the course is taught by:
 
 In the course Data Science for Economics you will learn how to deal with big (unstructured) data to answer policy questions using recent advances in machine learning.
 
-Whether you are a public policy-maker or a data analyst at a private firm,  you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large individual-level data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which (out of many) variables to use in your analysis.
+Whether you are a public policy-maker or a data analyst at a private firm, you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
 
 This course will help you to overcome those challenges. The "traditional" econometrics you have learnt in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there are more variables than observations, and you do not know at the start which variables and interaction terms to include.
 
-In this course, we give an introduction to data-project management  (e.g. git, sublime), tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
+In this course, we give an introduction to data-project management, tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
 
-We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets, cross-validation and machine learning to find the best instrumental variables. We will also learn to use supervised machine learning methods as Lasso, Ridge regressions, and tree-based methods (e.g., random forest). 
+We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets and Bayesian estimation techniques.
 
-Finally, we will cover how to use the machine learning methods to measure causal effects (i.e., post-regularization inference, Double Machine Learning, Generalized Random Forest).
+In terms of software we will be using python,  pymc3 and google's tensorflow.
 
-In terms of software we will be using python, google's tensorflow, and R. Students must have followed the Econometrics 1 and the python track in AEA 1.
+For this course we are very happy that we partner with [[https://www.datacamp.com/][Datacamp]] for this course: [[https://www.tilburguniversity.edu/students/skills/programming][register for Datacamp]]
 
+*Required Prerequisites*
 
-For this course we use the following resources:
-
-+ We are very happy that we partner with [[https://www.datacamp.com/][Datacamp]] for this course: [[https://www.tilburguniversity.edu/students/skills/programming][register for Datacamp]]
-+ Textbook for Madina's part: Chapters 6 and 8 from [[http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf][An Introduction to Statistical Learning]] by James, Witte, Hastie, and Tibshirani (available free online)
+Students make sure they follow Econometrics 1 and the python track in AEA 1.
 
 
 #+TOC: headlines 2
@@ -46,17 +43,17 @@ For this course we use the following resources:
   :CUSTOM_ID:       screencasts_datascience
   :END:
 
-For this course a series of screencasts is available. For Jan's part of the course the screencasts can be found on this [[file:./pagescreencasts.org][webpage.]]
+For this course a series of screencasts is available. Screencasts are available for [[file:./pagescreencasts.org][part 1]] and [[./pagescreencasts2.org][part 2]].
 
 
 * Organisation of the course
 
-** Lecture schedule
+** TODO add Lecture schedule
    :PROPERTIES:
    :ID:       39F7FAD7-56BA-49D0-8424-7EB8F8839E41
    :END:
-   
 
+#+begin_comment
 | day      | date   |         time | teacher | topics                                              | datacamp                   |
 |----------+--------+--------------+---------+-----------------------------------------------------+----------------------------|
 | Friday   | Feb 5  | 10:45--12:30 | Jan     | distributions, bootstrapping                        | statistical simulation 1,2 |
@@ -75,14 +72,16 @@ For this course a series of screencasts is available. For Jan's part of the cour
 |          |        |              |         | causality: double machine learning                  |                            |
 | Friday   | Apr 1  | 10:45--12:30 | Madina  | causality: causal trees                             |                            |
 |          |        |              |         | causality: generalized random forests               |                            |
+#+end_comment
+
 
 + we will see how fast we go, the column "topics" is an indication of what will be discussed in each week
-+ for the first part, taught by Jan, we will go through [[https://janboone.github.io/msc_datascience/Statistical_Hacking/Statistical_Hacking.html][this notebook]]
-+ for the second part, taught by Madina, we will go through a series of lectures and tutorials based on the textbook (see above) and the latest techniques in the field of machine learning for causality (e.g., double machine learning,  causal trees).
++ for the first part, we will go through [[https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb][this notebook]]
++ for the second part, through [[https://github.com/janboone/msc_datascience/blob/master/hacking_part_2.ipynb][this one]]
 
 ** First Lecture
 
-[[file:img/Introduction_Lecture.org::#introduction][Introduction Lecture]]
+[[./Introduction_Lecture.org][Introduction Lecture]]
 
 *** Assignment 1
 :PROPERTIES:
@@ -91,7 +90,7 @@ For this course a series of screencasts is available. For Jan's part of the cour
 
 Do the following four steps:
 + if you did AEA 1, you already have a [[https://github.com/][github]] account, otherwise create a github account
-+ fill in this [[https://forms.gle/33HJUpXV3iD6s5ZE6][google form]] before *Friday 12 February 2021*
++ fill in this [[https://forms.gle/33HJUpXV3iD6s5ZE6][google form]] before *Friday 11 February 2022*
   + sign in with your @tilburguniversity.edu email address and password
 + go to
   + [[https://jupyterlab.uvt.nl/][jupyter lab]]
@@ -168,15 +167,19 @@ The [[https://www.datacamp.com/courses/introduction-to-tensorflow-in-python][ten
 
 ** For the second part of the course, you can do the following datacamp courses:
 
-- [[https://learn.datacamp.com/courses/supervised-learning-with-scikit-learn][linear regressions]] (Chapter 2 only)
-- [[https://learn.datacamp.com/courses/machine-learning-with-tree-based-models-in-python][tree-based models]]
 
-Additional courses on datacamp (optional, highly recommended):  
+- Resources for pymc3 can be found [[https://docs.pymc.io/en/v3/learn.html][here]].
+  - a good video to start with is [[https://www.youtube.com/watch?v=TMmSESkhRtI][this one]] where one of the developers of pymc3, Christopher Fonnesbeck, goes over the notebooks in this repository: https://github.com/fonnesbeck/intro_stat_modeling_2017
 
-- working with big datasets:
-  - [[https://learn.datacamp.com/courses/introduction-to-sql][Intro to SQL]]
-  - [[https://learn.datacamp.com/courses/introduction-to-pyspark][Intro to PySpark]]
-- Other useful skills:
+if you want to clone this repository in jupyter lab, run the following code on the server:
+
+#+BEGIN_SRC ipython
+%%bash
+
+git clone https://github.com/fonnesbeck/intro_stat_modeling_2017.git
+#+END_SRC
+
+- Other useful skills for datascience you may want to look at:
   - [[https://www.datacamp.com/courses/regular-expressions-in-python][regular expressions Python]]
   - [[https://www.datacamp.com/courses/web-scraping-with-python][intro to scraping]]
 
@@ -185,9 +188,9 @@ Additional courses on datacamp (optional, highly recommended):
    :ID:       D000098A-D12D-4E06-9F7A-2C2549B03236
    :END:
 
-The deadline for the *final assignment* is: Friday June 18th 2021 at 23:59.
+The deadline for the *final assignment* is: Friday June 17th 2022 at 23:59.
 
-The resit deadline for the assignment is: Friday August 27th, 2021. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
+The resit deadline for the assignment is: Friday August 26th, 2022. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
 
 ** Questions
 
@@ -218,7 +221,7 @@ The resit deadline for the assignment is: Friday August 27th, 2021. Let us know 
 
 ** Assessment material
 
-We have a separate page with all relevant [[file:Datascience_for_economics.org::*Syllabus][assessment material]]
+We have a separate page with all relevant [[./Datascience_for_economics.org][assessment material]].
 
 * Final Assignment
   :PROPERTIES:
@@ -266,7 +269,7 @@ Then you can see whether other students had the same question (which was already
 
 Good luck with the assignment,
 
-Madina and Jan.
+Jan.
 
 ** what we are looking for
 

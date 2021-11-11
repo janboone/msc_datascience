@@ -1,6 +1,6 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 #+Title: Assessment material for the course "Seminar Data Science for Economics" 310170-M-6
-#+Author: Jan Boone and Madina Kurmangaliyeva
+#+Author: Jan Boone
 
 * Syllabus
   :PROPERTIES:
@@ -11,15 +11,15 @@
 
 In the course Data Science for Economics you will learn how to deal with big (unstructured) data to answer policy questions using recent advances in machine learning.
 
-Whether you are a public policy-maker or a data analyst at a private firm,  you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large individual-level data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which (out of many) variables to use in your analysis.
+Whether you are a public policy-maker or a data analyst at a private firm, you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
 
 This course will help you to overcome those challenges. The "traditional" econometrics you have learnt in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there are more variables than observations, and you do not know at the start which variables and interaction terms to include.
 
-In this course, we give an introduction to data-project management  (e.g. git, sublime), tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
+In this course, we give an introduction to data-project management, tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
 
-We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets, cross-validation and machine learning to find the best instrumental variables.
+We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets and Bayesian estimation techniques.
 
-Finally, we will cover post-selection inference for causal effects (as in Belloni, Chernozhukov, and Hansen 2013). In terms of software we will be using python, google's tensorflow, and R.
+In terms of software we will be using python,  pymc3 and google's tensorflow.
 
 *Required Prerequisites*
 
@@ -31,7 +31,7 @@ By the end of the course, you will be able to:
 + design your empirical strategy to answer a policy question
   + motivate your policy question (why is it relevant/interesting; how is your analysis going to answer the question)
 + gather unstructured datasets, merge and clean them using programming
-+ apply machine learning techniques (e.g. neural networks, decision trees, random forest) to deal with big data in a causal framework
++ apply machine learning techniques (e.g. neural networks) to deal with big data
 + explain the critical assumptions that you need for the technique that you are using and discuss (potential) weaknesses of the technique used
 + use machine learning toolkit if the goal is pure prediction, explain why this differs from causal inference
 + explain the policy implications of your analysis
@@ -69,7 +69,7 @@ From the final assignment (discussed below):
 + design empirical strategy relates to the assignment questions on Research question, (half of) Method and data and Preview of answers
 + explain policy motivation: question on Motivation                        
 + gather data, merge clean data (using programming): question on (half of) Method and data
-+ apply machine learning methods: Python/R code                   
++ apply machine learning methods: Python code
 + explain critical assumptions, discuss weaknesses: Main assumptions (half) and Robustness analysis 
 + distinguish prediction and causal inference: Main assumptions (half)     
 + explain policy implications: Discussion and conclusion
@@ -84,12 +84,7 @@ Students can contact us for an appointment to discuss the grade of their assignm
   + [[https://www.datacamp.com/courses/statistical-simulation-in-python][statistical simulation]]
   + [[https://www.datacamp.com/courses/deep-learning-with-keras-in-python][keras]]
   + [[https://www.datacamp.com/courses/introduction-to-tensorflow-in-python][tensorflow]]
-  + [[https://www.datacamp.com/courses/web-scraping-with-python][intro to scraping (do only chapters 1,2,3)]]
-  + [[https://www.datacamp.com/courses/regular-expressions-in-python][regular expressions Python]]
-  + [[https://www.datacamp.com/courses/string-manipulation-in-r-with-stringr][regular expressions R]]
-  + [[https://www.datacamp.com/courses/introduction-to-the-tidyverse][intro to tidyverse R]]
-+ [[https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb][jupyter notebook]]
-+ Chapters 6 and 8 from [[http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf][An Introduction to Statistical Learning]] by James, Witte, Hastie, and Tibshirani
++ jupyter notebooks for the course
 
 
 * The exam cover page and exam questions for the exams

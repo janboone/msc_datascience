@@ -3,11 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-11 Thu 12:20 -->
+<!-- 2021-11-11 Thu 14:38 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assessment material for the course "Seminar Data Science for Economics" 310170-M-6</title>
-<meta name="author" content="Jan Boone and Madina Kurmangaliyeva" />
+<meta name="author" content="Jan Boone" />
 <meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 </head>
@@ -15,20 +15,20 @@
 <div id="content" class="content">
 <h1 class="title">Assessment material for the course "Seminar Data Science for Economics" 310170-M-6</h1>
 
-<div id="outline-container-org8e4925f" class="outline-2">
-<h2 id="org8e4925f">Syllabus</h2>
-<div class="outline-text-2" id="text-org8e4925f">
+<div id="outline-container-org3f5fbf1" class="outline-2">
+<h2 id="org3f5fbf1">Syllabus</h2>
+<div class="outline-text-2" id="text-org3f5fbf1">
 </div>
 
-<div id="outline-container-org319e3c3" class="outline-3">
-<h3 id="org319e3c3">Course structure</h3>
-<div class="outline-text-3" id="text-org319e3c3">
+<div id="outline-container-orgf1e7d14" class="outline-3">
+<h3 id="orgf1e7d14">Course structure</h3>
+<div class="outline-text-3" id="text-orgf1e7d14">
 <p>
 In the course Data Science for Economics you will learn how to deal with big (unstructured) data to answer policy questions using recent advances in machine learning.
 </p>
 
 <p>
-Whether you are a public policy-maker or a data analyst at a private firm,  you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large individual-level data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which (out of many) variables to use in your analysis.
+Whether you are a public policy-maker or a data analyst at a private firm, you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
 </p>
 
 <p>
@@ -36,15 +36,15 @@ This course will help you to overcome those challenges. The "traditional" econom
 </p>
 
 <p>
-In this course, we give an introduction to data-project management  (e.g. git, sublime), tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
+In this course, we give an introduction to data-project management, tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
 </p>
 
 <p>
-We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets, cross-validation and machine learning to find the best instrumental variables.
+We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets and Bayesian estimation techniques.
 </p>
 
 <p>
-Finally, we will cover post-selection inference for causal effects (as in Belloni, Chernozhukov, and Hansen 2013). In terms of software we will be using python, google's tensorflow, and R.
+In terms of software we will be using python,  pymc3 and google's tensorflow.
 </p>
 
 <p>
@@ -57,9 +57,9 @@ Students make sure they follow Econometrics 1 and the python track in AEA 1.
 </div>
 </div>
 
-<div id="outline-container-orgf247b3b" class="outline-3">
-<h3 id="orgf247b3b">Learning goals</h3>
-<div class="outline-text-3" id="text-orgf247b3b">
+<div id="outline-container-org0875920" class="outline-3">
+<h3 id="org0875920">Learning goals</h3>
+<div class="outline-text-3" id="text-org0875920">
 <p>
 By the end of the course, you will be able to:
 </p>
@@ -69,7 +69,7 @@ By the end of the course, you will be able to:
 <li>motivate your policy question (why is it relevant/interesting; how is your analysis going to answer the question)</li>
 </ul></li>
 <li>gather unstructured datasets, merge and clean them using programming</li>
-<li>apply machine learning techniques (e.g. neural networks, decision trees, random forest) to deal with big data in a causal framework</li>
+<li>apply machine learning techniques (e.g. neural networks) to deal with big data</li>
 <li>explain the critical assumptions that you need for the technique that you are using and discuss (potential) weaknesses of the technique used</li>
 <li>use machine learning toolkit if the goal is pure prediction, explain why this differs from causal inference</li>
 <li>explain the policy implications of your analysis</li>
@@ -81,28 +81,28 @@ The overall learning goal is to make you independent in designing and performing
 </div>
 </div>
 
-<div id="outline-container-orga05f2b5" class="outline-3">
-<h3 id="orga05f2b5">Examination</h3>
-<div class="outline-text-3" id="text-orga05f2b5">
+<div id="outline-container-org439d1b6" class="outline-3">
+<h3 id="org439d1b6">Examination</h3>
+<div class="outline-text-3" id="text-org439d1b6">
 <p>
 The examination for this course consists of a data analysis project (100%), where you will use the knowledge gained throughout the course and apply it in a new setting on your own.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org3d1ab49" class="outline-3">
-<h3 id="org3d1ab49">Course website</h3>
-<div class="outline-text-3" id="text-org3d1ab49">
+<div id="outline-container-org9b298a6" class="outline-3">
+<h3 id="org9b298a6">Course website</h3>
+<div class="outline-text-3" id="text-org9b298a6">
 <p>
-All other information can be found on the <a href="index.html#org8b82893">course website</a>.
+All other information can be found on the <a href="index.html#org1852be1">course website</a>.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgea1410b" class="outline-2">
-<h2 id="orgea1410b">Specification table</h2>
-<div class="outline-text-2" id="text-orgea1410b">
+<div id="outline-container-org5eccd97" class="outline-2">
+<h2 id="org5eccd97">Specification table</h2>
+<div class="outline-text-2" id="text-org5eccd97">
 <p>
 <b>Test type</b>: Assignment 
 </p>
@@ -239,7 +239,7 @@ From the final assignment (discussed below):
 <li>design empirical strategy relates to the assignment questions on Research question, (half of) Method and data and Preview of answers</li>
 <li>explain policy motivation: question on Motivation</li>
 <li>gather data, merge clean data (using programming): question on (half of) Method and data</li>
-<li>apply machine learning methods: Python/R code</li>
+<li>apply machine learning methods: Python code</li>
 <li>explain critical assumptions, discuss weaknesses: Main assumptions (half) and Robustness analysis</li>
 <li>distinguish prediction and causal inference: Main assumptions (half)</li>
 <li>explain policy implications: Discussion and conclusion</li>
@@ -247,39 +247,34 @@ From the final assignment (discussed below):
 </div>
 </div>
 
-<div id="outline-container-orgaa56e21" class="outline-2">
-<h2 id="orgaa56e21">Inspection information</h2>
-<div class="outline-text-2" id="text-orgaa56e21">
+<div id="outline-container-orgfc6ffff" class="outline-2">
+<h2 id="orgfc6ffff">Inspection information</h2>
+<div class="outline-text-2" id="text-orgfc6ffff">
 <p>
 Students can contact us for an appointment to discuss the grade of their assignment.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org35c941a" class="outline-2">
-<h2 id="org35c941a">Preparation materials for the exam</h2>
-<div class="outline-text-2" id="text-org35c941a">
+<div id="outline-container-org3def068" class="outline-2">
+<h2 id="org3def068">Preparation materials for the exam</h2>
+<div class="outline-text-2" id="text-org3def068">
 <ul class="org-ul">
 <li>From Datacamp, the following courses:
 <ul class="org-ul">
 <li><a href="https://www.datacamp.com/courses/statistical-simulation-in-python">statistical simulation</a></li>
 <li><a href="https://www.datacamp.com/courses/deep-learning-with-keras-in-python">keras</a></li>
 <li><a href="https://www.datacamp.com/courses/introduction-to-tensorflow-in-python">tensorflow</a></li>
-<li><a href="https://www.datacamp.com/courses/web-scraping-with-python">intro to scraping (do only chapters 1,2,3)</a></li>
-<li><a href="https://www.datacamp.com/courses/regular-expressions-in-python">regular expressions Python</a></li>
-<li><a href="https://www.datacamp.com/courses/string-manipulation-in-r-with-stringr">regular expressions R</a></li>
-<li><a href="https://www.datacamp.com/courses/introduction-to-the-tidyverse">intro to tidyverse R</a></li>
 </ul></li>
-<li><a href="https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb">jupyter notebook</a></li>
-<li>Chapters 6 and 8 from <a href="http://faculty.marshall.usc.edu/gareth-james/ISL/ISLR%20Seventh%20Printing.pdf">An Introduction to Statistical Learning</a> by James, Witte, Hastie, and Tibshirani</li>
+<li>jupyter notebooks for the course</li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org7ac1cd8" class="outline-2">
-<h2 id="org7ac1cd8">The exam cover page and exam questions for the exams</h2>
-<div class="outline-text-2" id="text-org7ac1cd8">
+<div id="outline-container-org5e2153d" class="outline-2">
+<h2 id="org5e2153d">The exam cover page and exam questions for the exams</h2>
+<div class="outline-text-2" id="text-org5e2153d">
 <p>
 Students get a template to make their assignment in the form of a jupyter notebook.
 </p>
@@ -295,9 +290,9 @@ The template was designed by Madina and Jan.
 </div>
 
 
-<div id="outline-container-orgfc9b099" class="outline-2">
-<h2 id="orgfc9b099">Grading instructions</h2>
-<div class="outline-text-2" id="text-orgfc9b099">
+<div id="outline-container-org2db4552" class="outline-2">
+<h2 id="org2db4552">Grading instructions</h2>
+<div class="outline-text-2" id="text-org2db4552">
 <p>
 Since this is a (free) assignment, it is not possible to provide (exact) answers to each section in the assignment template. The template itself specifies the points we are looking for when grading the assignment.
 </p>
@@ -313,8 +308,8 @@ Students with a grade of 5.5 can be called in for an oral exam (discussion of th
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Jan Boone and Madina Kurmangaliyeva</p>
-<p class="date">Created: 2021-11-11 Thu 12:20</p>
+<p class="author">Author: Jan Boone</p>
+<p class="date">Created: 2021-11-11 Thu 14:38</p>
 </div>
 </body>
 </html>

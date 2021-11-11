@@ -6,7 +6,9 @@
 *Under construction*
 
 
-This page contains the screencasts for the second part of the course [[file:index.org::*Course description][Seminar Datascience for Economics]]
+This page contains the screencasts for the second part of the course [[./index.org][Seminar Datascience for Economics]].
+
+The videos go through the questions in [[https://github.com/janboone/msc_datascience/blob/master/hacking_part_2.ipynb][this notebook]].
 
 #+TOC: headlines 2
 
