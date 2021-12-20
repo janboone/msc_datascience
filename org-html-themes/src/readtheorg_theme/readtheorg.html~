@@ -3,12 +3,12 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-11 Thu 16:24 -->
+<!-- 2021-12-20 Mon 11:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>ReadTheOrg style</title>
+<meta name="generator" content="Org mode" />
 <meta name="author" content="Fabrice Niessen" />
-<meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -17,53 +17,53 @@
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 </head>
 <body>
-<div id="content" class="content">
+<div id="content">
 <h1 class="title">ReadTheOrg style</h1>
-<div id="table-of-contents" role="doc-toc">
+<div id="table-of-contents">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
+<div id="text-table-of-contents">
 <ul>
-<li><a href="#org9ada967">1. Overview</a></li>
-<li><a href="#org2ffba62">2. Typography</a>
+<li><a href="#org68e8ffb">1. Overview</a></li>
+<li><a href="#org1207e98">2. Typography</a>
 <ul>
-<li><a href="#org61b594d">2.1. Headings</a></li>
-<li><a href="#org5457c70">2.2. Body</a></li>
-<li><a href="#org2c90b4a">2.3. Bold</a></li>
-<li><a href="#org63792a7">2.4. Blockquotes</a></li>
-<li><a href="#orgd43dc27">2.5. Lists</a></li>
+<li><a href="#orgb0150e6">2.1. Headings</a></li>
+<li><a href="#org939d991">2.2. Body</a></li>
+<li><a href="#org1df1dd2">2.3. Bold</a></li>
+<li><a href="#org8e1c0e2">2.4. Blockquotes</a></li>
+<li><a href="#orgb9ad731">2.5. Lists</a></li>
 </ul>
 </li>
-<li><a href="#org45366cc">3. Media queries</a></li>
-<li><a href="#orgb1fcf4d">4. Code</a>
+<li><a href="#orgd70551c">3. Media queries</a></li>
+<li><a href="#orgdc3dc9b">4. Code</a>
 <ul>
-<li><a href="#org315c499">4.1. Inline</a></li>
-<li><a href="#orgd3d0953">4.2. Basic block</a></li>
-<li><a href="#org552e39d">4.3. Sample output</a></li>
+<li><a href="#org1da7cb2">4.1. Inline</a></li>
+<li><a href="#org39b1a3b">4.2. Basic block</a></li>
+<li><a href="#org5f59a1e">4.3. Sample output</a></li>
 </ul>
 </li>
-<li><a href="#org5c894f2">5. Tables</a>
+<li><a href="#orgfa700bb">5. Tables</a>
 <ul>
-<li><a href="#org5abf1fa">5.1. Basic example</a></li>
-<li><a href="#orgd5f5850">5.2. Optional table caption</a></li>
-<li><a href="#orge52d524">5.3. Striped rows</a></li>
+<li><a href="#orge424c08">5.1. Basic example</a></li>
+<li><a href="#org5912307">5.2. Optional table caption</a></li>
+<li><a href="#org78c9e9f">5.3. Striped rows</a></li>
 </ul>
 </li>
-<li><a href="#org190b79f">6. Images</a>
+<li><a href="#org89a5019">6. Images</a>
 <ul>
-<li><a href="#org1899a57">6.1. Optional image caption</a></li>
+<li><a href="#org5122159">6.1. Optional image caption</a></li>
 </ul>
 </li>
-<li><a href="#org19bbe21">7. Helper classes</a></li>
-<li><a href="#org5f6fb70">8. Responsive utilities</a></li>
-<li><a href="#org0d557fd">9. CSS</a></li>
-<li><a href="#orge881d3a">10. Htmlize</a></li>
-<li><a href="#orgcfef9c8">11. JS</a></li>
+<li><a href="#org31d0884">7. Helper classes</a></li>
+<li><a href="#org9eb40a4">8. Responsive utilities</a></li>
+<li><a href="#org99bd6ec">9. CSS</a></li>
+<li><a href="#orgded46c7">10. Htmlize</a></li>
+<li><a href="#orgcadbab6">11. JS</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org9ada967" class="outline-2">
-<h2 id="org9ada967"><span class="section-number-2">1.</span> Overview</h2>
+<div id="outline-container-org68e8ffb" class="outline-2">
+<h2 id="org68e8ffb"><span class="section-number-2">1</span> Overview</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Get the lowdown on the key pieces of ReadTheOrg's infrastructure, including our
@@ -72,8 +72,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org2ffba62" class="outline-2">
-<h2 id="org2ffba62"><span class="section-number-2">2.</span> Typography</h2>
+<div id="outline-container-org1207e98" class="outline-2">
+<h2 id="org1207e98"><span class="section-number-2">2</span> Typography</h2>
 <div class="outline-text-2" id="text-2">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">@import</span> url(<span style="font-style: italic;">"https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700"</span>);
@@ -82,8 +82,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org61b594d" class="outline-3">
-<h3 id="org61b594d"><span class="section-number-3">2.1.</span> Headings</h3>
+<div id="outline-container-orgb0150e6" class="outline-3">
+<h3 id="orgb0150e6"><span class="section-number-3">2.1</span> Headings</h3>
 <div class="outline-text-3" id="text-2-1">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">h1,h2,h3,h4,h5,h6,legend</span>{
@@ -97,7 +97,7 @@ approach to better HTML export.
 }
 
 <span style="font-weight: bold;">.subtitle</span>{
-    <span style="font-weight: bold;">font-size</span>:95%; <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">of h1</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold;">font-size</span>:95%; <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">of h1 </span><span style="font-weight: bold; font-style: italic;">*/</span>
 }
 
 <span style="font-weight: bold;">h2</span>{
@@ -129,8 +129,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org5457c70" class="outline-3">
-<h3 id="org5457c70"><span class="section-number-3">2.2.</span> Body</h3>
+<div id="outline-container-org939d991" class="outline-3">
+<h3 id="org939d991"><span class="section-number-3">2.2</span> Body</h3>
 <div class="outline-text-3" id="text-2-2">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">html</span>{
@@ -155,7 +155,7 @@ approach to better HTML export.
     <span style="font-weight: bold;">background</span>:<span style="color: #000000; background-color: #fcfcfc;">#fcfcfc</span>;
     <span style="font-weight: bold;">height</span>:100%;
     <span style="font-weight: bold;">margin-left</span>:300px;
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">margin:auto;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">margin:auto; </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">max-width</span>:800px;
     <span style="font-weight: bold;">min-height</span>:100%;
     <span style="font-weight: bold;">padding</span>:1.618em 3.236em;
@@ -171,8 +171,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org2c90b4a" class="outline-3">
-<h3 id="org2c90b4a"><span class="section-number-3">2.3.</span> Bold</h3>
+<div id="outline-container-org1df1dd2" class="outline-3">
+<h3 id="org1df1dd2"><span class="section-number-3">2.3</span> Bold</h3>
 <div class="outline-text-3" id="text-2-3">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">b,strong</span>{
@@ -182,8 +182,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org63792a7" class="outline-3">
-<h3 id="org63792a7"><span class="section-number-3">2.4.</span> Blockquotes</h3>
+<div id="outline-container-org8e1c0e2" class="outline-3">
+<h3 id="org8e1c0e2"><span class="section-number-3">2.4</span> Blockquotes</h3>
 <div class="outline-text-3" id="text-2-4">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">blockquote</span>{
@@ -192,7 +192,7 @@ approach to better HTML export.
     <span style="font-weight: bold;">font-style</span>:italic;
     <span style="font-weight: bold;">line-height</span>:24px;
     <span style="font-weight: bold;">margin</span>:0px 0px 24px 0px;
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">margin-left:24px;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">margin-left:24px; </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">padding</span>: 6px 20px;
 }
 </pre>
@@ -200,14 +200,14 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-orgd43dc27" class="outline-3">
-<h3 id="orgd43dc27"><span class="section-number-3">2.5.</span> Lists</h3>
+<div id="outline-container-orgb9ad731" class="outline-3">
+<h3 id="orgb9ad731"><span class="section-number-3">2.5</span> Lists</h3>
 <div class="outline-text-3" id="text-2-5">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">ul,ol,dl</span>{
     <span style="font-weight: bold;">line-height</span>:24px;
     <span style="font-weight: bold;">list-style-image</span>:none;
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">list-style:none;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">list-style:none; </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">margin</span>:0px 0px 24px 0px;
     <span style="font-weight: bold;">padding</span>:0;
 }
@@ -271,20 +271,20 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org65efc69" class="outline-4">
-<h4 id="org65efc69"><span class="section-number-4">2.5.1.</span> Unordered</h4>
+<div id="outline-container-orga1cb611" class="outline-4">
+<h4 id="orga1cb611"><span class="section-number-4">2.5.1</span> Unordered</h4>
 </div>
 
 
 
-<div id="outline-container-org60cccc3" class="outline-4">
-<h4 id="org60cccc3"><span class="section-number-4">2.5.2.</span> Ordered</h4>
+<div id="outline-container-org2b1bd5c" class="outline-4">
+<h4 id="org2b1bd5c"><span class="section-number-4">2.5.2</span> Ordered</h4>
 </div>
 
 
 
-<div id="outline-container-orgb73f1ad" class="outline-4">
-<h4 id="orgb73f1ad"><span class="section-number-4">2.5.3.</span> Description</h4>
+<div id="outline-container-orga660e25" class="outline-4">
+<h4 id="orga660e25"><span class="section-number-4">2.5.3</span> Description</h4>
 <div class="outline-text-4" id="text-2-5-3">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">dl dt</span>{
@@ -305,8 +305,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org45366cc" class="outline-2">
-<h2 id="org45366cc"><span class="section-number-2">3.</span> Media queries</h2>
+<div id="outline-container-orgd70551c" class="outline-2">
+<h2 id="orgd70551c"><span class="section-number-2">3</span> Media queries</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">@media</span> print{
@@ -453,19 +453,19 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-orgb1fcf4d" class="outline-2">
-<h2 id="orgb1fcf4d"><span class="section-number-2">4.</span> Code</h2>
+<div id="outline-container-orgdc3dc9b" class="outline-2">
+<h2 id="orgdc3dc9b"><span class="section-number-2">4</span> Code</h2>
 <div class="outline-text-2" id="text-4">
 </div>
 
-<div id="outline-container-org315c499" class="outline-3">
-<h3 id="org315c499"><span class="section-number-3">4.1.</span> Inline</h3>
+<div id="outline-container-org1da7cb2" class="outline-3">
+<h3 id="org1da7cb2"><span class="section-number-3">4.1</span> Inline</h3>
 <div class="outline-text-3" id="text-4-1">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">code</span>{
     <span style="font-weight: bold;">background</span>:<span style="color: #000000; background-color: #fff;">#fff</span>;
     <span style="font-weight: bold;">border</span>:solid 1px <span style="color: #000000; background-color: #e1e4e5;">#e1e4e5</span>;
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">color:#000;  for clickable code</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">color:#000;  for clickable code </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">font-family</span>:Consolas,<span style="font-style: italic;">"Andale Mono WT"</span>,<span style="font-style: italic;">"Andale Mono"</span>,<span style="font-style: italic;">"Lucida Console"</span>,<span style="font-style: italic;">"Lucida Sans Typewriter"</span>,<span style="font-style: italic;">"DejaVu Sans Mono"</span>,<span style="font-style: italic;">"Bitstream Vera Sans Mono"</span>,<span style="font-style: italic;">"Liberation Mono"</span>,<span style="font-style: italic;">"Nimbus Mono L"</span>,Monaco,<span style="font-style: italic;">"Courier New"</span>,Courier,monospace;
     <span style="font-weight: bold;">font-size</span>:75%;
     <span style="font-weight: bold;">max-width</span>:100%;
@@ -478,8 +478,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-orgd3d0953" class="outline-3">
-<h3 id="orgd3d0953"><span class="section-number-3">4.2.</span> Basic block</h3>
+<div id="outline-container-org39b1a3b" class="outline-3">
+<h3 id="org39b1a3b"><span class="section-number-3">4.2</span> Basic block</h3>
 <div class="outline-text-3" id="text-4-2">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">.codeblock-example</span>{
@@ -496,7 +496,7 @@ approach to better HTML export.
     <span style="font-weight: bold;">position</span>:absolute;
     <span style="font-weight: bold;">top</span>:0px;
     <span style="font-weight: bold;">left</span>:0px;
-    <span style="font-weight: bold;">background</span>:<span style="color: #ffffff; background-color: #9B59B6;">#9B59B6</span>;
+    <span style="font-weight: bold;">background</span>:<span style="color: #000000; background-color: #9B59B6;">#9B59B6</span>;
     <span style="font-weight: bold;">color</span>:<span style="color: #000000; background-color: #fff;">#fff</span>;
     <span style="font-weight: bold;">padding</span>:6px 12px}
 
@@ -512,7 +512,7 @@ approach to better HTML export.
     <span style="font-weight: bold;">margin</span>:1px 0 24px 0}
 
 <span style="font-weight: bold;">pre.src</span>{
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">color:#404040;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">color:#404040; </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">display</span>:block;
     <span style="font-weight: bold;">font-family</span>:Consolas,<span style="font-style: italic;">"Andale Mono WT"</span>,<span style="font-style: italic;">"Andale Mono"</span>,<span style="font-style: italic;">"Lucida Console"</span>,<span style="font-style: italic;">"Lucida Sans Typewriter"</span>,<span style="font-style: italic;">"DejaVu Sans Mono"</span>,<span style="font-style: italic;">"Bitstream Vera Sans Mono"</span>,<span style="font-style: italic;">"Liberation Mono"</span>,<span style="font-style: italic;">"Nimbus Mono L"</span>,Monaco,<span style="font-style: italic;">"Courier New"</span>,Courier,monospace;
     <span style="font-weight: bold;">font-size</span>:12px;
@@ -527,8 +527,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org552e39d" class="outline-3">
-<h3 id="org552e39d"><span class="section-number-3">4.3.</span> Sample output</h3>
+<div id="outline-container-org5f59a1e" class="outline-3">
+<h3 id="org5f59a1e"><span class="section-number-3">4.3</span> Sample output</h3>
 <div class="outline-text-3" id="text-4-3">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">.example</span>{
@@ -546,13 +546,13 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org5c894f2" class="outline-2">
-<h2 id="org5c894f2"><span class="section-number-2">5.</span> Tables</h2>
+<div id="outline-container-orgfa700bb" class="outline-2">
+<h2 id="orgfa700bb"><span class="section-number-2">5</span> Tables</h2>
 <div class="outline-text-2" id="text-5">
 </div>
 
-<div id="outline-container-org5abf1fa" class="outline-3">
-<h3 id="org5abf1fa"><span class="section-number-3">5.1.</span> Basic example</h3>
+<div id="outline-container-orge424c08" class="outline-3">
+<h3 id="orge424c08"><span class="section-number-3">5.1</span> Basic example</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">table</span>{
@@ -585,8 +585,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-orgd5f5850" class="outline-3">
-<h3 id="orgd5f5850"><span class="section-number-3">5.2.</span> Optional table caption</h3>
+<div id="outline-container-org5912307" class="outline-3">
+<h3 id="org5912307"><span class="section-number-3">5.2</span> Optional table caption</h3>
 <div class="outline-text-3" id="text-5-2">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">table caption</span>{
@@ -599,8 +599,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-orge52d524" class="outline-3">
-<h3 id="orge52d524"><span class="section-number-3">5.3.</span> Striped rows</h3>
+<div id="outline-container-org78c9e9f" class="outline-3">
+<h3 id="org78c9e9f"><span class="section-number-3">5.3</span> Striped rows</h3>
 <div class="outline-text-3" id="text-5-3">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">table tr:nth-child(2n-1) td</span>{
@@ -616,13 +616,13 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org190b79f" class="outline-2">
-<h2 id="org190b79f"><span class="section-number-2">6.</span> Images</h2>
+<div id="outline-container-org89a5019" class="outline-2">
+<h2 id="org89a5019"><span class="section-number-2">6</span> Images</h2>
 <div class="outline-text-2" id="text-6">
 </div>
 
-<div id="outline-container-org1899a57" class="outline-3">
-<h3 id="org1899a57"><span class="section-number-3">6.1.</span> Optional image caption</h3>
+<div id="outline-container-org5122159" class="outline-3">
+<h3 id="org5122159"><span class="section-number-3">6.1</span> Optional image caption</h3>
 <div class="outline-text-3" id="text-6-1">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">.figure p</span>{
@@ -636,8 +636,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org19bbe21" class="outline-2">
-<h2 id="org19bbe21"><span class="section-number-2">7.</span> Helper classes</h2>
+<div id="outline-container-org31d0884" class="outline-2">
+<h2 id="org31d0884"><span class="section-number-2">7</span> Helper classes</h2>
 <div class="outline-text-2" id="text-7">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">.rotate-90</span>{
@@ -660,8 +660,8 @@ approach to better HTML export.
 </div>
 </div>
 
-<div id="outline-container-org5f6fb70" class="outline-2">
-<h2 id="org5f6fb70"><span class="section-number-2">8.</span> Responsive utilities</h2>
+<div id="outline-container-org9eb40a4" class="outline-2">
+<h2 id="org9eb40a4"><span class="section-number-2">8</span> Responsive utilities</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Responsive for sidebar:
@@ -727,8 +727,8 @@ Responsive for sidebar:
 </div>
 </div>
 
-<div id="outline-container-org0d557fd" class="outline-2">
-<h2 id="org0d557fd"><span class="section-number-2">9.</span> CSS</h2>
+<div id="outline-container-org99bd6ec" class="outline-2">
+<h2 id="org99bd6ec"><span class="section-number-2">9</span> CSS</h2>
 <div class="outline-text-2" id="text-9">
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">*</span>{
@@ -804,7 +804,7 @@ Responsive for sidebar:
 <span style="font-weight: bold; font-style: italic;">/*</span><span style="font-weight: bold; font-style: italic;">!</span>
 <span style="font-weight: bold; font-style: italic;"> *  Font Awesome 4.1.0 by @davegandy - http://fontawesome.io - @fontawesome</span>
 <span style="font-weight: bold; font-style: italic;"> *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)</span>
-<span style="font-weight: bold; font-style: italic;"> */</span><span style="font-weight: bold;">@font-face</span>{
+<span style="font-weight: bold; font-style: italic;"> </span><span style="font-weight: bold; font-style: italic;">*/</span><span style="font-weight: bold;">@font-face</span>{
     <span style="font-weight: bold;">font-family</span>:<span style="font-style: italic;">'FontAwesome'</span>;
     <span style="font-weight: bold;">src</span>:url(<span style="font-style: italic;">"../fonts/fontawesome-webfont.eot?v=4.1.0"</span>);
     <span style="font-weight: bold;">src</span>:url(<span style="font-style: italic;">"../fonts/fontawesome-webfont.eot?#iefix&amp;v=4.1.0"</span>) format(<span style="font-style: italic;">"embedded-opentype"</span>),url(<span style="font-style: italic;">"../fonts/fontawesome-webfont.woff?v=4.1.0"</span>) format(<span style="font-style: italic;">"woff"</span>),url(<span style="font-style: italic;">"../fonts/fontawesome-webfont.ttf?v=4.1.0"</span>) format(<span style="font-style: italic;">"truetype"</span>),url(<span style="font-style: italic;">"../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular"</span>) format(<span style="font-style: italic;">"svg"</span>);
@@ -865,7 +865,7 @@ Responsive for sidebar:
     <span style="font-weight: bold;">padding</span>:12px;
     <span style="font-weight: bold;">line-height</span>:24px;
     <span style="font-weight: bold;">margin-bottom</span>:24px;
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">background:#e7f2fa;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">background:#e7f2fa; </span><span style="font-weight: bold; font-style: italic;">*/</span>
 }
 
 <span style="font-weight: bold;">.wy-alert-title,#content .admonition-title</span>{
@@ -873,8 +873,8 @@ Responsive for sidebar:
     <span style="font-weight: bold;">font-weight</span>:bold;
     <span style="font-weight: bold;">display</span>:block;
     <span style="font-weight: bold;">color</span>:<span style="color: #000000; background-color: #fff;">#fff</span>;
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">background:#6ab0de;</span><span style="font-weight: bold; font-style: italic;"> */</span>
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">margin:-12px;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">background:#6ab0de; </span><span style="font-weight: bold; font-style: italic;">*/</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">margin:-12px; </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">padding</span>:6px 12px;
     <span style="font-weight: bold;">margin-bottom</span>:0px}
 
@@ -954,7 +954,7 @@ Responsive for sidebar:
     <span style="font-weight: bold;">color</span>:<span style="color: #000000; background-color: #3091d1;">#3091d1</span>}
 
 <span style="font-weight: bold;">a:visited</span>{
-    <span style="font-weight: bold;">color</span>:<span style="color: #ffffff; background-color: #9B59B6;">#9B59B6</span>}
+    <span style="font-weight: bold;">color</span>:<span style="color: #000000; background-color: #9B59B6;">#9B59B6</span>}
 </pre>
 </div>
 
@@ -1020,20 +1020,20 @@ Responsive for sidebar:
     <span style="font-weight: bold;">background</span>:<span style="color: #000000; background-color: #d6d6d6;">#d6d6d6</span>}
 
 <span style="font-weight: bold;">#table-of-contents li a</span>{
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">color:#404040;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">color:#404040; </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">padding</span>:0.4045em 1.618em;
     <span style="font-weight: bold;">position</span>:relative;
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">background:#fcfcfc;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">background:#fcfcfc; </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">border</span>:none;
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">border-bottom:solid 1px #c9c9c9;</span><span style="font-weight: bold; font-style: italic;"> */</span>
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">border-top:solid 1px #c9c9c9;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">border-bottom:solid 1px #c9c9c9; </span><span style="font-weight: bold; font-style: italic;">*/</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">border-top:solid 1px #c9c9c9; </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">padding-left</span>:1.618em -4px}
 
 <span style="font-weight: bold;">#table-of-contents li.on a:hover,#table-of-contents li.current&gt;a:hover</span>{
     <span style="font-weight: bold;">background</span>:<span style="color: #000000; background-color: #fcfcfc;">#fcfcfc</span>}
 
 <span style="font-weight: bold;">#table-of-contents li ul li a</span>{
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">background:#c9c9c9;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">background:#c9c9c9; </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">padding</span>:0.4045em 2.427em}
 
 <span style="font-weight: bold;">#table-of-contents li ul li ul li a</span>{
@@ -1042,9 +1042,9 @@ Responsive for sidebar:
 <span style="font-weight: bold;">#table-of-contents li.current ul</span>{
     <span style="font-weight: bold;">display</span>:block}
 
-<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">#table-of-contents li ul{</span><span style="font-weight: bold; font-style: italic;"> */</span>
-<span style="font-weight: bold; font-style: italic;">/*     </span><span style="font-weight: bold; font-style: italic;">margin-bottom:0;</span><span style="font-weight: bold; font-style: italic;"> */</span>
-<span style="font-weight: bold; font-style: italic;">/*     </span><span style="font-weight: bold; font-style: italic;">display:none}</span><span style="font-weight: bold; font-style: italic;"> */</span>
+<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">#table-of-contents li ul{ </span><span style="font-weight: bold; font-style: italic;">*/</span>
+<span style="font-weight: bold; font-style: italic;">/*     </span><span style="font-weight: bold; font-style: italic;">margin-bottom:0; </span><span style="font-weight: bold; font-style: italic;">*/</span>
+<span style="font-weight: bold; font-style: italic;">/*     </span><span style="font-weight: bold; font-style: italic;">display:none} </span><span style="font-weight: bold; font-style: italic;">*/</span>
 
 <span style="font-weight: bold;">#table-of-contents .local-toc li ul</span>{
     <span style="font-weight: bold;">display</span>:block}
@@ -1069,9 +1069,9 @@ Responsive for sidebar:
     <span style="font-weight: bold;">background-color</span>:<span style="color: #ffffff; background-color: #4e4a4a;">#4e4a4a</span>;
     <span style="font-weight: bold;">cursor</span>:pointer}
 
-<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">#text-table-of-contents {</span><span style="font-weight: bold; font-style: italic;"> */</span>
-<span style="font-weight: bold; font-style: italic;">/*     </span><span style="font-weight: bold; font-style: italic;">overflow:scroll;</span><span style="font-weight: bold; font-style: italic;"> */</span>
-<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">}</span><span style="font-weight: bold; font-style: italic;"> */</span>
+<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">#text-table-of-contents { </span><span style="font-weight: bold; font-style: italic;">*/</span>
+<span style="font-weight: bold; font-style: italic;">/*     </span><span style="font-weight: bold; font-style: italic;">overflow:scroll; </span><span style="font-weight: bold; font-style: italic;">*/</span>
+<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">} </span><span style="font-weight: bold; font-style: italic;">*/</span>
 
 <span style="font-weight: bold;">#table-of-contents</span>{
     <span style="font-weight: bold;">position</span>:fixed;
@@ -1146,18 +1146,18 @@ Responsive for sidebar:
     <span style="font-weight: bold;">display</span>: none <span style="font-weight: bold;">!important</span>;
 }
 
-<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">ul.nav li ul li ul li {</span><span style="font-weight: bold; font-style: italic;"> */</span>
-<span style="font-weight: bold; font-style: italic;">/*     </span><span style="font-weight: bold; font-style: italic;">display: none !important; /\* as long as nav is on multiple levels of ul *\/</span><span style="font-weight: bold; font-style: italic;"> */</span>
-<span style="font-weight: bold; font-style: italic;">/*     </span><span style="font-weight: bold; font-style: italic;">/\* display: none; /\* as long as nav is on multiple levels of ul *\\/ *\/</span><span style="font-weight: bold; font-style: italic;"> */</span>
-<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">}</span><span style="font-weight: bold; font-style: italic;"> */</span>
+<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">ul.nav li ul li ul li { </span><span style="font-weight: bold; font-style: italic;">*/</span>
+<span style="font-weight: bold; font-style: italic;">/*     </span><span style="font-weight: bold; font-style: italic;">display: none !important; /\* as long as nav is on multiple levels of ul *\/ </span><span style="font-weight: bold; font-style: italic;">*/</span>
+<span style="font-weight: bold; font-style: italic;">/*     </span><span style="font-weight: bold; font-style: italic;">/\* display: none; /\* as long as nav is on multiple levels of ul *\\/ *\/ </span><span style="font-weight: bold; font-style: italic;">*/</span>
+<span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">} </span><span style="font-weight: bold; font-style: italic;">*/</span>
 
 <span style="font-weight: bold;">ul.nav li ul li ul li ul li </span>{
-    <span style="font-weight: bold;">display</span>: none <span style="font-weight: bold;">!important</span>; <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">as long as nav is on multiple levels of ul</span><span style="font-weight: bold; font-style: italic;"> */</span>
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">display: none; /* as long as nav is on multiple levels of ul *\/</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold;">display</span>: none <span style="font-weight: bold;">!important</span>; <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">as long as nav is on multiple levels of ul </span><span style="font-weight: bold; font-style: italic;">*/</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">display: none; /* as long as nav is on multiple levels of ul *\/ </span><span style="font-weight: bold; font-style: italic;">*/</span>
 }
 
 <span style="font-weight: bold;">ul.nav li.active &gt; a </span>{
-    <span style="font-weight: bold;">border-bottom</span>:solid 1px <span style="color: #000000; background-color: #c9c9c9;">#c9c9c9</span> <span style="font-weight: bold;">!important</span>; <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">XXX Restrict it to 2nd level</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold;">border-bottom</span>:solid 1px <span style="color: #000000; background-color: #c9c9c9;">#c9c9c9</span> <span style="font-weight: bold;">!important</span>; <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">XXX Restrict it to 2nd level </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">border-right</span>:solid 1px <span style="color: #000000; background-color: #c9c9c9;">#c9c9c9</span> <span style="font-weight: bold;">!important</span>;
 }
 
@@ -1206,7 +1206,7 @@ Responsive for sidebar:
 <span style="font-weight: bold;">#postamble .date </span>{
     <span style="font-weight: bold;">font-size</span>: 90%;
     <span style="font-weight: bold;">margin-bottom</span>: 0px;
-    <span style="font-weight: bold;">color</span>: <span style="color: #000000; background-color: #27AE60;">#27AE60</span>;
+    <span style="font-weight: bold;">color</span>: <span style="color: #ffffff; background-color: #27AE60;">#27AE60</span>;
 }
 
 <span style="font-weight: bold;">#postamble .creator,#postamble .validation </span>{
@@ -1224,7 +1224,7 @@ Responsive for sidebar:
     <span style="font-weight: bold;">text-align</span>:right;
     <span style="font-weight: bold;">font-size</span>:90%;
     <span style="font-weight: bold;">cursor</span>:pointer;
-    <span style="font-weight: bold;">color</span>:<span style="color: #000000; background-color: #27AE60;">#27AE60</span>;
+    <span style="font-weight: bold;">color</span>:<span style="color: #ffffff; background-color: #27AE60;">#27AE60</span>;
     *zoom:1}
 </pre>
 </div>
@@ -1349,7 +1349,7 @@ Responsive for sidebar:
     <span style="font-weight: bold;">padding-right</span>: 16px;
     <span style="font-weight: bold;">padding-top</span>: 8px;
     <span style="font-weight: bold;">line-height</span>: 1.25em;
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">display: inline;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">display: inline; </span><span style="font-weight: bold; font-style: italic;">*/</span>
 }
 </pre>
 </div>
@@ -1412,11 +1412,11 @@ for nice yellow or orange boxes.
 
 <div class="org-src-container">
 <pre class="src src-css"><span style="font-weight: bold;">.inlinetask </span>{
-    <span style="font-weight: bold;">background</span>: <span style="color: #000000; background-color: #FFF9E3;">#FFF9E3</span>;  <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">url</span><span style="color: #000000; background-color: #ffffff;">(</span><span style="font-weight: bold; font-style: italic;">dialog-todo.png</span><span style="color: #000000; background-color: #ffffff;">)</span><span style="font-weight: bold; font-style: italic;"> no-repeat 10px 8px;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold;">background</span>: <span style="color: #000000; background-color: #FFF9E3;">#FFF9E3</span>;  <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">url</span><span style="color: #000000; background-color: #ffffff;">(</span><span style="font-weight: bold; font-style: italic;">dialog-todo.png</span><span style="color: #000000; background-color: #ffffff;">)</span><span style="font-weight: bold; font-style: italic;"> no-repeat 10px 8px; </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">border</span>: 3px solid <span style="color: #000000; background-color: #FFEB8E;">#FFEB8E</span>;
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">border-right-style: none;</span><span style="font-weight: bold; font-style: italic;"> */</span>
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">border-left-style: none;</span><span style="font-weight: bold; font-style: italic;"> */</span>
-    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">padding: 10px 20px 10px 60px;</span><span style="font-weight: bold; font-style: italic;"> */</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">border-right-style: none; </span><span style="font-weight: bold; font-style: italic;">*/</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">border-left-style: none; </span><span style="font-weight: bold; font-style: italic;">*/</span>
+    <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">padding: 10px 20px 10px 60px; </span><span style="font-weight: bold; font-style: italic;">*/</span>
     <span style="font-weight: bold;">padding</span>: 9px 12px;
     <span style="font-weight: bold;">margin-bottom</span>: 24px;
     <span style="font-weight: bold;">font-family</span>:<span style="font-style: italic;">"Roboto Slab"</span>,<span style="font-style: italic;">"ff-tisa-web-pro"</span>,<span style="font-style: italic;">"Georgia"</span>,Arial,sans-serif}
@@ -1425,162 +1425,162 @@ for nice yellow or orange boxes.
 </div>
 </div>
 
-<div id="outline-container-orge881d3a" class="outline-2">
-<h2 id="orge881d3a"><span class="section-number-2">10.</span> Htmlize</h2>
+<div id="outline-container-orgded46c7" class="outline-2">
+<h2 id="orgded46c7"><span class="section-number-2">10</span> Htmlize</h2>
 <div class="outline-text-2" id="text-10">
 <div class="org-src-container">
-<pre class="src src-css"><span style="font-weight: bold;">.org-bold </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">bold</span><span style="font-weight: bold; font-style: italic;"> */</span> font-weight: bold; }
-<span style="font-weight: bold;">.org-bold-italic </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">bold-italic</span><span style="font-weight: bold; font-style: italic;"> */</span> font-weight: bold; <span style="font-weight: bold;">font-style</span>: italic; }
-<span style="font-weight: bold;">.org-buffer-menu-buffer </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">buffer-menu-buffer</span><span style="font-weight: bold; font-style: italic;"> */</span> font-weight: bold; }
-<span style="font-weight: bold;">.org-builtin </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-builtin-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; }
-<span style="font-weight: bold;">.org-button </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">button</span><span style="font-weight: bold; font-style: italic;"> */</span> text-decoration: underline; }
-<span style="font-weight: bold;">.org-calendar-today </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">calendar-today</span><span style="font-weight: bold; font-style: italic;"> */</span> text-decoration: underline; }
-<span style="font-weight: bold;">.org-change-log-acknowledgement </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-acknowledgement</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
-<span style="font-weight: bold;">.org-change-log-conditionals </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-conditionals</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; }
-<span style="font-weight: bold;">.org-change-log-date </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-date</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; }
-<span style="font-weight: bold;">.org-change-log-email </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-email</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; }
-<span style="font-weight: bold;">.org-change-log-file </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-file</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
-<span style="font-weight: bold;">.org-change-log-function </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-function</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; }
-<span style="font-weight: bold;">.org-change-log-list </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-list</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; }
-<span style="font-weight: bold;">.org-change-log-name </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-name</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #008b8b;">#008b8b</span>; }
-<span style="font-weight: bold;">.org-comint-highlight-input </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">comint-highlight-input</span><span style="font-weight: bold; font-style: italic;"> */</span> font-weight: bold; }
-<span style="font-weight: bold;">.org-comint-highlight-prompt </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">comint-highlight-prompt</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #00008b;">#00008b</span>; }
-<span style="font-weight: bold;">.org-comment </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-comment-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #999988;">#999988</span>; <span style="font-weight: bold;">font-style</span>: italic; }
-<span style="font-weight: bold;">.org-comment-delimiter </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-comment-delimiter-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #999988;">#999988</span>; <span style="font-weight: bold;">font-style</span>: italic; }
-<span style="font-weight: bold;">.org-completions-annotations </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">completions-annotations</span><span style="font-weight: bold; font-style: italic;"> */</span> font-style: italic; }
-<span style="font-weight: bold;">.org-completions-common-part </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">completions-common-part</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #ffffff;">#ffffff</span>; }
-<span style="font-weight: bold;">.org-completions-first-difference </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">completions-first-difference</span><span style="font-weight: bold; font-style: italic;"> */</span> font-weight: bold; }
-<span style="font-weight: bold;">.org-constant </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-constant-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #008b8b;">#008b8b</span>; }
-<span style="font-weight: bold;">.org-diary </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diary</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; }
-<span style="font-weight: bold;">.org-diff-context </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-context</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-diff-file-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-file-header</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #b3b3b3;">#b3b3b3</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-diff-function </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-function</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #cccccc;">#cccccc</span>; }
-<span style="font-weight: bold;">.org-diff-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-header</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #cccccc;">#cccccc</span>; }
-<span style="font-weight: bold;">.org-diff-hunk-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-hunk-header</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #cccccc;">#cccccc</span>; }
-<span style="font-weight: bold;">.org-diff-index </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-index</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #b3b3b3;">#b3b3b3</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-diff-nonexistent </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-nonexistent</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #b3b3b3;">#b3b3b3</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-diff-refine-change </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-refine-change</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #d9d9d9;">#d9d9d9</span>; }
-<span style="font-weight: bold;">.org-dired-directory </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-directory</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
-<span style="font-weight: bold;">.org-dired-flagged </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-flagged</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-dired-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-header</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #228b22;">#228b22</span>; }
-<span style="font-weight: bold;">.org-dired-ignored </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-ignored</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-dired-mark </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-mark</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #008b8b;">#008b8b</span>; }
-<span style="font-weight: bold;">.org-dired-marked </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-marked</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-dired-perm-write </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-perm-write</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
-<span style="font-weight: bold;">.org-dired-symlink </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-symlink</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; }
-<span style="font-weight: bold;">.org-dired-warning </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-warning</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-doc </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-doc-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; }
-<span style="font-weight: bold;">.org-escape-glyph </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">escape-glyph</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a52a2a;">#a52a2a</span>; }
-<span style="font-weight: bold;">.org-file-name-shadow </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">file-name-shadow</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-flyspell-duplicate </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">flyspell-duplicate</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #cdad00;">#cdad00</span>; <span style="font-weight: bold;">font-weight</span>: bold; <span style="font-weight: bold;">text-decoration</span>: underline; }
-<span style="font-weight: bold;">.org-flyspell-incorrect </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">flyspell-incorrect</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #ff4500;">#ff4500</span>; <span style="font-weight: bold;">font-weight</span>: bold; <span style="font-weight: bold;">text-decoration</span>: underline; }
-<span style="font-weight: bold;">.org-fringe </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">fringe</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #f2f2f2;">#f2f2f2</span>; }
-<span style="font-weight: bold;">.org-function-name </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-function-name-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #008080;">teal</span>; }
-<span style="font-weight: bold;">.org-header-line </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">header-line</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #333333;">#333333</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #e5e5e5;">#e5e5e5</span>; }
-<span style="font-weight: bold;">.org-help-argument-name </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">help-argument-name</span><span style="font-weight: bold; font-style: italic;"> */</span> font-style: italic; }
-<span style="font-weight: bold;">.org-highlight </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">highlight</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #b4eeb4;">#b4eeb4</span>; }
-<span style="font-weight: bold;">.org-holiday </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">holiday</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #ffffff; background-color: #ffc0cb;">#ffc0cb</span>; }
-<span style="font-weight: bold;">.org-isearch </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">isearch</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #b0e2ff;">#b0e2ff</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #ffffff; background-color: #cd00cd;">#cd00cd</span>; }
-<span style="font-weight: bold;">.org-isearch-fail </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">isearch-fail</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #ffc1c1;">#ffc1c1</span>; }
-<span style="font-weight: bold;">.org-italic </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">italic</span><span style="font-weight: bold; font-style: italic;"> */</span> font-style: italic; }
-<span style="font-weight: bold;">.org-keyword </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-keyword-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #0086b3;">#0086b3</span>; }
-<span style="font-weight: bold;">.org-lazy-highlight </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">lazy-highlight</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #afeeee;">#afeeee</span>; }
-<span style="font-weight: bold;">.org-link </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">link</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
-<span style="font-weight: bold;">.org-link-visited </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">link-visited</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #8b008b;">#8b008b</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
-<span style="font-weight: bold;">.org-log-edit-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">log-edit-header</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; }
-<span style="font-weight: bold;">.org-log-edit-summary </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">log-edit-summary</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
-<span style="font-weight: bold;">.org-log-edit-unknown-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">log-edit-unknown-header</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
-<span style="font-weight: bold;">.org-match </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">match</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #ffff00;">#ffff00</span>; }
-<span style="font-weight: bold;">.org-next-error </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">next-error</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #eedc82;">#eedc82</span>; }
-<span style="font-weight: bold;">.org-nobreak-space </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">nobreak-space</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a52a2a;">#a52a2a</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
-<span style="font-weight: bold;">.org-org-archived </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-archived</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-org-block </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-block</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-org-block-begin-line </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-block-begin-line</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
-<span style="font-weight: bold;">.org-org-block-end-line </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-block-end-line</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
-<span style="font-weight: bold;">.org-org-checkbox </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-checkbox</span><span style="font-weight: bold; font-style: italic;"> */</span> font-weight: bold; }
-<span style="font-weight: bold;">.org-org-checkbox-statistics-done </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-checkbox-statistics-done</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #228b22;">#228b22</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-org-checkbox-statistics-todo </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-checkbox-statistics-todo</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-org-clock-overlay </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-clock-overlay</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #ffff00;">#ffff00</span>; }
-<span style="font-weight: bold;">.org-org-code </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-code</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-org-column </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-column</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #e5e5e5;">#e5e5e5</span>; }
-<span style="font-weight: bold;">.org-org-column-title </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-column-title</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #e5e5e5;">#e5e5e5</span>; <span style="font-weight: bold;">font-weight</span>: bold; <span style="font-weight: bold;">text-decoration</span>: underline; }
-<span style="font-weight: bold;">.org-org-date </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-date</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
-<span style="font-weight: bold;">.org-org-document-info </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-document-info</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #191970;">#191970</span>; }
-<span style="font-weight: bold;">.org-org-document-info-keyword </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-document-info-keyword</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-org-document-title </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-document-title</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #191970;">#191970</span>; <span style="font-weight: bold;">font-size</span>: 144%; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-org-done </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-done</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #228b22;">#228b22</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-org-drawer </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-drawer</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
-<span style="font-weight: bold;">.org-org-ellipsis </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-ellipsis</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #b8860b;">#b8860b</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
-<span style="font-weight: bold;">.org-org-footnote </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-footnote</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
-<span style="font-weight: bold;">.org-org-formula </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-formula</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
-<span style="font-weight: bold;">.org-org-headline-done </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-headline-done</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #bc8f8f;">#bc8f8f</span>; }
-<span style="font-weight: bold;">.org-org-hide </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-hide</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #ffffff;">#ffffff</span>; }
-<span style="font-weight: bold;">.org-org-latex-and-export-specials </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-latex-and-export-specials</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #8b4513;">#8b4513</span>; }
-<span style="font-weight: bold;">.org-org-level-1 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-1</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
-<span style="font-weight: bold;">.org-org-level-2 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-2</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; }
-<span style="font-weight: bold;">.org-org-level-3 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-3</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; }
-<span style="font-weight: bold;">.org-org-level-4 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-4</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
-<span style="font-weight: bold;">.org-org-level-5 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-5</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #228b22;">#228b22</span>; }
-<span style="font-weight: bold;">.org-org-level-6 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-6</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #008b8b;">#008b8b</span>; }
-<span style="font-weight: bold;">.org-org-level-7 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-7</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; }
-<span style="font-weight: bold;">.org-org-level-8 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-8</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; }
-<span style="font-weight: bold;">.org-org-link </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-link</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
-<span style="font-weight: bold;">.org-org-meta-line </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-meta-line</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
-<span style="font-weight: bold;">.org-org-mode-line-clock </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-mode-line-clock</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #bfbfbf;">#bfbfbf</span>; }
-<span style="font-weight: bold;">.org-org-mode-line-clock-overrun </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-mode-line-clock-overrun</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; }
-<span style="font-weight: bold;">.org-org-quote </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-quote</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-org-scheduled </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-scheduled</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #006400;">#006400</span>; }
-<span style="font-weight: bold;">.org-org-scheduled-previously </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-scheduled-previously</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
-<span style="font-weight: bold;">.org-org-scheduled-today </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-scheduled-today</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #006400;">#006400</span>; }
-<span style="font-weight: bold;">.org-org-sexp-date </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-sexp-date</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; }
-<span style="font-weight: bold;">.org-org-special-keyword </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-special-keyword</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; }
-<span style="font-weight: bold;">.org-org-table </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-table</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
-<span style="font-weight: bold;">.org-org-tag </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-tag</span><span style="font-weight: bold; font-style: italic;"> */</span> font-weight: bold; }
-<span style="font-weight: bold;">.org-org-target </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-target</span><span style="font-weight: bold; font-style: italic;"> */</span> text-decoration: underline; }
-<span style="font-weight: bold;">.org-org-time-grid </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-time-grid</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #b8860b;">#b8860b</span>; }
-<span style="font-weight: bold;">.org-org-todo </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-todo</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-org-upcoming-deadline </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-upcoming-deadline</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
-<span style="font-weight: bold;">.org-org-verbatim </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-verbatim</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-org-verse </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-verse</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-org-warning </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-warning</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-outline-1 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-1</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
-<span style="font-weight: bold;">.org-outline-2 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-2</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; }
-<span style="font-weight: bold;">.org-outline-3 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-3</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; }
-<span style="font-weight: bold;">.org-outline-4 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-4</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
-<span style="font-weight: bold;">.org-outline-5 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-5</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #228b22;">#228b22</span>; }
-<span style="font-weight: bold;">.org-outline-6 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-6</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #008b8b;">#008b8b</span>; }
-<span style="font-weight: bold;">.org-outline-7 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-7</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; }
-<span style="font-weight: bold;">.org-outline-8 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-8</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; }
-<span style="font-weight: bold;">.org-preprocessor </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-preprocessor-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; }
-<span style="font-weight: bold;">.org-query-replace </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">query-replace</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #b0e2ff;">#b0e2ff</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #ffffff; background-color: #cd00cd;">#cd00cd</span>; }
-<span style="font-weight: bold;">.org-regexp-grouping-backslash </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-regexp-grouping-backslash</span><span style="font-weight: bold; font-style: italic;"> */</span> font-weight: bold; }
-<span style="font-weight: bold;">.org-regexp-grouping-construct </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-regexp-grouping-construct</span><span style="font-weight: bold; font-style: italic;"> */</span> font-weight: bold; }
-<span style="font-weight: bold;">.org-region </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">region</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #eedc82;">#eedc82</span>; }
-<span style="font-weight: bold;">.org-secondary-selection </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">secondary-selection</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #ffff00;">#ffff00</span>; }
-<span style="font-weight: bold;">.org-shadow </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">shadow</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-show-paren-match </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">show-paren-match</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #40e0d0;">#40e0d0</span>; }
-<span style="font-weight: bold;">.org-show-paren-mismatch </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">show-paren-mismatch</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #ffffff;">#ffffff</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #ffffff; background-color: #a020f0;">#a020f0</span>; }
-<span style="font-weight: bold;">.org-string </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-string-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #dd1144;">#dd1144</span>; }
-<span style="font-weight: bold;">.org-tool-bar </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">tool-bar</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #bfbfbf;">#bfbfbf</span>; }
-<span style="font-weight: bold;">.org-tooltip </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">tooltip</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #ffffe0;">#ffffe0</span>; }
-<span style="font-weight: bold;">.org-trailing-whitespace </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">trailing-whitespace</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; }
-<span style="font-weight: bold;">.org-type </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-type-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #228b22;">#228b22</span>; }
-<span style="font-weight: bold;">.org-underline </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">underline</span><span style="font-weight: bold; font-style: italic;"> */</span> text-decoration: underline; }
-<span style="font-weight: bold;">.org-variable-name </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-variable-name-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #008080;">teal</span>; }
-<span style="font-weight: bold;">.org-warning </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-warning-face</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
-<span style="font-weight: bold;">.org-widget-button </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-button</span><span style="font-weight: bold; font-style: italic;"> */</span> font-weight: bold; }
-<span style="font-weight: bold;">.org-widget-button-pressed </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-button-pressed</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; }
-<span style="font-weight: bold;">.org-widget-documentation </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-documentation</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #000000; background-color: #006400;">#006400</span>; }
-<span style="font-weight: bold;">.org-widget-field </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-field</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #d9d9d9;">#d9d9d9</span>; }
-<span style="font-weight: bold;">.org-widget-inactive </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-inactive</span><span style="font-weight: bold; font-style: italic;"> */</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
-<span style="font-weight: bold;">.org-widget-single-line-field </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-single-line-field</span><span style="font-weight: bold; font-style: italic;"> */</span> background-color: <span style="color: #000000; background-color: #d9d9d9;">#d9d9d9</span>; }
+<pre class="src src-css"><span style="font-weight: bold;">.org-bold </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">bold </span><span style="font-weight: bold; font-style: italic;">*/</span> font-weight: bold; }
+<span style="font-weight: bold;">.org-bold-italic </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">bold-italic </span><span style="font-weight: bold; font-style: italic;">*/</span> font-weight: bold; <span style="font-weight: bold;">font-style</span>: italic; }
+<span style="font-weight: bold;">.org-buffer-menu-buffer </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">buffer-menu-buffer </span><span style="font-weight: bold; font-style: italic;">*/</span> font-weight: bold; }
+<span style="font-weight: bold;">.org-builtin </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-builtin-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; }
+<span style="font-weight: bold;">.org-button </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">button </span><span style="font-weight: bold; font-style: italic;">*/</span> text-decoration: underline; }
+<span style="font-weight: bold;">.org-calendar-today </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">calendar-today </span><span style="font-weight: bold; font-style: italic;">*/</span> text-decoration: underline; }
+<span style="font-weight: bold;">.org-change-log-acknowledgement </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-acknowledgement </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
+<span style="font-weight: bold;">.org-change-log-conditionals </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-conditionals </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; }
+<span style="font-weight: bold;">.org-change-log-date </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-date </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; }
+<span style="font-weight: bold;">.org-change-log-email </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-email </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; }
+<span style="font-weight: bold;">.org-change-log-file </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-file </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
+<span style="font-weight: bold;">.org-change-log-function </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-function </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; }
+<span style="font-weight: bold;">.org-change-log-list </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-list </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #a020f0;">#a020f0</span>; }
+<span style="font-weight: bold;">.org-change-log-name </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">change-log-name </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #008b8b;">#008b8b</span>; }
+<span style="font-weight: bold;">.org-comint-highlight-input </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">comint-highlight-input </span><span style="font-weight: bold; font-style: italic;">*/</span> font-weight: bold; }
+<span style="font-weight: bold;">.org-comint-highlight-prompt </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">comint-highlight-prompt </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #00008b;">#00008b</span>; }
+<span style="font-weight: bold;">.org-comment </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-comment-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #999988;">#999988</span>; <span style="font-weight: bold;">font-style</span>: italic; }
+<span style="font-weight: bold;">.org-comment-delimiter </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-comment-delimiter-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #999988;">#999988</span>; <span style="font-weight: bold;">font-style</span>: italic; }
+<span style="font-weight: bold;">.org-completions-annotations </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">completions-annotations </span><span style="font-weight: bold; font-style: italic;">*/</span> font-style: italic; }
+<span style="font-weight: bold;">.org-completions-common-part </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">completions-common-part </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #ffffff;">#ffffff</span>; }
+<span style="font-weight: bold;">.org-completions-first-difference </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">completions-first-difference </span><span style="font-weight: bold; font-style: italic;">*/</span> font-weight: bold; }
+<span style="font-weight: bold;">.org-constant </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-constant-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #008b8b;">#008b8b</span>; }
+<span style="font-weight: bold;">.org-diary </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diary </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; }
+<span style="font-weight: bold;">.org-diff-context </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-context </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-diff-file-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-file-header </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #b3b3b3;">#b3b3b3</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-diff-function </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-function </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #cccccc;">#cccccc</span>; }
+<span style="font-weight: bold;">.org-diff-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-header </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #cccccc;">#cccccc</span>; }
+<span style="font-weight: bold;">.org-diff-hunk-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-hunk-header </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #cccccc;">#cccccc</span>; }
+<span style="font-weight: bold;">.org-diff-index </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-index </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #b3b3b3;">#b3b3b3</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-diff-nonexistent </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-nonexistent </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #b3b3b3;">#b3b3b3</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-diff-refine-change </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">diff-refine-change </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #d9d9d9;">#d9d9d9</span>; }
+<span style="font-weight: bold;">.org-dired-directory </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-directory </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
+<span style="font-weight: bold;">.org-dired-flagged </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-flagged </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-dired-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-header </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; }
+<span style="font-weight: bold;">.org-dired-ignored </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-ignored </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-dired-mark </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-mark </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #008b8b;">#008b8b</span>; }
+<span style="font-weight: bold;">.org-dired-marked </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-marked </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-dired-perm-write </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-perm-write </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
+<span style="font-weight: bold;">.org-dired-symlink </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-symlink </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #a020f0;">#a020f0</span>; }
+<span style="font-weight: bold;">.org-dired-warning </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">dired-warning </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-doc </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-doc-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; }
+<span style="font-weight: bold;">.org-escape-glyph </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">escape-glyph </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #a52a2a;">#a52a2a</span>; }
+<span style="font-weight: bold;">.org-file-name-shadow </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">file-name-shadow </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-flyspell-duplicate </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">flyspell-duplicate </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #cdad00;">#cdad00</span>; <span style="font-weight: bold;">font-weight</span>: bold; <span style="font-weight: bold;">text-decoration</span>: underline; }
+<span style="font-weight: bold;">.org-flyspell-incorrect </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">flyspell-incorrect </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #ff4500;">#ff4500</span>; <span style="font-weight: bold;">font-weight</span>: bold; <span style="font-weight: bold;">text-decoration</span>: underline; }
+<span style="font-weight: bold;">.org-fringe </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">fringe </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #f2f2f2;">#f2f2f2</span>; }
+<span style="font-weight: bold;">.org-function-name </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-function-name-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #008080;">teal</span>; }
+<span style="font-weight: bold;">.org-header-line </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">header-line </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #333333;">#333333</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #e5e5e5;">#e5e5e5</span>; }
+<span style="font-weight: bold;">.org-help-argument-name </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">help-argument-name </span><span style="font-weight: bold; font-style: italic;">*/</span> font-style: italic; }
+<span style="font-weight: bold;">.org-highlight </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">highlight </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #b4eeb4;">#b4eeb4</span>; }
+<span style="font-weight: bold;">.org-holiday </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">holiday </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #ffc0cb;">#ffc0cb</span>; }
+<span style="font-weight: bold;">.org-isearch </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">isearch </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #b0e2ff;">#b0e2ff</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #cd00cd;">#cd00cd</span>; }
+<span style="font-weight: bold;">.org-isearch-fail </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">isearch-fail </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #ffc1c1;">#ffc1c1</span>; }
+<span style="font-weight: bold;">.org-italic </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">italic </span><span style="font-weight: bold; font-style: italic;">*/</span> font-style: italic; }
+<span style="font-weight: bold;">.org-keyword </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-keyword-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #0086b3;">#0086b3</span>; }
+<span style="font-weight: bold;">.org-lazy-highlight </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">lazy-highlight </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #afeeee;">#afeeee</span>; }
+<span style="font-weight: bold;">.org-link </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">link </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
+<span style="font-weight: bold;">.org-link-visited </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">link-visited </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #8b008b;">#8b008b</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
+<span style="font-weight: bold;">.org-log-edit-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">log-edit-header </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #a020f0;">#a020f0</span>; }
+<span style="font-weight: bold;">.org-log-edit-summary </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">log-edit-summary </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
+<span style="font-weight: bold;">.org-log-edit-unknown-header </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">log-edit-unknown-header </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
+<span style="font-weight: bold;">.org-match </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">match </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #ffff00;">#ffff00</span>; }
+<span style="font-weight: bold;">.org-next-error </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">next-error </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #eedc82;">#eedc82</span>; }
+<span style="font-weight: bold;">.org-nobreak-space </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">nobreak-space </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #a52a2a;">#a52a2a</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
+<span style="font-weight: bold;">.org-org-archived </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-archived </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-org-block </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-block </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-org-block-begin-line </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-block-begin-line </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
+<span style="font-weight: bold;">.org-org-block-end-line </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-block-end-line </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
+<span style="font-weight: bold;">.org-org-checkbox </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-checkbox </span><span style="font-weight: bold; font-style: italic;">*/</span> font-weight: bold; }
+<span style="font-weight: bold;">.org-org-checkbox-statistics-done </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-checkbox-statistics-done </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-org-checkbox-statistics-todo </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-checkbox-statistics-todo </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-org-clock-overlay </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-clock-overlay </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #ffff00;">#ffff00</span>; }
+<span style="font-weight: bold;">.org-org-code </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-code </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-org-column </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-column </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #e5e5e5;">#e5e5e5</span>; }
+<span style="font-weight: bold;">.org-org-column-title </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-column-title </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #e5e5e5;">#e5e5e5</span>; <span style="font-weight: bold;">font-weight</span>: bold; <span style="font-weight: bold;">text-decoration</span>: underline; }
+<span style="font-weight: bold;">.org-org-date </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-date </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #a020f0;">#a020f0</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
+<span style="font-weight: bold;">.org-org-document-info </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-document-info </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #191970;">#191970</span>; }
+<span style="font-weight: bold;">.org-org-document-info-keyword </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-document-info-keyword </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-org-document-title </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-document-title </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #191970;">#191970</span>; <span style="font-weight: bold;">font-size</span>: 144%; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-org-done </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-done </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-org-drawer </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-drawer </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
+<span style="font-weight: bold;">.org-org-ellipsis </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-ellipsis </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #b8860b;">#b8860b</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
+<span style="font-weight: bold;">.org-org-footnote </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-footnote </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #a020f0;">#a020f0</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
+<span style="font-weight: bold;">.org-org-formula </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-formula </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
+<span style="font-weight: bold;">.org-org-headline-done </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-headline-done </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #bc8f8f;">#bc8f8f</span>; }
+<span style="font-weight: bold;">.org-org-hide </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-hide </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #ffffff;">#ffffff</span>; }
+<span style="font-weight: bold;">.org-org-latex-and-export-specials </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-latex-and-export-specials </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #8b4513;">#8b4513</span>; }
+<span style="font-weight: bold;">.org-org-level-1 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-1 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
+<span style="font-weight: bold;">.org-org-level-2 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-2 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; }
+<span style="font-weight: bold;">.org-org-level-3 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-3 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #a020f0;">#a020f0</span>; }
+<span style="font-weight: bold;">.org-org-level-4 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-4 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
+<span style="font-weight: bold;">.org-org-level-5 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-5 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; }
+<span style="font-weight: bold;">.org-org-level-6 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-6 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #008b8b;">#008b8b</span>; }
+<span style="font-weight: bold;">.org-org-level-7 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-7 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; }
+<span style="font-weight: bold;">.org-org-level-8 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-level-8 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; }
+<span style="font-weight: bold;">.org-org-link </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-link </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; <span style="font-weight: bold;">text-decoration</span>: underline; }
+<span style="font-weight: bold;">.org-org-meta-line </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-meta-line </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
+<span style="font-weight: bold;">.org-org-mode-line-clock </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-mode-line-clock </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #bfbfbf;">#bfbfbf</span>; }
+<span style="font-weight: bold;">.org-org-mode-line-clock-overrun </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-mode-line-clock-overrun </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; }
+<span style="font-weight: bold;">.org-org-quote </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-quote </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-org-scheduled </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-scheduled </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #006400;">#006400</span>; }
+<span style="font-weight: bold;">.org-org-scheduled-previously </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-scheduled-previously </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
+<span style="font-weight: bold;">.org-org-scheduled-today </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-scheduled-today </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #006400;">#006400</span>; }
+<span style="font-weight: bold;">.org-org-sexp-date </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-sexp-date </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #a020f0;">#a020f0</span>; }
+<span style="font-weight: bold;">.org-org-special-keyword </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-special-keyword </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #a020f0;">#a020f0</span>; }
+<span style="font-weight: bold;">.org-org-table </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-table </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
+<span style="font-weight: bold;">.org-org-tag </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-tag </span><span style="font-weight: bold; font-style: italic;">*/</span> font-weight: bold; }
+<span style="font-weight: bold;">.org-org-target </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-target </span><span style="font-weight: bold; font-style: italic;">*/</span> text-decoration: underline; }
+<span style="font-weight: bold;">.org-org-time-grid </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-time-grid </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #b8860b;">#b8860b</span>; }
+<span style="font-weight: bold;">.org-org-todo </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-todo </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-org-upcoming-deadline </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-upcoming-deadline </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
+<span style="font-weight: bold;">.org-org-verbatim </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-verbatim </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-org-verse </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-verse </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-org-warning </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">org-warning </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-outline-1 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-1 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #0000ff;">#0000ff</span>; }
+<span style="font-weight: bold;">.org-outline-2 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-2 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #a0522d;">#a0522d</span>; }
+<span style="font-weight: bold;">.org-outline-3 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-3 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #a020f0;">#a020f0</span>; }
+<span style="font-weight: bold;">.org-outline-4 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-4 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #b22222;">#b22222</span>; }
+<span style="font-weight: bold;">.org-outline-5 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-5 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; }
+<span style="font-weight: bold;">.org-outline-6 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-6 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #008b8b;">#008b8b</span>; }
+<span style="font-weight: bold;">.org-outline-7 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-7 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; }
+<span style="font-weight: bold;">.org-outline-8 </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">outline-8 </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #8b2252;">#8b2252</span>; }
+<span style="font-weight: bold;">.org-preprocessor </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-preprocessor-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7a378b;">#7a378b</span>; }
+<span style="font-weight: bold;">.org-query-replace </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">query-replace </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #b0e2ff;">#b0e2ff</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #cd00cd;">#cd00cd</span>; }
+<span style="font-weight: bold;">.org-regexp-grouping-backslash </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-regexp-grouping-backslash </span><span style="font-weight: bold; font-style: italic;">*/</span> font-weight: bold; }
+<span style="font-weight: bold;">.org-regexp-grouping-construct </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-regexp-grouping-construct </span><span style="font-weight: bold; font-style: italic;">*/</span> font-weight: bold; }
+<span style="font-weight: bold;">.org-region </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">region </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #eedc82;">#eedc82</span>; }
+<span style="font-weight: bold;">.org-secondary-selection </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">secondary-selection </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #ffff00;">#ffff00</span>; }
+<span style="font-weight: bold;">.org-shadow </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">shadow </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-show-paren-match </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">show-paren-match </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #40e0d0;">#40e0d0</span>; }
+<span style="font-weight: bold;">.org-show-paren-mismatch </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">show-paren-mismatch </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #ffffff;">#ffffff</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #a020f0;">#a020f0</span>; }
+<span style="font-weight: bold;">.org-string </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-string-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #dd1144;">#dd1144</span>; }
+<span style="font-weight: bold;">.org-tool-bar </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">tool-bar </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #bfbfbf;">#bfbfbf</span>; }
+<span style="font-weight: bold;">.org-tooltip </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">tooltip </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #000000;">#000000</span>; <span style="font-weight: bold;">background-color</span>: <span style="color: #000000; background-color: #ffffe0;">#ffffe0</span>; }
+<span style="font-weight: bold;">.org-trailing-whitespace </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">trailing-whitespace </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; }
+<span style="font-weight: bold;">.org-type </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-type-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #228b22;">#228b22</span>; }
+<span style="font-weight: bold;">.org-underline </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">underline </span><span style="font-weight: bold; font-style: italic;">*/</span> text-decoration: underline; }
+<span style="font-weight: bold;">.org-variable-name </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-variable-name-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #000000; background-color: #008080;">teal</span>; }
+<span style="font-weight: bold;">.org-warning </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">font-lock-warning-face </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; <span style="font-weight: bold;">font-weight</span>: bold; }
+<span style="font-weight: bold;">.org-widget-button </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-button </span><span style="font-weight: bold; font-style: italic;">*/</span> font-weight: bold; }
+<span style="font-weight: bold;">.org-widget-button-pressed </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-button-pressed </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #ff0000;">#ff0000</span>; }
+<span style="font-weight: bold;">.org-widget-documentation </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-documentation </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #006400;">#006400</span>; }
+<span style="font-weight: bold;">.org-widget-field </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-field </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #d9d9d9;">#d9d9d9</span>; }
+<span style="font-weight: bold;">.org-widget-inactive </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-inactive </span><span style="font-weight: bold; font-style: italic;">*/</span> color: <span style="color: #ffffff; background-color: #7f7f7f;">#7f7f7f</span>; }
+<span style="font-weight: bold;">.org-widget-single-line-field </span>{ <span style="font-weight: bold; font-style: italic;">/* </span><span style="font-weight: bold; font-style: italic;">widget-single-line-field </span><span style="font-weight: bold; font-style: italic;">*/</span> background-color: <span style="color: #000000; background-color: #d9d9d9;">#d9d9d9</span>; }
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgcfef9c8" class="outline-2">
-<h2 id="orgcfef9c8"><span class="section-number-2">11.</span> JS</h2>
+<div id="outline-container-orgcadbab6" class="outline-2">
+<h2 id="orgcadbab6"><span class="section-number-2">11</span> JS</h2>
 <div class="outline-text-2" id="text-11">
 <div class="org-src-container">
 <pre class="src src-js">$(<span style="font-weight: bold;">function</span>() {
@@ -1675,7 +1675,7 @@ window.SphinxRtdTheme = (<span style="font-weight: bold;">function</span> (<span
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Fabrice Niessen</p>
-<p class="date">Created: 2021-11-11 Thu 16:24</p>
+<p class="date">Created: 2021-12-20 Mon 11:42</p>
 </div>
 </body>
 </html>
