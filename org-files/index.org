@@ -16,19 +16,19 @@ This year the course is taught by:
   :ID:       6a40d18d-ece7-40ae-a723-79a2e93891cc
   :END:
 
-In the course Data Science for Economics you will learn how to deal with big (unstructured) data to answer policy questions using recent advances in machine learning.
+In the course Data Science for Economics you will learn how to deal with big data and using simulations to answer policy questions using recent advances in machine learning.
 
-Whether you are a public policy-maker or a data analyst at a private firm, you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
+Whether you are a public policy-maker or a data analyst at a private firm, you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing scheme for our products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
 
-This course will help you to overcome those challenges. The "traditional" econometrics you have learnt in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there are more variables than observations, and you do not know at the start which variables and interaction terms to include.
+This course will help you overcome those challenges. The "traditional" econometrics you have learned in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there can be more variables than observations, and you do not know at the start which variables and interaction terms to include.
 
 In this course, we give an introduction to data-project management, tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
 
 We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets and Bayesian estimation techniques.
 
-In terms of software we will be using python,  pymc3 and google's tensorflow.
+In terms of software we will be using [[https://www.python.org/][python]],  [[https://docs.pymc.io/en/v3/][pymc3]] and google's [[https://www.tensorflow.org/][tensorflow]].
 
-For this course we are very happy that we partner with [[https://www.datacamp.com/][Datacamp]] for this course: [[https://www.tilburguniversity.edu/students/skills/programming][register for Datacamp]]
+For this course we are very happy that we partner with [[https://www.datacamp.com/][Datacamp]]: [[https://www.tilburguniversity.edu/students/skills/programming][register for Datacamp]]
 
 *Required Prerequisites*
 
@@ -90,7 +90,7 @@ For this course a series of screencasts is available. Screencasts are available 
 
 Do the following four steps:
 + if you did AEA 1, you already have a [[https://github.com/][github]] account, otherwise create a github account
-+ fill in this [[https://forms.gle/33HJUpXV3iD6s5ZE6][google form]] before *Friday 11 February 2022*
++ fill in this [[https://forms.gle/d4WUjAZz2pSTA7uH9][google form]] before *Friday 11 February 2022*
   + sign in with your @tilburguniversity.edu email address and password
 + go to
   + [[https://jupyterlab.uvt.nl/][jupyter lab]]
@@ -124,7 +124,7 @@ A couple of notes on these datacamp courses:
 
 The [[https://www.datacamp.com/courses/statistical-simulation-in-python][statistical simulation]] course starts with very simple statistical concepts. But rapidly things become more challenging. The focus of our seminar will not be on statistical simulation per se, but we will use it to understand the properties of estimators. Hence, it is important to understand the "flow" of having a statistical process and then repeating it 10,000 times to understand its properties. You also learn how to use numpy's statistical functions from ~numpy.random~.
 
-The point for us of this Datacamp course is to become comfortable with modelling data generating processes. Not the specific applications considered in this course.
+The point for us of this Datacamp course is to become comfortable with modeling data generating processes. Not the specific applications considered in this course.
 
 You may not have seen the ~get~ method of a dictionary. Here you see it in action in a simple example (borrowed from [[https://stackoverflow.com/questions/2068349/understanding-get-method-in-python][stackoverflow]]):
 
@@ -141,7 +141,7 @@ print(characters)
 #+RESULTS:
 : {'T': 1, 'h': 2, 'e': 4, ' ': 8, 'q': 1, 'u': 2, 'i': 1, 'c': 1, 'k': 1, 'b': 1, 'r': 2, 'o': 4, 'w': 1, 'n': 1, 'f': 1, 'x': 1, 'j': 1, 'm': 1, 'p': 1, 'd': 2, 'v': 1, 't': 1, 'l': 1, 'a': 1, 'z': 1, 'y': 1, 'g': 1, '.': 1}
 
-~characters~ is a dictionary with ~key~ a character (including "space") from the ~sentence~ and the ~value~ equals the number of times the character has occured up till then. If a character "happens" for the first time, ~get~ cannot find it in the dictionary ~characters~ and returns the default value (here specified as 0). If character has happened, say, 3 times before, ~get~ returns the value 3 and we add 1, so the new value equals 4.
+~characters~ is a dictionary with ~key~ a character (including "space") from the ~sentence~ and the ~value~ equals the number of times the character has occurred up till then. If a character "happens" for the first time, ~get~ cannot find it in the dictionary ~characters~ and returns the default value (here specified as 0). If character has happened, say, 3 times before, ~get~ returns the value 3 and we add 1, so the new value equals 4.
 
 If you run into other functions that you are not familiar with, you can use "?", like in:
 
@@ -166,7 +166,6 @@ Note that for this [[https://www.datacamp.com/courses/deep-learning-with-keras-i
 The [[https://www.datacamp.com/courses/introduction-to-tensorflow-in-python][tensorflow]] course gives some more background on the syntax used in tensorflow that we also use in class. All the keras commands you learn in the keras course are easily applied under tensorflow.
 
 ** For the second part of the course, you can do the following datacamp courses:
-
 
 - Resources for pymc3 can be found [[https://docs.pymc.io/en/v3/learn.html][here]].
   - a good video to start with is [[https://www.youtube.com/watch?v=TMmSESkhRtI][this one]] where one of the developers of pymc3, Christopher Fonnesbeck, goes over the notebooks in this repository: https://github.com/fonnesbeck/intro_stat_modeling_2017
@@ -233,14 +232,14 @@ We have a separate page with all relevant [[./Datascience_for_economics.org][ass
 + on Canvas we give you the link to the github repos. with the ~assignment_notebook.ipynb~
 + to submit your final assignment:
   + do not change the name of the ~assignment_notebook.ipynb~ notebook
-  + fill in this [[https://forms.gle/PxdCRduc2wWBkNbT9][google form]]
+  + fill in this [[https://forms.gle/iABa9iGp6yt4ETNu7][google form]]
   + push the final notebook on the github classroom repository
 
 
 ** TODO Instructions for submitting final assignment to be put on Canvas :noexport:
 
-- [X] create assignment on github classroom with the datascience template/notebook
-- [X] create google form for students to fill in once they finish assignment: replace last year link above
+- [X] create assignment on github classroom with the datascience template/notebook (20-12-2021)
+- [X] create google form for students to fill in once they finish assignment: replace last year link above (20-12-2021)
 
 1. attach instructions: [[file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf][file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf]]
 2. create and post screencast where notebook is downloaded and uploaded on github
@@ -249,17 +248,17 @@ We have a separate page with all relevant [[./Datascience_for_economics.org][ass
 
 Dear students,
 
-The link for the final datascience assignment (template) is: https://classroom.github.com/g/7C4-NeR1
+The link for the final datascience assignment (template) is: https://classroom.github.com/a/1hlPplCU
 
 You can do the assignment on your own or with (at max.) one other student. When you use the link to the assignment, you will be asked for your team's name.
 
 When you finish your assignment:
 
-1. download your assignment (jupyter notebook) from jupyter lab (or google colabs; or check where it is on your computer when using anaconda) to your computer (e.g. in the folder Downloads)
+1. download your assignment (jupyter notebook and other material, like datasets, that you use) from jupyter lab (or google colabs; or check where it is on your computer when using anaconda) to your computer (e.g. in the folder Downloads)
 
-2. push it onto your assignment's github repository
+2. push all relevant material onto your assignment's github repository
 
-3. fill in the google form as indicated on the website under Final Assignment
+3. fill in the google form as indicated on the website under Final Assignment (this is a different form from the one you filled in at the start of the semester)
 
 We need the information from the google form to link your assignment to your student number which is needed for the exam administration.
 

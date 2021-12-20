@@ -18,6 +18,7 @@
 (require 'ox-publish)
 
 
+(setq org-export-with-broken-links t)
 
 (defvar yt-iframe-format
   ;; You may want to change your width and height.

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Seminar Data Science for Economics</title>
+<meta name="generator" content="Org mode" />
 <meta name="author" content="Jan Boone" />
-<meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 </head>
 <body>
-<div id="content" class="content">
+<div id="content">
 <h1 class="title">Seminar Data Science for Economics</h1>
 <p>
 This website contains the material for the MSc course Seminar Data Science for Economics
@@ -29,19 +29,19 @@ This year the course is taught by:
 <li>Barbora Písecká</li>
 </ul>
 
-<div id="outline-container-orgdc71351" class="outline-2">
-<h2 id="orgdc71351">Course description</h2>
-<div class="outline-text-2" id="text-orgdc71351">
+<div id="outline-container-org9ad9be1" class="outline-2">
+<h2 id="org9ad9be1">Course description</h2>
+<div class="outline-text-2" id="text-org9ad9be1">
 <p>
-In the course Data Science for Economics you will learn how to deal with big (unstructured) data to answer policy questions using recent advances in machine learning.
+In the course Data Science for Economics you will learn how to deal with big data and using simulations to answer policy questions using recent advances in machine learning.
 </p>
 
 <p>
-Whether you are a public policy-maker or a data analyst at a private firm, you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
+Whether you are a public policy-maker or a data analyst at a private firm, you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing scheme for our products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
 </p>
 
 <p>
-This course will help you to overcome those challenges. The "traditional" econometrics you have learnt in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there are more variables than observations, and you do not know at the start which variables and interaction terms to include.
+This course will help you overcome those challenges. The "traditional" econometrics you have learned in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there can be more variables than observations, and you do not know at the start which variables and interaction terms to include.
 </p>
 
 <p>
@@ -53,11 +53,11 @@ We use data simulation to get the main intuitions across starting from the diffe
 </p>
 
 <p>
-In terms of software we will be using python,  pymc3 and google's tensorflow.
+In terms of software we will be using <a href="https://www.python.org/">python</a>,  <a href="https://docs.pymc.io/en/v3/">pymc3</a> and google's <a href="https://www.tensorflow.org/">tensorflow</a>.
 </p>
 
 <p>
-For this course we are very happy that we partner with <a href="https://www.datacamp.com/">Datacamp</a> for this course: <a href="https://www.tilburguniversity.edu/students/skills/programming">register for Datacamp</a>
+For this course we are very happy that we partner with <a href="https://www.datacamp.com/">Datacamp</a>: <a href="https://www.tilburguniversity.edu/students/skills/programming">register for Datacamp</a>
 </p>
 
 <p>
@@ -69,28 +69,28 @@ Students make sure they follow Econometrics 1 and the python track in AEA 1.
 </p>
 
 
-<div id="table-of-contents" role="doc-toc">
+<div id="table-of-contents">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
+<div id="text-table-of-contents">
 <ul>
-<li><a href="#orgdc71351">Course description</a></li>
+<li><a href="#org9ad9be1">Course description</a></li>
 <li><a href="#screencasts_datascience">Screencasts</a></li>
-<li><a href="#orgb7cd8d5">Organisation of the course</a>
+<li><a href="#org6ffd8e6">Organisation of the course</a>
 <ul>
-<li><a href="#org0b2f230"><span class="todo TODO">TODO</span> add Lecture schedule</a></li>
-<li><a href="#org5fa2813">First Lecture</a></li>
-<li><a href="#orgf394329">Datacamp</a></li>
-<li><a href="#org65e40e6">From Datacamp, do the following courses for the first part of the course</a></li>
-<li><a href="#org5d23fcc">For the second part of the course, you can do the following datacamp courses:</a></li>
-<li><a href="#orga2a77e3">Deadlines</a></li>
-<li><a href="#org356b340">Questions</a></li>
-<li><a href="#org1f74a20">Assessment material</a></li>
+<li><a href="#org26d6844"><span class="todo TODO">TODO</span> add Lecture schedule</a></li>
+<li><a href="#orgd3b933c">First Lecture</a></li>
+<li><a href="#org51c6cee">Datacamp</a></li>
+<li><a href="#orge756b71">From Datacamp, do the following courses for the first part of the course</a></li>
+<li><a href="#orgc111daf">For the second part of the course, you can do the following datacamp courses:</a></li>
+<li><a href="#orgf4b4ffc">Deadlines</a></li>
+<li><a href="#orga6c2381">Questions</a></li>
+<li><a href="#org201563c">Assessment material</a></li>
 </ul>
 </li>
-<li><a href="#org5a3abc2">Final Assignment</a>
+<li><a href="#orgeef51a5">Final Assignment</a>
 <ul>
-<li><a href="#org8d4e723">what we are looking for</a></li>
-<li><a href="#org4d86e27">resit of final assignment</a></li>
+<li><a href="#org7bf41cc">what we are looking for</a></li>
+<li><a href="#org5f12d24">resit of final assignment</a></li>
 </ul>
 </li>
 </ul>
@@ -110,13 +110,13 @@ For this course a series of screencasts is available. Screencasts are available 
 </div>
 
 
-<div id="outline-container-orgb7cd8d5" class="outline-2">
-<h2 id="orgb7cd8d5">Organisation of the course</h2>
-<div class="outline-text-2" id="text-orgb7cd8d5">
+<div id="outline-container-org6ffd8e6" class="outline-2">
+<h2 id="org6ffd8e6">Organisation of the course</h2>
+<div class="outline-text-2" id="text-org6ffd8e6">
 </div>
-<div id="outline-container-org0b2f230" class="outline-3">
-<h3 id="org0b2f230"><span class="todo TODO">TODO</span> add Lecture schedule</h3>
-<div class="outline-text-3" id="text-org0b2f230">
+<div id="outline-container-org26d6844" class="outline-3">
+<h3 id="org26d6844"><span class="todo TODO">TODO</span> add Lecture schedule</h3>
+<div class="outline-text-3" id="text-org26d6844">
 <ul class="org-ul">
 <li>we will see how fast we go, the column "topics" is an indication of what will be discussed in each week</li>
 <li>for the first part, we will go through <a href="https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb">this notebook</a></li>
@@ -125,23 +125,23 @@ For this course a series of screencasts is available. Screencasts are available 
 </div>
 </div>
 
-<div id="outline-container-org5fa2813" class="outline-3">
-<h3 id="org5fa2813">First Lecture</h3>
-<div class="outline-text-3" id="text-org5fa2813">
+<div id="outline-container-orgd3b933c" class="outline-3">
+<h3 id="orgd3b933c">First Lecture</h3>
+<div class="outline-text-3" id="text-orgd3b933c">
 <p>
 <a href="./Introduction_Lecture.html">Introduction Lecture</a>
 </p>
 </div>
 
-<div id="outline-container-org1ab95d1" class="outline-4">
-<h4 id="org1ab95d1">Assignment 1</h4>
-<div class="outline-text-4" id="text-org1ab95d1">
+<div id="outline-container-org5b44a25" class="outline-4">
+<h4 id="org5b44a25">Assignment 1</h4>
+<div class="outline-text-4" id="text-org5b44a25">
 <p>
 Do the following four steps:
 </p>
 <ul class="org-ul">
 <li>if you did AEA 1, you already have a <a href="https://github.com/">github</a> account, otherwise create a github account</li>
-<li>fill in this <a href="https://forms.gle/33HJUpXV3iD6s5ZE6">google form</a> before <b>Friday 11 February 2022</b>
+<li>fill in this <a href="https://forms.gle/d4WUjAZz2pSTA7uH9">google form</a> before <b>Friday 11 February 2022</b>
 <ul class="org-ul">
 <li>sign in with your @tilburguniversity.edu email address and password</li>
 </ul></li>
@@ -170,9 +170,9 @@ git clone https://github.com/janboone/msc_datascience.git
 </div>
 </div>
 
-<div id="outline-container-orgf7813ee" class="outline-4">
-<h4 id="orgf7813ee">Final assignment</h4>
-<div class="outline-text-4" id="text-orgf7813ee">
+<div id="outline-container-org0587232" class="outline-4">
+<h4 id="org0587232">Final assignment</h4>
+<div class="outline-text-4" id="text-org0587232">
 <ul class="org-ul">
 <li>instructions for the final assignment can be found below.</li>
 </ul>
@@ -181,13 +181,13 @@ git clone https://github.com/janboone/msc_datascience.git
 </div>
 
 
-<div id="outline-container-orgf394329" class="outline-3">
-<h3 id="orgf394329">Datacamp</h3>
+<div id="outline-container-org51c6cee" class="outline-3">
+<h3 id="org51c6cee">Datacamp</h3>
 </div>
 
-<div id="outline-container-org65e40e6" class="outline-3">
-<h3 id="org65e40e6">From Datacamp, do the following courses for the first part of the course</h3>
-<div class="outline-text-3" id="text-org65e40e6">
+<div id="outline-container-orge756b71" class="outline-3">
+<h3 id="orge756b71">From Datacamp, do the following courses for the first part of the course</h3>
+<div class="outline-text-3" id="text-orge756b71">
 <ul class="org-ul">
 <li><a href="https://www.datacamp.com/courses/statistical-simulation-in-python">statistical simulation</a></li>
 <li><a href="https://www.datacamp.com/courses/deep-learning-with-keras-in-python">keras</a></li>
@@ -203,7 +203,7 @@ The <a href="https://www.datacamp.com/courses/statistical-simulation-in-python">
 </p>
 
 <p>
-The point for us of this Datacamp course is to become comfortable with modelling data generating processes. Not the specific applications considered in this course.
+The point for us of this Datacamp course is to become comfortable with modeling data generating processes. Not the specific applications considered in this course.
 </p>
 
 <p>
@@ -222,7 +222,7 @@ print(characters)
 </div>
 
 <p>
-<code>characters</code> is a dictionary with <code>key</code> a character (including "space") from the <code>sentence</code> and the <code>value</code> equals the number of times the character has occured up till then. If a character "happens" for the first time, <code>get</code> cannot find it in the dictionary <code>characters</code> and returns the default value (here specified as 0). If character has happened, say, 3 times before, <code>get</code> returns the value 3 and we add 1, so the new value equals 4.
+<code>characters</code> is a dictionary with <code>key</code> a character (including "space") from the <code>sentence</code> and the <code>value</code> equals the number of times the character has occurred up till then. If a character "happens" for the first time, <code>get</code> cannot find it in the dictionary <code>characters</code> and returns the default value (here specified as 0). If character has happened, say, 3 times before, <code>get</code> returns the value 3 and we add 1, so the new value equals 4.
 </p>
 
 <p>
@@ -264,9 +264,9 @@ The <a href="https://www.datacamp.com/courses/introduction-to-tensorflow-in-pyth
 </div>
 </div>
 
-<div id="outline-container-org5d23fcc" class="outline-3">
-<h3 id="org5d23fcc">For the second part of the course, you can do the following datacamp courses:</h3>
-<div class="outline-text-3" id="text-org5d23fcc">
+<div id="outline-container-orgc111daf" class="outline-3">
+<h3 id="orgc111daf">For the second part of the course, you can do the following datacamp courses:</h3>
+<div class="outline-text-3" id="text-orgc111daf">
 <ul class="org-ul">
 <li>Resources for pymc3 can be found <a href="https://docs.pymc.io/en/v3/learn.html">here</a>.
 <ul class="org-ul">
@@ -295,9 +295,9 @@ git clone https://github.com/fonnesbeck/intro_stat_modeling_2017.git
 </div>
 </div>
 
-<div id="outline-container-orga2a77e3" class="outline-3">
-<h3 id="orga2a77e3">Deadlines</h3>
-<div class="outline-text-3" id="text-orga2a77e3">
+<div id="outline-container-orgf4b4ffc" class="outline-3">
+<h3 id="orgf4b4ffc">Deadlines</h3>
+<div class="outline-text-3" id="text-orgf4b4ffc">
 <p>
 The deadline for the <b>final assignment</b> is: Friday June 17th 2022 at 23:59.
 </p>
@@ -308,9 +308,9 @@ The resit deadline for the assignment is: Friday August 26th, 2022. Let us know 
 </div>
 </div>
 
-<div id="outline-container-org356b340" class="outline-3">
-<h3 id="org356b340">Questions</h3>
-<div class="outline-text-3" id="text-org356b340">
+<div id="outline-container-orga6c2381" class="outline-3">
+<h3 id="orga6c2381">Questions</h3>
+<div class="outline-text-3" id="text-orga6c2381">
 <p>
 If you have questions/comments about this course, go to the <a href="https://github.com/janboone/msc_datascience/issues">issues page</a>
 open a new issue (with the green "New issue" button) and type your
@@ -350,9 +350,9 @@ to the earlier issue and leave a comment in that "conversation".
 </div>
 </div>
 
-<div id="outline-container-org1f74a20" class="outline-3">
-<h3 id="org1f74a20">Assessment material</h3>
-<div class="outline-text-3" id="text-org1f74a20">
+<div id="outline-container-org201563c" class="outline-3">
+<h3 id="org201563c">Assessment material</h3>
+<div class="outline-text-3" id="text-org201563c">
 <p>
 We have a separate page with all relevant <a href="./Datascience_for_economics.html">assessment material</a>.
 </p>
@@ -360,26 +360,26 @@ We have a separate page with all relevant <a href="./Datascience_for_economics.h
 </div>
 </div>
 
-<div id="outline-container-org5a3abc2" class="outline-2">
-<h2 id="org5a3abc2">Final Assignment</h2>
-<div class="outline-text-2" id="text-org5a3abc2">
+<div id="outline-container-orgeef51a5" class="outline-2">
+<h2 id="orgeef51a5">Final Assignment</h2>
+<div class="outline-text-2" id="text-orgeef51a5">
 <ul class="org-ul">
 <li>The final assignment you can do alone or with at max. one other student (i.e. max group size is 2).</li>
-<li>for the deadline of the python assignment, see <a href="#orga2a77e3">Deadlines</a> above</li>
+<li>for the deadline of the python assignment, see <a href="#orgf4b4ffc">Deadlines</a> above</li>
 <li>on Canvas we give you the link to the github repos. with the <code>assignment_notebook.ipynb</code></li>
 <li>to submit your final assignment:
 <ul class="org-ul">
 <li>do not change the name of the <code>assignment_notebook.ipynb</code> notebook</li>
-<li>fill in this <a href="https://forms.gle/PxdCRduc2wWBkNbT9">google form</a></li>
+<li>fill in this <a href="https://forms.gle/iABa9iGp6yt4ETNu7">google form</a></li>
 <li>push the final notebook on the github classroom repository</li>
 </ul></li>
 </ul>
 </div>
 
 
-<div id="outline-container-org8d4e723" class="outline-3">
-<h3 id="org8d4e723">what we are looking for</h3>
-<div class="outline-text-3" id="text-org8d4e723">
+<div id="outline-container-org7bf41cc" class="outline-3">
+<h3 id="org7bf41cc">what we are looking for</h3>
+<div class="outline-text-3" id="text-org7bf41cc">
 <p>
 The idea of the assignment is that you report your findings in a transparent way that can easily be verified/reproduced by others. The intended audience is your fellow students. They should be able to understand the code you write together with the explanations that you give for this code.
 </p>
@@ -444,9 +444,9 @@ Two remarks:
 </div>
 </div>
 
-<div id="outline-container-org4d86e27" class="outline-3">
-<h3 id="org4d86e27">resit of final assignment</h3>
-<div class="outline-text-3" id="text-org4d86e27">
+<div id="outline-container-org5f12d24" class="outline-3">
+<h3 id="org5f12d24">resit of final assignment</h3>
+<div class="outline-text-3" id="text-org5f12d24">
 <p>
 The resit of the final assignment needs to be a new project compared to the one you handed in before. The easiest way to achieve this is to choose a new research question and a new data set. You can use the same data if you make sure that research question and analysis are sufficiently different from before.
 </p>

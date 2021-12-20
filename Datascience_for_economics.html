@@ -3,36 +3,36 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-11-11 Thu 16:24 -->
+<!-- 2021-12-20 Mon 11:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Assessment material for the course "Seminar Data Science for Economics" 310170-M-6</title>
+<meta name="generator" content="Org mode" />
 <meta name="author" content="Jan Boone" />
-<meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 </head>
 <body>
-<div id="content" class="content">
+<div id="content">
 <h1 class="title">Assessment material for the course "Seminar Data Science for Economics" 310170-M-6</h1>
 
-<div id="outline-container-orgc859e5d" class="outline-2">
-<h2 id="orgc859e5d">Syllabus</h2>
-<div class="outline-text-2" id="text-orgc859e5d">
+<div id="outline-container-orga92f876" class="outline-2">
+<h2 id="orga92f876">Syllabus</h2>
+<div class="outline-text-2" id="text-orga92f876">
 </div>
 
-<div id="outline-container-org1eb49d5" class="outline-3">
-<h3 id="org1eb49d5">Course structure</h3>
-<div class="outline-text-3" id="text-org1eb49d5">
+<div id="outline-container-org823f16e" class="outline-3">
+<h3 id="org823f16e">Course structure</h3>
+<div class="outline-text-3" id="text-org823f16e">
 <p>
-In the course Data Science for Economics you will learn how to deal with big (unstructured) data to answer policy questions using recent advances in machine learning.
+In the course Data Science for Economics you will learn how to deal with big data and using simulations to answer policy questions using recent advances in machine learning.
 </p>
 
 <p>
-Whether you are a public policy-maker or a data analyst at a private firm, you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing and price differentiation scheme for insurance products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
+Whether you are a public policy-maker or a data analyst at a private firm, you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing scheme for our products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
 </p>
 
 <p>
-This course will help you to overcome those challenges. The "traditional" econometrics you have learnt in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there are more variables than observations, and you do not know at the start which variables and interaction terms to include.
+This course will help you overcome those challenges. The "traditional" econometrics you have learned in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there can be more variables than observations, and you do not know at the start which variables and interaction terms to include.
 </p>
 
 <p>
@@ -44,8 +44,9 @@ We use data simulation to get the main intuitions across starting from the diffe
 </p>
 
 <p>
-In terms of software we will be using python,  pymc3 and google's tensorflow.
+In terms of software we will be using <a href="https://www.python.org/">python</a>,  <a href="https://docs.pymc.io/en/v3/">pymc3</a> and google's <a href="https://www.tensorflow.org/">tensorflow</a>.
 </p>
+
 
 <p>
 <b>Required Prerequisites</b>
@@ -57,9 +58,9 @@ Students make sure they follow Econometrics 1 and the python track in AEA 1.
 </div>
 </div>
 
-<div id="outline-container-org56a96e0" class="outline-3">
-<h3 id="org56a96e0">Learning goals</h3>
-<div class="outline-text-3" id="text-org56a96e0">
+<div id="outline-container-orgf9ecbce" class="outline-3">
+<h3 id="orgf9ecbce">Learning goals</h3>
+<div class="outline-text-3" id="text-orgf9ecbce">
 <p>
 By the end of the course, you will be able to:
 </p>
@@ -68,7 +69,7 @@ By the end of the course, you will be able to:
 <ul class="org-ul">
 <li>motivate your policy question (why is it relevant/interesting; how is your analysis going to answer the question)</li>
 </ul></li>
-<li>gather unstructured datasets, merge and clean them using programming</li>
+<li>gather datasets, merge and clean them using programming</li>
 <li>apply machine learning techniques (e.g. neural networks) to deal with big data</li>
 <li>explain the critical assumptions that you need for the technique that you are using and discuss (potential) weaknesses of the technique used</li>
 <li>use machine learning toolkit if the goal is pure prediction, explain why this differs from causal inference</li>
@@ -81,28 +82,28 @@ The overall learning goal is to make you independent in designing and performing
 </div>
 </div>
 
-<div id="outline-container-orgd5a89ec" class="outline-3">
-<h3 id="orgd5a89ec">Examination</h3>
-<div class="outline-text-3" id="text-orgd5a89ec">
+<div id="outline-container-org2efdc67" class="outline-3">
+<h3 id="org2efdc67">Examination</h3>
+<div class="outline-text-3" id="text-org2efdc67">
 <p>
 The examination for this course consists of a data analysis project (100%), where you will use the knowledge gained throughout the course and apply it in a new setting on your own.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org44b8d20" class="outline-3">
-<h3 id="org44b8d20">Course website</h3>
-<div class="outline-text-3" id="text-org44b8d20">
+<div id="outline-container-orgf9f016b" class="outline-3">
+<h3 id="orgf9f016b">Course website</h3>
+<div class="outline-text-3" id="text-orgf9f016b">
 <p>
-All other information can be found on the <a href="index.html#orgdc71351">course website</a>.
+All other information can be found on the <a href="index.html#org9ad9be1">course website</a>.
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org7da2af6" class="outline-2">
-<h2 id="org7da2af6">Specification table</h2>
-<div class="outline-text-2" id="text-org7da2af6">
+<div id="outline-container-orgd8fc1e7" class="outline-2">
+<h2 id="orgd8fc1e7">Specification table</h2>
+<div class="outline-text-2" id="text-orgd8fc1e7">
 <p>
 <b>Test type</b>: Assignment 
 </p>
@@ -174,7 +175,7 @@ All other information can be found on the <a href="index.html#orgdc71351">course
 </tr>
 
 <tr>
-<td class="org-left">apply machine learning techniques</td>
+<td class="org-left">apply machine learning/Bayesian techniques</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
@@ -247,18 +248,18 @@ From the final assignment (discussed below):
 </div>
 </div>
 
-<div id="outline-container-org6f7b64f" class="outline-2">
-<h2 id="org6f7b64f">Inspection information</h2>
-<div class="outline-text-2" id="text-org6f7b64f">
+<div id="outline-container-org099a0a5" class="outline-2">
+<h2 id="org099a0a5">Inspection information</h2>
+<div class="outline-text-2" id="text-org099a0a5">
 <p>
 Students can contact us for an appointment to discuss the grade of their assignment.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org846d280" class="outline-2">
-<h2 id="org846d280">Preparation materials for the exam</h2>
-<div class="outline-text-2" id="text-org846d280">
+<div id="outline-container-org12bb079" class="outline-2">
+<h2 id="org12bb079">Preparation materials for the exam</h2>
+<div class="outline-text-2" id="text-org12bb079">
 <ul class="org-ul">
 <li>From Datacamp, the following courses:
 <ul class="org-ul">
@@ -272,15 +273,15 @@ Students can contact us for an appointment to discuss the grade of their assignm
 </div>
 
 
-<div id="outline-container-org77535b3" class="outline-2">
-<h2 id="org77535b3">The exam cover page and exam questions for the exams</h2>
-<div class="outline-text-2" id="text-org77535b3">
+<div id="outline-container-org9b9b91f" class="outline-2">
+<h2 id="org9b9b91f">The exam cover page and exam questions for the exams</h2>
+<div class="outline-text-2" id="text-org9b9b91f">
 <p>
 Students get a template to make their assignment in the form of a jupyter notebook.
 </p>
 
 <p>
-The template can be found <a href="https://github.com/janboone/datascience_assignment_template/blob/master/assignment_notebook.ipynb">here</a> and <a href="https://janboone.github.io/msc_datascience/#org6548148">the description of the final assignment</a>. The template specifies the sections for the final assignment and the max. points that can be earned for each section.
+The template can be found <a href="https://github.com/janboone/datascience_assignment_template/blob/master/assignment_notebook.ipynb">here</a>. The template specifies the sections for the final assignment and the max. points that can be earned for each section.
 </p>
 
 <p>
@@ -290,9 +291,9 @@ The template was designed by Madina and Jan.
 </div>
 
 
-<div id="outline-container-org9a411c6" class="outline-2">
-<h2 id="org9a411c6">Grading instructions</h2>
-<div class="outline-text-2" id="text-org9a411c6">
+<div id="outline-container-org3e4f2f6" class="outline-2">
+<h2 id="org3e4f2f6">Grading instructions</h2>
+<div class="outline-text-2" id="text-org3e4f2f6">
 <p>
 Since this is a (free) assignment, it is not possible to provide (exact) answers to each section in the assignment template. The template itself specifies the points we are looking for when grading the assignment.
 </p>
@@ -309,7 +310,7 @@ Students with a grade of 5.5 can be called in for an oral exam (discussion of th
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jan Boone</p>
-<p class="date">Created: 2021-11-11 Thu 16:24</p>
+<p class="date">Created: 2021-12-20 Mon 11:42</p>
 </div>
 </body>
 </html>
