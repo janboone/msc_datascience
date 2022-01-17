@@ -48,31 +48,27 @@ For this course a series of screencasts is available. Screencasts are available 
 
 * Organisation of the course
 
-** TODO add Lecture schedule
    :PROPERTIES:
    :ID:       39F7FAD7-56BA-49D0-8424-7EB8F8839E41
    :END:
 
-#+begin_comment
-| day      | date   |         time | teacher | topics                                              | datacamp                   |
-|----------+--------+--------------+---------+-----------------------------------------------------+----------------------------|
-| Friday   | Feb 5  | 10:45--12:30 | Jan     | distributions, bootstrapping                        | statistical simulation 1,2 |
-|          |        |              |         | doing your own OLS                                  | statistical simulation 3,4 |
-| Thursday | Feb 11 | 12:45--14:30 | Jan     | causality                                           | keras 1,2                  |
-|          |        |              |         | tensors, first neural netw.                         | keras 3,4                  |
-| Friday   | Feb 26 | 10:45--12:30 | Jan     | over/underfitting                                   | tensorflow 1,2             |
-|          |        |              |         | neural network                                      | tensorflow 3,4             |
-| Friday   | Mar 5  | 10:45--12:30 | Jan     | neural network                                      |                            |
-|          |        |              |         | treatment effects                                   |                            |
-| Friday   | Mar 12 | 10:45--12:30 | Madina  | prediction: loss functions, bias variance trade-off |                            |
-|          |        |              |         | prediction: cross-validation                        |                            |
-| Friday   | Mar 19 | 10:45--12:30 | Madina  | prediction: lasso/ridge                             | linear regressions         |
-|          |        |              |         | prediction: trees, boosting, bagging, r. forest     | tree-based models          |
-| Friday   | Mar 26 | 10:45--12:30 | Madina  | causality: post-regularization inference            |                            |
-|          |        |              |         | causality: double machine learning                  |                            |
-| Friday   | Apr 1  | 10:45--12:30 | Madina  | causality: causal trees                             |                            |
-|          |        |              |         | causality: generalized random forests               |                            |
-#+end_comment
+
+| day | date         |        time | room   | topics                                                             | datacamp                                    |
+|-----+--------------+-------------+--------+--------------------------------------------------------------------+---------------------------------------------|
+| Tue | Feb 01, 2022 | 16:45-18:30 | AZ 211 | Introduction to the course                                         |                                             |
+| Wed | Feb 02, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
+| Tue | Feb 08, 2022 | 16:45-18:30 | AZ 211 | distributions, bootstrapping, OLS, causality                       | statistical simulation 1, 2, 3, 4           |
+| Wed | Feb 09, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
+| Tue | Feb 15, 2022 | 16:45-18:30 | AZ 211 | tensors, first neural network, over/under fitting                  | keras 1, 2, 3, 4                            |
+| Wed | Feb 16, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
+| Tue | Feb 22, 2022 | 16:45-18:30 | AZ 211 | neural network, treatment effects                                  | tensorflow 1, 2, 3, 4                       |
+| Wed | Feb 23, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
+| Tue | Mar 08, 2022 | 16:45-18:30 | AZ 211 | part 2: dealing with data,                                         | repeat last semester's pandas course        |
+| Wed | Mar 09, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
+| Tue | Mar 15, 2022 | 16:45-18:30 | AZ 211 | Bayesian statistics, estimating a Bayesian model, missing data     | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] |
+| Wed | Mar 16, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
+| Tue | Mar 22, 2022 | 16:45-18:30 | AZ 211 | Bayesian time series, Bayesian neural network, confidence interval |                                             |
+| Wed | Mar 23, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
 
 
 + we will see how fast we go, the column "topics" is an indication of what will be discussed in each week

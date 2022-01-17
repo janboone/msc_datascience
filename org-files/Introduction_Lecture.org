@@ -1,6 +1,6 @@
 #+SETUPFILE: ./org-html-themes/org/theme-bigblow.setup
 #+TITLE: Seminar Data Science for Economics
-#+AUTHOR: Jan and Madina
+#+AUTHOR: Jan
 #+DATE: Dept. of Economics, Tilburg University
 #+OPTIONS: toc:1 num:nil timestamp:nil
 
