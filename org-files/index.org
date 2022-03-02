@@ -63,12 +63,12 @@ For this course a series of screencasts is available. Screencasts are available 
 | Wed | Feb 16, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
 | Tue | Feb 22, 2022 | 16:45-18:30 | AZ 211 | neural network, treatment effects                                  | tensorflow 1, 2, 3, 4                       |
 | Wed | Feb 23, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
-| Tue | Mar 08, 2022 | 16:45-18:30 | AZ 211 | part 2: dealing with data,                                         | repeat last semester's pandas course        |
-| Wed | Mar 09, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
-| Tue | Mar 15, 2022 | 16:45-18:30 | AZ 211 | Bayesian statistics, estimating a Bayesian model, missing data     | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] |
-| Wed | Mar 16, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
-| Tue | Mar 22, 2022 | 16:45-18:30 | AZ 211 | Bayesian time series, Bayesian neural network, confidence interval |                                             |
-| Wed | Mar 23, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
+| Tue | Mar 08, 2022 | 16:45-18:30 | AZ 211 | [[./Git_Lecture.org][Lecture on Git]]                                                     | repeat last semester's pandas course        |
+| Wed | Mar 09, 2022 | 10:45-12:30 | AZ 211 | part 2: dealing with data,                                         |                                             |
+| Tue | Mar 15, 2022 | 16:45-18:30 | AZ 211 |                                                                    | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] |
+| Wed | Mar 16, 2022 | 10:45-12:30 | AZ 211 | Bayesian statistics, estimating a Bayesian model, missing data     |                                             |
+| Tue | Mar 22, 2022 | 16:45-18:30 | AZ 211 |                                                                    |                                             |
+| Wed | Mar 23, 2022 | 10:45-12:30 | AZ 211 | Bayesian time series, Bayesian neural network, confidence interval |                                             |
 
 
 + we will see how fast we go, the column "topics" is an indication of what will be discussed in each week

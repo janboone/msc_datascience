@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lecture on Git and Github</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jan Boone" />
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/bigblow_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/bigblow_theme/css/bigblow.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/bigblow_theme/css/hideshow.css"/>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/bigblow.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/bigblow_theme/js/hideshow.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Lecture on Git and Github</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org8c276cd">some basics</a></li>
+<li><a href="#org172f519">standard workflow</a></li>
+<li><a href="#org9ba86fe">some more advanced features</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8c276cd" class="outline-2">
+<h2 id="org8c276cd">some basics</h2>
+<div class="outline-text-2" id="text-org8c276cd">
+<ul class="org-ul">
+<li>git is a version control system</li>
+<li>Install git: <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></li>
+<li>We will use git on the command line</li>
+</ul>
+
+<p>
+Information about git:
+</p>
+<ul class="org-ul">
+<li>book with "more than you need to know": <a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></li>
+<li>cheatsheet: <a href="https://education.github.com/git-cheat-sheet-education.pdf">https://education.github.com/git-cheat-sheet-education.pdf</a></li>
+<li>datacamp: <a href="https://app.datacamp.com/learn/courses/introduction-to-git">https://app.datacamp.com/learn/courses/introduction-to-git</a></li>
+<li>youtube tutorials</li>
+</ul>
+</div>
+
+<div id="outline-container-orgd28aac2" class="outline-3">
+<h3 id="orgd28aac2">different states</h3>
+<div class="outline-text-3" id="text-orgd28aac2">
+<p>
+Local files in git can be in a number of states:
+</p>
+<ul class="org-ul">
+<li>untracked</li>
+<li>tracked:
+<ul class="org-ul">
+<li>unmodified</li>
+<li>modified</li>
+<li>staged</li>
+<li>committed</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org172f519" class="outline-2">
+<h2 id="org172f519">standard workflow</h2>
+<div class="outline-text-2" id="text-org172f519">
+</div>
+<div id="outline-container-orgbdc4cc1" class="outline-3">
+<h3 id="orgbdc4cc1">some settings</h3>
+<div class="outline-text-3" id="text-orgbdc4cc1">
+<ul class="org-ul">
+<li><code>git config --global user.name "John Doe"</code></li>
+<li><code>git config --global user.email johndoe@example.com</code></li>
+<li>get access token:
+<ul class="org-ul">
+<li>on github page click on icon top right corner:</li>
+<li>Settings</li>
+<li>&lt; &gt; Developer settings</li>
+<li>Personal access tokens</li>
+<li>Generate new token: keep this page open so that you can copy/paste the token a number of times</li>
+<li><b>warning:</b> treat this token as a password!!!</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgedcee35" class="outline-3">
+<h3 id="orgedcee35">workflow</h3>
+<div class="outline-text-3" id="text-orgedcee35">
+<ul class="org-ul">
+<li>to start:
+<ul class="org-ul">
+<li><code>git init</code> or</li>
+<li><code>git clone</code> <a href="https://github.com">https://github.com</a> etc.</li>
+</ul></li>
+<li>when you change or add files:
+<ul class="org-ul">
+<li><code>git add</code> file</li>
+<li><code>git commit -m "message to explain what commit does"</code></li>
+<li><code>git push</code> to get your repository on the github server up-to-date
+<ul class="org-ul">
+<li>is shorthand for: push local branch <code>master</code> to the <code>origin</code> server: <code>git push origin master</code></li>
+<li>if someone else pushed before you, you need to merge their content first before you can push</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org30a1eb9" class="outline-3">
+<h3 id="org30a1eb9">useful commands:</h3>
+<div class="outline-text-3" id="text-org30a1eb9">
+<ul class="org-ul">
+<li><code>git status</code></li>
+<li><code>git diff</code>:
+<ul class="org-ul">
+<li>shows the changes in a file that are still unstaged</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org416b8c0" class="outline-3">
+<h3 id="org416b8c0">some practice</h3>
+<div class="outline-text-3" id="text-org416b8c0">
+</div>
+<div id="outline-container-org7252f85" class="outline-4">
+<h4 id="org7252f85">clone a repository</h4>
+<div class="outline-text-4" id="text-org7252f85">
+<ul class="org-ul">
+<li>go to github.com and create a new repository</li>
+<li>in the repos. click on the green "Code" button and copy the https address</li>
+<li>open a (git) terminal and type <code>git clone</code> then paste the https-address you just copied</li>
+<li>this clones this repository to your computer</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdbbe0b0" class="outline-4">
+<h4 id="orgdbbe0b0">edit a file</h4>
+<div class="outline-text-4" id="text-orgdbbe0b0">
+<ul class="org-ul">
+<li>edit a file from your repository, e.g. the README file</li>
+<li>or create a new file and edit this file</li>
+<li>then we type:
+<ul class="org-ul">
+<li>if you created a new file: <code>git add</code> new-file-name (this is not necessary if you edited an existing file)</li>
+<li><code>git commit -m "these changes were made on my laptop"</code></li>
+<li><code>git push</code></li>
+</ul></li>
+<li>go to github and check that you can see your changes on-line</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org10fe472" class="outline-4">
+<h4 id="org10fe472">pull changes made on github</h4>
+<div class="outline-text-4" id="text-org10fe472">
+<ul class="org-ul">
+<li>edit the file online by  adding text.</li>
+<li>use as commit message "these additions I made online"</li>
+<li>in the terminal type: <code>git pull</code></li>
+<li>check that this file on your laptop now also has these changes</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7ddac36" class="outline-4">
+<h4 id="org7ddac36">create a conflict</h4>
+<div class="outline-text-4" id="text-org7ddac36">
+<ul class="org-ul">
+<li>edit the file online by deleting and adding some text.</li>
+<li>use as commit message "these changes I made online"</li>
+<li>also change the same file on your laptop by deleting and adding text</li>
+<li>commit these changes with message "other changes I made on my laptop"</li>
+<li>type <code>git pull</code></li>
+<li>why do you get an error?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4ecf883" class="outline-4">
+<h4 id="org4ecf883">resolve the conflict</h4>
+<div class="outline-text-4" id="text-org4ecf883">
+<ul class="org-ul">
+<li>open the file on your laptop</li>
+<li>notice the syntax with &lt;&lt;&lt;&lt;&lt; <code>===</code> &gt;&gt;&gt;&gt;&gt;</li>
+<li>manually resolve the conflicts in the relevant file(s)</li>
+<li><code>git add</code> the corrected file(s)</li>
+<li><code>git commit</code></li>
+<li><code>git push</code></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9ba86fe" class="outline-2">
+<h2 id="org9ba86fe">some more advanced features</h2>
+<div class="outline-text-2" id="text-org9ba86fe">
+<ul class="org-ul">
+<li>file <code>.gitignore</code> for files that are not to be tracked by git</li>
+<li>e.g. when you use latex and you do not want .aux, .log files etc.
+<ul class="org-ul">
+<li>example: <a href="https://github.com/github/gitignore/blob/main/TeX.gitignore">https://github.com/github/gitignore/blob/main/TeX.gitignore</a></li>
+</ul></li>
+<li>rename a file in git: <code>git mv oldname newname</code></li>
+<li>revert a file back to what it was in last commit: <code>git checkout -- file.name</code></li>
+</ul>
+</div>
+
+<div id="outline-container-org8fc6b17" class="outline-3">
+<h3 id="org8fc6b17">branching</h3>
+<div class="outline-text-3" id="text-org8fc6b17">
+</div>
+<div id="outline-container-orgaa32613" class="outline-4">
+<h4 id="orgaa32613">underlying idea</h4>
+<div class="outline-text-4" id="text-orgaa32613">
+<ul class="org-ul">
+<li>git allows you to have simultaneously different versions of your files</li>
+<li>you can experiment on one branch (called, say, testing)</li>
+<li>when you are happy with the results, you can merge them into your main branch</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7b5343e" class="outline-4">
+<h4 id="org7b5343e">some practice</h4>
+<div class="outline-text-4" id="text-org7b5343e">
+<ul class="org-ul">
+<li>create a new branch <code>testing</code>: <code>git branch testing</code></li>
+<li>switch to this new branch: <code>git checkout testing</code></li>
+<li>change a file on branch <code>testing</code></li>
+<li><code>git checkout master</code></li>
+<li>now this file is "back to the state" it was in before we switched to <code>testing</code></li>
+<li><code>git merge testing</code></li>
+<li><code>git branch -d testing</code> to delete the <code>testing</code> branch</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org54b26a7" class="outline-4">
+<h4 id="org54b26a7">conflicts</h4>
+<div class="outline-text-4" id="text-org54b26a7">
+<ul class="org-ul">
+<li>if you changed the same part of the same file differently in the two branches, Git cannot merge them cleanly:
+<ul class="org-ul">
+<li><code>git status</code> to check which files are unmerged</li>
+<li>manually merge the files by looking for syntax: &lt;&lt;&lt;&lt;&lt; HEAD <code>==</code>  &gt;&gt;&gt;&gt;&gt;testing</li>
+<li>run <code>git status</code> again to check everything is resolved</li>
+<li>then <code>git commit</code></li>
+</ul></li>
+<li><code>git branch</code> gives an overview of your current branches</li>
+<li>pointer <code>HEAD</code> points to branch you are currently on</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jan Boone</p>
+</div>
+</body>
+</html>
