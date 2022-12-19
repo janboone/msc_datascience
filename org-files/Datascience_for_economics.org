@@ -24,7 +24,7 @@ In terms of software we will be using [[https://www.python.org/][python]],  [[ht
 
 *Required Prerequisites*
 
-Students make sure they follow Econometrics 1 and the python track in AEA 1.
+Students make sure they follow Econometrics 1 and the mandatory course AEA 1.
 
 ** Learning goals
 
@@ -49,7 +49,7 @@ All other information can be found on the [[file:index.org::*Course description]
 
 * Specification table
 
-*Test type*: Assignment 
+*Test type*: Assignment
 
 #+Caption: Specification table: cognitive skills
 | tested subjects                                       | Knowledge | Comprehension | Application | Analysis | Evaluation | Synthesis | Total |
@@ -68,11 +68,11 @@ All other information can be found on the [[file:index.org::*Course description]
 
 From the final assignment (discussed below):
 + design empirical strategy relates to the assignment questions on Research question, (half of) Method and data and Preview of answers
-+ explain policy motivation: question on Motivation                        
++ explain policy motivation: question on Motivation
 + gather data, merge clean data (using programming): question on (half of) Method and data
 + apply machine learning methods: Python code
-+ explain critical assumptions, discuss weaknesses: Main assumptions (half) and Robustness analysis 
-+ distinguish prediction and causal inference: Main assumptions (half)     
++ explain critical assumptions, discuss weaknesses: Main assumptions (half) and Robustness analysis
++ distinguish prediction and causal inference: Main assumptions (half)
 + explain policy implications: Discussion and conclusion
 
 * Inspection information
@@ -104,5 +104,3 @@ Since this is a (free) assignment, it is not possible to provide (exact) answers
 Students can work on their own or in teams of two students. We use github classroom and hence can see whether both students contributed to the assignment (github keeps track who made which changes in a file). If we have doubts whether a student (or the two students) worked on her/his own, we ask them to come to our office and explain their code to us.
 
 Students with a grade of 5.5 can be called in for an oral exam (discussion of their assignment).
-
-

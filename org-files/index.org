@@ -5,11 +5,11 @@
 
 This website contains the material for the MSc course Seminar Data Science for Economics
 
-**This website is under construction for 2021/2022**
+**This website is under construction for 2022/2023**
 
 This year the course is taught by:
 + Jan Boone
-+ Barbora Písecká
++ Aleksandr Minchenko
 
 * Course description
   :PROPERTIES:
@@ -32,7 +32,7 @@ For this course we are very happy that we partner with [[https://www.datacamp.co
 
 *Required Prerequisites*
 
-Students make sure they follow Econometrics 1 and the python track in AEA 1.
+Students make sure they follow Econometrics 1 and the mandatory course AEA 1.
 
 
 #+TOC: headlines 2
@@ -47,33 +47,34 @@ For this course a series of screencasts is available. Screencasts are available 
 
 
 * Organisation of the course
-
    :PROPERTIES:
-   :ID:       39F7FAD7-56BA-49D0-8424-7EB8F8839E41
+   :CUSTOM_ID:       organisation_datascience
    :END:
 
 
-| day | date         |        time | room   | topics                                                             | datacamp                                    |
-|-----+--------------+-------------+--------+--------------------------------------------------------------------+---------------------------------------------|
-| Tue | Feb 01, 2022 | 16:45-18:30 | AZ 211 | Introduction to the course                                         |                                             |
-| Wed | Feb 02, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
-| Tue | Feb 08, 2022 | 16:45-18:30 | AZ 211 | distributions, bootstrapping, OLS, causality                       | statistical simulation 1, 2, 3, 4           |
-| Wed | Feb 09, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
-| Tue | Feb 15, 2022 | 16:45-18:30 | AZ 211 | tensors, first neural network, over/under fitting                  | keras 1, 2, 3, 4                            |
-| Wed | Feb 16, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
-| Tue | Feb 22, 2022 | 16:45-18:30 | AZ 211 | neural network, treatment effects                                  | tensorflow 1, 2, 3, 4                       |
-| Wed | Feb 23, 2022 | 10:45-12:30 | AZ 211 |                                                                    |                                             |
-| Tue | Mar 08, 2022 | 16:45-18:30 | AZ 211 | [[./Git_Lecture.org][Lecture on Git]]                                                     | repeat last semester's pandas course        |
-| Wed | Mar 09, 2022 | 10:45-12:30 | AZ 211 | part 2: dealing with data,                                         |                                             |
-| Tue | Mar 15, 2022 | 16:45-18:30 | AZ 211 |                                                                    | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] |
-| Wed | Mar 16, 2022 | 10:45-12:30 | AZ 211 | Bayesian statistics, estimating a Bayesian model, missing data     |                                             |
-| Tue | Mar 22, 2022 | 16:45-18:30 | AZ 211 |                                                                    |                                             |
-| Wed | Mar 23, 2022 | 10:45-12:30 | AZ 211 | Bayesian time series, Bayesian neural network, confidence interval |                                             |
+| day |       date |        time | room   | topics                                        | datacamp                                    |
+|-----+------------+-------------+--------+-----------------------------------------------+---------------------------------------------|
+| Fri | 2023-02-03 | 10:45-12:30 | WZ 201 | Introduction to the course                    |                                             |
+| Fri | 2023-02-10 | 10:45-12:30 | WZ 201 | part 1: distributions, bootstrapping          | statistical simulation 1, 2,                |
+| Fri | 2023-02-17 | 10:45-12:30 | WZ 201 | OLS, causality                                | 3, 4                                        |
+| Tue | 2023-02-28 | 08:45-10:30 | TZ 3   | tensors, first neural network                 |                                             |
+| Fri | 2023-03-03 | 10:45-12:30 | WZ 201 | over/under fitting, neural network            | keras 1, 2,                                 |
+| Tue | 2023-03-07 | 08:45-10:30 | TZ 3   | [[./Git_Lecture.org][Lecture on Git]]                                |                                             |
+| Fri | 2023-03-10 | 10:45-12:30 | WZ 201 | treatment effects                             | 3, 4                                        |
+| Tue | 2023-03-14 | 08:45-10:30 | TZ 3   | part 2: dealing with data                     | tensorflow 1, 2,                            |
+| Fri | 2023-03-17 | 10:45-12:30 | WZ 201 | Bayesian statistics                           |                                             |
+| Tue | 2023-03-21 | 08:45-10:30 | TZ 3   | estimating a Bayesian model, missing data     | 3, 4                                        |
+| Fri | 2023-03-24 | 10:45-12:30 | WZ 201 | How to choose an editor                       | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] |
+| Tue | 2023-03-28 | 08:45-10:30 | TZ 3   | Bayesian time series, Bayesian neural network |                                             |
+| Fri | 2023-03-31 | 10:45-12:30 | WZ 201 | Guest lecture                                 |                                             |
+| Tue | 2023-04-04 | 08:45-10:30 | TZ 3   | (reserve)                                     |                                             |
+| Thu | 2023-04-06 | 14:45-16:30 | WZ 104 | confidence interval and Q&A                   |                                             |
 
 
 + we will see how fast we go, the column "topics" is an indication of what will be discussed in each week
-+ for the first part, we will go through [[https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb][this notebook]]
++ for the first part, you will go through [[https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb][this notebook]]
 + for the second part, through [[https://github.com/janboone/msc_datascience/blob/master/hacking_part_2.ipynb][this one]]
++ there is also a [[https://app.datacamp.com/learn/courses/introduction-to-version-control-with-git][Datacamp course on git]]: this is recommended but not mandatory
 
 ** First Lecture
 
@@ -84,10 +85,8 @@ For this course a series of screencasts is available. Screencasts are available 
 :ID:       1BBFB9ED-F701-42A8-B620-03FD6AFB73A2
 :END:
 
-Do the following four steps:
+Do the following steps:
 + if you did AEA 1, you already have a [[https://github.com/][github]] account, otherwise create a github account
-+ fill in this [[https://forms.gle/d4WUjAZz2pSTA7uH9][google form]] before *Friday 11 February 2022*
-  + sign in with your @tilburguniversity.edu email address and password
 + go to
   + [[https://jupyterlab.uvt.nl/][jupyter lab]]
     + IT suggests that you use the Firefox browser to access jupyter lab
@@ -183,9 +182,9 @@ git clone https://github.com/fonnesbeck/intro_stat_modeling_2017.git
    :ID:       D000098A-D12D-4E06-9F7A-2C2549B03236
    :END:
 
-The deadline for the *final assignment* is: Friday June 17th 2022 at 23:59.
+The deadline for the *final assignment* is: Friday June 16th 2023 at 23:59.
 
-The resit deadline for the assignment is: Friday August 26th, 2022. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
+The resit deadline for the assignment is: Friday August 18th, 2023. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
 
 ** Questions
 
@@ -228,14 +227,13 @@ We have a separate page with all relevant [[./Datascience_for_economics.org][ass
 + on Canvas we give you the link to the github repos. with the ~assignment_notebook.ipynb~
 + to submit your final assignment:
   + do not change the name of the ~assignment_notebook.ipynb~ notebook
-  + fill in this [[https://forms.gle/iABa9iGp6yt4ETNu7][google form]]
+  + fill in this [[https://forms.gle/JH8qey2cWEgiUjqq5][google form]]
   + push the final notebook on the github classroom repository
-
 
 ** TODO Instructions for submitting final assignment to be put on Canvas :noexport:
 
-- [X] create assignment on github classroom with the datascience template/notebook (20-12-2021)
-- [X] create google form for students to fill in once they finish assignment: replace last year link above (20-12-2021)
+- [X] create assignment on github classroom with the datascience template/notebook (19-12-2022)
+- [X] create google form for students to fill in once they finish assignment: replace last year link above (19-12-2022)
 
 1. attach instructions: [[file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf][file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf]]
 2. create and post screencast where notebook is downloaded and uploaded on github
@@ -244,7 +242,7 @@ We have a separate page with all relevant [[./Datascience_for_economics.org][ass
 
 Dear students,
 
-The link for the final datascience assignment (template) is: https://classroom.github.com/a/1hlPplCU
+The link for the final datascience assignment (template) is: https://classroom.github.com/a/F6MaGpoX
 
 You can do the assignment on your own or with (at max.) one other student. When you use the link to the assignment, you will be asked for your team's name.
 
@@ -254,7 +252,7 @@ When you finish your assignment:
 
 2. push all relevant material onto your assignment's github repository
 
-3. fill in the google form as indicated on the website under Final Assignment (this is a different form from the one you filled in at the start of the semester)
+3. fill in the google form as indicated on the website under Final Assignment 
 
 We need the information from the google form to link your assignment to your student number which is needed for the exam administration.
 
@@ -295,18 +293,30 @@ The following ingredients will be important when we evaluate your assignment:
 + Mention the main *assumptions* that you need to get this answer.
 + Use graphs to introduce your data
 + If you use equations, use latex to make them easy to read.
-+ Explain your code, the reader --think of your fellow students--  must be able to easily follow what you are doing.
++ Explain your code, the reader --think of your fellow students-- must be able to easily follow what you are doing.
 + How well does your model *fit* the data?
   + what methods do you use to evaluate this?
 + Present a clear conclusion/answer to your question.
 + Include some *discussion* of what you find and elements on which you need additional information.
 
-Two remarks:
+Three remarks:
 + you can copy code from the web; but
   + make sure that you explain the code that you use so that another student of the course understands it and can use it;
   + give the reference of the code that you copy;
 + use *common sense*: it is not always necessary to have a full blown economic model, but we do expect you to think!
-  + in the past we had students looking at the effect of age on income in sports; "theory" suggests that this relation is hump-shaped: 5 year olds and 80 year olds tend not to earn a lot of money as elite athletes; the students presented a scatter plot with a clear hump-shape; then they wrote "now we do a linear regression". For each step that you program, ask yourself why this step makes sense and then explain this in your notebook.
+  + in the past we had students looking at the effect of age on income in sports; "theory" suggests that this relation is hump-shaped: 5 year olds and 80 year olds tend not to earn a lot of money as elite athletes; the students presented a scatter plot with a clear hump-shape; then they wrote "now we do a linear regression".
+  + for each step that you program, ask yourself why this step makes sense and then explain this in your notebook.
++ show us what you have learned during this course; hence use a *number* of topics we discussed in your final assignment, for example:
+  + simulate data to verify the estimation techniques that you use
+  + download your data in the notebook using a python API
+  + use pandas to merge different datasets, clean your data, create new variables
+  + explain clearly what the causal relations are in your analysis
+  + use methods like: ridge and lasso regressions, neural network, Bayesian analysis
+    + explain why you use these methods to answer your research question (what are pros and cons of the methods)
+    + explain the choices that you make within a method (think of the number of layers and epochs in a neural network)
+    + use more than one method and compare the results:
+      + discuss what is different and why
+  + simply downloading an existing dataset and estimating a neural network on this will not be enough to get a passing grade
 
 ** resit of final assignment
 
@@ -314,4 +324,4 @@ The resit of the final assignment needs to be a new project compared to the one 
 
 Simply adjusting your first submission based on our feedback will be not be enough. 
 
-Otherwise, follow the procedure above on how to submit the assignment and fill in the google form.
+Apart from this, follow the procedure above on how to submit the assignment and fill in the google form.

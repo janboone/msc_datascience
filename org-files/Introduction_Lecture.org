@@ -7,7 +7,6 @@
 * Introduction
   :PROPERTIES:
   :CUSTOM_ID: introduction
-  :ID:       C98820D6-EBEB-41AF-8D24-8F286AE8C730
   :END:
 
 ** this lecture

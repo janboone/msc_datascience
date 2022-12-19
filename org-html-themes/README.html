@@ -3,15 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-03-02 Wed 10:39 -->
+<!-- 2022-12-19 Mon 18:01 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>How to export Org mode files into awesome HTML in 2 minutes</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="Fabrice Niessen" />
-<meta name="description" content="Org-HTML export made simple."
- />
+<meta name="description" content="Org-HTML export made simple." />
 <meta name="keywords" content="org-mode, export, html, theme, style, css, js, bigblow" />
+<meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
 <link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -20,49 +19,49 @@
 <script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">How to export Org mode files into awesome HTML in 2 minutes</h1>
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org632bb04">1. Overview</a>
+<li><a href="#orga6d756c">1. Overview</a>
 <ul>
-<li><a href="#org052b532">1.1. Description</a></li>
-<li><a href="#org433e070">1.2. Requirements</a></li>
+<li><a href="#orgff3737c">1.1. Description</a></li>
+<li><a href="#orga0aa13e">1.2. Requirements</a></li>
 </ul>
 </li>
-<li><a href="#orga9cb744">2. Gallery</a>
+<li><a href="#orgb1dc9de">2. Gallery</a>
 <ul>
-<li><a href="#org6193879">2.1. Bigblow</a>
+<li><a href="#orgbd2e3d2">2.1. Bigblow</a>
 <ul>
-<li><a href="#org1065d53">Quotations about Bigblow</a></li>
+<li><a href="#orgb91a6ba">Quotations about Bigblow</a></li>
 </ul>
 </li>
-<li><a href="#orgb7e51cf">2.2. ReadTheOrg</a>
+<li><a href="#orgf481cab">2.2. ReadTheOrg</a>
 <ul>
-<li><a href="#org755ca71">Quotations about ReadTheOrg</a></li>
+<li><a href="#orgbe9df1c">Quotations about ReadTheOrg</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgb1b518e">3. Demo</a></li>
-<li><a href="#org5c4a60e">4. Using a theme</a></li>
-<li><a href="#orgea82411">5. Customizing a theme</a>
+<li><a href="#org32079e9">3. Demo</a></li>
+<li><a href="#orgbcb5942">4. Using a theme</a></li>
+<li><a href="#org84b7fc7">5. Customizing a theme</a>
 <ul>
-<li><a href="#orgad67594">5.1. Change the background code blocks</a></li>
-<li><a href="#orgce64d47">5.2. Unset body width limit of ReadTheOrg</a></li>
+<li><a href="#org916e484">5.1. Change the background code blocks</a></li>
+<li><a href="#orgdc47ecd">5.2. Unset body width limit of ReadTheOrg</a></li>
 </ul>
 </li>
-<li><a href="#orgadcf1df">6. Contributing</a>
+<li><a href="#org7a485c8">6. Contributing</a>
 <ul>
-<li><a href="#org7b869ef">6.1. Issues</a></li>
-<li><a href="#org66dd6a4">6.2. Patches</a></li>
-<li><a href="#org90ce8e6">6.3. Donations</a></li>
-<li><a href="#orgd9228ad">6.4. Follow me</a></li>
+<li><a href="#org44f85fe">6.1. Issues</a></li>
+<li><a href="#org57e8d07">6.2. Patches</a></li>
+<li><a href="#org2cdae28">6.3. Donations</a></li>
+<li><a href="#orgc0747c2">6.4. Follow me</a></li>
 </ul>
 </li>
-<li><a href="#orge33aa46">7. License</a></li>
+<li><a href="#orgef162a7">7. License</a></li>
 </ul>
 </div>
 </div>
@@ -73,12 +72,12 @@
 <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="btn_donate_LG.gif" />
 </a>
 
-<div id="outline-container-org632bb04" class="outline-2">
-<h2 id="org632bb04"><span class="section-number-2">1</span> Overview</h2>
+<div id="outline-container-orga6d756c" class="outline-2">
+<h2 id="orga6d756c"><span class="section-number-2">1.</span> Overview</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org052b532" class="outline-3">
-<h3 id="org052b532"><span class="section-number-3">1.1</span> Description</h3>
+<div id="outline-container-orgff3737c" class="outline-3">
+<h3 id="orgff3737c"><span class="section-number-3">1.1.</span> Description</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Though you can easily override CSS stylesheets and add your own HTML themes, we
@@ -104,8 +103,8 @@ Follow <a href="https://twitter.com/f_niessen">f<sub>niessen</sub></a> on Twitte
 </div>
 </div>
 
-<div id="outline-container-org433e070" class="outline-3">
-<h3 id="org433e070"><span class="section-number-3">1.2</span> Requirements</h3>
+<div id="outline-container-orga0aa13e" class="outline-3">
+<h3 id="orga0aa13e"><span class="section-number-3">1.2.</span> Requirements</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Org mode version 8 (or later) is required.
@@ -118,8 +117,8 @@ If such a version is not bundled with your Emacs, install one from ELPA.
 </div>
 </div>
 
-<div id="outline-container-orga9cb744" class="outline-2">
-<h2 id="orga9cb744"><span class="section-number-2">2</span> Gallery</h2>
+<div id="outline-container-orgb1dc9de" class="outline-2">
+<h2 id="orgb1dc9de"><span class="section-number-2">2.</span> Gallery</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 This is a list of available <b>HTML themes for Org mode</b>, which you can use right
@@ -127,8 +126,8 @@ now!  Well, I hope to have more than one in a couple of weeks&#x2026;
 </p>
 </div>
 
-<div id="outline-container-org6193879" class="outline-3">
-<h3 id="org6193879"><span class="section-number-3">2.1</span> Bigblow</h3>
+<div id="outline-container-orgbd2e3d2" class="outline-3">
+<h3 id="orgbd2e3d2"><span class="section-number-3">2.1.</span> Bigblow</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Bigblow is perfect for your work: it is a clean design aimed at optimal <b>Org
@@ -136,7 +135,7 @@ mode experience in your browser</b>.  It looks just awesome!
 </p>
 
 
-<div id="orga0b3958" class="figure">
+<div id="org16b5cbe" class="figure">
 <p><a href="https://www.youtube.com/watch?v=DnSGSiXYuOk" width="640"><img src="docs/bigblow.png" alt="bigblow.png" width="640" /></a>
 </p>
 </div>
@@ -227,9 +226,9 @@ Keyboard shortcuts to save time and boost your productivity:
 </table>
 </div>
 
-<div id="outline-container-org1065d53" class="outline-4">
-<h4 id="org1065d53">Quotations about Bigblow</h4>
-<div class="outline-text-4" id="text-org1065d53">
+<div id="outline-container-orgb91a6ba" class="outline-4">
+<h4 id="orgb91a6ba">Quotations about Bigblow</h4>
+<div class="outline-text-4" id="text-orgb91a6ba">
 <p>
 "Very very nice, I enjoy it a lot." <br />
 &#x2013; <i>Ista Zahn</i>
@@ -270,8 +269,8 @@ wonderful package!" <br />
 </div>
 </div>
 
-<div id="outline-container-orgb7e51cf" class="outline-3">
-<h3 id="orgb7e51cf"><span class="section-number-3">2.2</span> ReadTheOrg</h3>
+<div id="outline-container-orgf481cab" class="outline-3">
+<h3 id="orgf481cab"><span class="section-number-3">2.2.</span> ReadTheOrg</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 ReadTheOrg is a clone of the official &#x2013; and great! &#x2013;  <a href="https://github.com/snide/sphinx_rtd_theme">theme</a>
@@ -284,12 +283,12 @@ all your Org docs.
 </p>
 
 
-<div id="orgc1abd08" class="figure">
+<div id="org3ef3810" class="figure">
 <p><img src="docs/readtheorg.png" alt="readtheorg.png" width="640" />
 </p>
 </div>
 
-<div class="note" id="org7a5677a">
+<div class="note" id="org296e9eb">
 <p>
 While the original theme shines on mobile devices as well, ReadTheOrg does not
 stay completely functional.
@@ -304,9 +303,9 @@ default structure of the HTML export)!
 </div>
 </div>
 
-<div id="outline-container-org755ca71" class="outline-4">
-<h4 id="org755ca71">Quotations about ReadTheOrg</h4>
-<div class="outline-text-4" id="text-org755ca71">
+<div id="outline-container-orgbe9df1c" class="outline-4">
+<h4 id="orgbe9df1c">Quotations about ReadTheOrg</h4>
+<div class="outline-text-4" id="text-orgbe9df1c">
 <p>
 "OMG.  The ReadTheOrg theme for exported HTML from org mode files is eye
 wateringly beautiful.  Thank you!" <br />
@@ -346,8 +345,8 @@ available." <br />
 </div>
 </div>
 
-<div id="outline-container-orgb1b518e" class="outline-2">
-<h2 id="orgb1b518e"><span class="section-number-2">3</span> Demo</h2>
+<div id="outline-container-org32079e9" class="outline-2">
+<h2 id="org32079e9"><span class="section-number-2">3.</span> Demo</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 I've written a <a href="org/org-mode-syntax-example.txt">demo page</a> for the themes that provides a maximal working support
@@ -361,8 +360,8 @@ admonitions, footnotes, tables and other details.
 </div>
 </div>
 
-<div id="outline-container-org5c4a60e" class="outline-2">
-<h2 id="org5c4a60e"><span class="section-number-2">4</span> Using a theme</h2>
+<div id="outline-container-orgbcb5942" class="outline-2">
+<h2 id="orgbcb5942"><span class="section-number-2">4.</span> Using a theme</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Using a theme from the theme gallery for your own Org documents is very easy:
@@ -406,8 +405,8 @@ with <code>C-c C-e h h</code>.</li>
 </div>
 </div>
 
-<div id="outline-container-orgea82411" class="outline-2">
-<h2 id="orgea82411"><span class="section-number-2">5</span> Customizing a theme</h2>
+<div id="outline-container-org84b7fc7" class="outline-2">
+<h2 id="org84b7fc7"><span class="section-number-2">5.</span> Customizing a theme</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 You love those themes, but you still would like to override particular HTML
@@ -421,8 +420,8 @@ change&#x2026;
 </p>
 </div>
 
-<div id="outline-container-orgad67594" class="outline-3">
-<h3 id="orgad67594"><span class="section-number-3">5.1</span> Change the background code blocks</h3>
+<div id="outline-container-org916e484" class="outline-3">
+<h3 id="org916e484"><span class="section-number-3">5.1.</span> Change the background code blocks</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 Here's an example to insert into your Org documents:
@@ -436,8 +435,8 @@ Here's an example to insert into your Org documents:
 </div>
 </div>
 
-<div id="outline-container-orgce64d47" class="outline-3">
-<h3 id="orgce64d47"><span class="section-number-3">5.2</span> Unset body width limit of ReadTheOrg</h3>
+<div id="outline-container-orgdc47ecd" class="outline-3">
+<h3 id="orgdc47ecd"><span class="section-number-3">5.2.</span> Unset body width limit of ReadTheOrg</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 Solution provided by Malcolm Cook:
@@ -453,12 +452,12 @@ Solution provided by Malcolm Cook:
 </div>
 </div>
 
-<div id="outline-container-orgadcf1df" class="outline-2">
-<h2 id="orgadcf1df"><span class="section-number-2">6</span> Contributing</h2>
+<div id="outline-container-org7a485c8" class="outline-2">
+<h2 id="org7a485c8"><span class="section-number-2">6.</span> Contributing</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org7b869ef" class="outline-3">
-<h3 id="org7b869ef"><span class="section-number-3">6.1</span> Issues</h3>
+<div id="outline-container-org44f85fe" class="outline-3">
+<h3 id="org44f85fe"><span class="section-number-3">6.1.</span> Issues</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 Report issues and suggest features and improvements on the <a href="https://github.com/fniessen/org-html-themes/issues/new">GitHub issue tracker</a>.
@@ -466,8 +465,8 @@ Report issues and suggest features and improvements on the <a href="https://gith
 </div>
 </div>
 
-<div id="outline-container-org66dd6a4" class="outline-3">
-<h3 id="org66dd6a4"><span class="section-number-3">6.2</span> Patches</h3>
+<div id="outline-container-org57e8d07" class="outline-3">
+<h3 id="org57e8d07"><span class="section-number-3">6.2.</span> Patches</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 I love contributions!  Patches under any form are always welcome!
@@ -475,8 +474,8 @@ I love contributions!  Patches under any form are always welcome!
 </div>
 </div>
 
-<div id="outline-container-org90ce8e6" class="outline-3">
-<h3 id="org90ce8e6"><span class="section-number-3">6.3</span> Donations</h3>
+<div id="outline-container-org2cdae28" class="outline-3">
+<h3 id="org2cdae28"><span class="section-number-3">6.3.</span> Donations</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 If you use the org-html-themes project (or any of <a href="https://github.com/fniessen/">my other projects</a>) and feel it
@@ -492,8 +491,8 @@ beer and as in speech.
 </div>
 </div>
 
-<div id="outline-container-orgd9228ad" class="outline-3">
-<h3 id="orgd9228ad"><span class="section-number-3">6.4</span> Follow me</h3>
+<div id="outline-container-orgc0747c2" class="outline-3">
+<h3 id="orgc0747c2"><span class="section-number-3">6.4.</span> Follow me</h3>
 <div class="outline-text-3" id="text-6-4">
 <p>
 I have an <a href="https://twitter.com/f_niessen">f<sub>niessen</sub></a> account on Twitter.  You should follow it.
@@ -502,8 +501,8 @@ I have an <a href="https://twitter.com/f_niessen">f<sub>niessen</sub></a> accoun
 </div>
 </div>
 
-<div id="outline-container-orge33aa46" class="outline-2">
-<h2 id="orge33aa46"><span class="section-number-2">7</span> License</h2>
+<div id="outline-container-orgef162a7" class="outline-2">
+<h2 id="orgef162a7"><span class="section-number-2">7.</span> License</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Copyright (C) 2011-2020 Fabrice Niessen.
@@ -543,7 +542,7 @@ this program.  If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Fabrice Niessen</p>
-<p class="date">Created: 2022-03-02 Wed 10:39</p>
+<p class="date">Created: 2022-12-19 Mon 18:01</p>
 </div>
 </body>
 </html>

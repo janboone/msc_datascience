@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Screencasts for Seminar Datascience for Economics Part 2</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="Jan Boone" />
+<meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -29,11 +29,10 @@
              }
 });
 </script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Screencasts for Seminar Datascience for Economics Part 2</h1>
 <p>
 <b>Under construction</b>
@@ -48,68 +47,68 @@ This page contains the screencasts for the second part of the course <a href="./
 The videos go through the questions in <a href="https://github.com/janboone/msc_datascience/blob/master/hacking_part_2.ipynb">this notebook</a>.
 </p>
 
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgf0951bd">Dealing with data</a>
+<li><a href="#orga6d3506">Dealing with data</a>
 <ul>
-<li><a href="#orgf549713">mortality</a></li>
-<li><a href="#org9f05edd">GDP</a></li>
-<li><a href="#orge1e7eb8">Income quantiles</a></li>
-<li><a href="#org96aee47">life style variables</a></li>
+<li><a href="#org00c238d">mortality</a></li>
+<li><a href="#org1cbecf4">GDP</a></li>
+<li><a href="#org52e58f0">Income quantiles</a></li>
+<li><a href="#org46370d2">life style variables</a></li>
 </ul>
 </li>
-<li><a href="#orga9d8dbc">Bayesian statistics</a>
+<li><a href="#orgb0211fa">Bayesian statistics</a>
 <ul>
-<li><a href="#org4d96b8f">Introduction</a></li>
-<li><a href="#org6e0ec87">Simple Bayesian model</a></li>
+<li><a href="#org897f330">Introduction</a></li>
+<li><a href="#orgdd8b316">Simple Bayesian model</a></li>
 </ul>
 </li>
-<li><a href="#orgfc7d313">Estimating a Bayesian model</a>
+<li><a href="#orgb4a8098">Estimating a Bayesian model</a>
 <ul>
-<li><a href="#org4433b81">formulating the model</a></li>
-<li><a href="#org2d46e7e">sampling from the model</a></li>
-<li><a href="#org66d71ff">summarizing posterior distribution and model fit</a></li>
-<li><a href="#org9d0bc6d">Income inequality and standardizing data</a></li>
-<li><a href="#orgffb72f7">Bayesian Model</a></li>
-<li><a href="#org38fbc09">Checking model</a></li>
-<li><a href="#orge7b8951">Interactive plot with Altair</a></li>
+<li><a href="#org2b44fbc">formulating the model</a></li>
+<li><a href="#org6628138">sampling from the model</a></li>
+<li><a href="#orgb73ac83">summarizing posterior distribution and model fit</a></li>
+<li><a href="#orgafcbe6f">Income inequality and standardizing data</a></li>
+<li><a href="#org66329c8">Bayesian Model</a></li>
+<li><a href="#org2ab6a9f">Checking model</a></li>
+<li><a href="#orgdd80bdd">Interactive plot with Altair</a></li>
 </ul>
 </li>
-<li><a href="#org0a7a7c1">Dealing with missing data the Bayesian way</a>
+<li><a href="#org91ea971">Dealing with missing data the Bayesian way</a>
 <ul>
-<li><a href="#orgf86fbe1">Masked arrays</a></li>
-<li><a href="#org0bfd13a">Estimating model with missing observations</a></li>
+<li><a href="#org0b38fb3">Masked arrays</a></li>
+<li><a href="#orged2a2c5">Estimating model with missing observations</a></li>
 </ul>
 </li>
-<li><a href="#org18ed4d2">Bayesian time series</a>
+<li><a href="#orgcc35ce9">Bayesian time series</a>
 <ul>
-<li><a href="#org1df7a19">Gaussian process</a></li>
-<li><a href="#org9f27a97">Covid data</a></li>
+<li><a href="#org4798972">Gaussian process</a></li>
+<li><a href="#orgcfb4bb3">Covid data</a></li>
 </ul>
 </li>
-<li><a href="#org857039f">Bayesian neural network</a>
+<li><a href="#org852582e">Bayesian neural network</a>
 <ul>
-<li><a href="#orge086e2f">Generating the data and the grid</a></li>
-<li><a href="#org7ce0743">Code for the network</a></li>
-<li><a href="#org757f0b9">Evaluating the estimated network</a></li>
-<li><a href="#org08d2658">Further graphical illustrations of the estimated network</a></li>
+<li><a href="#org64840ff">Generating the data and the grid</a></li>
+<li><a href="#org2ea2b50">Code for the network</a></li>
+<li><a href="#orga0dd0a3">Evaluating the estimated network</a></li>
+<li><a href="#org5e05acc">Further graphical illustrations of the estimated network</a></li>
 </ul>
 </li>
-<li><a href="#orgeae815d">What is a confidence interval</a></li>
+<li><a href="#orgfdeec3b">What is a confidence interval</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-orgf0951bd" class="outline-2">
-<h2 id="orgf0951bd">Dealing with data</h2>
-<div class="outline-text-2" id="text-orgf0951bd">
+<div id="outline-container-orga6d3506" class="outline-2">
+<h2 id="orga6d3506">Dealing with data</h2>
+<div class="outline-text-2" id="text-orga6d3506">
 </div>
-<div id="outline-container-orgf549713" class="outline-3">
-<h3 id="orgf549713">mortality</h3>
-<div class="outline-text-3" id="text-orgf549713">
+<div id="outline-container-org00c238d" class="outline-3">
+<h3 id="org00c238d">mortality</h3>
+<div class="outline-text-3" id="text-org00c238d">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/921Z4AgHwNY" frameborder="0" allowfullscreen>downloading mortality variables</iframe>
 </p>
@@ -142,9 +141,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org9f05edd" class="outline-3">
-<h3 id="org9f05edd">GDP</h3>
-<div class="outline-text-3" id="text-org9f05edd">
+<div id="outline-container-org1cbecf4" class="outline-3">
+<h3 id="org1cbecf4">GDP</h3>
+<div class="outline-text-3" id="text-org1cbecf4">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/nm0V0vVfpiI" frameborder="0" allowfullscreen>downloading gdp</iframe>
 </p>
@@ -168,9 +167,9 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-orge1e7eb8" class="outline-3">
-<h3 id="orge1e7eb8">Income quantiles</h3>
-<div class="outline-text-3" id="text-orge1e7eb8">
+<div id="outline-container-org52e58f0" class="outline-3">
+<h3 id="org52e58f0">Income quantiles</h3>
+<div class="outline-text-3" id="text-org52e58f0">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/Yfl-z8E3VCU" frameborder="0" allowfullscreen>downloading income quantiles</iframe>
 </p>
@@ -195,9 +194,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org96aee47" class="outline-3">
-<h3 id="org96aee47">life style variables</h3>
-<div class="outline-text-3" id="text-org96aee47">
+<div id="outline-container-org46370d2" class="outline-3">
+<h3 id="org46370d2">life style variables</h3>
+<div class="outline-text-3" id="text-org46370d2">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/nOaNkcpnINg" frameborder="0" allowfullscreen>downloading lifestyle variables</iframe>
 </p>
@@ -228,13 +227,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orga9d8dbc" class="outline-2">
-<h2 id="orga9d8dbc">Bayesian statistics</h2>
-<div class="outline-text-2" id="text-orga9d8dbc">
+<div id="outline-container-orgb0211fa" class="outline-2">
+<h2 id="orgb0211fa">Bayesian statistics</h2>
+<div class="outline-text-2" id="text-orgb0211fa">
 </div>
-<div id="outline-container-org4d96b8f" class="outline-3">
-<h3 id="org4d96b8f">Introduction</h3>
-<div class="outline-text-3" id="text-org4d96b8f">
+<div id="outline-container-org897f330" class="outline-3">
+<h3 id="org897f330">Introduction</h3>
+<div class="outline-text-3" id="text-org897f330">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/VGe2AHNkMUU" frameborder="0" allowfullscreen>Bayes' theorem</iframe>
 </p>
@@ -266,9 +265,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org6e0ec87" class="outline-3">
-<h3 id="org6e0ec87">Simple Bayesian model</h3>
-<div class="outline-text-3" id="text-org6e0ec87">
+<div id="outline-container-orgdd8b316" class="outline-3">
+<h3 id="orgdd8b316">Simple Bayesian model</h3>
+<div class="outline-text-3" id="text-orgdd8b316">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/Rlvy1ItxU0A" frameborder="0" allowfullscreen>First Baysian model</iframe>
 </p>
@@ -298,13 +297,13 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-orgfc7d313" class="outline-2">
-<h2 id="orgfc7d313">Estimating a Bayesian model</h2>
-<div class="outline-text-2" id="text-orgfc7d313">
+<div id="outline-container-orgb4a8098" class="outline-2">
+<h2 id="orgb4a8098">Estimating a Bayesian model</h2>
+<div class="outline-text-2" id="text-orgb4a8098">
 </div>
-<div id="outline-container-org4433b81" class="outline-3">
-<h3 id="org4433b81">formulating the model</h3>
-<div class="outline-text-3" id="text-org4433b81">
+<div id="outline-container-org2b44fbc" class="outline-3">
+<h3 id="org2b44fbc">formulating the model</h3>
+<div class="outline-text-3" id="text-org2b44fbc">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/1urA2THS46A" frameborder="0" allowfullscreen>Model specification</iframe>
 </p>
@@ -331,9 +330,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org2d46e7e" class="outline-3">
-<h3 id="org2d46e7e">sampling from the model</h3>
-<div class="outline-text-3" id="text-org2d46e7e">
+<div id="outline-container-org6628138" class="outline-3">
+<h3 id="org6628138">sampling from the model</h3>
+<div class="outline-text-3" id="text-org6628138">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/sOl41BfFwEw" frameborder="0" allowfullscreen>Sampling from the model</iframe>
 </p>
@@ -367,9 +366,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org66d71ff" class="outline-3">
-<h3 id="org66d71ff">summarizing posterior distribution and model fit</h3>
-<div class="outline-text-3" id="text-org66d71ff">
+<div id="outline-container-orgb73ac83" class="outline-3">
+<h3 id="orgb73ac83">summarizing posterior distribution and model fit</h3>
+<div class="outline-text-3" id="text-orgb73ac83">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/Dxx8lbKDk_0" frameborder="0" allowfullscreen>summarizing posterior and fit</iframe>
 </p>
@@ -396,9 +395,9 @@ Questions you should be able to answer before continuing:
 </ul>
 </div>
 
-<div id="outline-container-org3305989" class="outline-4">
-<h4 id="org3305989">Eurostat data</h4>
-<div class="outline-text-4" id="text-org3305989">
+<div id="outline-container-orge0ddd13" class="outline-4">
+<h4 id="orge0ddd13">Eurostat data</h4>
+<div class="outline-text-4" id="text-orge0ddd13">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/gnE9K0u6p34" frameborder="0" allowfullscreen>Loading and plotting Eurostat data</iframe>
 </p>
@@ -415,9 +414,9 @@ Topics we cover in this video:
 </div>
 
 
-<div id="outline-container-org9d0bc6d" class="outline-3">
-<h3 id="org9d0bc6d">Income inequality and standardizing data</h3>
-<div class="outline-text-3" id="text-org9d0bc6d">
+<div id="outline-container-orgafcbe6f" class="outline-3">
+<h3 id="orgafcbe6f">Income inequality and standardizing data</h3>
+<div class="outline-text-3" id="text-orgafcbe6f">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/32A_LTy5RW4" frameborder="0" allowfullscreen>Income inequality and standardizing data</iframe>
 </p>
@@ -444,9 +443,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgffb72f7" class="outline-3">
-<h3 id="orgffb72f7">Bayesian Model</h3>
-<div class="outline-text-3" id="text-orgffb72f7">
+<div id="outline-container-org66329c8" class="outline-3">
+<h3 id="org66329c8">Bayesian Model</h3>
+<div class="outline-text-3" id="text-org66329c8">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/IFi50EBpXig" frameborder="0" allowfullscreen>Bayesian model</iframe>
 </p>
@@ -470,9 +469,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org38fbc09" class="outline-3">
-<h3 id="org38fbc09">Checking model</h3>
-<div class="outline-text-3" id="text-org38fbc09">
+<div id="outline-container-org2ab6a9f" class="outline-3">
+<h3 id="org2ab6a9f">Checking model</h3>
+<div class="outline-text-3" id="text-org2ab6a9f">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/ozzR5_DXMqs" frameborder="0" allowfullscreen>Checking the model</iframe>
 </p>
@@ -496,9 +495,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orge7b8951" class="outline-3">
-<h3 id="orge7b8951">Interactive plot with Altair</h3>
-<div class="outline-text-3" id="text-orge7b8951">
+<div id="outline-container-orgdd80bdd" class="outline-3">
+<h3 id="orgdd80bdd">Interactive plot with Altair</h3>
+<div class="outline-text-3" id="text-orgdd80bdd">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/sVwuOjmcvck" frameborder="0" allowfullscreen>Interactive Plot Altair</iframe>
 </p>
@@ -522,13 +521,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org0a7a7c1" class="outline-2">
-<h2 id="org0a7a7c1">Dealing with missing data the Bayesian way</h2>
-<div class="outline-text-2" id="text-org0a7a7c1">
+<div id="outline-container-org91ea971" class="outline-2">
+<h2 id="org91ea971">Dealing with missing data the Bayesian way</h2>
+<div class="outline-text-2" id="text-org91ea971">
 </div>
-<div id="outline-container-orgf86fbe1" class="outline-3">
-<h3 id="orgf86fbe1">Masked arrays</h3>
-<div class="outline-text-3" id="text-orgf86fbe1">
+<div id="outline-container-org0b38fb3" class="outline-3">
+<h3 id="org0b38fb3">Masked arrays</h3>
+<div class="outline-text-3" id="text-org0b38fb3">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/AicqVtR1-RI" frameborder="0" allowfullscreen>Masked arrays</iframe>
 </p>
@@ -552,9 +551,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org0bfd13a" class="outline-3">
-<h3 id="org0bfd13a">Estimating model with missing observations</h3>
-<div class="outline-text-3" id="text-org0bfd13a">
+<div id="outline-container-orged2a2c5" class="outline-3">
+<h3 id="orged2a2c5">Estimating model with missing observations</h3>
+<div class="outline-text-3" id="text-orged2a2c5">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/FhjhU1CxAns" frameborder="0" allowfullscreen>Model with missing observations</iframe>
 </p>
@@ -577,17 +576,17 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org18ed4d2" class="outline-2">
-<h2 id="org18ed4d2">Bayesian time series</h2>
-<div class="outline-text-2" id="text-org18ed4d2">
+<div id="outline-container-orgcc35ce9" class="outline-2">
+<h2 id="orgcc35ce9">Bayesian time series</h2>
+<div class="outline-text-2" id="text-orgcc35ce9">
 </div>
-<div id="outline-container-org1df7a19" class="outline-3">
-<h3 id="org1df7a19">Gaussian process</h3>
-<div class="outline-text-3" id="text-org1df7a19">
+<div id="outline-container-org4798972" class="outline-3">
+<h3 id="org4798972">Gaussian process</h3>
+<div class="outline-text-3" id="text-org4798972">
 </div>
-<div id="outline-container-org2959bf5" class="outline-4">
-<h4 id="org2959bf5">GP with exponentiated quadratic kernel</h4>
-<div class="outline-text-4" id="text-org2959bf5">
+<div id="outline-container-org0ae8c60" class="outline-4">
+<h4 id="org0ae8c60">GP with exponentiated quadratic kernel</h4>
+<div class="outline-text-4" id="text-org0ae8c60">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/HjoYRQDYK4E" frameborder="0" allowfullscreen>exponentiated quadratic kernel</iframe>
 </p>
@@ -616,9 +615,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org5ad53d4" class="outline-4">
-<h4 id="org5ad53d4">Checking fit</h4>
-<div class="outline-text-4" id="text-org5ad53d4">
+<div id="outline-container-org79d850f" class="outline-4">
+<h4 id="org79d850f">Checking fit</h4>
+<div class="outline-text-4" id="text-org79d850f">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/0ZpJB1ROLuA" frameborder="0" allowfullscreen>checking fit GP</iframe>
 </p>
@@ -639,9 +638,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgb0a305b" class="outline-4">
-<h4 id="orgb0a305b">GP with periodic kernel</h4>
-<div class="outline-text-4" id="text-orgb0a305b">
+<div id="outline-container-orgf365745" class="outline-4">
+<h4 id="orgf365745">GP with periodic kernel</h4>
+<div class="outline-text-4" id="text-orgf365745">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/Kq-ZlhkGDWw" frameborder="0" allowfullscreen>periodic kernel</iframe>
 </p>
@@ -670,13 +669,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org9f27a97" class="outline-3">
-<h3 id="org9f27a97">Covid data</h3>
-<div class="outline-text-3" id="text-org9f27a97">
+<div id="outline-container-orgcfb4bb3" class="outline-3">
+<h3 id="orgcfb4bb3">Covid data</h3>
+<div class="outline-text-3" id="text-orgcfb4bb3">
 </div>
-<div id="outline-container-org444771e" class="outline-4">
-<h4 id="org444771e">Getting the data from John Hopkins University</h4>
-<div class="outline-text-4" id="text-org444771e">
+<div id="outline-container-orgb118df7" class="outline-4">
+<h4 id="orgb118df7">Getting the data from John Hopkins University</h4>
+<div class="outline-text-4" id="text-orgb118df7">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/KE-GjOb58x8" frameborder="0" allowfullscreen>getting covid data</iframe>
 </p>
@@ -699,9 +698,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org4e24c9a" class="outline-4">
-<h4 id="org4e24c9a">Bayesian exponential model</h4>
-<div class="outline-text-4" id="text-org4e24c9a">
+<div id="outline-container-org1ab75d7" class="outline-4">
+<h4 id="org1ab75d7">Bayesian exponential model</h4>
+<div class="outline-text-4" id="text-org1ab75d7">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/FFU_n5r_2a8" frameborder="0" allowfullscreen>specifying exponential model</iframe>
 </p>
@@ -728,9 +727,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org83b3c1b" class="outline-4">
-<h4 id="org83b3c1b">Bayesian logistic model</h4>
-<div class="outline-text-4" id="text-org83b3c1b">
+<div id="outline-container-org3df2d90" class="outline-4">
+<h4 id="org3df2d90">Bayesian logistic model</h4>
+<div class="outline-text-4" id="text-org3df2d90">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/aytlnYqBZgA" frameborder="0" allowfullscreen>logistic model</iframe>
 </p>
@@ -759,13 +758,13 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-org857039f" class="outline-2">
-<h2 id="org857039f">Bayesian neural network</h2>
-<div class="outline-text-2" id="text-org857039f">
+<div id="outline-container-org852582e" class="outline-2">
+<h2 id="org852582e">Bayesian neural network</h2>
+<div class="outline-text-2" id="text-org852582e">
 </div>
-<div id="outline-container-orge086e2f" class="outline-3">
-<h3 id="orge086e2f">Generating the data and the grid</h3>
-<div class="outline-text-3" id="text-orge086e2f">
+<div id="outline-container-org64840ff" class="outline-3">
+<h3 id="org64840ff">Generating the data and the grid</h3>
+<div class="outline-text-3" id="text-org64840ff">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/E0_KRDJX2iQ" frameborder="0" allowfullscreen>Data and grid</iframe>
 </p>
@@ -804,9 +803,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org7ce0743" class="outline-3">
-<h3 id="org7ce0743">Code for the network</h3>
-<div class="outline-text-3" id="text-org7ce0743">
+<div id="outline-container-org2ea2b50" class="outline-3">
+<h3 id="org2ea2b50">Code for the network</h3>
+<div class="outline-text-3" id="text-org2ea2b50">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/-StgJosvkaQ" frameborder="0" allowfullscreen>code for the network</iframe>
 </p>
@@ -844,9 +843,9 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-org757f0b9" class="outline-3">
-<h3 id="org757f0b9">Evaluating the estimated network</h3>
-<div class="outline-text-3" id="text-org757f0b9">
+<div id="outline-container-orga0dd0a3" class="outline-3">
+<h3 id="orga0dd0a3">Evaluating the estimated network</h3>
+<div class="outline-text-3" id="text-orga0dd0a3">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/q2gaWDjlrGU" frameborder="0" allowfullscreen>evaluating the network</iframe>
 </p>
@@ -872,9 +871,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org08d2658" class="outline-3">
-<h3 id="org08d2658">Further graphical illustrations of the estimated network</h3>
-<div class="outline-text-3" id="text-org08d2658">
+<div id="outline-container-org5e05acc" class="outline-3">
+<h3 id="org5e05acc">Further graphical illustrations of the estimated network</h3>
+<div class="outline-text-3" id="text-org5e05acc">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/eiDGXIqveA8" frameborder="0" allowfullscreen>graphical illustration of network uncertainty</iframe>
 </p>
@@ -899,9 +898,9 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-orgeae815d" class="outline-2">
-<h2 id="orgeae815d">What is a confidence interval</h2>
-<div class="outline-text-2" id="text-orgeae815d">
+<div id="outline-container-orgfdeec3b" class="outline-2">
+<h2 id="orgfdeec3b">What is a confidence interval</h2>
+<div class="outline-text-2" id="text-orgfdeec3b">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/BVe6EYkbHQw" frameborder="0" allowfullscreen>confidence vs credible intervals</iframe>
 </p>

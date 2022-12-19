@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Screencasts for Seminar Datascience for Economics</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="Jan Boone" />
+<meta name="generator" content="Org Mode" />
 <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -29,11 +29,10 @@
              }
 });
 </script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Screencasts for Seminar Datascience for Economics</h1>
 <p>
 <b>Under construction</b>
@@ -44,99 +43,99 @@
 This page contains the screencasts for the first part of the course <a href="./index.html">Seminar Datascience for Economics</a>.
 </p>
 
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5f74aa4">How are the screencasts supposed to help?</a>
+<li><a href="#org448d3b4">How are the screencasts supposed to help?</a>
 <ul>
-<li><a href="#org9dc333c">Why are there screencasts?</a></li>
-<li><a href="#org39a8b38">Suggested use of the screencasts</a></li>
-<li><a href="#orga75e272">Prerequisite knowledge</a></li>
-<li><a href="#org8d33c68">Libraries we use</a></li>
+<li><a href="#org30fd706">Why are there screencasts?</a></li>
+<li><a href="#org98cb2c8">Suggested use of the screencasts</a></li>
+<li><a href="#orgc45ce6b">Prerequisite knowledge</a></li>
+<li><a href="#org066fc5a">Libraries we use</a></li>
 </ul>
 </li>
-<li><a href="#orgebe63bf">Compare jupyter notebook/lab and emacs</a>
+<li><a href="#org896747f">Compare jupyter notebook/lab and emacs</a>
 <ul>
-<li><a href="#org8445346">Why am I using emacs</a></li>
+<li><a href="#orga0358f9">Why am I using emacs</a></li>
 </ul>
 </li>
-<li><a href="#org2f6a75c">Distributions of an estimator</a>
+<li><a href="#orga19c51e">Distributions of an estimator</a>
 <ul>
-<li><a href="#orgb5751b5">distribution of sample average and standard deviation</a></li>
-<li><a href="#org2ac8e99">distribution of a slope</a></li>
-<li><a href="#org26ec719">bootstrapping</a></li>
-<li><a href="#org31fa383">Doing your own OLS and lasso regressions</a></li>
+<li><a href="#org0690b04">distribution of sample average and standard deviation</a></li>
+<li><a href="#org2ac0fa3">distribution of a slope</a></li>
+<li><a href="#org8f5bcd3">bootstrapping</a></li>
+<li><a href="#org82fd61e">Doing your own OLS and lasso regressions</a></li>
 </ul>
 </li>
-<li><a href="#orgf30b6e9">Causality</a>
+<li><a href="#orgc55d9ab">Causality</a>
 <ul>
-<li><a href="#orgaf57950">Fork</a></li>
-<li><a href="#org37116d2">Pipe</a></li>
-<li><a href="#org6ee5e73">Collider</a></li>
+<li><a href="#org9e66f1e">Fork</a></li>
+<li><a href="#orgde472be">Pipe</a></li>
+<li><a href="#orgb562e1c">Collider</a></li>
 </ul>
 </li>
-<li><a href="#org02bf653">Tensors</a>
+<li><a href="#org3a84b7e">Tensors</a>
 <ul>
-<li><a href="#org67f3b5e">Introduction</a></li>
-<li><a href="#org7c8c330">Creating tensors with numpy</a></li>
-<li><a href="#org698dec2">Broadcasting</a></li>
-<li><a href="#orgd8f7146">slicing and fancy indexing</a></li>
-<li><a href="#org02b3392">First neural network</a></li>
+<li><a href="#orga34d833">Introduction</a></li>
+<li><a href="#orge7cfb51">Creating tensors with numpy</a></li>
+<li><a href="#org2fbb4e0">Broadcasting</a></li>
+<li><a href="#org81442cd">slicing and fancy indexing</a></li>
+<li><a href="#orgffc3418">First neural network</a></li>
 </ul>
 </li>
-<li><a href="#orgc398986">Overfitting and underfitting</a>
+<li><a href="#org6b9de6d">Overfitting and underfitting</a>
 <ul>
-<li><a href="#org063e1c9">generating the data</a></li>
-<li><a href="#org0560bcd">overfitting</a></li>
+<li><a href="#org8f7b301">generating the data</a></li>
+<li><a href="#org64af010">overfitting</a></li>
 </ul>
 </li>
-<li><a href="#org261f3c8">Neural network</a>
+<li><a href="#orga692250">Neural network</a>
 <ul>
-<li><a href="#orga14d88b">perceptron</a></li>
-<li><a href="#org22bb94b">tensorflow regression</a></li>
-<li><a href="#org3800b48">tensorflow classification</a></li>
+<li><a href="#org500760d">perceptron</a></li>
+<li><a href="#org7bc3263">tensorflow regression</a></li>
+<li><a href="#orgc2e7d89">tensorflow classification</a></li>
 </ul>
 </li>
-<li><a href="#org92aae47">Back to our first neural network</a>
+<li><a href="#org9dca419">Back to our first neural network</a>
 <ul>
-<li><a href="#org6c0562b">defining the network and fitting it</a></li>
-<li><a href="#org053b730">checking the fit</a></li>
-<li><a href="#orgd864489">number of epochs and overfitting</a></li>
+<li><a href="#org59aaddc">defining the network and fitting it</a></li>
+<li><a href="#orge334cf2">checking the fit</a></li>
+<li><a href="#org657134d">number of epochs and overfitting</a></li>
 </ul>
 </li>
-<li><a href="#org518d1d2">Treatment effects</a>
+<li><a href="#org67683e9">Treatment effects</a>
 <ul>
-<li><a href="#orgd2c2376">IV</a></li>
-<li><a href="#org0629b71">Heterogenous treatment effects</a></li>
-<li><a href="#orgda8cc46">Probability of treatment</a></li>
+<li><a href="#org61f37f3">IV</a></li>
+<li><a href="#org6b7e6e5">Heterogenous treatment effects</a></li>
+<li><a href="#org0157207">Probability of treatment</a></li>
 </ul>
 </li>
-<li><a href="#orgeb392a3">Part 2</a></li>
+<li><a href="#orgc5bf490">Part 2</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5f74aa4" class="outline-2">
-<h2 id="org5f74aa4">How are the screencasts supposed to help?</h2>
-<div class="outline-text-2" id="text-org5f74aa4">
+<div id="outline-container-org448d3b4" class="outline-2">
+<h2 id="org448d3b4">How are the screencasts supposed to help?</h2>
+<div class="outline-text-2" id="text-org448d3b4">
 <p>
 For the first part of the course we use <a href="https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb">this notebook</a>. The notebook is fairly self-explanatory, but you may get stuck with some of the questions. The screencasts are meant to help you along if you do not know how to proceed. The idea is similar to what we did in <a href="https://janboone.github.io/applied-economics/index.html">Applied Economic Analysis</a>.
 </p>
 </div>
 
-<div id="outline-container-org9dc333c" class="outline-3">
-<h3 id="org9dc333c">Why are there screencasts?</h3>
-<div class="outline-text-3" id="text-org9dc333c">
+<div id="outline-container-org30fd706" class="outline-3">
+<h3 id="org30fd706">Why are there screencasts?</h3>
+<div class="outline-text-3" id="text-org30fd706">
 <p>
-The screencasts were initially developed because of the 2020 corona crisis where students were no longer able to come to the campus of Tilburg University. But they can also be used as complements to the lecturers and classes taught.
+The screencasts are used as complements to the lecturers and classes taught. For some programming problems you need to take time to try to solve them yourself. This we cannot do in class as some students solve them quickly (and get bored) while others need more time to solve these by themselves. 
 </p>
 </div>
 </div>
 
-<div id="outline-container-org39a8b38" class="outline-3">
-<h3 id="org39a8b38">Suggested use of the screencasts</h3>
-<div class="outline-text-3" id="text-org39a8b38">
+<div id="outline-container-org98cb2c8" class="outline-3">
+<h3 id="org98cb2c8">Suggested use of the screencasts</h3>
+<div class="outline-text-3" id="text-org98cb2c8">
 <p>
 Just watching the screencasts is not going to be very useful for you. The best way to use them is as follows:
 </p>
@@ -168,22 +167,22 @@ Python error messages:
 </div>
 </div>
 
-<div id="outline-container-orga75e272" class="outline-3">
-<h3 id="orga75e272">Prerequisite knowledge</h3>
-<div class="outline-text-3" id="text-orga75e272">
+<div id="outline-container-orgc45ce6b" class="outline-3">
+<h3 id="orgc45ce6b">Prerequisite knowledge</h3>
+<div class="outline-text-3" id="text-orgc45ce6b">
 <p>
-<b>Economics/Econometrics</b> this introduction to datascience is part of an MSc degree in Economics. Hence, we assume that you know what OLS is, standard errors, the difference between correlation and causality and you have seen instrumental variables before. In terms of math, you can do some basic linear algebra like multiplying a matrix and a vector and know what a (partial) derivative of a function is.
+<b>Economics/Econometrics:</b> this introduction to datascience is part of an MSc degree in Economics. Hence, we assume that you know what OLS is, standard errors, the difference between correlation and causality and you have seen instrumental variables before. In terms of math, you can do some basic linear algebra like multiplying a matrix and a vector and know what a (partial) derivative of a function is.
 </p>
 
 <p>
-<b>Python</b>: you have done the python track of <a href="https://janboone.github.io/applied-economics/index.html">Applied Economic Analysis</a>.
+<b>Python</b>: you have done <a href="https://janboone.github.io/applied-economics/index.html">Applied Economic Analysis</a>.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org8d33c68" class="outline-3">
-<h3 id="org8d33c68">Libraries we use</h3>
-<div class="outline-text-3" id="text-org8d33c68">
+<div id="outline-container-org066fc5a" class="outline-3">
+<h3 id="org066fc5a">Libraries we use</h3>
+<div class="outline-text-3" id="text-org066fc5a">
 <ul class="org-ul">
 <li>numpy: basic number crunching and vector manipulation</li>
 <li>pandas to work with dataframes</li>
@@ -197,13 +196,13 @@ Python error messages:
 </div>
 </div>
 
-<div id="outline-container-orgebe63bf" class="outline-2">
-<h2 id="orgebe63bf">Compare jupyter notebook/lab and emacs</h2>
-<div class="outline-text-2" id="text-orgebe63bf">
+<div id="outline-container-org896747f" class="outline-2">
+<h2 id="org896747f">Compare jupyter notebook/lab and emacs</h2>
+<div class="outline-text-2" id="text-org896747f">
 </div>
-<div id="outline-container-org8445346" class="outline-3">
-<h3 id="org8445346">Why am I using emacs</h3>
-<div class="outline-text-3" id="text-org8445346">
+<div id="outline-container-orga0358f9" class="outline-3">
+<h3 id="orga0358f9">Why am I using emacs</h3>
+<div class="outline-text-3" id="text-orga0358f9">
 <p>
 You know how to work with JupyterLab on the university servers (or on your own laptop). As with Applied Economic Analysis, most screencasts will be made with Emacs. See the <a href="https://janboone.github.io/applied-economics/pagescreencasts.html#org3bcecee">Applied Economics website</a> for an explanation why I use Emacs.
 </p>
@@ -211,17 +210,17 @@ You know how to work with JupyterLab on the university servers (or on your own l
 </div>
 </div>
 
-<div id="outline-container-org2f6a75c" class="outline-2">
-<h2 id="org2f6a75c">Distributions of an estimator</h2>
-<div class="outline-text-2" id="text-org2f6a75c">
+<div id="outline-container-orga19c51e" class="outline-2">
+<h2 id="orga19c51e">Distributions of an estimator</h2>
+<div class="outline-text-2" id="text-orga19c51e">
 </div>
-<div id="outline-container-orgb5751b5" class="outline-3">
-<h3 id="orgb5751b5">distribution of sample average and standard deviation</h3>
-<div class="outline-text-3" id="text-orgb5751b5">
+<div id="outline-container-org0690b04" class="outline-3">
+<h3 id="org0690b04">distribution of sample average and standard deviation</h3>
+<div class="outline-text-3" id="text-org0690b04">
 </div>
-<div id="outline-container-org2baab09" class="outline-4">
-<h4 id="org2baab09">generating data</h4>
-<div class="outline-text-4" id="text-org2baab09">
+<div id="outline-container-orgc65419f" class="outline-4">
+<h4 id="orgc65419f">generating data</h4>
+<div class="outline-text-4" id="text-orgc65419f">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/QLVO-twLJU4" frameborder="0" allowfullscreen>generating data</iframe>
 </p>
@@ -248,9 +247,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org865585e" class="outline-4">
-<h4 id="org865585e">distribution sample mean</h4>
-<div class="outline-text-4" id="text-org865585e">
+<div id="outline-container-org7fb726b" class="outline-4">
+<h4 id="org7fb726b">distribution sample mean</h4>
+<div class="outline-text-4" id="text-org7fb726b">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/GysdEGpCfk4" frameborder="0" allowfullscreen>sample mean</iframe>
 </p>
@@ -273,9 +272,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org458dfbc" class="outline-4">
-<h4 id="org458dfbc">standard deviation of \(m\)</h4>
-<div class="outline-text-4" id="text-org458dfbc">
+<div id="outline-container-org31d9e5e" class="outline-4">
+<h4 id="org31d9e5e">standard deviation of \(m\)</h4>
+<div class="outline-text-4" id="text-org31d9e5e">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/ancSPkoYnX8" frameborder="0" allowfullscreen>standard deviation m</iframe>
 </p>
@@ -304,9 +303,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org17d34b9" class="outline-4">
-<h4 id="org17d34b9">distribution of \(s\)</h4>
-<div class="outline-text-4" id="text-org17d34b9">
+<div id="outline-container-org8a51dd8" class="outline-4">
+<h4 id="org8a51dd8">distribution of \(s\)</h4>
+<div class="outline-text-4" id="text-org8a51dd8">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/0Qsxh_BArZY" frameborder="0" allowfullscreen>distribution of the standard deviation</iframe>
 </p>
@@ -335,13 +334,13 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-org2ac8e99" class="outline-3">
-<h3 id="org2ac8e99">distribution of a slope</h3>
-<div class="outline-text-3" id="text-org2ac8e99">
+<div id="outline-container-org2ac0fa3" class="outline-3">
+<h3 id="org2ac0fa3">distribution of a slope</h3>
+<div class="outline-text-3" id="text-org2ac0fa3">
 </div>
-<div id="outline-container-org5e91bc9" class="outline-4">
-<h4 id="org5e91bc9">generating data</h4>
-<div class="outline-text-4" id="text-org5e91bc9">
+<div id="outline-container-org8a05bbe" class="outline-4">
+<h4 id="org8a05bbe">generating data</h4>
+<div class="outline-text-4" id="text-org8a05bbe">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/D9uaz2dPMRw" frameborder="0" allowfullscreen>generating data</iframe>
 </p>
@@ -364,9 +363,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgb4136e9" class="outline-4">
-<h4 id="orgb4136e9">doing OLS on your data</h4>
-<div class="outline-text-4" id="text-orgb4136e9">
+<div id="outline-container-orgcca92ae" class="outline-4">
+<h4 id="orgcca92ae">doing OLS on your data</h4>
+<div class="outline-text-4" id="text-orgcca92ae">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/MDinBLqliIw" frameborder="0" allowfullscreen>doing OLS</iframe>
 </p>
@@ -390,9 +389,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org4cb3cdf" class="outline-4">
-<h4 id="org4cb3cdf">distribution of slopes</h4>
-<div class="outline-text-4" id="text-org4cb3cdf">
+<div id="outline-container-org9ba8402" class="outline-4">
+<h4 id="org9ba8402">distribution of slopes</h4>
+<div class="outline-text-4" id="text-org9ba8402">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/YiZV985oB5k" frameborder="0" allowfullscreen>distribution of slopes</iframe>
 </p>
@@ -417,9 +416,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org26ec719" class="outline-3">
-<h3 id="org26ec719">bootstrapping</h3>
-<div class="outline-text-3" id="text-org26ec719">
+<div id="outline-container-org8f5bcd3" class="outline-3">
+<h3 id="org8f5bcd3">bootstrapping</h3>
+<div class="outline-text-3" id="text-org8f5bcd3">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/69zsXfKib2o" frameborder="0" allowfullscreen>bootstrapping</iframe>
 </p>
@@ -450,9 +449,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org31fa383" class="outline-3">
-<h3 id="org31fa383">Doing your own OLS and lasso regressions</h3>
-<div class="outline-text-3" id="text-org31fa383">
+<div id="outline-container-org82fd61e" class="outline-3">
+<h3 id="org82fd61e">Doing your own OLS and lasso regressions</h3>
+<div class="outline-text-3" id="text-org82fd61e">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/r2QteNGlMYM" frameborder="0" allowfullscreen>OLS and lasso</iframe>
 </p>
@@ -484,13 +483,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgf30b6e9" class="outline-2">
-<h2 id="orgf30b6e9">Causality</h2>
-<div class="outline-text-2" id="text-orgf30b6e9">
+<div id="outline-container-orgc55d9ab" class="outline-2">
+<h2 id="orgc55d9ab">Causality</h2>
+<div class="outline-text-2" id="text-orgc55d9ab">
 </div>
-<div id="outline-container-orgaf57950" class="outline-3">
-<h3 id="orgaf57950">Fork</h3>
-<div class="outline-text-3" id="text-orgaf57950">
+<div id="outline-container-org9e66f1e" class="outline-3">
+<h3 id="org9e66f1e">Fork</h3>
+<div class="outline-text-3" id="text-org9e66f1e">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/eYYxS6HBAEI" frameborder="0" allowfullscreen>Fork</iframe>
 </p>
@@ -527,9 +526,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org37116d2" class="outline-3">
-<h3 id="org37116d2">Pipe</h3>
-<div class="outline-text-3" id="text-org37116d2">
+<div id="outline-container-orgde472be" class="outline-3">
+<h3 id="orgde472be">Pipe</h3>
+<div class="outline-text-3" id="text-orgde472be">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/BWLrbqho8Hs" frameborder="0" allowfullscreen>Pipe</iframe>
 </p>
@@ -559,9 +558,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org6ee5e73" class="outline-3">
-<h3 id="org6ee5e73">Collider</h3>
-<div class="outline-text-3" id="text-org6ee5e73">
+<div id="outline-container-orgb562e1c" class="outline-3">
+<h3 id="orgb562e1c">Collider</h3>
+<div class="outline-text-3" id="text-orgb562e1c">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/VrfDU1Dl9G8" frameborder="0" allowfullscreen>Collider</iframe>
 </p>
@@ -594,13 +593,13 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-org02bf653" class="outline-2">
-<h2 id="org02bf653">Tensors</h2>
-<div class="outline-text-2" id="text-org02bf653">
+<div id="outline-container-org3a84b7e" class="outline-2">
+<h2 id="org3a84b7e">Tensors</h2>
+<div class="outline-text-2" id="text-org3a84b7e">
 </div>
-<div id="outline-container-org67f3b5e" class="outline-3">
-<h3 id="org67f3b5e">Introduction</h3>
-<div class="outline-text-3" id="text-org67f3b5e">
+<div id="outline-container-orga34d833" class="outline-3">
+<h3 id="orga34d833">Introduction</h3>
+<div class="outline-text-3" id="text-orga34d833">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/yJxsbWL9JUI" frameborder="0" allowfullscreen>Introduction Tensors</iframe>
 </p>
@@ -634,9 +633,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org7c8c330" class="outline-3">
-<h3 id="org7c8c330">Creating tensors with numpy</h3>
-<div class="outline-text-3" id="text-org7c8c330">
+<div id="outline-container-orge7cfb51" class="outline-3">
+<h3 id="orge7cfb51">Creating tensors with numpy</h3>
+<div class="outline-text-3" id="text-orge7cfb51">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/XWCmZjjgeLs" frameborder="0" allowfullscreen>tensors with numpy</iframe>
 </p>
@@ -665,9 +664,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org698dec2" class="outline-3">
-<h3 id="org698dec2">Broadcasting</h3>
-<div class="outline-text-3" id="text-org698dec2">
+<div id="outline-container-org2fbb4e0" class="outline-3">
+<h3 id="org2fbb4e0">Broadcasting</h3>
+<div class="outline-text-3" id="text-org2fbb4e0">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/4xUIQlbxHqI" frameborder="0" allowfullscreen>broadcasting</iframe>
 </p>
@@ -702,9 +701,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgd8f7146" class="outline-3">
-<h3 id="orgd8f7146">slicing and fancy indexing</h3>
-<div class="outline-text-3" id="text-orgd8f7146">
+<div id="outline-container-org81442cd" class="outline-3">
+<h3 id="org81442cd">slicing and fancy indexing</h3>
+<div class="outline-text-3" id="text-org81442cd">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/B0dU9F6v5U4" frameborder="0" allowfullscreen>slicing and indexing</iframe>
 </p>
@@ -731,9 +730,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org02b3392" class="outline-3">
-<h3 id="org02b3392">First neural network</h3>
-<div class="outline-text-3" id="text-org02b3392">
+<div id="outline-container-orgffc3418" class="outline-3">
+<h3 id="orgffc3418">First neural network</h3>
+<div class="outline-text-3" id="text-orgffc3418">
 <ul class="org-ul">
 <li>After all the work of understanding tensors, the notebook presents a first example of a neural network. At this point you do not need to worry about the syntax (from <code>keras</code>) with which we build the neural network. Just go through the notebook and run the cells. The independent variable (\(x\) variable, if you like) is now a two-dimensional figure: a handwritten number. The labels are the number that was handwritten in the figure. The network tries to predict this label based on the figure. The notebook takes you through the steps and checks accuracy.</li>
 <li>the \(x\) variable in the train set is called <code>train_images</code> which is a 3-dimensional tensor of shape \((60000, 28, 28)\). You cannot work with such \(x\) variables in an OLS regression, but the neural network has no problems with this.</li>
@@ -742,13 +741,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgc398986" class="outline-2">
-<h2 id="orgc398986">Overfitting and underfitting</h2>
-<div class="outline-text-2" id="text-orgc398986">
+<div id="outline-container-org6b9de6d" class="outline-2">
+<h2 id="org6b9de6d">Overfitting and underfitting</h2>
+<div class="outline-text-2" id="text-org6b9de6d">
 </div>
-<div id="outline-container-org063e1c9" class="outline-3">
-<h3 id="org063e1c9">generating the data</h3>
-<div class="outline-text-3" id="text-org063e1c9">
+<div id="outline-container-org8f7b301" class="outline-3">
+<h3 id="org8f7b301">generating the data</h3>
+<div class="outline-text-3" id="text-org8f7b301">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/BIW0H6cB2DU" frameborder="0" allowfullscreen>overfitting generating data</iframe>
 </p>
@@ -783,9 +782,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org0560bcd" class="outline-3">
-<h3 id="org0560bcd">overfitting</h3>
-<div class="outline-text-3" id="text-org0560bcd">
+<div id="outline-container-org64af010" class="outline-3">
+<h3 id="org64af010">overfitting</h3>
+<div class="outline-text-3" id="text-org64af010">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/EXMt0LWgtVs" frameborder="0" allowfullscreen>overfitting in test data</iframe>
 </p>
@@ -817,13 +816,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org261f3c8" class="outline-2">
-<h2 id="org261f3c8">Neural network</h2>
-<div class="outline-text-2" id="text-org261f3c8">
+<div id="outline-container-orga692250" class="outline-2">
+<h2 id="orga692250">Neural network</h2>
+<div class="outline-text-2" id="text-orga692250">
 </div>
-<div id="outline-container-orga14d88b" class="outline-3">
-<h3 id="orga14d88b">perceptron</h3>
-<div class="outline-text-3" id="text-orga14d88b">
+<div id="outline-container-org500760d" class="outline-3">
+<h3 id="org500760d">perceptron</h3>
+<div class="outline-text-3" id="text-org500760d">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/BpKcGueisRI" frameborder="0" allowfullscreen>update coefficients network</iframe>
 </p>
@@ -850,13 +849,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org22bb94b" class="outline-3">
-<h3 id="org22bb94b">tensorflow regression</h3>
-<div class="outline-text-3" id="text-org22bb94b">
+<div id="outline-container-org7bc3263" class="outline-3">
+<h3 id="org7bc3263">tensorflow regression</h3>
+<div class="outline-text-3" id="text-org7bc3263">
 </div>
-<div id="outline-container-orgd782baa" class="outline-4">
-<h4 id="orgd782baa">the math</h4>
-<div class="outline-text-4" id="text-orgd782baa">
+<div id="outline-container-orgd012015" class="outline-4">
+<h4 id="orgd012015">the math</h4>
+<div class="outline-text-4" id="text-orgd012015">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/TAFldQ-af40" frameborder="0" allowfullscreen>tensorflow minimize</iframe>
 </p>
@@ -881,9 +880,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgf784802" class="outline-4">
-<h4 id="orgf784802">the regression</h4>
-<div class="outline-text-4" id="text-orgf784802">
+<div id="outline-container-orgba98c40" class="outline-4">
+<h4 id="orgba98c40">the regression</h4>
+<div class="outline-text-4" id="text-orgba98c40">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/wWjVn1Flphs" frameborder="0" allowfullscreen>tensorflow regression</iframe>
 </p>
@@ -908,13 +907,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org3800b48" class="outline-3">
-<h3 id="org3800b48">tensorflow classification</h3>
-<div class="outline-text-3" id="text-org3800b48">
+<div id="outline-container-orgc2e7d89" class="outline-3">
+<h3 id="orgc2e7d89">tensorflow classification</h3>
+<div class="outline-text-3" id="text-orgc2e7d89">
 </div>
-<div id="outline-container-org820c6db" class="outline-4">
-<h4 id="org820c6db">getting the data ready</h4>
-<div class="outline-text-4" id="text-org820c6db">
+<div id="outline-container-org2d1920f" class="outline-4">
+<h4 id="org2d1920f">getting the data ready</h4>
+<div class="outline-text-4" id="text-org2d1920f">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/aTUcFsWPBJ8" frameborder="0" allowfullscreen>getting data ready</iframe>
 </p>
@@ -941,9 +940,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orga459f83" class="outline-4">
-<h4 id="orga459f83">estimating the network</h4>
-<div class="outline-text-4" id="text-orga459f83">
+<div id="outline-container-orgff631c8" class="outline-4">
+<h4 id="orgff631c8">estimating the network</h4>
+<div class="outline-text-4" id="text-orgff631c8">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/lNoK-NdW1sQ" frameborder="0" allowfullscreen>estimating network</iframe>
 </p>
@@ -976,13 +975,13 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-org92aae47" class="outline-2">
-<h2 id="org92aae47">Back to our first neural network</h2>
-<div class="outline-text-2" id="text-org92aae47">
+<div id="outline-container-org9dca419" class="outline-2">
+<h2 id="org9dca419">Back to our first neural network</h2>
+<div class="outline-text-2" id="text-org9dca419">
 </div>
-<div id="outline-container-org6c0562b" class="outline-3">
-<h3 id="org6c0562b">defining the network and fitting it</h3>
-<div class="outline-text-3" id="text-org6c0562b">
+<div id="outline-container-org59aaddc" class="outline-3">
+<h3 id="org59aaddc">defining the network and fitting it</h3>
+<div class="outline-text-3" id="text-org59aaddc">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/bqY-iOitEYk" frameborder="0" allowfullscreen>defining the network</iframe>
 </p>
@@ -1010,9 +1009,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org053b730" class="outline-3">
-<h3 id="org053b730">checking the fit</h3>
-<div class="outline-text-3" id="text-org053b730">
+<div id="outline-container-orge334cf2" class="outline-3">
+<h3 id="orge334cf2">checking the fit</h3>
+<div class="outline-text-3" id="text-orge334cf2">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/wq8lxJ-ugwM" frameborder="0" allowfullscreen>checking the fit</iframe>
 </p>
@@ -1035,9 +1034,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgd864489" class="outline-3">
-<h3 id="orgd864489">number of epochs and overfitting</h3>
-<div class="outline-text-3" id="text-orgd864489">
+<div id="outline-container-org657134d" class="outline-3">
+<h3 id="org657134d">number of epochs and overfitting</h3>
+<div class="outline-text-3" id="text-org657134d">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/cEJQJQ2wSgI" frameborder="0" allowfullscreen>choosing the number of epochs</iframe>
 </p>
@@ -1069,17 +1068,17 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-org518d1d2" class="outline-2">
-<h2 id="org518d1d2">Treatment effects</h2>
-<div class="outline-text-2" id="text-org518d1d2">
+<div id="outline-container-org67683e9" class="outline-2">
+<h2 id="org67683e9">Treatment effects</h2>
+<div class="outline-text-2" id="text-org67683e9">
 </div>
-<div id="outline-container-orgd2c2376" class="outline-3">
-<h3 id="orgd2c2376">IV</h3>
-<div class="outline-text-3" id="text-orgd2c2376">
+<div id="outline-container-org61f37f3" class="outline-3">
+<h3 id="org61f37f3">IV</h3>
+<div class="outline-text-3" id="text-org61f37f3">
 </div>
-<div id="outline-container-org2f5f2e5" class="outline-4">
-<h4 id="org2f5f2e5">generating our data</h4>
-<div class="outline-text-4" id="text-org2f5f2e5">
+<div id="outline-container-org3dec709" class="outline-4">
+<h4 id="org3dec709">generating our data</h4>
+<div class="outline-text-4" id="text-org3dec709">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/o5O2P8DrAZA" frameborder="0" allowfullscreen>generating our data</iframe>
 </p>
@@ -1103,9 +1102,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org1ea9573" class="outline-4">
-<h4 id="org1ea9573">IV estimate</h4>
-<div class="outline-text-4" id="text-org1ea9573">
+<div id="outline-container-org2bb22fe" class="outline-4">
+<h4 id="org2bb22fe">IV estimate</h4>
+<div class="outline-text-4" id="text-org2bb22fe">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/GjBvmgOB4TU" frameborder="0" allowfullscreen>IV estimate</iframe>
 </p>
@@ -1129,13 +1128,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org0629b71" class="outline-3">
-<h3 id="org0629b71">Heterogenous treatment effects</h3>
-<div class="outline-text-3" id="text-org0629b71">
+<div id="outline-container-org6b7e6e5" class="outline-3">
+<h3 id="org6b7e6e5">Heterogenous treatment effects</h3>
+<div class="outline-text-3" id="text-org6b7e6e5">
 </div>
-<div id="outline-container-orgb8bf676" class="outline-4">
-<h4 id="orgb8bf676">generating our data</h4>
-<div class="outline-text-4" id="text-orgb8bf676">
+<div id="outline-container-org3a0b4e9" class="outline-4">
+<h4 id="org3a0b4e9">generating our data</h4>
+<div class="outline-text-4" id="text-org3a0b4e9">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/CJbiwXSnAV8" frameborder="0" allowfullscreen>generating data</iframe>
 </p>
@@ -1164,9 +1163,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org3fbf7f8" class="outline-4">
-<h4 id="org3fbf7f8">what can we calculate?</h4>
-<div class="outline-text-4" id="text-org3fbf7f8">
+<div id="outline-container-orgc1352ed" class="outline-4">
+<h4 id="orgc1352ed">what can we calculate?</h4>
+<div class="outline-text-4" id="text-orgc1352ed">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/s4MinmKxytw" frameborder="0" allowfullscreen>comparing average earnings of individuals with and without traing</iframe>
 </p>
@@ -1188,9 +1187,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org9016d38" class="outline-4">
-<h4 id="org9016d38">three cases where we can identify the treatment effect</h4>
-<div class="outline-text-4" id="text-org9016d38">
+<div id="outline-container-org44f69c3" class="outline-4">
+<h4 id="org44f69c3">three cases where we can identify the treatment effect</h4>
+<div class="outline-text-4" id="text-org44f69c3">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/_GiHNAfhm4Y" frameborder="0" allowfullscreen>three cases where we can identify treatment effects</iframe>
 </p>
@@ -1213,13 +1212,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgda8cc46" class="outline-3">
-<h3 id="orgda8cc46">Probability of treatment</h3>
-<div class="outline-text-3" id="text-orgda8cc46">
+<div id="outline-container-org0157207" class="outline-3">
+<h3 id="org0157207">Probability of treatment</h3>
+<div class="outline-text-3" id="text-org0157207">
 </div>
-<div id="outline-container-org447b412" class="outline-4">
-<h4 id="org447b412">generating our data</h4>
-<div class="outline-text-4" id="text-org447b412">
+<div id="outline-container-org0644bcb" class="outline-4">
+<h4 id="org0644bcb">generating our data</h4>
+<div class="outline-text-4" id="text-org0644bcb">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/KrTwMeWUCx0" frameborder="0" allowfullscreen>generating data with probability of treatment</iframe>
 </p>
@@ -1241,9 +1240,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgc28bca7" class="outline-4">
-<h4 id="orgc28bca7">effect of training on earnings</h4>
-<div class="outline-text-4" id="text-orgc28bca7">
+<div id="outline-container-org3838339" class="outline-4">
+<h4 id="org3838339">effect of training on earnings</h4>
+<div class="outline-text-4" id="text-org3838339">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/Gk_lo-UG_tA" frameborder="0" allowfullscreen>effect of training</iframe>
 </p>
@@ -1268,9 +1267,9 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-orgeb392a3" class="outline-2">
-<h2 id="orgeb392a3">Part 2</h2>
-<div class="outline-text-2" id="text-orgeb392a3">
+<div id="outline-container-orgc5bf490" class="outline-2">
+<h2 id="orgc5bf490">Part 2</h2>
+<div class="outline-text-2" id="text-orgc5bf490">
 <p>
 For part 2 of the screencasts, go to <a href="./pagescreencasts2.html">this page</a>.
 </p>

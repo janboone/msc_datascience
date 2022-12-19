@@ -19,7 +19,7 @@ For the first part of the course we use [[https://github.com/janboone/msc_datasc
 
 ** Why are there screencasts?
 
-The screencasts were initially developed because of the 2020 corona crisis where students were no longer able to come to the campus of Tilburg University. But they can also be used as complements to the lecturers and classes taught.
+The screencasts are used as complements to the lecturers and classes taught. For some programming problems you need to take time to try to solve them yourself. This we cannot do in class as some students solve them quickly (and get bored) while others need more time to solve these by themselves. 
 
 ** Suggested use of the screencasts
 
@@ -42,9 +42,9 @@ Python error messages:
 
 ** Prerequisite knowledge
 
-*Economics/Econometrics* this introduction to datascience is part of an MSc degree in Economics. Hence, we assume that you know what OLS is, standard errors, the difference between correlation and causality and you have seen instrumental variables before. In terms of math, you can do some basic linear algebra like multiplying a matrix and a vector and know what a (partial) derivative of a function is.
+*Economics/Econometrics:* this introduction to datascience is part of an MSc degree in Economics. Hence, we assume that you know what OLS is, standard errors, the difference between correlation and causality and you have seen instrumental variables before. In terms of math, you can do some basic linear algebra like multiplying a matrix and a vector and know what a (partial) derivative of a function is.
 
-*Python*: you have done the python track of [[https://janboone.github.io/applied-economics/index.html][Applied Economic Analysis]].
+*Python*: you have done [[https://janboone.github.io/applied-economics/index.html][Applied Economic Analysis]].
 
 ** Libraries we use
 
