@@ -10,6 +10,8 @@ This website contains the material for the MSc course Seminar Data Science for E
 This year the course is taught by:
 + Jan Boone
 + Aleksandr Minchenko
++ Suzanne van Veen
++ Reyn Wagenaar
 
 * Course description
   :PROPERTIES:
@@ -63,12 +65,12 @@ For this course a series of screencasts is available. Screencasts are available 
 | Fri | 2023-03-10 | 10:45-12:30 | WZ 201 | treatment effects                             | 3, 4                                        |
 | Tue | 2023-03-14 | 08:45-10:30 | TZ 3   | part 2: dealing with data                     | tensorflow 1, 2,                            |
 | Fri | 2023-03-17 | 10:45-12:30 | WZ 201 | Bayesian statistics                           |                                             |
-| Tue | 2023-03-21 | 08:45-10:30 | TZ 3   | estimating a Bayesian model, missing data     | 3, 4                                        |
-| Fri | 2023-03-24 | 10:45-12:30 | WZ 201 | How to choose an editor                       | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] |
+| Tue | 2023-03-21 | 08:45-10:30 | TZ 3   | How to choose an editor                       | 3, 4                                        |
+| Fri | 2023-03-24 | 10:45-12:30 | WZ 201 | estimating a Bayesian model, missing data     | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] |
 | Tue | 2023-03-28 | 08:45-10:30 | TZ 3   | Bayesian time series, Bayesian neural network |                                             |
-| Fri | 2023-03-31 | 10:45-12:30 | WZ 201 | Guest lecture                                 |                                             |
+| Fri | 2023-03-31 | 10:45-12:30 | WZ 201 | confidence interval and Q&A                   |                                             |
 | Tue | 2023-04-04 | 08:45-10:30 | TZ 3   | (reserve)                                     |                                             |
-| Thu | 2023-04-06 | 14:45-16:30 | WZ 104 | confidence interval and Q&A                   |                                             |
+| Thu | 2023-04-06 | 14:45-16:30 | WZ 104 | Guest lecture                                 |                                             |
 
 
 + we will see how fast we go, the column "topics" is an indication of what will be discussed in each week
