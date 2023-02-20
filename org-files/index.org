@@ -59,17 +59,17 @@ For this course a series of screencasts is available. Screencasts are available 
 | Fri | 2023-02-03 | 10:45-12:30 | WZ 201 | Introduction to the course                    |                                             |
 | Fri | 2023-02-10 | 10:45-12:30 | WZ 201 | part 1: distributions, bootstrapping          | statistical simulation 1, 2,                |
 | Fri | 2023-02-17 | 10:45-12:30 | WZ 201 | OLS, causality                                | 3, 4                                        |
-| Tue | 2023-02-28 | 08:45-10:30 | TZ 3   | tensors, first neural network                 |                                             |
+| Tue | 2023-02-28 | 08:45-10:30 | DZ 006 | tensors, first neural network                 |                                             |
 | Fri | 2023-03-03 | 10:45-12:30 | WZ 201 | over/under fitting, neural network            | keras 1, 2,                                 |
-| Tue | 2023-03-07 | 08:45-10:30 | TZ 3   | [[./Git_Lecture.org][Lecture on Git]]                                |                                             |
+| Tue | 2023-03-07 | 08:45-10:30 | DZ 006 | [[./Git_Lecture.org][Lecture on Git]]                                |                                             |
 | Fri | 2023-03-10 | 10:45-12:30 | WZ 201 | treatment effects                             | 3, 4                                        |
-| Tue | 2023-03-14 | 08:45-10:30 | TZ 3   | part 2: dealing with data                     | tensorflow 1, 2,                            |
+| Tue | 2023-03-14 | 08:45-10:30 | DZ 006 | part 2: dealing with data                     | tensorflow 1, 2,                            |
 | Fri | 2023-03-17 | 10:45-12:30 | WZ 201 | Bayesian statistics                           |                                             |
-| Tue | 2023-03-21 | 08:45-10:30 | TZ 3   | How to choose an editor                       | 3, 4                                        |
+| Tue | 2023-03-21 | 08:45-10:30 | DZ 006 | How to choose an editor                       | 3, 4                                        |
 | Fri | 2023-03-24 | 10:45-12:30 | WZ 201 | estimating a Bayesian model, missing data     | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] |
-| Tue | 2023-03-28 | 08:45-10:30 | TZ 3   | Bayesian time series, Bayesian neural network |                                             |
+| Tue | 2023-03-28 | 08:45-10:30 | DZ 006 | Bayesian time series, Bayesian neural network |                                             |
 | Fri | 2023-03-31 | 10:45-12:30 | WZ 201 | confidence interval and Q&A                   |                                             |
-| Tue | 2023-04-04 | 08:45-10:30 | TZ 3   | (reserve)                                     |                                             |
+| Tue | 2023-04-04 | 08:45-10:30 | DZ 006 | (reserve)                                     |                                             |
 | Thu | 2023-04-06 | 14:45-16:30 | WZ 104 | Guest lecture                                 |                                             |
 
 
