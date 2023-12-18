@@ -5,13 +5,10 @@
 
 This website contains the material for the MSc course Seminar Data Science for Economics
 
-**This website is under construction for 2022/2023**
+**This website is under construction for 2023/2024**
 
 This year the course is taught by:
 + Jan Boone
-+ Aleksandr Minchenko
-+ Suzanne van Veen
-+ Reyn Wagenaar
 
 * Course description
   :PROPERTIES:
@@ -34,7 +31,7 @@ For this course we are very happy that we partner with [[https://www.datacamp.co
 
 *Required Prerequisites*
 
-Students make sure they follow Econometrics 1 and the mandatory course AEA 1.
+Students make sure they follow Econometrics 1 and the mandatory course Methods: Python programming for economists.
 
 
 #+TOC: headlines 2
@@ -54,24 +51,20 @@ For this course a series of screencasts is available. Screencasts are available 
    :END:
 
 
-| day |       date |        time | room   | topics                                        | datacamp                                    |
-|-----+------------+-------------+--------+-----------------------------------------------+---------------------------------------------|
-| Fri | 2023-02-03 | 10:45-12:30 | WZ 201 | Introduction to the course                    |                                             |
-| Fri | 2023-02-10 | 10:45-12:30 | WZ 201 | part 1: distributions, bootstrapping          | statistical simulation 1, 2,                |
-| Fri | 2023-02-17 | 10:45-12:30 | WZ 201 | OLS, causality                                | 3, 4                                        |
-| Tue | 2023-02-28 | 08:45-10:30 | DZ 006 | tensors, first neural network                 |                                             |
-| Fri | 2023-03-03 | 10:45-12:30 | WZ 201 | over/under fitting, neural network            | keras 1, 2,                                 |
-| Tue | 2023-03-07 | 08:45-10:30 | DZ 006 | [[./Git_Lecture.org][Lecture on Git]]                                |                                             |
-| Fri | 2023-03-10 | 10:45-12:30 | WZ 201 | treatment effects                             | 3, 4                                        |
-| Tue | 2023-03-14 | 08:45-10:30 | DZ 006 | part 2: dealing with data                     | tensorflow 1, 2,                            |
-| Fri | 2023-03-17 | 10:45-12:30 | WZ 201 | Bayesian statistics                           |                                             |
-| Tue | 2023-03-21 | 08:45-10:30 | DZ 006 | How to choose an editor                       | 3, 4                                        |
-| Fri | 2023-03-24 | 10:45-12:30 | WZ 201 | estimating a Bayesian model, missing data     | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] |
-| Tue | 2023-03-28 | 08:45-10:30 | DZ 006 | Bayesian time series, Bayesian neural network |                                             |
-| Fri | 2023-03-31 | 10:45-12:30 | WZ 201 | confidence interval and Q&A                   |                                             |
-| Tue | 2023-04-04 | 08:45-10:30 | DZ 006 | (reserve)                                     |                                             |
-| Thu | 2023-04-06 | 14:45-16:30 | WZ 104 | Guest lecture                                 |                                             |
-
+| day |       date |        time | staff | room   | datacamp                                    | topics                                        |
+|-----+------------+-------------+-------+--------+---------------------------------------------+-----------------------------------------------|
+| Thu | 2024-02-01 | 10:45-12:30 | Jan   | WZ 202 | statistical simulation 1-4                  | Introduction to the course                    |
+| Thu | 2024-02-08 | 10:45-12:30 | Jan   | WZ 202 | keras 1-4                                   | part 1: distributions, bootstrapping          |
+| Thu | 2024-02-22 | 10:45-12:30 | Jan   | WZ 202 | tensorflow 1-4                              | OLS, causality                                |
+| Tue | 2024-02-27 | 08:45-10:30 | Jan   | WZ 202 |                                             | tensors, first neural network                 |
+| Thu | 2024-02-29 | 10:45-12:30 | Jan   | WZ 202 |                                             | over/under fitting, neural network            |
+| Tue | 2024-03-05 | 08:45-10:30 | Jan   | WZ 202 |                                             | treatment effects                             |
+| Thu | 2024-03-07 | 10:45-12:30 | Jan   | WZ 202 |                                             | part 2: dealing with data                     |
+| Tue | 2024-03-12 | 08:45-10:30 | Jan   | WZ 202 |                                             | Bayesian statistics                           |
+| Thu | 2024-03-14 | 10:45-12:30 | Jan   | WZ 202 | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] | estimating a Bayesian model, missing data     |
+| Tue | 2024-03-19 | 08:45-10:30 | Jan   | WZ 202 |                                             | Bayesian time series, Bayesian neural network |
+| Thu | 2024-03-21 | 10:45-12:30 | Jan   | WZ 202 |                                             | confidence interval and Q&A                   |
+										      
 
 + we will see how fast we go, the column "topics" is an indication of what will be discussed in each week
 + for the first part, you will go through [[https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb][this notebook]]
@@ -88,7 +81,7 @@ For this course a series of screencasts is available. Screencasts are available 
 :END:
 
 Do the following steps:
-+ if you did AEA 1, you already have a [[https://github.com/][github]] account, otherwise create a github account
++ if you did Methods: Python programming for economists, you already have a [[https://github.com/][github]] account, otherwise create a github account
 + go to
   + [[https://jupyterlab.uvt.nl/][jupyter lab]]
     + IT suggests that you use the Firefox browser to access jupyter lab
@@ -146,7 +139,7 @@ If you run into other functions that you are not familiar with, you can use "?",
 np.random.binomial?
 #+END_SRC
 
-Also, you can google!
+Also, you can google, use chatgpt or bard.
 
 Things to take away from this course:
 + how to use random variables in python
@@ -184,9 +177,9 @@ git clone https://github.com/fonnesbeck/intro_stat_modeling_2017.git
    :ID:       D000098A-D12D-4E06-9F7A-2C2549B03236
    :END:
 
-The deadline for the *final assignment* is: Friday June 16th 2023 at 23:59.
+The deadline for the *final assignment* is: Friday June 14th 2024 at 23:59.
 
-The resit deadline for the assignment is: Friday August 18th, 2023. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
+The resit deadline for the assignment is: Friday August 16th, 2024. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
 
 ** Questions
 
@@ -229,22 +222,23 @@ We have a separate page with all relevant [[./Datascience_for_economics.org][ass
 + on Canvas we give you the link to the github repos. with the ~assignment_notebook.ipynb~
 + to submit your final assignment:
   + do not change the name of the ~assignment_notebook.ipynb~ notebook
-  + fill in this [[https://forms.gle/JH8qey2cWEgiUjqq5][google form]]
+  + fill in this [[https://forms.gle/Lp2pYoGzNqYhvAWc6][google form]]
   + push the final notebook on the github classroom repository
 
 ** TODO Instructions for submitting final assignment to be put on Canvas :noexport:
 
-- [X] create assignment on github classroom with the datascience template/notebook (19-12-2022)
-- [X] create google form for students to fill in once they finish assignment: replace last year link above (19-12-2022)
+- [X] create assignment on github classroom with the datascience template/notebook (18-12-2023)
+- [X] create google form for students to fill in once they finish assignment: replace last year link above (18-12-2023)
+- [X] adjust the link under point 4.(18-12-2023)
 
-1. attach instructions: [[file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf][file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf]]
-2. create and post screencast where notebook is downloaded and uploaded on github
-3. show previous step during lecture
+- attach instructions: [[file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf][file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf]]
+- create and post screencast where notebook is downloaded and uploaded on github
+- show previous step during lecture
 
 
 Dear students,
 
-The link for the final datascience assignment (template) is: https://classroom.github.com/a/F6MaGpoX
+The link for the final datascience assignment (template) is: https://classroom.github.com/a/5Xd5xACu
 
 You can do the assignment on your own or with (at max.) one other student. When you use the link to the assignment, you will be asked for your team's name.
 
@@ -254,7 +248,9 @@ When you finish your assignment:
 
 2. push all relevant material onto your assignment's github repository
 
-3. fill in the google form as indicated on the website under Final Assignment 
+3. fill in the google form as indicated on the website under Final Assignment
+
+4. the format of your assignment link is: https://github.com/TiSEM/final-assignment-seminar-datascience-2023-2024-your-team
 
 We need the information from the google form to link your assignment to your student number which is needed for the exam administration.
 
@@ -274,7 +270,7 @@ The following ingredients will be important when we evaluate your assignment:
 
 + Create a "big dataset" from an economic organization providing data; think of:
   + [[https://stats.oecd.org][OECD]]
-  + [[https://data.worldbank.org][World Bank]] (recall that we use a python API to access this data in AEA; this you can use as well, of course)
+  + [[https://data.worldbank.org][World Bank]] (recall that we use a python API to access this data in Methods: Python programming; this you can use as well, of course)
   + [[https://www.imf.org/en/Data][IMF]]
   + [[https://www.federalreserve.gov/data.htm][Federal Reserve]]
   + [[https://data.europa.eu/euodp/en/data/][European Union]]

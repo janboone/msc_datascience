@@ -15,7 +15,7 @@ This page contains the screencasts for the first part of the course [[./index.or
   :ID:       how_are_screencasts_supposed_to_help_datascience
   :END:
 
-For the first part of the course we use [[https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb][this notebook]]. The notebook is fairly self-explanatory, but you may get stuck with some of the questions. The screencasts are meant to help you along if you do not know how to proceed. The idea is similar to what we did in [[https://janboone.github.io/applied-economics/index.html][Applied Economic Analysis]].
+For the first part of the course we use [[https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb][this notebook]]. The notebook is fairly self-explanatory, but you may get stuck with some of the questions. The screencasts are meant to help you along if you do not know how to proceed. The idea is similar to what we did in [[https://janboone.github.io/Python-programming-for-economists/index.html][Methods: Python programming for economists]]
 
 ** Why are there screencasts?
 
@@ -44,7 +44,7 @@ Python error messages:
 
 *Economics/Econometrics:* this introduction to datascience is part of an MSc degree in Economics. Hence, we assume that you know what OLS is, standard errors, the difference between correlation and causality and you have seen instrumental variables before. In terms of math, you can do some basic linear algebra like multiplying a matrix and a vector and know what a (partial) derivative of a function is.
 
-*Python*: you have done [[https://janboone.github.io/applied-economics/index.html][Applied Economic Analysis]].
+*Python*: you have done [[https://janboone.github.io/Python-programming-for-economists/index.html][Methods: Python programming for economists]].
 
 ** Libraries we use
 
@@ -60,7 +60,7 @@ Python error messages:
 
 ** Why am I using emacs
 
-You know how to work with JupyterLab on the university servers (or on your own laptop). As with Applied Economic Analysis, most screencasts will be made with Emacs. See the [[https://janboone.github.io/applied-economics/pagescreencasts.html#org3bcecee][Applied Economics website]] for an explanation why I use Emacs.
+You know how to work with JupyterLab on the university servers (or on your own laptop). As with Methods: Python programming for economists, most screencasts will be made with Emacs. 
 
 * Distributions of an estimator
 

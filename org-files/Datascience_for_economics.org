@@ -24,7 +24,7 @@ In terms of software we will be using [[https://www.python.org/][python]],  [[ht
 
 *Required Prerequisites*
 
-Students make sure they follow Econometrics 1 and the mandatory course AEA 1.
+Students make sure they follow Econometrics 1 and the mandatory course Methods: Python programming for economists.
 
 ** Learning goals
 
