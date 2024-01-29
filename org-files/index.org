@@ -73,7 +73,7 @@ For this course a series of screencasts is available. Screencasts are available 
 
 ** First Lecture
 
-[[./Introduction_Lecture.org][Introduction Lecture]]
+[[https://janboone.github.io/msc_datascience/img/Introduction_Lecture.html][Introduction Lecture]]
 
 *** Assignment 1
 :PROPERTIES:
@@ -218,7 +218,7 @@ We have a separate page with all relevant [[./Datascience_for_economics.org][ass
   :END:
 
 + The final assignment you can do alone or with at max. one other student (i.e. max group size is 2).
-+ for the deadline of the python assignment, see [[Deadlines]] above
++ for the deadline of the assignment, see [[Deadlines]] above
 + on Canvas we give you the link to the github repos. with the ~assignment_notebook.ipynb~
 + to submit your final assignment:
   + do not change the name of the ~assignment_notebook.ipynb~ notebook
