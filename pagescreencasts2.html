@@ -62,64 +62,62 @@ The videos go through the questions in <a href="https://github.com/janboone/msc_
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org72a1ffd">Dealing with data</a>
+<li><a href="#org6d32b2c">Dealing with data</a>
 <ul>
-<li><a href="#org806c98c">mortality</a></li>
-<li><a href="#org6472823">GDP</a></li>
-<li><a href="#org895aa2c">Income quantiles</a></li>
-<li><a href="#orgf3e1a2c">life style variables</a></li>
+<li><a href="#orgf3f19f3">mortality</a></li>
+<li><a href="#orgae3ffd8">GDP</a></li>
+<li><a href="#orgb19efa2">Income quantiles</a></li>
+<li><a href="#orgb8453b1">life style variables</a></li>
 </ul>
 </li>
-<li><a href="#org4db0f72">Bayesian statistics</a>
+<li><a href="#org301e300">Bayesian statistics</a>
 <ul>
-<li><a href="#org7fd8b4c">Introduction</a></li>
-<li><a href="#orgd6c731e">Simple Bayesian model</a></li>
+<li><a href="#orga2c971b">Introduction</a></li>
+<li><a href="#orgbf584fd">Simple Bayesian model</a></li>
 </ul>
 </li>
-<li><a href="#orgbca4882">Estimating a Bayesian model</a>
+<li><a href="#org1308674">Estimating a Bayesian model</a>
 <ul>
-<li><a href="#orgb0343d1">formulating the model</a></li>
-<li><a href="#org9ff7518">sampling from the model</a></li>
-<li><a href="#orgfb82e4b">summarizing posterior distribution and model fit</a></li>
-<li><a href="#org012d11d">Income inequality and standardizing data</a></li>
-<li><a href="#org49c3b4e">Bayesian Model</a></li>
-<li><a href="#org2b07d97">Checking model</a></li>
-<li><a href="#org0a95a01">Interactive plot with Altair</a></li>
+<li><a href="#org93b57af">formulating the model</a></li>
+<li><a href="#org19399ba">sampling from the model</a></li>
+<li><a href="#orge938f7e">summarizing posterior distribution and model fit</a></li>
+<li><a href="#org20a0e20">Income inequality and standardizing data</a></li>
+<li><a href="#org3a86367">Bayesian Model</a></li>
+<li><a href="#org7588efb">Checking model</a></li>
+<li><a href="#org01b77c3">Interactive plot with Altair</a></li>
 </ul>
 </li>
-<li><a href="#org8766645">Dealing with missing data the Bayesian way</a>
+<li><a href="#org15cdaef">Dealing with missing data the Bayesian way</a>
 <ul>
-<li><a href="#org2c33c52">Masked arrays</a></li>
-<li><a href="#orgbe39649">Estimating model with missing observations</a></li>
+<li><a href="#org8c31256">Masked arrays</a></li>
+<li><a href="#org38c7c40">Estimating model with missing observations</a></li>
 </ul>
 </li>
-<li><a href="#org919256a">Bayesian time series</a>
+<li><a href="#org48c03b3">Bayesian time series</a>
 <ul>
-<li><a href="#org0c1fb70">Gaussian process</a></li>
-<li><a href="#org3ebba73">Covid data</a></li>
+<li><a href="#orgfa3406b">Covid data</a></li>
 </ul>
 </li>
-<li><a href="#org45f2fa3">Bayesian neural network</a>
+<li><a href="#org709d85f">Bayesian neural network</a>
 <ul>
-<li><a href="#orge7875bf">Generating the data and the grid</a></li>
-<li><a href="#org43cdbe2">Code for the network</a></li>
-<li><a href="#orge78e98e">Evaluating the estimated network</a></li>
-<li><a href="#org6ac96df">Further graphical illustrations of the estimated network</a></li>
+<li><a href="#org5c59c66">Generating the data and the grid</a></li>
+<li><a href="#orgffe91f8">Code for the network</a></li>
+<li><a href="#orgb241270">Evaluating the estimated network</a></li>
 </ul>
 </li>
-<li><a href="#orgc6f8633">What is a confidence interval</a></li>
+<li><a href="#org95fd383">What is a confidence interval</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org72a1ffd" class="outline-2">
-<h2 id="org72a1ffd">Dealing with data</h2>
-<div class="outline-text-2" id="text-org72a1ffd">
+<div id="outline-container-org6d32b2c" class="outline-2">
+<h2 id="org6d32b2c">Dealing with data</h2>
+<div class="outline-text-2" id="text-org6d32b2c">
 </div>
-<div id="outline-container-org806c98c" class="outline-3">
-<h3 id="org806c98c">mortality</h3>
-<div class="outline-text-3" id="text-org806c98c">
+<div id="outline-container-orgf3f19f3" class="outline-3">
+<h3 id="orgf3f19f3">mortality</h3>
+<div class="outline-text-3" id="text-orgf3f19f3">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/921Z4AgHwNY" frameborder="0" allowfullscreen>downloading mortality variables</iframe>
 </p>
@@ -131,8 +129,20 @@ Topics we cover in this video:
 <li>use <code>eurostat.get_data_df()</code> to download variables directly into a <code>pandas</code> dataframe</li>
 <li>use the <code>.unique()</code> method to find the values of a variable</li>
 <li><code>.rename()</code> to give a column a different name</li>
-<li><code>.replace()</code> to change the (row) values of a column</li>
-<li>use <code>pd.melt()</code> to "change columns into rows"</li>
+<li><code>.replace()</code> to change the (row) values of a column
+<ul class="org-ul">
+<li>note that eurostat has changed the format of its data since the video was made</li>
+<li>the column that needs to be renamed is now denoted by <code>geo\TIME_PERIOD</code> instead of <code>geo\time</code> as in the video</li>
+</ul></li>
+<li>use <code>pd.melt()</code> to "change columns into rows"
+<ul class="org-ul">
+<li>also here the eurostat interface has changed: the year-columns are strings (these were integers when the video was recorded)</li>
+<li>this leads to 2 changes:
+<ul class="org-ul">
+<li>in the <code>melt</code> statement we use <code>value_vars = [str(y) for y in np.arange(2011,2018)]</code> as we need to refer to strings like "2011"</li>
+<li>when we want to refer to year as an integer we need: <code>df['year'] = df.year.astype('int')</code></li>
+</ul></li>
+</ul></li>
 <li><code>.set_index</code> together with <code>.unstack()</code> to get variables in rows "into different columns"</li>
 <li><code>reset_index()</code> removes the index hierarchy to get a dataframe without an index</li>
 <li>and then renaming columns with <code>df.columns = [' '.join(col).strip() for col in df.columns.values]</code></li>
@@ -145,16 +155,16 @@ Questions you should be able to answer before continuing:
 <li>consider the following two statements, where we replace/rename a label:
 <ul class="org-ul">
 <li><code>df['country'] = df['geo'].replace(eurostat_dictionary)</code></li>
-<li><code>df.rename({'geo\\time':'geo'},inplace=True, axis=1)</code></li>
+<li><code>df.rename({'geo\\TIME_PERIOD':'geo'},inplace=True, axis=1)</code></li>
 </ul></li>
 <li>why does the second statement use <code>inplace = True</code> and the first does not?</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org6472823" class="outline-3">
-<h3 id="org6472823">GDP</h3>
-<div class="outline-text-3" id="text-org6472823">
+<div id="outline-container-orgae3ffd8" class="outline-3">
+<h3 id="orgae3ffd8">GDP</h3>
+<div class="outline-text-3" id="text-orgae3ffd8">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/nm0V0vVfpiI" frameborder="0" allowfullscreen>downloading gdp</iframe>
 </p>
@@ -178,9 +188,9 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-org895aa2c" class="outline-3">
-<h3 id="org895aa2c">Income quantiles</h3>
-<div class="outline-text-3" id="text-org895aa2c">
+<div id="outline-container-orgb19efa2" class="outline-3">
+<h3 id="orgb19efa2">Income quantiles</h3>
+<div class="outline-text-3" id="text-orgb19efa2">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/Yfl-z8E3VCU" frameborder="0" allowfullscreen>downloading income quantiles</iframe>
 </p>
@@ -205,9 +215,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgf3e1a2c" class="outline-3">
-<h3 id="orgf3e1a2c">life style variables</h3>
-<div class="outline-text-3" id="text-orgf3e1a2c">
+<div id="outline-container-orgb8453b1" class="outline-3">
+<h3 id="orgb8453b1">life style variables</h3>
+<div class="outline-text-3" id="text-orgb8453b1">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/nOaNkcpnINg" frameborder="0" allowfullscreen>downloading lifestyle variables</iframe>
 </p>
@@ -217,9 +227,16 @@ Topics we cover in this video:
 </p>
 <ul class="org-ul">
 <li>downloading the data for BMI and alcohol consumption is similar to what we did before: the columns that we want to "turn into rows" are years</li>
-<li>hence we can use <code>np.arange(2011,2021)</code> or even simpler <code>[2014]</code> (if we only want one year) in the <code>melt</code> statement</li>
-<li>at the time of making the video, the Eurostat data for smoking has the country abbreviations as columns that we want to "turn into rows"</li>
+<li>hence we can use <code>np.arange(2011,2021)</code> or even simpler <code>['2014']</code> (if we only want one year) in the <code>melt</code> statement
+<ul class="org-ul">
+<li>in the video, year is an integer and he use <code>[2014]</code></li>
+</ul></li>
+<li>at the time of making the video, the Eurostat data for smoking has the country abbreviations as columns that we want to "turn into rows"
+<ul class="org-ul">
 <li>here we use <code>df_n.columns[4:]</code> in the melt statement</li>
+<li>nowadays the structure of the lifestyle data is similar to what we saw above with the column <code>geo\TIME_PERIOD</code></li>
+<li>the <code>melt</code> statement should now use <code>value_vars = ['2014']</code></li>
+</ul></li>
 </ul>
 
 <p>
@@ -238,13 +255,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org4db0f72" class="outline-2">
-<h2 id="org4db0f72">Bayesian statistics</h2>
-<div class="outline-text-2" id="text-org4db0f72">
+<div id="outline-container-org301e300" class="outline-2">
+<h2 id="org301e300">Bayesian statistics</h2>
+<div class="outline-text-2" id="text-org301e300">
 </div>
-<div id="outline-container-org7fd8b4c" class="outline-3">
-<h3 id="org7fd8b4c">Introduction</h3>
-<div class="outline-text-3" id="text-org7fd8b4c">
+<div id="outline-container-orga2c971b" class="outline-3">
+<h3 id="orga2c971b">Introduction</h3>
+<div class="outline-text-3" id="text-orga2c971b">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/VGe2AHNkMUU" frameborder="0" allowfullscreen>Bayes' theorem</iframe>
 </p>
@@ -260,11 +277,12 @@ Topics we cover in this video:
 P(\theta | \text{data}) = \frac{P(\text{data}|\theta)*P(\theta)}{P(\text{data})}
 \end{equation}
 <ul class="org-ul">
-<li>below we will use <code>pymc3</code> (imported as <code>pm</code>) to derive the posterior distribution \(P(\theta | \text{data})\):
+<li>below we will use <code>pymc</code> (imported as <code>pm</code>) to derive the posterior distribution \(P(\theta | \text{data})\):
 <ul class="org-ul">
 <li>the probability distribution of the parameters \(\theta\) given the data that we have</li>
 </ul></li>
 <li>we use Bayes' theorem to find the probability that someone is a vampire, conditional on testing positive</li>
+<li>note that the video uses the older library <code>pymc3</code>, but that will give an error on the university jupyterlab server</li>
 </ul>
 
 <p>
@@ -276,9 +294,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgd6c731e" class="outline-3">
-<h3 id="orgd6c731e">Simple Bayesian model</h3>
-<div class="outline-text-3" id="text-orgd6c731e">
+<div id="outline-container-orgbf584fd" class="outline-3">
+<h3 id="orgbf584fd">Simple Bayesian model</h3>
+<div class="outline-text-3" id="text-orgbf584fd">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/Rlvy1ItxU0A" frameborder="0" allowfullscreen>First Baysian model</iframe>
 </p>
@@ -289,7 +307,7 @@ Topics we cover in this video:
 <ul class="org-ul">
 <li><a href="https://en.wikipedia.org/wiki/Binomial_distribution">binomial distribution</a></li>
 <li>we have data on an experiment where a coin is throw up to 20 times; we see how the posterior evolves after 1, 2, 3, 4, 5 and 20 throws</li>
-<li>do not worry about the <code>pymc3</code> syntax yet (this will be explained in later videos)</li>
+<li>do not worry about the <code>pymc</code> syntax yet (this will be explained in later videos)</li>
 <li>focus on the figure showing how the posterior distribution for <code>p</code> evolves and try to understand how different values for \(y\) affect this distribution</li>
 </ul>
 
@@ -308,13 +326,13 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-orgbca4882" class="outline-2">
-<h2 id="orgbca4882">Estimating a Bayesian model</h2>
-<div class="outline-text-2" id="text-orgbca4882">
+<div id="outline-container-org1308674" class="outline-2">
+<h2 id="org1308674">Estimating a Bayesian model</h2>
+<div class="outline-text-2" id="text-org1308674">
 </div>
-<div id="outline-container-orgb0343d1" class="outline-3">
-<h3 id="orgb0343d1">formulating the model</h3>
-<div class="outline-text-3" id="text-orgb0343d1">
+<div id="outline-container-org93b57af" class="outline-3">
+<h3 id="org93b57af">formulating the model</h3>
+<div class="outline-text-3" id="text-org93b57af">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/1urA2THS46A" frameborder="0" allowfullscreen>Model specification</iframe>
 </p>
@@ -323,7 +341,7 @@ Questions you should be able to answer before continuing:
 Topics we cover in this video:
 </p>
 <ul class="org-ul">
-<li>start <code>pymc3</code> model as follows: <code>with pm.Model() as model_name:</code></li>
+<li>start <code>pymc</code> model as follows: <code>with pm.Model() as model_name:</code></li>
 <li>then give the priors for the parameters of the models: <code>slope = pm.Normal('slope', 0,1)</code></li>
 <li>link the model to observed variable in the data, here <code>df.y</code> (column <code>y</code> from dataframe <code>df</code>):
 <ul class="org-ul">
@@ -341,9 +359,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org9ff7518" class="outline-3">
-<h3 id="org9ff7518">sampling from the model</h3>
-<div class="outline-text-3" id="text-org9ff7518">
+<div id="outline-container-org19399ba" class="outline-3">
+<h3 id="org19399ba">sampling from the model</h3>
+<div class="outline-text-3" id="text-org19399ba">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/sOl41BfFwEw" frameborder="0" allowfullscreen>Sampling from the model</iframe>
 </p>
@@ -355,11 +373,12 @@ Topics we cover in this video:
 <li>sample from the posterior with <code>trace = pm.sample()</code></li>
 <li>the posterior predictive gives for each observation ('row') in your data, the prediction of the 'y' variable for this observation</li>
 <li>this is useful to check the fit of the model</li>
-<li>use <code>pm.sample_posterior_prediction(trace,varnames = ['obs'])</code> to generate the posterior predictive</li>
-<li>to capture the trace and the posterior predictive into one object use <code>az.from_pymc3()</code></li>
-<li>this can be used to save the trace and posterior predictive together</li>
+<li>use <code>pm.sample_posterior_predictive(trace, extend_inferencedata = True)</code> to generate the posterior predictive
+<ul class="org-ul">
+<li>in the older <code>pymc3</code> syntax, the statement was: <code>pm.sample_posterior_prediction(trace,varnames = ['obs'])</code></li>
+<li>to capture the trace and the posterior predictive into one we used <code>az.from_pymc3()</code> in the video, but this can now be achieved with <code>extend_inferencedata = True</code></li>
+</ul></li>
 </ul>
-
 
 
 <p>
@@ -377,9 +396,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgfb82e4b" class="outline-3">
-<h3 id="orgfb82e4b">summarizing posterior distribution and model fit</h3>
-<div class="outline-text-3" id="text-orgfb82e4b">
+<div id="outline-container-orge938f7e" class="outline-3">
+<h3 id="orge938f7e">summarizing posterior distribution and model fit</h3>
+<div class="outline-text-3" id="text-orge938f7e">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/Dxx8lbKDk_0" frameborder="0" allowfullscreen>summarizing posterior and fit</iframe>
 </p>
@@ -394,6 +413,7 @@ Topics we cover in this video:
 <ul class="org-ul">
 <li>use of <code>np.percentile()</code> to find the percentiles</li>
 <li><code>matplotlib.pyplot</code>'s <code>vlines</code> to plot the percentiles as a vertical line</li>
+<li>note that with the new <code>pymc</code> syntax, the <code>posterior_predictive</code> is now part of <code>trace</code> because we said <code>extend_inferencedata = True</code> in <code>pm.sample_posterior_predictive()</code></li>
 </ul></li>
 </ul>
 
@@ -406,9 +426,9 @@ Questions you should be able to answer before continuing:
 </ul>
 </div>
 
-<div id="outline-container-orgff1cf49" class="outline-4">
-<h4 id="orgff1cf49">Eurostat data</h4>
-<div class="outline-text-4" id="text-orgff1cf49">
+<div id="outline-container-org70bc65b" class="outline-4">
+<h4 id="org70bc65b">Eurostat data</h4>
+<div class="outline-text-4" id="text-org70bc65b">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/gnE9K0u6p34" frameborder="0" allowfullscreen>Loading and plotting Eurostat data</iframe>
 </p>
@@ -425,9 +445,9 @@ Topics we cover in this video:
 </div>
 
 
-<div id="outline-container-org012d11d" class="outline-3">
-<h3 id="org012d11d">Income inequality and standardizing data</h3>
-<div class="outline-text-3" id="text-org012d11d">
+<div id="outline-container-org20a0e20" class="outline-3">
+<h3 id="org20a0e20">Income inequality and standardizing data</h3>
+<div class="outline-text-3" id="text-org20a0e20">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/32A_LTy5RW4" frameborder="0" allowfullscreen>Income inequality and standardizing data</iframe>
 </p>
@@ -454,9 +474,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org49c3b4e" class="outline-3">
-<h3 id="org49c3b4e">Bayesian Model</h3>
-<div class="outline-text-3" id="text-org49c3b4e">
+<div id="outline-container-org3a86367" class="outline-3">
+<h3 id="org3a86367">Bayesian Model</h3>
+<div class="outline-text-3" id="text-org3a86367">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/IFi50EBpXig" frameborder="0" allowfullscreen>Bayesian model</iframe>
 </p>
@@ -467,8 +487,8 @@ Topics we cover in this video:
 <ul class="org-ul">
 <li>we build a model to explain how log-mortality varies between countries and genders</li>
 <li>we use 'mortality' instead of 'obs' when linking the model to the observed (standardized) variable <code>log_mortality</code></li>
+<li>in the old <code>pymc3</code> syntax, you could use the keyword <code>sd</code> to specify the standard deviation of a normal distribution. In <code>pymc</code> the keyword is <code>sigma</code>, but you do not actually need to specify the keyword. Thus <code>constant = pm.Normal('constant', 0.0, 1.0)</code> is the same as <code>constant = pm.Normal('constant', mu = 0.0, sigma = 1.0)</code>.</li>
 </ul>
-
 
 <p>
 Questions you should be able to answer before continuing:
@@ -480,9 +500,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org2b07d97" class="outline-3">
-<h3 id="org2b07d97">Checking model</h3>
-<div class="outline-text-3" id="text-org2b07d97">
+<div id="outline-container-org7588efb" class="outline-3">
+<h3 id="org7588efb">Checking model</h3>
+<div class="outline-text-3" id="text-org7588efb">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/ozzR5_DXMqs" frameborder="0" allowfullscreen>Checking the model</iframe>
 </p>
@@ -506,9 +526,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org0a95a01" class="outline-3">
-<h3 id="org0a95a01">Interactive plot with Altair</h3>
-<div class="outline-text-3" id="text-org0a95a01">
+<div id="outline-container-org01b77c3" class="outline-3">
+<h3 id="org01b77c3">Interactive plot with Altair</h3>
+<div class="outline-text-3" id="text-org01b77c3">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/sVwuOjmcvck" frameborder="0" allowfullscreen>Interactive Plot Altair</iframe>
 </p>
@@ -532,13 +552,13 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org8766645" class="outline-2">
-<h2 id="org8766645">Dealing with missing data the Bayesian way</h2>
-<div class="outline-text-2" id="text-org8766645">
+<div id="outline-container-org15cdaef" class="outline-2">
+<h2 id="org15cdaef">Dealing with missing data the Bayesian way</h2>
+<div class="outline-text-2" id="text-org15cdaef">
 </div>
-<div id="outline-container-org2c33c52" class="outline-3">
-<h3 id="org2c33c52">Masked arrays</h3>
-<div class="outline-text-3" id="text-org2c33c52">
+<div id="outline-container-org8c31256" class="outline-3">
+<h3 id="org8c31256">Masked arrays</h3>
+<div class="outline-text-3" id="text-org8c31256">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/AicqVtR1-RI" frameborder="0" allowfullscreen>Masked arrays</iframe>
 </p>
@@ -562,9 +582,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgbe39649" class="outline-3">
-<h3 id="orgbe39649">Estimating model with missing observations</h3>
-<div class="outline-text-3" id="text-orgbe39649">
+<div id="outline-container-org38c7c40" class="outline-3">
+<h3 id="org38c7c40">Estimating model with missing observations</h3>
+<div class="outline-text-3" id="text-org38c7c40">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/FhjhU1CxAns" frameborder="0" allowfullscreen>Model with missing observations</iframe>
 </p>
@@ -587,106 +607,17 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org919256a" class="outline-2">
-<h2 id="org919256a">Bayesian time series</h2>
-<div class="outline-text-2" id="text-org919256a">
+<div id="outline-container-org48c03b3" class="outline-2">
+<h2 id="org48c03b3">Bayesian time series</h2>
+<div class="outline-text-2" id="text-org48c03b3">
 </div>
-<div id="outline-container-org0c1fb70" class="outline-3">
-<h3 id="org0c1fb70">Gaussian process</h3>
-<div class="outline-text-3" id="text-org0c1fb70">
+<div id="outline-container-orgfa3406b" class="outline-3">
+<h3 id="orgfa3406b">Covid data</h3>
+<div class="outline-text-3" id="text-orgfa3406b">
 </div>
-<div id="outline-container-orgfecfe0a" class="outline-4">
-<h4 id="orgfecfe0a">GP with exponentiated quadratic kernel</h4>
-<div class="outline-text-4" id="text-orgfecfe0a">
-<p>
-<iframe width="660" height="503" src="https://www.youtube.com/embed/HjoYRQDYK4E" frameborder="0" allowfullscreen>exponentiated quadratic kernel</iframe>
-</p>
-
-<p>
-Topics we cover in this video:
-</p>
-<ul class="org-ul">
-<li>generate our own data with a trend and cyclical component</li>
-<li>formulate the model with a Gaussian Process:
-<ul class="org-ul">
-<li><code>pm.gp.cov.ExpQuad()</code> for the kernel</li>
-<li><code>pm.gp.Marginal()</code> for the Gaussian Process</li>
-<li><code>.marginal_likelihood()</code> method on the Gaussian Process to link process to the data</li>
-</ul></li>
-<li>use <code>pm.ADVI()</code> to approximate the posterior and then <code>.sample()</code> to sample from this posterior</li>
-</ul>
-
-<p>
-Questions you should be able to answer before continuing:
-</p>
-<ul class="org-ul">
-<li>use MCMC to sample the posterior; does this work well?</li>
-<li>generate a different time series and fit the GP to this data using the ADVI sampler</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org114b70e" class="outline-4">
-<h4 id="org114b70e">Checking fit</h4>
-<div class="outline-text-4" id="text-org114b70e">
-<p>
-<iframe width="660" height="503" src="https://www.youtube.com/embed/0ZpJB1ROLuA" frameborder="0" allowfullscreen>checking fit GP</iframe>
-</p>
-
-<p>
-Topics we cover in this video:
-</p>
-<ul class="org-ul">
-<li>use of <code>np_c</code> as documented <a href="https://numpy.org/doc/stable/reference/generated/numpy.c_.html">here</a></li>
-</ul>
-
-<p>
-Questions you should be able to answer before continuing:
-</p>
-<ul class="org-ul">
-<li>what do you think of the out-of-sample prediction of this kernel?</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-orgd3af298" class="outline-4">
-<h4 id="orgd3af298">GP with periodic kernel</h4>
-<div class="outline-text-4" id="text-orgd3af298">
-<p>
-<iframe width="660" height="503" src="https://www.youtube.com/embed/Kq-ZlhkGDWw" frameborder="0" allowfullscreen>periodic kernel</iframe>
-</p>
-
-<p>
-Topics we cover in this video:
-</p>
-<ul class="org-ul">
-<li>defining the periodic kernel with
-<ul class="org-ul">
-<li><code>pm.gp.cov.Periodic()</code> and <code>pm.gp.Marginal()</code></li>
-<li>defining a linear component with <code>pm.gp.cov.Linear()</code></li>
-<li>adding two GP's</li>
-</ul></li>
-</ul>
-
-
-<p>
-Questions you should be able to answer before continuing:
-</p>
-<ul class="org-ul">
-<li>finish the analysis with the ELBO-plot, sampling from the posterior, in-sample and out-of-sample predictions</li>
-<li>compare the out-of-sample predictions here with the ones obtained from the exponentiated quadratic kernel: which one performs better in your view?</li>
-</ul>
-</div>
-</div>
-</div>
-
-<div id="outline-container-org3ebba73" class="outline-3">
-<h3 id="org3ebba73">Covid data</h3>
-<div class="outline-text-3" id="text-org3ebba73">
-</div>
-<div id="outline-container-org4387294" class="outline-4">
-<h4 id="org4387294">Getting the data from John Hopkins University</h4>
-<div class="outline-text-4" id="text-org4387294">
+<div id="outline-container-org663047a" class="outline-4">
+<h4 id="org663047a">Getting the data from John Hopkins University</h4>
+<div class="outline-text-4" id="text-org663047a">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/KE-GjOb58x8" frameborder="0" allowfullscreen>getting covid data</iframe>
 </p>
@@ -709,9 +640,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-orgd0832ea" class="outline-4">
-<h4 id="orgd0832ea">Bayesian exponential model</h4>
-<div class="outline-text-4" id="text-orgd0832ea">
+<div id="outline-container-org437ce68" class="outline-4">
+<h4 id="org437ce68">Bayesian exponential model</h4>
+<div class="outline-text-4" id="text-org437ce68">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/FFU_n5r_2a8" frameborder="0" allowfullscreen>specifying exponential model</iframe>
 </p>
@@ -738,9 +669,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org351d3d0" class="outline-4">
-<h4 id="org351d3d0">Bayesian logistic model</h4>
-<div class="outline-text-4" id="text-org351d3d0">
+<div id="outline-container-org4902fb8" class="outline-4">
+<h4 id="org4902fb8">Bayesian logistic model</h4>
+<div class="outline-text-4" id="text-org4902fb8">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/aytlnYqBZgA" frameborder="0" allowfullscreen>logistic model</iframe>
 </p>
@@ -751,6 +682,7 @@ Topics we cover in this video:
 <ul class="org-ul">
 <li>rewrite your model in terms of parameters that simplify the choice of prior distributions for these parameters</li>
 <li>then use <code>pm.Deterministic()</code> to generate the parameter that you actually need in your model</li>
+<li>here we give the <code>posterior_predictive</code> a new name, instead of adding it to the trace. Both options are possible in <code>pymc</code></li>
 </ul>
 
 
@@ -769,13 +701,13 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-org45f2fa3" class="outline-2">
-<h2 id="org45f2fa3">Bayesian neural network</h2>
-<div class="outline-text-2" id="text-org45f2fa3">
+<div id="outline-container-org709d85f" class="outline-2">
+<h2 id="org709d85f">Bayesian neural network</h2>
+<div class="outline-text-2" id="text-org709d85f">
 </div>
-<div id="outline-container-orge7875bf" class="outline-3">
-<h3 id="orge7875bf">Generating the data and the grid</h3>
-<div class="outline-text-3" id="text-orge7875bf">
+<div id="outline-container-org5c59c66" class="outline-3">
+<h3 id="org5c59c66">Generating the data and the grid</h3>
+<div class="outline-text-3" id="text-org5c59c66">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/E0_KRDJX2iQ" frameborder="0" allowfullscreen>Data and grid</iframe>
 </p>
@@ -785,7 +717,7 @@ Topics we cover in this video:
 </p>
 <ul class="org-ul">
 <li>use of <code>make_moons()</code> from <code>sklearn</code> to generate "nice" data for a supervised learning algorithm</li>
-<li>use <code>pm.floatX()</code> to get data of the correct type for <code>pymc3</code> (and its <code>theano</code> backbone) &#x2013;don't worry if you do not understand this; usually this step is not necessary</li>
+<li>use <code>pm.floatX()</code> to get data of the correct type for <code>pymc</code> (and its <code>pytensor</code> backbone) &#x2013;don't worry if you do not understand this; usually this step is not necessary</li>
 <li>use of <code>np.mgrid[]</code> to generate a two dimensional grid of coordinates:
 <ul class="org-ul">
 <li><code>np.mgrid[0:1:3j,10:11:4j]</code> generates a \(2 \times 3 \times 4\) tensor of \((x,y)\) coordinates (first dimension),
@@ -814,9 +746,9 @@ Questions you should be able to answer before continuing:
 </div>
 </div>
 
-<div id="outline-container-org43cdbe2" class="outline-3">
-<h3 id="org43cdbe2">Code for the network</h3>
-<div class="outline-text-3" id="text-org43cdbe2">
+<div id="outline-container-orgffe91f8" class="outline-3">
+<h3 id="orgffe91f8">Code for the network</h3>
+<div class="outline-text-3" id="text-orgffe91f8">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/-StgJosvkaQ" frameborder="0" allowfullscreen>code for the network</iframe>
 </p>
@@ -825,21 +757,21 @@ Questions you should be able to answer before continuing:
 Topics we cover in this video:
 </p>
 <ul class="org-ul">
-<li>the model follows a standard <code>pymc3</code> model, with some additional "bells and whistles" as we are modeling a neural network:
+<li>the model follows a standard <code>pymc</code> model, with some additional "bells and whistles" as we are modeling a neural network:
 <ul class="org-ul">
 <li>the code is mainly provided as illustration; it is not necessary to fully understand the code of the model</li>
 <li>but the main idea is important: the parameters/weights of a neural network can be thought of as being stochastic and hence we can consider the posterior distribution of the weights and the predictions of the network</li>
 <li>weights in the first layer <code>weights_in_1</code> need to "receive" the inputs of the features (columns) in data matrix \(X\) and output to the number of nodes in the first hidden layer. The <code>shape</code> keyword in <code>pm.Normal()</code> takes care of this when defining the prior for these weights</li>
-<li><code>testval</code> sometimes helps to get the sampling of the posterior going; it is like providing an initial guess in a function like <code>fsolve()</code></li>
+<li><code>testval</code> sometimes helps to get the sampling of the posterior going; it is like providing an initial guess in a function like <code>fsolve()</code>; it is used in the video, but not (anymore) in the code in the notebook</li>
 <li>we also specify the weights of the first and second hidden layers</li>
 <li>we define the activation functions and outcomes for the three layers: <code>act_1, act_2, act_out</code></li>
 <li>these activations will be defined in terms of our inputs (data) \(X\)</li>
 <li>in addition to this, we want to plot the predictions of the network on the grid <code>grid_2d</code> that we defined</li>
 <li>for this we use <code>pm.Deterministic()</code> to define the probability <code>p</code>, which is again based on the three activation functions but now applied to <code>grid_2d</code> and not to data \(X\)</li>
 <li>our final classification is based on the classification propability <code>act_out</code> which is based on data \(X\); as there are only two classes (blue and red), this is a Bernoulli process (one draw from a Binomial distribution)</li>
-<li><code>theano.shared()</code> makes sure that variables defined outside the <code>pymc3</code> model, work inside it as well (again, do not worry about this)</li>
+<li><code>pytensor.shared()</code> makes sure that variables defined outside the <code>pymc</code> model, work inside it as well (again, do not worry about this)</li>
 </ul></li>
-<li>we use ADVI to sample the posterior as it is faster than MCMC</li>
+<li>in the video we used ADVI to sample the posterior as it is faster than MCMC; the new version of <code>pymc</code> allows us to use the <code>numpyro</code> sampler which is also fast. If this sampler is not available, just use <code>pm.sample()</code> (it will take a bit more time).</li>
 </ul>
 
 
@@ -854,9 +786,9 @@ Questions you should be able to answer before continuing:
 </div>
 
 
-<div id="outline-container-orge78e98e" class="outline-3">
-<h3 id="orge78e98e">Evaluating the estimated network</h3>
-<div class="outline-text-3" id="text-orge78e98e">
+<div id="outline-container-orgb241270" class="outline-3">
+<h3 id="orgb241270">Evaluating the estimated network</h3>
+<div class="outline-text-3" id="text-orgb241270">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/q2gaWDjlrGU" frameborder="0" allowfullscreen>evaluating the network</iframe>
 </p>
@@ -865,7 +797,10 @@ Questions you should be able to answer before continuing:
 Topics we cover in this video:
 </p>
 <ul class="org-ul">
-<li>we plot the ELBO to see whether the optimization step in ADVI converged; we get the "inverse J" shape that we would expect</li>
+<li>we plot the ELBO to see whether the optimization step in ADVI converged; we get the "inverse J" shape that we would expect
+<ul class="org-ul">
+<li>we the new version of <code>pymc</code> we do not use ADVI here and hence do not need to check the ELBO plot</li>
+</ul></li>
 <li>since we draw weigths from our posterior, there is not one decision boundary, but we have a number of these; we plot the first 50 of these boundaries
 <ul class="org-ul">
 <li>the boundary is the contour ("iso probability line") corresponding to \(p=0.5\)</li>
@@ -877,41 +812,17 @@ Topics we cover in this video:
 Questions you should be able to answer before continuing:
 </p>
 <ul class="org-ul">
-<li>just for illustrative purposes: plot the 0.4 and 0.6 contours; we will use color below to plot "all contours" at once</li>
-</ul>
-</div>
-</div>
-
-<div id="outline-container-org6ac96df" class="outline-3">
-<h3 id="org6ac96df">Further graphical illustrations of the estimated network</h3>
-<div class="outline-text-3" id="text-org6ac96df">
-<p>
-<iframe width="660" height="503" src="https://www.youtube.com/embed/eiDGXIqveA8" frameborder="0" allowfullscreen>graphical illustration of network uncertainty</iframe>
-</p>
-
-<p>
-Topics we cover in this video:
-</p>
-<ul class="org-ul">
-<li>using a color map, we plot all probability contours (iso probability lines) at the same time</li>
-<li>hence, we can say things like: for this point we are 70% sure that the label is "red" where we take the average probability across posterior samples</li>
-<li>to get an idea of the uncertainty across samples, we plot the standard deviation of the probabilities across posterior samples</li>
-</ul>
-
-<p>
-Questions you should be able to answer before continuing:
-</p>
-<ul class="org-ul">
-<li>in this case, the contour plots of the means \(p\) across posterior samples and of the standard deviations across samples look very similar. Explain why this is [hint: consider the expression for the standard deviation of a binomial distribution]</li>
+<li>just for illustrative purposes: plot the 0.4 and 0.6 contours</li>
 </ul>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-orgc6f8633" class="outline-2">
-<h2 id="orgc6f8633">What is a confidence interval</h2>
-<div class="outline-text-2" id="text-orgc6f8633">
+
+<div id="outline-container-org95fd383" class="outline-2">
+<h2 id="org95fd383">What is a confidence interval</h2>
+<div class="outline-text-2" id="text-org95fd383">
 <p>
 <iframe width="660" height="503" src="https://www.youtube.com/embed/BVe6EYkbHQw" frameborder="0" allowfullscreen>confidence vs credible intervals</iframe>
 </p>

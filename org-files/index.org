@@ -5,7 +5,7 @@
 
 This website contains the material for the MSc course Seminar Data Science for Economics
 
-**This website is under construction for 2023/2024**
+**This website is under construction for 2024/2025**
 
 This year the course is taught by:
 + Jan Boone
@@ -17,15 +17,15 @@ This year the course is taught by:
 
 In the course Data Science for Economics you will learn how to deal with big data and using simulations to answer policy questions using recent advances in machine learning.
 
-Whether you are a public policy-maker or a data analyst at a private firm, you might be often tasked with providing answers to inherently causal questions. For example: "What is the optimal pricing scheme for our products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
+Whether you are a public policy-maker or a data analyst at a private firm, you might be tasked with providing answers to questions like "What is the optimal pricing scheme for our products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
 
 This course will help you overcome those challenges. The "traditional" econometrics you have learned in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there can be more variables than observations, and you do not know at the start which variables and interaction terms to include.
 
-In this course, we give an introduction to data-project management, tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with new developments in datascience applicable for economic analysis.
+In this course, we give an introduction to data-project management, tensors (data with more than 2 dimensions), data simulation, neural networks, cross validation. The goal is to get you up to speed with developments in datascience applicable for economic analysis.
 
 We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets and Bayesian estimation techniques.
 
-In terms of software we will be using [[https://www.python.org/][python]],  [[https://docs.pymc.io/en/v3/][pymc3]] and google's [[https://www.tensorflow.org/][tensorflow]].
+In terms of software we will be using [[https://www.python.org/][python]], [[https://www.pymc.io/welcome.html][pymc]] and google's [[https://www.tensorflow.org/][tensorflow]].
 
 For this course we are very happy that we partner with [[https://www.datacamp.com/][Datacamp]]: [[https://www.tilburguniversity.edu/students/skills/programming][register for Datacamp]]
 
@@ -50,20 +50,22 @@ For this course a series of screencasts is available. Screencasts are available 
    :CUSTOM_ID:       organisation_datascience
    :END:
 
+| day |       date |        time | staff | room     | topic                                         | datacamp                                    | assignment |
+|-----+------------+-------------+-------+----------+-----------------------------------------------+---------------------------------------------+------------|
+| Tue | 2025-01-28 | 12:45-14:30 | Jan   | Cube 221 | Introduction to the course                    | statistical simulation 1-4                  |            |
+| Tue | 2025-02-04 | 12:45-14:30 | Jan   | Cube 221 | part 1: distributions, bootstrapping          | keras 1-4                                   |            |
+| Tue | 2025-02-11 | 12:45-14:30 | Jan   | Cube 221 | OLS, causality                                | tensorflow 1-4                              |            |
+| Tue | 2025-02-18 | 12:45-14:30 | Jan   | Cube 221 | tensors, first neural network                 |                                             |            |
+| Thu | 2025-02-20 | 14:45-16:30 | Jan   | Cube 221 | over/under fitting, neural network            |                                             |            |
+| Tue | 2025-02-25 | 12:45-14:30 | Jan   | Cube 221 | treatment effects                             |                                             |            |
+| Thu | 2025-02-27 | 14:45-16:30 | Jan   | Cube 221 | part 2: dealing with data                     |                                             |            |
+| Tue | 2025-03-11 | 12:45-14:30 | Jan   | Cube 221 | Bayesian statistics                           |                                             |            |
+| Thu | 2025-03-13 | 14:45-16:30 | Jan   | Cube 221 | estimating a Bayesian model, missing data     | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] |            |
+| Tue | 2025-03-18 | 12:45-14:30 | Jan   | Cube 221 | Bayesian time series, Bayesian neural network |                                             |            |
+| Thu | 2025-03-20 | 14:45-16:30 | Jan   | Cube 17  | confidence interval and Q&A                   |                                             |            |
+| Fri | 2025-04-25 |             |       |          |                                               |                                             | deadline   |
+| Fri | 2025-06-20 |             |       |          |                                               |                                             | resit      |
 
-| day |       date |        time | staff | room   | datacamp                                    | topics                                        |
-|-----+------------+-------------+-------+--------+---------------------------------------------+-----------------------------------------------|
-| Thu | 2024-02-01 | 10:45-12:30 | Jan   | WZ 202 | statistical simulation 1-4                  | Introduction to the course                    |
-| Thu | 2024-02-08 | 10:45-12:30 | Jan   | WZ 202 | keras 1-4                                   | part 1: distributions, bootstrapping          |
-| Thu | 2024-02-22 | 10:45-12:30 | Jan   | WZ 202 | tensorflow 1-4                              | OLS, causality                                |
-| Tue | 2024-02-27 | 08:45-10:30 | Jan   | WZ 202 |                                             | tensors, first neural network                 |
-| Thu | 2024-02-29 | 10:45-12:30 | Jan   | WZ 202 |                                             | over/under fitting, neural network            |
-| Tue | 2024-03-05 | 08:45-10:30 | Jan   | WZ 202 |                                             | treatment effects                             |
-| Thu | 2024-03-07 | 10:45-12:30 | Jan   | WZ 202 |                                             | part 2: dealing with data                     |
-| Tue | 2024-03-12 | 08:45-10:30 | Jan   | WZ 202 |                                             | Bayesian statistics                           |
-| Thu | 2024-03-14 | 10:45-12:30 | Jan   | WZ 202 | [[https://www.youtube.com/watch?v=TMmSESkhRtI]] | estimating a Bayesian model, missing data     |
-| Tue | 2024-03-19 | 08:45-10:30 | Jan   | WZ 202 |                                             | Bayesian time series, Bayesian neural network |
-| Thu | 2024-03-21 | 10:45-12:30 | Jan   | WZ 202 |                                             | confidence interval and Q&A                   |
 										      
 
 + we will see how fast we go, the column "topics" is an indication of what will be discussed in each week
@@ -73,11 +75,11 @@ For this course a series of screencasts is available. Screencasts are available 
 
 ** First Lecture
 
-[[https://janboone.github.io/msc_datascience/img/Introduction_Lecture.html][Introduction Lecture]]
+[[file:Introduction_Lecture.org::#introduction][Introduction]]
 
 *** Assignment 1
 :PROPERTIES:
-:ID:       1BBFB9ED-F701-42A8-B620-03FD6AFB73A2
+:CUSTON_ID:       assignment1
 :END:
 
 Do the following steps:
@@ -157,8 +159,8 @@ The [[https://www.datacamp.com/courses/introduction-to-tensorflow-in-python][ten
 
 ** For the second part of the course, you can do the following datacamp courses:
 
-- Resources for pymc3 can be found [[https://docs.pymc.io/en/v3/learn.html][here]].
-  - a good video to start with is [[https://www.youtube.com/watch?v=TMmSESkhRtI][this one]] where one of the developers of pymc3, Christopher Fonnesbeck, goes over the notebooks in this repository: https://github.com/fonnesbeck/intro_stat_modeling_2017
+- Resources for pymc can be found [[https://www.pymc.io/welcome.html][here.]]
+  - a good video to start with is [[https://www.youtube.com/watch?v=TMmSESkhRtI][this one]] where one of the developers of pymc, Christopher Fonnesbeck, goes over the notebooks in this repository: https://github.com/fonnesbeck/intro_stat_modeling_2017
 
 if you want to clone this repository in jupyter lab, run the following code on the server:
 
@@ -168,25 +170,49 @@ if you want to clone this repository in jupyter lab, run the following code on t
 git clone https://github.com/fonnesbeck/intro_stat_modeling_2017.git
 #+END_SRC
 
+
+*** new version of =pymc=
+  :PROPERTIES:
+  :CUSTOM_ID: new_pymc
+  :END:
+
+A change compared to previous years is that the university servers have upgraded =pymc3= to =pymc=. This affects some aspects of the =pymc= syntax used in the youtube link above and in our screencasts. Where relevant we will point this out on the screencast page and in our jupyter notebooks.
+
+The new version of =pymc= is imported as =import pymc as pm=; no longer as =import pymc3 as pm=. This has a number of implications:
+- in the video and notebook we use =import pymc3 as pm= but this will give an error when you run it on the jupyterlab server; hence use =pymc= instead of =pymc3=
+- the syntax for drawing samples from a distribution in =pymc= has changed:
+  - =pm.Normal.dist(0,1).random(size=10)= will given an error
+  - now use the following two lines:
+
+#+begin_src example
+x = pm.Normal.dist(0,1)
+pm.draw(x, draws=10)
+#+end_src
+
+See [[https://www.pymc-labs.com/blog-posts/simulating-data-with-pymc/][this blog]] for more information.
+
+
+** Other resources
+
 - Other useful skills for datascience you may want to look at:
   - [[https://www.datacamp.com/courses/regular-expressions-in-python][regular expressions Python]]
   - [[https://www.datacamp.com/courses/web-scraping-with-python][intro to scraping]]
 
 ** Deadlines
    :PROPERTIES:
-   :ID:       D000098A-D12D-4E06-9F7A-2C2549B03236
+   :CUSTOM_ID:       Deadlines
    :END:
 
-The deadline for the *final assignment* is: Friday June 14th 2024 at 23:59.
+The deadline for the *final assignment* is: Friday April 25th 2025 at 23:59.
 
-The resit deadline for the assignment is: Friday August 16th, 2024. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
+The resit deadline for the assignment is: Friday June 20th, 2025. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
 
 ** Questions
 
  If you have questions/comments about this course, go to the [[https://github.com/janboone/msc_datascience/issues][issues page]]
  open a new issue (with the green "New issue" button) and type your
  question. Use a title that is informative (e.g. not "question", but
- "question about the second assignment"). Go to the next box ("Leave a comment")
+ "question about instrumental variables"). Go to the next box ("Leave a comment")
  and type your question. Then click on "Submit new issue". We will
  answer your question as quickly as possible.
 
@@ -214,7 +240,7 @@ We have a separate page with all relevant [[./Datascience_for_economics.org][ass
 
 * Final Assignment
   :PROPERTIES:
-  :ID:       A5BAF826-823B-4CE7-AB70-F9BD310CE96A
+  :CUSTOM_ID:       Finalassignment
   :END:
 
 + The final assignment you can do alone or with at max. one other student (i.e. max group size is 2).
@@ -222,23 +248,25 @@ We have a separate page with all relevant [[./Datascience_for_economics.org][ass
 + on Canvas we give you the link to the github repos. with the ~assignment_notebook.ipynb~
 + to submit your final assignment:
   + do not change the name of the ~assignment_notebook.ipynb~ notebook
-  + fill in this [[https://forms.gle/Lp2pYoGzNqYhvAWc6][google form]]
+  + fill in this [[https://forms.gle/DHj8cZDNLUeUHp3m6][google form]]
   + push the final notebook on the github classroom repository
 
 ** TODO Instructions for submitting final assignment to be put on Canvas :noexport:
 
-- [X] create assignment on github classroom with the datascience template/notebook (18-12-2023)
-- [X] create google form for students to fill in once they finish assignment: replace last year link above (18-12-2023)
-- [X] adjust the link under point 4.(18-12-2023)
+- [ ] create assignment on github classroom with the datascience template/notebook (16-12-2024): https://classroom.github.com/a/J3hn5GFI
+- https://classroom.github.com/classrooms/16413080-tisem-datascience-for-economics/new_assignments/final-assignment-seminar-datascience-2024-2025/settings
+- [ ] create google form for students to fill in once they finish assignment: replace last year link above (16-12-2024): https://forms.gle/DHj8cZDNLUeUHp3m6
+- [ ] adjust the link under point 4.(18-12-2023)
 
-- attach instructions: [[file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf][file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf]]
+- attach instructions: [[file:~/Google Drive File Stream/My Drive/repositories/github/websites/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf][file:~/Google Drive File Stream/My Drive/repositories/github/websites/archive/github_classroom_assignments/how_to_use_nbgrader_github_classroom/Manual_students.pdf]]
 - create and post screencast where notebook is downloaded and uploaded on github
 - show previous step during lecture
 
 
 Dear students,
 
-The link for the final datascience assignment (template) is: https://classroom.github.com/a/5Xd5xACu
+The link for the final datascience assignment (template) is:
+- https://classroom.github.com/a/J3hn5GFI
 
 You can do the assignment on your own or with (at max.) one other student. When you use the link to the assignment, you will be asked for your team's name.
 
@@ -250,7 +278,7 @@ When you finish your assignment:
 
 3. fill in the google form as indicated on the website under Final Assignment
 
-4. the format of your assignment link is: https://github.com/TiSEM/final-assignment-seminar-datascience-2023-2024-your-team
+4. the format of your assignment link is: https://github.com/TiSEM/final-assignment-seminar-datascience-2024-2025-your-team (note that this is the "format" of the link; this link itself does not work...)
 
 We need the information from the google form to link your assignment to your student number which is needed for the exam administration.
 

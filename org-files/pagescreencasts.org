@@ -51,7 +51,7 @@ Python error messages:
 + numpy: basic number crunching and vector manipulation
 + pandas to work with dataframes
 + statsmodels to do OLS
-+ pymc3: to generate random numbers and do Bayesian analysis
++ pymc: to generate random numbers and do Bayesian analysis
 + tensorflow (2.0 or later): we use keras for our neural networks
 + scipy: scientific python
 + matplotlib: to make plots

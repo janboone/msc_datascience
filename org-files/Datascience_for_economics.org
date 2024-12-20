@@ -19,7 +19,7 @@ In this course, we give an introduction to data-project management, tensors (dat
 
 We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets and Bayesian estimation techniques.
 
-In terms of software we will be using [[https://www.python.org/][python]],  [[https://docs.pymc.io/en/v3/][pymc3]] and google's [[https://www.tensorflow.org/][tensorflow]].
+In terms of software we will be using [[https://www.python.org/][python]], [[https://www.pymc.io/welcome.html][pymc]] and google's [[https://www.tensorflow.org/][tensorflow]].
 
 
 *Required Prerequisites*

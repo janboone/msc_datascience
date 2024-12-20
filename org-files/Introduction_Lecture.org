@@ -30,7 +30,7 @@
   - difference with econometrics
   - prediction vs causality
   - give policy advice based on "unstructured data"
-  - to use python, pymc3 and tensorflow
+  - to use python, pymc and tensorflow
 
 ** things to learn
    :PROPERTIES:
@@ -69,8 +69,7 @@
    :END:
 
 - you will be working with [[https://jupyterlab.uvt.nl/][jupyter lab]]
-- if you also want to install things on your computer, use the [[https://www.anaconda.com/distribution/][anaconda distribution]]
-- use github but for this you do not need to install anything
+- if you also want to install things on your computer, use the [[https://www.anaconda.com/download][anaconda distribution]]. We also use github but for this you do not need to install anything
 
 * Rules of the game
   :PROPERTIES:
@@ -82,9 +81,19 @@
   - you need to finish the datacamp courses in time
   - see the Lecture schedule for the deadlines
   - first try the notebooks yourself, then watch the video if you get stuck
-  - you do not learn datascience by passively typing in answers!
+  - you do not learn datascience by passively typing in code!
   - participate actively by posting github issues for your questions
   - these will be discussed in the tutorials
+
+
+** screencasts
+
+- note that the screencasts were made with an older version of =pymc= (called =pymc3=)
+- =pymc= syntax is different from =pymc3= on a small number of points
+- these differences are pointed out in the notebook (part 2) and on the screencast website
+- the same is true for the eurostat API:
+  - columns have now different names compared to when the videos were made;
+  - data itself is different
 
 ** to get a grade for this seminar:
 
