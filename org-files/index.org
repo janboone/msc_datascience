@@ -9,6 +9,7 @@ This website contains the material for the MSc course Seminar Data Science for E
 
 This year the course is taught by:
 + Jan Boone
++ Űsame Berk Aktaş
 
 * Course description
   :PROPERTIES:
