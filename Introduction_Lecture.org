@@ -1,0 +1,102 @@
+#+SETUPFILE: ./org-html-themes/org/theme-bigblow.setup
+#+TITLE: Seminar Data Science for Economics
+#+AUTHOR: Jan
+#+DATE: Dept. of Economics, Tilburg University
+#+OPTIONS: toc:1 num:nil timestamp:nil
+
+* Introduction
+  :PROPERTIES:
+  :CUSTOM_ID: introduction
+  :END:
+
+** this lecture
+   :PROPERTIES:
+   :CUSTOM_ID: this-lecture
+   :END:
+
+- in this lecture, we look at:
+
+  - motivation to learn datascience
+  - first assignment
+
+** motivation
+   :PROPERTIES:
+   :CUSTOM_ID: motivation
+   :END:
+
+- in this course we teach you
+
+  - what is datascience?
+  - difference with econometrics
+  - prediction vs causality
+  - give policy advice based on "unstructured data"
+  - to use python, pymc and tensorflow
+
+** things to learn
+   :PROPERTIES:
+   :CUSTOM_ID: examples
+   :END:
+
+- when you finish this course, you can
+
+  - obtain data
+  - clean data (in a reproducible way)
+  - do data-project management
+  - work with high dimensional data (tensors)
+  - simulate your own estimation techniques
+  - use a (simple) neural network
+  - use cross validation
+
+** finishing the course
+   :PROPERTIES:
+   :CUSTOM_ID: finishing-the-course
+   :END:
+
+- gives you a better understanding
+  - how statistics/econometrics work
+  - how to do a Bayesian analysis
+  - what datascience and AI is
+  - what the advantages and limits are of datascience techniques
+
+* What do you need?
+  :PROPERTIES:
+  :CUSTOM_ID: what-do-you-need
+  :END:
+
+** Software
+   :PROPERTIES:
+   :CUSTOM_ID: install-software
+   :END:
+
+- you will be working with [[https://jupyterlab.uvt.nl/][jupyter lab]]
+- if you also want to install things on your computer, use the [[https://www.anaconda.com/download][anaconda distribution]]. We also use github but for this you do not need to install anything
+
+* Rules of the game
+  :PROPERTIES:
+  :CUSTOM_ID: rules-of-the-game
+  :END:
+
+** to learn python we use [[https://www.datacamp.com/home][datacamp]] and lectures:
+
+  - you need to finish the datacamp courses in time
+  - see the Lecture schedule for the deadlines
+  - first try the notebooks yourself, then watch the video if you get stuck
+  - you do not learn datascience by passively typing in code!
+  - participate actively by posting github issues for your questions
+  - these will be discussed in the tutorials
+
+
+** screencasts
+
+- note that the screencasts were made with an older version of =pymc= (called =pymc3=)
+- =pymc= syntax is different from =pymc3= on a small number of points
+- these differences are pointed out in the notebook (part 2) and on the screencast website
+- the same is true for the eurostat API:
+  - columns have now different names compared to when the videos were made;
+  - data itself is different
+
+** to get a grade for this seminar:
+
+  - finish Assignment 1 before the deadline
+  - Final Assignment
+  - check the deadlines for the final assignment

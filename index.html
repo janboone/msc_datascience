@@ -8,7 +8,199 @@
 <title>Seminar Data Science for Economics</title>
 <meta name="author" content="Jan Boone" />
 <meta name="generator" content="Org Mode" />
-<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/src/readtheorg_theme/js/readtheorg.js"></script>
+<link rel="stylesheet" href="./css/Latex.css">
+<link rel="stylesheet" href="https://latex.now.sh/prism/prism.css">
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
 </head>
 <body>
 <div id="content" class="content">
@@ -18,7 +210,7 @@ This website contains the material for the MSc course Seminar Data Science for E
 </p>
 
 <p>
-<b><b>This website is under construction for 2024/2025</b></b>
+<b><b>This website is under construction for 2025/2026</b></b>
 </p>
 
 <p>
@@ -26,22 +218,21 @@ This year the course is taught by:
 </p>
 <ul class="org-ul">
 <li>Jan Boone</li>
-<li>Űsame Berk Aktaş</li>
+<li>Mia Aktaş</li>
 </ul>
-
-<div id="outline-container-orgecb71fc" class="outline-2">
-<h2 id="orgecb71fc">Course description</h2>
-<div class="outline-text-2" id="text-orgecb71fc">
+<div id="outline-container-course_description" class="outline-2">
+<h2 id="course_description"><span class="section-number-2">1.</span> Course description</h2>
+<div class="outline-text-2" id="text-course_description">
 <p>
 In the course Data Science for Economics you will learn how to deal with big data and using simulations to answer policy questions using recent advances in machine learning.
 </p>
 
 <p>
-Whether you are a public policy-maker or a data analyst at a private firm, you might be tasked with providing answers to questions like "What is the optimal pricing scheme for our products?" or "Who should receive state benefits?". In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
+Whether you are a public policy-maker or a data analyst at a private firm, you might be tasked with providing answers to questions like &ldquo;What is the optimal pricing scheme for our products?&rdquo; or &ldquo;Who should receive state benefits?&rdquo;. In such cases you want to use large data to provide convincing policy prescriptions. However, there are different challenges to it such as obtaining the data, cleaning it, collaborating with your co-workers, and most importantly deciding which variables to use in your analysis.
 </p>
 
 <p>
-This course will help you overcome those challenges. The "traditional" econometrics you have learned in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there can be more variables than observations, and you do not know at the start which variables and interaction terms to include.
+This course will help you overcome those challenges. The &ldquo;traditional&rdquo; econometrics you have learned in previous classes provides you with solid knowledge in answering causal questions. Machine learning toolkit, which you will also learn to apply in this class, is primarily targeted to provide the best prediction rather than to answer causal questions. However, when combined together they will help you to work with highly-dimensional datasets, where there can be more variables than observations, and you do not know at the start which variables and interaction terms to include.
 </p>
 
 <p>
@@ -49,11 +240,11 @@ In this course, we give an introduction to data-project management, tensors (dat
 </p>
 
 <p>
-We use data simulation to get the main intuitions across starting from the difference between correlation and causality, the use of instrumental variables and how to deal with heterogeneous treatment effects. We cover the estimation of neural networks using training, test and validation sets and Bayesian estimation techniques.
+We use data simulation to get the main intuitions across starting from the difference between correlation and causality. We cover the estimation of neural networks using training, test and validation sets and Bayesian estimation techniques.
 </p>
 
 <p>
-In terms of software we will be using <a href="https://www.python.org/">python</a>, <a href="https://www.pymc.io/welcome.html">pymc</a> and google's <a href="https://www.tensorflow.org/">tensorflow</a>.
+In terms of software we will be using <a href="https://www.python.org/">python</a>, <a href="https://www.pymc.io/welcome.html">pymc</a> and google&rsquo;s <a href="https://www.tensorflow.org/">tensorflow</a>.
 </p>
 
 <p>
@@ -68,50 +259,48 @@ For this course we are very happy that we partner with <a href="https://www.data
 Students make sure they follow Econometrics 1 and the mandatory course Methods: Python programming for economists.
 </p>
 
-
+<hr />
 <div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#orgecb71fc">Course description</a></li>
-<li><a href="#screencasts_datascience">Screencasts</a></li>
-<li><a href="#organisation_datascience">Organisation of the course</a>
+<li><a href="#course_description">1. Course description</a></li>
+<li><a href="#screencasts_datascience">2. Screencasts</a></li>
+<li><a href="#organisation_datascience">3. Organisation of the course</a>
 <ul>
-<li><a href="#org2f90dfa">First Lecture</a></li>
-<li><a href="#org38a1726">Datacamp</a></li>
-<li><a href="#orgebaa3cc">From Datacamp, do the following courses for the first part of the course</a></li>
-<li><a href="#org7a237f9">For the second part of the course, you can do the following datacamp courses:</a></li>
-<li><a href="#org2bac887">Other resources</a></li>
-<li><a href="#Deadlines">Deadlines</a></li>
-<li><a href="#org37a9ed3">Questions</a></li>
-<li><a href="#org8fdebbe">Assessment material</a></li>
+<li><a href="#orgb8efa32">3.1. First Lecture</a></li>
+<li><a href="#org0c5d65d">3.2. Datacamp</a></li>
+<li><a href="#org60f8a90">3.3. From Datacamp, do the following courses for the first part of the course</a></li>
+<li><a href="#org71f9849">3.4. For the second part of the course, you can do the following datacamp courses:</a></li>
+<li><a href="#org97cbf2b">3.5. Other resources</a></li>
+<li><a href="#Deadlines">3.6. Deadlines</a></li>
+<li><a href="#orga7b2452">3.7. Questions</a></li>
+<li><a href="#orgd9f32db">3.8. Assessment material</a></li>
 </ul>
 </li>
-<li><a href="#Finalassignment">Final Assignment</a>
+<li><a href="#Finalassignment">4. Final Assignment</a>
 <ul>
-<li><a href="#orgffd91dc">what we are looking for</a></li>
-<li><a href="#org93e4229">resit of final assignment</a></li>
+<li><a href="#org3df32ad">4.1. what we are looking for</a></li>
+<li><a href="#orga287d34">4.2. resit of final assignment</a></li>
 </ul>
 </li>
 </ul>
-</div>
-</div>
 </div>
 </div>
 
-
+<hr />
+</div>
+</div>
 <div id="outline-container-screencasts_datascience" class="outline-2">
-<h2 id="screencasts_datascience">Screencasts</h2>
+<h2 id="screencasts_datascience"><span class="section-number-2">2.</span> Screencasts</h2>
 <div class="outline-text-2" id="text-screencasts_datascience">
 <p>
 For this course a series of screencasts is available. Screencasts are available for <a href="./pagescreencasts.html">part 1</a> and <a href="./pagescreencasts2.html">part 2</a>.
 </p>
 </div>
 </div>
-
-
 <div id="outline-container-organisation_datascience" class="outline-2">
-<h2 id="organisation_datascience">Organisation of the course</h2>
+<h2 id="organisation_datascience"><span class="section-number-2">3.</span> Organisation of the course</h2>
 <div class="outline-text-2" id="text-organisation_datascience">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -130,15 +319,12 @@ For this course a series of screencasts is available. Screencasts are available 
 <col  class="org-left" />
 
 <col  class="org-left" />
-
-<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
 <th scope="col" class="org-left">day</th>
 <th scope="col" class="org-right">date</th>
 <th scope="col" class="org-right">time</th>
-<th scope="col" class="org-left">staff</th>
 <th scope="col" class="org-left">room</th>
 <th scope="col" class="org-left">topic</th>
 <th scope="col" class="org-left">datacamp</th>
@@ -148,10 +334,9 @@ For this course a series of screencasts is available. Screencasts are available 
 <tbody>
 <tr>
 <td class="org-left">Tue</td>
-<td class="org-right">2025-01-28</td>
-<td class="org-right">12:45-14:30</td>
-<td class="org-left">Jan</td>
-<td class="org-left">Cube 221</td>
+<td class="org-right">2026-01-27</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">TZ 11</td>
 <td class="org-left">Introduction to the course</td>
 <td class="org-left">statistical simulation 1-4</td>
 <td class="org-left">&#xa0;</td>
@@ -159,10 +344,9 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Tue</td>
-<td class="org-right">2025-02-04</td>
-<td class="org-right">12:45-14:30</td>
-<td class="org-left">Jan</td>
-<td class="org-left">Cube 221</td>
+<td class="org-right">2026-02-03</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">TZ 11</td>
 <td class="org-left">part 1: distributions, bootstrapping</td>
 <td class="org-left">keras 1-4</td>
 <td class="org-left">&#xa0;</td>
@@ -170,10 +354,9 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Tue</td>
-<td class="org-right">2025-02-11</td>
-<td class="org-right">12:45-14:30</td>
-<td class="org-left">Jan</td>
-<td class="org-left">Cube 221</td>
+<td class="org-right">2026-02-10</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">Cube 214</td>
 <td class="org-left">OLS, causality</td>
 <td class="org-left">tensorflow 1-4</td>
 <td class="org-left">&#xa0;</td>
@@ -181,10 +364,9 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Tue</td>
-<td class="org-right">2025-02-18</td>
-<td class="org-right">12:45-14:30</td>
-<td class="org-left">Jan</td>
-<td class="org-left">Cube 221</td>
+<td class="org-right">2026-02-24</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">TZ 11</td>
 <td class="org-left">tensors, first neural network</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
@@ -192,10 +374,9 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Thu</td>
-<td class="org-right">2025-02-20</td>
-<td class="org-right">14:45-16:30</td>
-<td class="org-left">Jan</td>
-<td class="org-left">Cube 221</td>
+<td class="org-right">2026-02-26</td>
+<td class="org-right">10:45-12:30</td>
+<td class="org-left">DZ 7</td>
 <td class="org-left">over/under fitting, neural network</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
@@ -203,10 +384,9 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Tue</td>
-<td class="org-right">2025-02-25</td>
-<td class="org-right">12:45-14:30</td>
-<td class="org-left">Jan</td>
-<td class="org-left">Cube 221</td>
+<td class="org-right">2026-03-03</td>
+<td class="org-right">08:45-10:30</td>
+<td class="org-left">TZ 11</td>
 <td class="org-left">treatment effects</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
@@ -214,10 +394,9 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Thu</td>
-<td class="org-right">2025-02-27</td>
-<td class="org-right">14:45-16:30</td>
-<td class="org-left">Jan</td>
-<td class="org-left">Cube 221</td>
+<td class="org-right">2026-03-05</td>
+<td class="org-right">10:45-12:30</td>
+<td class="org-left">DZ 7</td>
 <td class="org-left">part 2: dealing with data</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
@@ -225,9 +404,8 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Tue</td>
-<td class="org-right">2025-03-11</td>
-<td class="org-right">12:45-14:30</td>
-<td class="org-left">Jan</td>
+<td class="org-right">2026-03-10</td>
+<td class="org-right">10:45-12:30</td>
 <td class="org-left">Cube 221</td>
 <td class="org-left">Bayesian statistics</td>
 <td class="org-left">&#xa0;</td>
@@ -236,10 +414,9 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Thu</td>
-<td class="org-right">2025-03-13</td>
-<td class="org-right">14:45-16:30</td>
-<td class="org-left">Jan</td>
-<td class="org-left">Cube 221</td>
+<td class="org-right">2026-03-12</td>
+<td class="org-right">10:45-12:30</td>
+<td class="org-left">TZ 11</td>
 <td class="org-left">estimating a Bayesian model, missing data</td>
 <td class="org-left"><a href="https://www.youtube.com/watch?v=TMmSESkhRtI">https://www.youtube.com/watch?v=TMmSESkhRtI</a></td>
 <td class="org-left">&#xa0;</td>
@@ -247,10 +424,9 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Tue</td>
-<td class="org-right">2025-03-18</td>
-<td class="org-right">12:45-14:30</td>
-<td class="org-left">Jan</td>
-<td class="org-left">Cube 221</td>
+<td class="org-right">2026-03-17</td>
+<td class="org-right">14:45-16:30</td>
+<td class="org-left">TZ 11</td>
 <td class="org-left">Bayesian time series, Bayesian neural network</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
@@ -258,10 +434,9 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Thu</td>
-<td class="org-right">2025-03-20</td>
-<td class="org-right">14:45-16:30</td>
-<td class="org-left">Jan</td>
-<td class="org-left">Cube 17</td>
+<td class="org-right">2026-03-19</td>
+<td class="org-right">10:45-12:30</td>
+<td class="org-left">DZ 7</td>
 <td class="org-left">confidence interval and Q&amp;A</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
@@ -269,9 +444,8 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Fri</td>
-<td class="org-right">2025-04-25</td>
-<td class="org-right">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-right">2026-04-24</td>
+<td class="org-right">23:59</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
@@ -280,9 +454,8 @@ For this course a series of screencasts is available. Screencasts are available 
 
 <tr>
 <td class="org-left">Fri</td>
-<td class="org-right">2025-06-20</td>
+<td class="org-right">2026-06-19</td>
 <td class="org-right">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
 <td class="org-left">&#xa0;</td>
@@ -294,24 +467,22 @@ For this course a series of screencasts is available. Screencasts are available 
 
 
 <ul class="org-ul">
-<li>we will see how fast we go, the column "topics" is an indication of what will be discussed in each week</li>
+<li>we will see how fast we go, the column &ldquo;topics&rdquo; is an indication of what will be discussed in each week</li>
 <li>for the first part, you will go through <a href="https://github.com/janboone/msc_datascience/blob/master/Statistical_Hacking.ipynb">this notebook</a></li>
 <li>for the second part, through <a href="https://github.com/janboone/msc_datascience/blob/master/hacking_part_2.ipynb">this one</a></li>
 <li>there is also a <a href="https://app.datacamp.com/learn/courses/introduction-to-version-control-with-git">Datacamp course on git</a>: this is recommended but not mandatory</li>
 </ul>
 </div>
-
-<div id="outline-container-org2f90dfa" class="outline-3">
-<h3 id="org2f90dfa">First Lecture</h3>
-<div class="outline-text-3" id="text-org2f90dfa">
+<div id="outline-container-orgb8efa32" class="outline-3">
+<h3 id="orgb8efa32"><span class="section-number-3">3.1.</span> First Lecture</h3>
+<div class="outline-text-3" id="text-3-1">
 <p>
 <a href="Introduction_Lecture.html#introduction">Introduction</a>
 </p>
 </div>
-
-<div id="outline-container-org3b6dd0f" class="outline-4">
-<h4 id="org3b6dd0f">Assignment 1</h4>
-<div class="outline-text-4" id="text-org3b6dd0f">
+<div id="outline-container-assignment1" class="outline-4">
+<h4 id="assignment1">Assignment 1</h4>
+<div class="outline-text-4" id="text-assignment1">
 <p>
 Do the following steps:
 </p>
@@ -324,7 +495,7 @@ Do the following steps:
 <li>IT suggests that you use the Firefox browser to access jupyter lab</li>
 <li>sometimes it helps to access jupyter lab with an incognito/private window</li>
 </ul></li>
-<li>or &#x2013;if all else fails&#x2013; you can use <a href="https://colab.research.google.com/">google's colab</a></li>
+<li>or &#x2013;if all else fails&#x2013; you can use <a href="https://colab.research.google.com/">google&rsquo;s colab</a></li>
 </ul></li>
 <li>create a new python notebook and type the following code in the first cell:</li>
 </ul>
@@ -341,25 +512,22 @@ git clone https://github.com/janboone/msc_datascience.git
 </ul>
 </div>
 </div>
-
-<div id="outline-container-orgc49be82" class="outline-4">
-<h4 id="orgc49be82">Final assignment</h4>
-<div class="outline-text-4" id="text-orgc49be82">
+<div id="outline-container-org65471d1" class="outline-4">
+<h4 id="org65471d1">Final assignment</h4>
+<div class="outline-text-4" id="text-org65471d1">
 <ul class="org-ul">
 <li>instructions for the final assignment can be found below.</li>
 </ul>
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org38a1726" class="outline-3">
-<h3 id="org38a1726">Datacamp</h3>
+<div id="outline-container-org0c5d65d" class="outline-3">
+<h3 id="org0c5d65d"><span class="section-number-3">3.2.</span> Datacamp</h3>
 </div>
 
-<div id="outline-container-orgebaa3cc" class="outline-3">
-<h3 id="orgebaa3cc">From Datacamp, do the following courses for the first part of the course</h3>
-<div class="outline-text-3" id="text-orgebaa3cc">
+<div id="outline-container-org60f8a90" class="outline-3">
+<h3 id="org60f8a90"><span class="section-number-3">3.3.</span> From Datacamp, do the following courses for the first part of the course</h3>
+<div class="outline-text-3" id="text-3-3">
 <ul class="org-ul">
 <li><a href="https://www.datacamp.com/courses/statistical-simulation-in-python">statistical simulation</a></li>
 <li><a href="https://www.datacamp.com/courses/deep-learning-with-keras-in-python">keras</a></li>
@@ -371,7 +539,7 @@ A couple of notes on these datacamp courses:
 </p>
 
 <p>
-The <a href="https://www.datacamp.com/courses/statistical-simulation-in-python">statistical simulation</a> course starts with very simple statistical concepts. But rapidly things become more challenging. The focus of our seminar will not be on statistical simulation per se, but we will use it to understand the properties of estimators. Hence, it is important to understand the "flow" of having a statistical process and then repeating it 10,000 times to understand its properties. You also learn how to use numpy's statistical functions from <code>numpy.random</code>.
+The <a href="https://www.datacamp.com/courses/statistical-simulation-in-python">statistical simulation</a> course starts with very simple statistical concepts. But rapidly things become more challenging. The focus of our seminar will not be on statistical simulation per se, but we will use it to understand the properties of estimators. Hence, it is important to understand the &ldquo;flow&rdquo; of having a statistical process and then repeating it 10,000 times to understand its properties. You also learn how to use numpy&rsquo;s statistical functions from <code>numpy.random</code>.
 </p>
 
 <p>
@@ -383,26 +551,31 @@ You may not have seen the <code>get</code> method of a dictionary. Here you see 
 </p>
 
 <div class="org-src-container">
-<pre class="src src-ipython">sentence="The quick brown fox jumped over the lazy dog."
-characters={}
+<pre class="src src-python"><span style="color: #e95678;">sentence</span>=<span style="color: #fab795;">"The quick brown fox jumped over the lazy dog."</span>
+<span style="color: #e95678;">characters</span>={}
 
-for character in sentence:
-    characters[character] = characters.get(character, 0) + 1
+<span style="color: #b877db;">for</span> character <span style="color: #b877db;">in</span> sentence:
+    <span style="color: #e95678;">characters</span>[character] = characters.get(character, 0) + 1
 
-print(characters)
+<span style="color: #b877db;">print</span>(characters)
 </pre>
 </div>
 
+<pre class="example">
+{'T': 1, 'h': 2, 'e': 4, ' ': 8, 'q': 1, 'u': 2, 'i': 1, 'c': 1, 'k': 1, 'b': 1, 'r': 2, 'o': 4, 'w': 1, 'n': 1, 'f': 1, 'x': 1, 'j': 1, 'm': 1, 'p': 1, 'd': 2, 'v': 1, 't': 1, 'l': 1, 'a': 1, 'z': 1, 'y': 1, 'g': 1, '.': 1}
+</pre>
+
+
 <p>
-<code>characters</code> is a dictionary with <code>key</code> a character (including "space") from the <code>sentence</code> and the <code>value</code> equals the number of times the character has occurred up till then. If a character "happens" for the first time, <code>get</code> cannot find it in the dictionary <code>characters</code> and returns the default value (here specified as 0). If character has happened, say, 3 times before, <code>get</code> returns the value 3 and we add 1, so the new value equals 4.
+<code>characters</code> is a dictionary with <code>key</code> a character (including &ldquo;space&rdquo;) from the <code>sentence</code> and the <code>value</code> equals the number of times the character has occurred up till then. If a character &ldquo;happens&rdquo; for the first time, <code>get</code> cannot find it in the dictionary <code>characters</code> and returns the default value (here specified as 0). If character has happened, say, 3 times before, <code>get</code> returns the value 3 and we add 1, so the new value equals 4.
 </p>
 
 <p>
-If you run into other functions that you are not familiar with, you can use "?", like in:
+If you run into other functions that you are not familiar with, you can use &ldquo;?&rdquo;, like in:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-jupyter-python">np.random.binomial?
+<pre class="src src-python">np.random.binomial?
 </pre>
 </div>
 
@@ -423,7 +596,7 @@ Things to take away from this course:
 </ul>
 
 <p>
-This <a href="https://www.datacamp.com/courses/deep-learning-with-keras-in-python">keras</a> course is "hands on" and has a lot of applications. If you prefer a course with some more background on the math of neural networks, you can do <a href="https://www.datacamp.com/courses/deep-learning-in-python">this one</a> instead.
+This <a href="https://www.datacamp.com/courses/deep-learning-with-keras-in-python">keras</a> course is &ldquo;hands on&rdquo; and has a lot of applications. If you prefer a course with some more background on the math of neural networks, you can do <a href="https://www.datacamp.com/courses/deep-learning-in-python">this one</a> instead.
 </p>
 
 <p>
@@ -435,10 +608,9 @@ The <a href="https://www.datacamp.com/courses/introduction-to-tensorflow-in-pyth
 </p>
 </div>
 </div>
-
-<div id="outline-container-org7a237f9" class="outline-3">
-<h3 id="org7a237f9">For the second part of the course, you can do the following datacamp courses:</h3>
-<div class="outline-text-3" id="text-org7a237f9">
+<div id="outline-container-org71f9849" class="outline-3">
+<h3 id="org71f9849"><span class="section-number-3">3.4.</span> For the second part of the course, you can do the following datacamp courses:</h3>
+<div class="outline-text-3" id="text-3-4">
 <ul class="org-ul">
 <li>Resources for pymc can be found <a href="https://www.pymc.io/welcome.html">here.</a>
 <ul class="org-ul">
@@ -457,8 +629,6 @@ git clone https://github.com/fonnesbeck/intro_stat_modeling_2017.git
 </pre>
 </div>
 </div>
-
-
 <div id="outline-container-new_pymc" class="outline-4">
 <h4 id="new_pymc">new version of <code>pymc</code></h4>
 <div class="outline-text-4" id="text-new_pymc">
@@ -479,7 +649,7 @@ The new version of <code>pymc</code> is imported as <code>import pymc as pm</cod
 </ul>
 
 <div class="org-src-container">
-<pre class="src src-example">x = pm.Normal.dist(0,1)
+<pre class="src src-python"><span style="color: #e95678;">x</span> = pm.Normal.dist(0,1)
 pm.draw(x, draws=10)
 </pre>
 </div>
@@ -490,11 +660,9 @@ See <a href="https://www.pymc-labs.com/blog-posts/simulating-data-with-pymc/">th
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org2bac887" class="outline-3">
-<h3 id="org2bac887">Other resources</h3>
-<div class="outline-text-3" id="text-org2bac887">
+<div id="outline-container-org97cbf2b" class="outline-3">
+<h3 id="org97cbf2b"><span class="section-number-3">3.5.</span> Other resources</h3>
+<div class="outline-text-3" id="text-3-5">
 <ul class="org-ul">
 <li>Other useful skills for datascience you may want to look at:
 <ul class="org-ul">
@@ -504,29 +672,27 @@ See <a href="https://www.pymc-labs.com/blog-posts/simulating-data-with-pymc/">th
 </ul>
 </div>
 </div>
-
 <div id="outline-container-Deadlines" class="outline-3">
-<h3 id="Deadlines">Deadlines</h3>
+<h3 id="Deadlines"><span class="section-number-3">3.6.</span> Deadlines</h3>
 <div class="outline-text-3" id="text-Deadlines">
 <p>
-The deadline for the <b>final assignment</b> is: Friday April 25th 2025 at 23:59.
+The deadline for the <b>final assignment</b> is: Friday April 24th 2026 at 23:59.
 </p>
 
 <p>
-The resit deadline for the assignment is: Friday June 20th, 2025. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
+The resit deadline for the assignment is: Friday June 19th, 2026. Let us know by email that you have submitted your assignment for the resit. Further, follow the instructions below on how to submit an assignment on github and fill in the google form etc.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org37a9ed3" class="outline-3">
-<h3 id="org37a9ed3">Questions</h3>
-<div class="outline-text-3" id="text-org37a9ed3">
+<div id="outline-container-orga7b2452" class="outline-3">
+<h3 id="orga7b2452"><span class="section-number-3">3.7.</span> Questions</h3>
+<div class="outline-text-3" id="text-3-7">
 <p>
 If you have questions/comments about this course, go to the <a href="https://github.com/janboone/msc_datascience/issues">issues page</a>
-open a new issue (with the green "New issue" button) and type your
-question. Use a title that is informative (e.g. not "question", but
-"question about instrumental variables"). Go to the next box ("Leave a comment")
-and type your question. Then click on "Submit new issue". We will
+open a new issue (with the green &ldquo;New issue&rdquo; button) and type your
+question. Use a title that is informative (e.g. not &ldquo;question&rdquo;, but
+&ldquo;question about instrumental variables&rdquo;). Go to the next box (&ldquo;Leave a comment&rdquo;)
+and type your question. Then click on &ldquo;Submit new issue&rdquo;. We will
 answer your question as quickly as possible.
 </p>
 
@@ -544,8 +710,8 @@ asked/answered before on the issue page</li>
 </ul>
 
 <p>
-Only when you need to include privately sensitive information ("my cat
-has passed away"), you can send an email.
+Only when you need to include privately sensitive information (&ldquo;my cat
+has passed away&rdquo;), you can send an email.
 </p>
 
 <p>
@@ -555,40 +721,37 @@ you need anyway to follow this course).
 
 <p>
 Note that if your question is related to another issue, you can react
-to the earlier issue and leave a comment in that "conversation".
+to the earlier issue and leave a comment in that &ldquo;conversation&rdquo;.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org8fdebbe" class="outline-3">
-<h3 id="org8fdebbe">Assessment material</h3>
-<div class="outline-text-3" id="text-org8fdebbe">
+<div id="outline-container-orgd9f32db" class="outline-3">
+<h3 id="orgd9f32db"><span class="section-number-3">3.8.</span> Assessment material</h3>
+<div class="outline-text-3" id="text-3-8">
 <p>
 We have a separate page with all relevant <a href="./Datascience_for_economics.html">assessment material</a>.
 </p>
 </div>
 </div>
 </div>
-
 <div id="outline-container-Finalassignment" class="outline-2">
-<h2 id="Finalassignment">Final Assignment</h2>
+<h2 id="Finalassignment"><span class="section-number-2">4.</span> Final Assignment</h2>
 <div class="outline-text-2" id="text-Finalassignment">
 <ul class="org-ul">
 <li>The final assignment you can do alone or with at max. one other student (i.e. max group size is 2).</li>
-<li>for the deadline of the assignment, see <a href="#Deadlines">Deadlines</a> above</li>
+<li>for the deadline of the assignment, see <a href="#Deadlines">3.6</a> above</li>
 <li>on Canvas we give you the link to the github repos. with the <code>assignment_notebook.ipynb</code></li>
 <li>to submit your final assignment:
 <ul class="org-ul">
 <li>do not change the name of the <code>assignment_notebook.ipynb</code> notebook</li>
-<li>fill in this <a href="https://forms.gle/DHj8cZDNLUeUHp3m6">google form</a></li>
+<li>fill in the google form published on Canvas</li>
 <li>push the final notebook on the github classroom repository</li>
 </ul></li>
 </ul>
 </div>
-
-<div id="outline-container-orgffd91dc" class="outline-3">
-<h3 id="orgffd91dc">what we are looking for</h3>
-<div class="outline-text-3" id="text-orgffd91dc">
+<div id="outline-container-org3df32ad" class="outline-3">
+<h3 id="org3df32ad"><span class="section-number-3">4.1.</span> what we are looking for</h3>
+<div class="outline-text-3" id="text-4-1">
 <p>
 The idea of the assignment is that you report your findings in a transparent way that can easily be verified/reproduced by others. The intended audience is your fellow students. They should be able to understand the code you write together with the explanations that you give for this code.
 </p>
@@ -598,7 +761,7 @@ The following ingredients will be important when we evaluate your assignment:
 </p>
 
 <ul class="org-ul">
-<li>Create a "big dataset" from an economic organization providing data; think of:
+<li>Create a &ldquo;big dataset&rdquo; from an economic organization providing data; think of:
 <ul class="org-ul">
 <li><a href="https://stats.oecd.org">OECD</a></li>
 <li><a href="https://data.worldbank.org">World Bank</a> (recall that we use a python API to access this data in Methods: Python programming; this you can use as well, of course)</li>
@@ -611,7 +774,7 @@ The following ingredients will be important when we evaluate your assignment:
 </ul></li>
 <li>Data handling:    
 <ul class="org-ul">
-<li>download the data to your repos. (in a separate folder "data") and</li>
+<li>download the data to your repos. (in a separate folder &ldquo;data&rdquo;) and</li>
 <li>in your notebook create a link to the website of the data source</li>
 <li>give the code how you merged separate datasets into one big dataset that you use</li>
 <li>explain what you did (including the code) and why you did the data cleaning steps to get the data from the downloads to the data that you use in the analysis</li>
@@ -647,7 +810,7 @@ Three remarks:
 </ul></li>
 <li>use <b>common sense</b>: it is not always necessary to have a full blown economic model, but we do expect you to think!
 <ul class="org-ul">
-<li>in the past we had students looking at the effect of age on income in sports; "theory" suggests that this relation is hump-shaped: 5 year olds and 80 year olds tend not to earn a lot of money as elite athletes; the students presented a scatter plot with a clear hump-shape; then they wrote "now we do a linear regression".</li>
+<li>in the past we had students looking at the effect of age on income in sports; &ldquo;theory&rdquo; suggests that this relation is hump-shaped: 5 year olds and 80 year olds tend not to earn a lot of money as elite athletes; the students presented a scatter plot with a clear hump-shape; then they wrote &ldquo;now we do a linear regression&rdquo;.</li>
 <li>for each step that you program, ask yourself why this step makes sense and then explain this in your notebook.</li>
 </ul></li>
 <li>show us what you have learned during this course; hence use a <b>number</b> of topics we discussed in your final assignment, for example:
@@ -670,10 +833,9 @@ Three remarks:
 </ul>
 </div>
 </div>
-
-<div id="outline-container-org93e4229" class="outline-3">
-<h3 id="org93e4229">resit of final assignment</h3>
-<div class="outline-text-3" id="text-org93e4229">
+<div id="outline-container-orga287d34" class="outline-3">
+<h3 id="orga287d34"><span class="section-number-3">4.2.</span> resit of final assignment</h3>
+<div class="outline-text-3" id="text-4-2">
 <p>
 The resit of the final assignment needs to be a new project compared to the one you handed in before. The easiest way to achieve this is to choose a new research question and a new data set. You can use the same data if you make sure that research question and analysis are sufficiently different from before.
 </p>
@@ -691,6 +853,7 @@ Apart from this, follow the procedure above on how to submit the assignment and 
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jan Boone</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

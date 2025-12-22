@@ -2,7 +2,6 @@
 #+Title: Seminar Data Science for Economics
 #+Author: Jan Boone
 #+LANGUAGE: en
-#+INFOJS_OPT: view:showall toc:t ltoc:t mouse:underline path:http://orgmode.org/org-info.js
 #+LaTeX_CLASS: article-12
 #+LATEX_HEADER: \renewcommand{\floatpagefraction}{.8} %% avoids figures getting their own page
 #+latex_header: \input{author.tex}
@@ -135,7 +134,7 @@ The point for us of this Datacamp course is to become comfortable with modeling 
 
 You may not have seen the ~get~ method of a dictionary. Here you see it in action in a simple example (borrowed from [[https://stackoverflow.com/questions/2068349/understanding-get-method-in-python][stackoverflow]]):
 
-#+BEGIN_SRC ipython
+#+BEGIN_SRC python
 sentence="The quick brown fox jumped over the lazy dog."
 characters={}
 
@@ -152,7 +151,7 @@ print(characters)
 
 If you run into other functions that you are not familiar with, you can use "?", like in:
 
-#+BEGIN_SRC jupyter-python :session py :kernel python3
+#+BEGIN_SRC python
 np.random.binomial?
 #+END_SRC
 
@@ -199,7 +198,7 @@ The new version of =pymc= is imported as =import pymc as pm=; no longer as =impo
   - =pm.Normal.dist(0,1).random(size=10)= will given an error
   - now use the following two lines:
 
-#+begin_src example
+#+begin_src python
 x = pm.Normal.dist(0,1)
 pm.draw(x, draws=10)
 #+end_src
